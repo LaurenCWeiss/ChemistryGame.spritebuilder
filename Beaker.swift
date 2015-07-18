@@ -13,6 +13,7 @@ class Beaker: CCNode {
     var top: CCNode!
     var neck: CCNode!
     var isTouchingGround = false
+    var touchDirection: CGPoint = CGPointZero
 
     func didLoadFromCCB(){
         
@@ -35,12 +36,25 @@ class Beaker: CCNode {
         if isTouchingGround != true || (isTouchingGround == true && diffPosition.y > 0) {
             
             position = ccpAdd(position,diffPosition)
+            //self.physicsBody.velocity = position
+            //touchDirection = ccpNormalize(diffPosition)
             
         }
-    
-       
-
     }
+    
+    /*
+    override func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+        touchDirection = ccp(0,0)
+        self.physicsBody.velocity = ccp(0,0)
+    }
+    
+    override func update(delta: CCTime) {
+        if(ccpLength(touchDirection)) > 0 {
+            self.physicsBody.velocity = ccpMult(touchDirection,200)
+        }
+        //self.physicsBody.applyImpulse((ccpMult(touchDirection,1000)))
+    }
+*/
 }
 
     
