@@ -8,10 +8,11 @@
 
 import Foundation
 
-class Molecule: CCNode, CCPhysicsCollisionDelegate {
+class Molecule: CCNode {
+   
+    var inBeaker: Bool = false
     func didLoadFromCCB() {
         
-        physicsBody.sensor = true;
         
     }
     

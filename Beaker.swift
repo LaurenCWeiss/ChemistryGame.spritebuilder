@@ -11,14 +11,11 @@ import Foundation
 class Beaker: CCNode {
     
     var top: CCNode!
-    var neck: CCNode!
-    var isTouchingGround = false
-    var touchDirection: CGPoint = CGPointZero
 
     func didLoadFromCCB(){
         
         userInteractionEnabled = true
-//      top.physicsBody.sensor = true
+
     }
     
     
@@ -32,29 +29,17 @@ class Beaker: CCNode {
         
         var diffPosition = ccpSub(lastTouch,curTouch)
         diffPosition.x *= -1
+       
+        position = ccpAdd(position,ccpMult(diffPosition,2.0))
         
-        if isTouchingGround != true || (isTouchingGround == true && diffPosition.y > 0) {
-            
-            position = ccpAdd(position,diffPosition)
-            //self.physicsBody.velocity = position
-            //touchDirection = ccpNormalize(diffPosition)
-            
-        }
-    }
-    
-    /*
-    override func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        touchDirection = ccp(0,0)
-        self.physicsBody.velocity = ccp(0,0)
     }
     
     override func update(delta: CCTime) {
-        if(ccpLength(touchDirection)) > 0 {
-            self.physicsBody.velocity = ccpMult(touchDirection,200)
+        if position.y<=155 {
+            position.y=150
         }
-        //self.physicsBody.applyImpulse((ccpMult(touchDirection,1000)))
     }
-*/
+
 }
 
     

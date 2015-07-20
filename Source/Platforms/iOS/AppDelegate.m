@@ -53,7 +53,9 @@
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
     
     [self setupCocos2dWithOptions:cocos2dSetup];
-    
+    //incrase physics samping
+    //1.0/180.0 default is 1/60 - now will run at 180 frames per second
+    [[CCDirector sharedDirector] setFixedUpdateInterval: 1.0/180.0];
     return YES;
 }
 

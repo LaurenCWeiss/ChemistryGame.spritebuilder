@@ -358,7 +358,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>Molecule</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -374,9 +374,7 @@
 			<key>bodyShape</key>
 			<integer>1</integer>
 			<key>collisionCategories</key>
-			<array>
-				<string>molecule</string>
-			</array>
+			<array/>
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>

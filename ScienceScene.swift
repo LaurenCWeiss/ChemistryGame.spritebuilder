@@ -94,9 +94,15 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     
     //MARK:- Physics
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, molec: CCNode!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, molec: Molecule!) -> Bool {
         //this collision is the circle collision at the top of the beaker/flask...this collision adds one to the score in the system so that the program knows to move up a level
-        points += 1
+        if molec.inBeaker == false {
+            points++
+            molec.inBeaker = true
+            //if we were to return true we would say just let physics continue on, but we want to return false so that the physics detection is still made
+            return false
+        }
+        
 //        println(points)
         
         return true
@@ -139,35 +145,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     
-    
-    //CCPHYSICSCOLLISIONSEPARATE
-        func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beakerBottom: CCNode!, ground: CCNode!) -> Bool {
-           beaker.isTouchingGround = true
-           return false
-        }
-    
-        func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!,  beakerBottom: CCNode!,  ground: CCNode!) {
-            beaker.isTouchingGround = false
-            println("sep")
-    
-        }
+ 
 
-    /*
-    func ccPhysicsCollisionPreSolve(pair: CCPhysicsCollisionPair!, molecDontLeave: CCNode!, molec: CCNode!) -> Bool {
-        
-        //if the molecule passes the second collision detection in the beaker, the boolean is set to false, meaning that the molecule can no longer pass through that detection(it's not invisible to the molecule anymore)
-        println("enter")
-        molec.physicsBody.collisionMask = ["dummy"]
-        return false
-    }
-    
-    func ccPhysicsCollisionSeparate(pair: CCPhysicsCollisionPair!, molecDontLeave: CCNode!, molec: CCNode!) -> Bool {
-        
-        //if the molecule passes the second collision detection in the beaker, the boolean is set to false, meaning that the molecule can no longer pass through that detection(it's not invisible to the molecule anymore)
-        println("exit")
-        molec.physicsBody.collisionMask = nil
-        return true
-    }*/
     
     
     
