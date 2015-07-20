@@ -8,16 +8,13 @@
 
 //import Foundation
 //
-//class RestartPopup: CCNode {
-//    func restart() {
-//        
-//        //if the molecule hits the ground, end the game
-//        
-//        let scene = CCBReader.loadAsScene("ScienceScene")
-//        CCDirector.sharedDirector().presentScene(scene)
-//        
-//    }
-//    
-//    
-//    
-//}
+
+import Foundation
+
+class RestartPopup: CCNode {
+    func restart() {
+        let scene = CCBReader.loadAsScene("ScienceScene")
+        CCDirector.sharedDirector().presentScene(scene)
+        
+    }
+}

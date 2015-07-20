@@ -44,9 +44,9 @@ struct LevelData {
     
     init() {
         var level1 = Data()
-        level1.hydrogen = 2
-        level1.oxygen = 1
-        level1.goal = 3
+        level1.hydrogen = 4
+        level1.oxygen = 2
+        level1.goal = 6
             //IMPORTANT*******************************
 //        level1.MyTransition = level1
         levels.append(level1)

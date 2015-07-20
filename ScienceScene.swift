@@ -22,14 +22,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     weak var molecule: Molecule!
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var loadMoleculesPhysicsNode: CCPhysicsNode!
-    //    weak var levelNode: CCNode!
     weak var startPointNode: CCNode!
-    weak var startPointNode2: CCNode!
-    weak var startPointNode3: CCNode!
     var points: NSInteger = 0
     weak var ground1: Ground!
-   //player receives 3 lives, not 2, 2-1-0=3
-    var lives: Int = 2
     
     
     
@@ -63,7 +58,12 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         for molecule in molecules {
             for index in 0..<molecule.number {
                 var moleculeNode = CCBReader.load("Molecules/\(molecule.name)")
-                moleculeNode.position = startPointNode.position
+                
+                
+     
+                moleculeNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
+                
+                
                 moleculeNodes.append(moleculeNode)
             }
         }
@@ -111,24 +111,14 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
         //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
-        
-        //        let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
-        //        popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
-        //        popup.position = CGPoint(x: 0.5, y: 0.5)
-        //        parent.addChild(popup)
      
-        if lives == 0 {
-            gameOver()
-            
-        }
-      
-        if(true){
-            lives -= 1
-            points++
-        }
-        
     
-        println(lives)
+   
+        
+        
+
+            gameOver()
+        
         return true
      
     }
@@ -138,12 +128,17 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     func gameOver() {
         
         //if the molecule hits the ground, end the game
-             lives += 3
-        let scene = CCBReader.loadAsScene("ScienceScene")
-        CCDirector.sharedDirector().presentScene(scene)
+        
+        //LOAD RESTART POPUP HERE
+        
+            let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
+                popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
+                popup.position = CGPoint(x: 0.5, y: 0.5)
+                parent.addChild(popup)
+
         
     }
-    
+
     
  
 
@@ -162,9 +157,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     override func update(delta: CCTime) {
         //if the number of points equals the number of molecules, then move on to the next level
         
-        //        if LevelData.curLevel == 5 {
-        //            LevelData.curLevel == 1
-        //        }
+     
         if points == levelData.levels[LevelData.curLevel].goal {
             
             cleanup()
