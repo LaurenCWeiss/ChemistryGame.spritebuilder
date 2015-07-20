@@ -18,11 +18,4 @@ class LevelSelect: CCNode {
     }
 
     
-//    func startLevel() {
-//        ScienceScene.startit()
-//        
-//          }
-//
-    
-    
 }

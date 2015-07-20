@@ -17,9 +17,8 @@ struct Data {
     var nitrogen: Int = 0
     var potassium: Int = 0
     var goal: Int = 0
-    //IMPORTANT*******************************
-//    var MyTransition: 
-//    var water: String
+    var smallLabel: String = " "
+    
 }
 
 //TODO: make singleton
@@ -44,18 +43,14 @@ struct LevelData {
     
     init() {
         var level1 = Data()
-        level1.hydrogen = 4
-        level1.oxygen = 2
-        level1.goal = 6
-            //IMPORTANT*******************************
-//        level1.MyTransition = level1
+        level1.hydrogen = 2
+        level1.oxygen = 1
+        level1.goal = 3
+        level1.smallLabel = "Water"
         levels.append(level1)
-        
-        
         
         var level2 = Data()
         level2.oxygen = 2
-        //level2.carbon = 1
         level2.goal = 2
         levels.append(level2)
         
@@ -69,9 +64,8 @@ struct LevelData {
         level4.hydrogen = 1
         level4.oxygen = 4
         level4.goal = 5
+      
         levels.append(level4)
-        
-        
-        
     }
+
 }

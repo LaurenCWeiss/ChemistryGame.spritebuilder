@@ -60,7 +60,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 var moleculeNode = CCBReader.load("Molecules/\(molecule.name)")
                 
                 
-     
+                
                 moleculeNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
                 
                 
@@ -103,7 +103,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             return false
         }
         
-//        println(points)
+        
         
         return true
         
@@ -111,19 +111,19 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
         //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
-     
-    
-   
         
         
-
-            gameOver()
+        
+        
+        
+        
+        gameOver()
         
         return true
-     
+        
     }
-
-
+    
+    
     
     func gameOver() {
         
@@ -131,22 +131,22 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         //LOAD RESTART POPUP HERE
         
-            let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
-                popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
-                popup.position = CGPoint(x: 0.5, y: 0.5)
-                parent.addChild(popup)
-
+        let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
+        popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
+        popup.position = CGPoint(x: 0.5, y: 0.5)
+        parent.addChild(popup)
+        
         
     }
-
     
- 
-
+    
+    
+    
     
     
     
     func startLevelTransitionScene() {
-        let scene = CCBReader.loadAsScene("LevelTransition")
+        let scene = CCBReader.loadAsScene("LevelTransitionScene")
         CCDirector.sharedDirector().presentScene(scene)
         
         //        gamePhysicsNode.addChild(beaker) //had to add "beaker" to ScienceScene under the beaker object in Sprite Builder
@@ -157,7 +157,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     override func update(delta: CCTime) {
         //if the number of points equals the number of molecules, then move on to the next level
         
-     
+        
         if points == levelData.levels[LevelData.curLevel].goal {
             
             cleanup()
@@ -190,12 +190,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         loadNextLevelMolecules(moleculesArray)
         
     }
-        //IMPORTANT*******************************
-//    func startit(){
-//        let LevelSelect = CCBReader.loadAsScene("ScienceScene.LevelData.MyTransition")
-//        CCDirector.sharedDirector().presentScene(LevelSelect)
-//        
-//
-//    }
+    
     
 }

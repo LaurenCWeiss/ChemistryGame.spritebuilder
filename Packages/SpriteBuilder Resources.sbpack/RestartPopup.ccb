@@ -122,10 +122,10 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
+							<real>0.32796007394790649</real>
+							<real>0.80593615770339966</real>
 							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -134,9 +134,11 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>1</real>
+						<real>0.0</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -684,8 +686,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
