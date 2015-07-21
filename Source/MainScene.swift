@@ -9,13 +9,6 @@ class MainScene: CCNode {
         
     }
     
-//    func startScience() {
-//        let mainScene = CCBReader.loadAsScene("ScienceScene")
-//        CCDirector.sharedDirector().presentScene(mainScene)
-//        
-//        
-//    }
-    
     func startScience() {
         
         let firstLevel = CCBReader.loadAsScene("ScienceScene")

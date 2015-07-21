@@ -111,12 +111,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
         //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
-        
-        
-        
-        
-        
-        
         gameOver()
         
         return true
@@ -138,13 +132,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         
     }
-    
-    
-    
-    
-    
-    
-    
+
     func startLevelTransitionScene() {
         let scene = CCBReader.loadAsScene("LevelTransitionScene")
         CCDirector.sharedDirector().presentScene(scene)
@@ -185,6 +173,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         // add to array
         loadNextLevelMolecules(moleculesArray)
+
         
     }
     
