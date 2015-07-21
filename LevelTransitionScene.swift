@@ -11,6 +11,7 @@ import Foundation
 class LevelTransitionScene: CCNode {
     
     func startContinueButton() {
+        
         var levelData: LevelData = LevelData()
         if (LevelData.curLevel + 1) >= levelData.levels.count {
             LevelData.curLevel = 0
@@ -20,8 +21,6 @@ class LevelTransitionScene: CCNode {
         let scene = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().presentScene(scene)
 
-        
-        
     }
     
    

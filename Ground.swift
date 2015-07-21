@@ -22,11 +22,6 @@ class Ground: CCNode, CCPhysicsCollisionDelegate {
        func didLoadFromCCB(){
         
         userInteractionEnabled = true
-        //        top.physicsBody.sensor = true
-    }
-    
-    
-       
-    
+        }
     
 }

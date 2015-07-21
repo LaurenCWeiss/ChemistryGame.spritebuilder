@@ -18,6 +18,7 @@ struct Data {
     var potassium: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
+    var level: Int = 0
     
 }
 
@@ -47,11 +48,14 @@ struct LevelData {
         level1.oxygen = 1
         level1.goal = 3
         level1.smallLabel = "Water"
+        level1.level = 1
+        
         levels.append(level1)
         
         var level2 = Data()
         level2.oxygen = 2
         level2.goal = 2
+        level2.level = 2
         level2.smallLabel = "Oxygen gas"
 
         levels.append(level2)
@@ -60,6 +64,7 @@ struct LevelData {
         level3.hydrogen = 2
         level3.oxygen = 5
         level3.goal = 7
+        level2.level = 3
         level3.smallLabel = "Water"
 
         levels.append(level3)
@@ -68,6 +73,7 @@ struct LevelData {
         level4.hydrogen = 1
         level4.oxygen = 4
         level4.goal = 5
+        level2.level = 4
         level4.smallLabel = "Water"
 
         levels.append(level4)

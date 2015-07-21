@@ -12,13 +12,12 @@ import Foundation
 class Label: CCNode {
     
     var smallLabel: CCLabelTTF!
-      var levelData: LevelData = LevelData()
+    var levelData: LevelData = LevelData()
     
     func didLoadFromCCB() {
 
-        smallLabel.string = levelData.levels[LevelData.curLevel].smallLabel
+smallLabel.string = levelData.levels[LevelData.curLevel].smallLabel
 
-      
     }
 
 

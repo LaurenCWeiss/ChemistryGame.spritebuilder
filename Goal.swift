@@ -11,7 +11,6 @@ import Foundation
 class Goal : CCNode
 {
     func didLoadFromCCB() {
-        
-                
+    
     }
 }

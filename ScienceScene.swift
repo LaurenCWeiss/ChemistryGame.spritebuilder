@@ -25,14 +25,15 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     weak var startPointNode: CCNode!
     var points: NSInteger = 0
     weak var ground1: Ground!
+
     
     
     
     //stores the information (number of molecules for each level) for all levels
-    //this is our global storage for all levels
+    //this is the global storage for all levels
     var levelData: LevelData = LevelData()
     
-    //this is our local storage for specific parameters of current level
+    //this is the local storage for specific parameters of current level
     var moleculeNodes: [CCNode] = [CCNode]()
     
     var moleculesArray = [LevelObject]()
@@ -41,12 +42,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         gamePhysicsNode.collisionDelegate = self
         gamePhysicsNode.debugDraw = true
         loadLevel()
-        //    loadMoleculesPhysicsNode.collisionDelegate = self
-        //    loadMoleculesPhysicsNode.debugDraw = true
-        
-        
-        
-        //      ground1.physicsBody.sensor = true
     }
     override func onEnter() {
         super.onEnter()
@@ -59,11 +54,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             for index in 0..<molecule.number {
                 var moleculeNode = CCBReader.load("Molecules/\(molecule.name)")
                 
-                
-                
                 moleculeNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
-                
-                
                 moleculeNodes.append(moleculeNode)
             }
         }
@@ -116,8 +107,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         return true
         
     }
-    
-    
+
     
     func gameOver() {
         

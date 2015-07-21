@@ -11,9 +11,9 @@ import Foundation
 class Molecule: CCNode {
    
     var inBeaker: Bool = false
+    
     func didLoadFromCCB() {
-        
-        
+    
     }
     
 }
