@@ -183,9 +183,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             moleculesArray.append(levelObject)
         }
         
-        
-        
-        
         // add to array
         loadNextLevelMolecules(moleculesArray)
         
