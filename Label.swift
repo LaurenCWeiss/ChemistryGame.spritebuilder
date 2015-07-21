@@ -15,15 +15,10 @@ class Label: CCNode {
       var levelData: LevelData = LevelData()
     
     func didLoadFromCCB() {
-//        smallLabel.string = "title" --this works just shows title
-//        smallLabel.string = "LevelData.level.smallLabel"
-//          smallLabel.string = LevelData.curLevel.smallLabel
-        
-        //works for 1st level-shows you made water
+
+        smallLabel.string = levelData.levels[LevelData.curLevel].smallLabel
+
       
-    }
-    override func update(delta: CCTime) {
-smallLabel.string = levelData.levels[LevelData.curLevel].smallLabel
     }
 
 

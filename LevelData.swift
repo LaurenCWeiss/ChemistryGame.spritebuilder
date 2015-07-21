@@ -52,7 +52,7 @@ struct LevelData {
         var level2 = Data()
         level2.oxygen = 2
         level2.goal = 2
-        level2.smallLabel = "Water"
+        level2.smallLabel = "Oxygen gas"
 
         levels.append(level2)
         
