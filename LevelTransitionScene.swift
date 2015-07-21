@@ -10,8 +10,6 @@ import Foundation
 
 class LevelTransitionScene: CCNode {
     
-//weak var smallLabel: Label!
-    
     func startContinueButton() {
         var levelData: LevelData = LevelData()
         if (LevelData.curLevel + 1) >= levelData.levels.count {
