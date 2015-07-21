@@ -64,6 +64,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         if !moleculeNodes.isEmpty {
             var molecule = moleculeNodes.removeLast()
             gamePhysicsNode.addChild(molecule)
+            molecule.physicsBody.applyImpulse(ccp(0, 20))
         }
     }
     
