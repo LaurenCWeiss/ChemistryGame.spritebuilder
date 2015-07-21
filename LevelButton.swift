@@ -8,15 +8,14 @@
 
 import Foundation
 
-
-class Label: CCNode {
+class LevelButton: CCButton {
     
-    var smallLabel: CCLabelTTF!
-    
+    var level: Int = 0
     
     func didLoadFromCCB() {
-        smallLabel.string = "test"
+        print(level)
+        self.title = "Level: \(level)"
     }
-
-
+    
+    
 }

@@ -16,6 +16,9 @@ class LevelSelect: CCNode {
         CCDirector.sharedDirector().presentScene(LevelSelect)
         
     }
-
+    
+    func startLevel(button:LevelButton) {
+        println("StartLevel: \(button.level)")
+    }
     
 }
