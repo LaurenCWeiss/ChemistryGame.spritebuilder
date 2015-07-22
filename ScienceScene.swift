@@ -25,6 +25,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     weak var startPointNode: CCNode!
     var points: NSInteger = 0
     weak var ground1: Ground!
+    var moleculeNode: CCNode!
     var currentLevelData: Data?
     
     
@@ -40,7 +41,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func didLoadFromCCB() {
         gamePhysicsNode.collisionDelegate = self
-        loadLevel()
+        //  gamePhysicsNode.debugDraw = true
+        currentLevelData = levelData.levels[LevelData.curLevel]
     }
     override func onEnter() {
         super.onEnter()
@@ -48,21 +50,45 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         self.schedule(Selector("dropMolecule"), interval: 2)
     }
     
-    func loadNextLevelMolecules(molecules: [LevelObject]) {
-        for molecule in molecules {
-            for index in 0..<molecule.number {
-                var moleculeNode = CCBReader.load("Molecules/\(molecule.name)")
-                
-                moleculeNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
-                moleculeNodes.append(moleculeNode)
-            }
-        }
-    }
-    
+
     func dropMolecule(){
+        //should this be in the update function?
+        //for spawning random atoms
+        //how to know the difference of spawning atoms to avoid and atoms that must be spawned?
+        
+        
+        //use spawnThisNumber to run through how many times I want something to randomly spawn
+        //problem is that what if atoms that need to be spawned aren't spawned
+        //need mechanism that will ensure that the atoms from level data are spawned, that enough of them are actually spawned
+        var fileName:String = ""
+        
+        var spawnMolecule:Int = currentLevelData!.spawnThese.randomItem()
+        
+        switch spawnMolecule {
+        case 1:
+            fileName = "Molecules/Hydrogen"
+        case 2:
+            fileName = "Molecules/Oxygen"
+        default:
+            println("No Molecule :(")
+        }
+        
+        var moleculeNode = CCBReader.load(fileName)
+       
+        //after atom obstalce has been randomly chosen, drop the atom at a random position
+        moleculeNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
+        
+        moleculeNodes.append(moleculeNode)
+        
+        
         if !moleculeNodes.isEmpty {
             var molecule = moleculeNodes.removeLast()
             gamePhysicsNode.addChild(molecule)
+            
+            let magnitude = levelData.levels[LevelData.curLevel].magnitude
+            let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
+            
+            molecule.physicsBody.applyImpulse(randomImpulse)
         }
     }
     
@@ -79,6 +105,12 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func startPause() {
         let ScienceScene = CCBReader.loadAsScene("PauseScene")
+        CCDirector.sharedDirector().pushScene(ScienceScene)
+    }
+    
+    
+    func restartButton() {
+        let ScienceScene = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().presentScene(ScienceScene)
     }
     
@@ -86,6 +118,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     //MARK:- Physics
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, molec: Molecule!) -> Bool {
         //this collision is the circle collision at the top of the beaker/flask...this collision adds one to the score in the system so that the program knows to move up a level
+        
         if molec.inBeaker == false {
             points++
             molec.inBeaker = true
@@ -93,20 +126,17 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             return false
         }
         
-        
-        
         return true
-        
     }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
         //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
+        
         gameOver()
         
         return true
         
     }
-
     
     func gameOver() {
         
@@ -119,46 +149,29 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         popup.position = CGPoint(x: 0.5, y: 0.5)
         parent.addChild(popup)
         
-        
     }
-
+    
     func startLevelTransitionScene() {
-        let scene = CCBReader.loadAsScene("LevelTransitionScene")
-        CCDirector.sharedDirector().presentScene(scene)
         
+        let scene = CCBReader.loadAsScene("LevelTransitionScene")
+        
+        let transition = CCTransition(fadeWithDuration: 0.8)
+        
+        CCDirector.sharedDirector().presentScene(scene)
         
     }
     
     override func update(delta: CCTime) {
         
+        //if the number of points equals the number of molecules released, then move on to the next level
         
         if points == levelData.levels[LevelData.curLevel].goal {
             
-            cleanup()
-            //call scene transition here
-            startLevelTransitionScene()
+        cleanup()
+        //call scene transition here
+        startLevelTransitionScene()
+        
         }
-        
-        
     }
-    
-    func loadLevel() {
-        
-        
-            var levelObject = LevelObject(name: "Oxygen", number: newLevelData.oxygen)
-            moleculesArray.append(levelObject)
-        }
-        
-        
-            var levelObject = LevelObject(name: "Hydrogen", number: newLevelData.hydrogen)
-            moleculesArray.append(levelObject)
-        }
-        
-        // add to array
-        loadNextLevelMolecules(moleculesArray)
-
-        
-    }
-    
     
 }
