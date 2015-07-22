@@ -20,6 +20,7 @@ struct Data {
     var smallLabel: String = " "
     var level: Int = 0
     var magnitude:CGPoint = CGPointZero
+    var spawnThese: [Int] = []
     
 }
 
@@ -47,20 +48,23 @@ struct LevelData {
         var level1 = Data()
         level1.hydrogen = 2
         level1.oxygen = 1
-//        level1.nitrogen = 4
+//      level1.nitrogen = 4
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
         level1.magnitude = ccp(50,30)
+        level1.spawnThese = [1,2,1]
         
         levels.append(level1)
         
         var level2 = Data()
         level2.oxygen = 2
+        level2.hydrogen = 1
         level2.goal = 2
         level2.level = 2
         level2.smallLabel = "Oxygen gas"
-
+        level2.magnitude = ccp(50,30)
+        level2.spawnThese = [1,1,1,1,2]
 
         levels.append(level2)
         
