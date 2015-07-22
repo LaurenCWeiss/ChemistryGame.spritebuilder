@@ -113,17 +113,17 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
-		<key>Art Assets/beaker-159174_1280.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>2</integer>
-		</dict>
 		<key>Art Assets/letterT@4x.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
-		<key>Art Assets/test-tube-303335_640.png</key>
+		<key>Art Assets/starGold@4x.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Art Assets/starSilver@4x.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>

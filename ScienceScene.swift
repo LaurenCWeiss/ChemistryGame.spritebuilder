@@ -50,7 +50,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         self.schedule(Selector("dropMolecule"), interval: 2)
     }
     
-
+    
     func dropMolecule(){
         //should this be in the update function?
         //for spawning random atoms
@@ -66,15 +66,16 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         switch spawnMolecule {
         case 1:
-            fileName = "Molecules/Hydrogen"
+            fileName = "Hydrogen"
         case 2:
-            fileName = "Molecules/Oxygen"
+            fileName = "Oxygen"
         default:
             println("No Molecule :(")
         }
         
-        var moleculeNode = CCBReader.load(fileName)
-       
+        var moleculeNode = CCBReader.load("Molecules/\(fileName)") as! Molecule
+        moleculeNode.type = fileName // Dynamicaly set molecule type
+        
         //after atom obstalce has been randomly chosen, drop the atom at a random position
         moleculeNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
         
@@ -119,59 +120,83 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, molec: Molecule!) -> Bool {
         //this collision is the circle collision at the top of the beaker/flask...this collision adds one to the score in the system so that the program knows to move up a level
         
-        if molec.inBeaker == false {
+        // If in beaker, bounce
+        if molec.inBeaker == true {
+            return true
+        }
+        
+        var collectMolecule = false
+        
+        switch molec.type {
+        case "Oxygen":
+            if currentLevelData?.oxygen > 0 {
+                currentLevelData?.oxygen--
+                collectMolecule = true
+            }
+        case "Hydrogen":
+            if currentLevelData?.hydrogen > 0 {
+                currentLevelData?.hydrogen--
+                collectMolecule = true
+            }
+        default:
+            collectMolecule = false
+            break;
+        }
+        
+        if collectMolecule == true {
             points++
             molec.inBeaker = true
-            //if we were to return true we would say just let physics continue on, but we want to return false so that the physics detection is still made
             return false
+        } else {
+            gameOver()
         }
         
         return true
-    }
+}
+
+func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
+    //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
-        //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
-        
-        gameOver()
-        
-        return true
-        
-    }
+    gameOver()
     
-    func gameOver() {
-        
-        //if the molecule hits the ground, end the game
-        
-        //LOAD RESTART POPUP HERE
-        
-        let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
-        popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
-        popup.position = CGPoint(x: 0.5, y: 0.5)
-        parent.addChild(popup)
-        
-    }
+    return true
     
-    func startLevelTransitionScene() {
-        
-        let scene = CCBReader.loadAsScene("LevelTransitionScene")
-        
-        let transition = CCTransition(fadeWithDuration: 0.8)
-        
-        CCDirector.sharedDirector().presentScene(scene)
-        
-    }
+}
+
+func gameOver() {
     
-    override func update(delta: CCTime) {
+    //if the molecule hits the ground, end the game
+    
+    //LOAD RESTART POPUP HERE
+    
+    let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
+    popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
+    popup.position = CGPoint(x: 0.5, y: 0.5)
+    parent.addChild(popup)
+    
+}
+
+func startLevelTransitionScene() {
+    
+    let scene = CCBReader.loadAsScene("LevelTransitionScene")
+    
+    let transition = CCTransition(fadeWithDuration: 0.8)
+    
+    CCDirector.sharedDirector().presentScene(scene)
+    
+}
+
+override func update(delta: CCTime) {
+    
+    //if the number of points equals the number of molecules released, then move on to the next level
+    
+    if points == levelData.levels[LevelData.curLevel].goal {
         
-        //if the number of points equals the number of molecules released, then move on to the next level
-        
-        if points == levelData.levels[LevelData.curLevel].goal {
-            
         cleanup()
         //call scene transition here
         startLevelTransitionScene()
         
-        }
     }
-    
+}
+
 }

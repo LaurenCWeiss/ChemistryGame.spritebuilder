@@ -11,6 +11,7 @@ import Foundation
 class Molecule: CCNode {
    
     var inBeaker: Bool = false
+    var type: String = ""
     
     func didLoadFromCCB() {
     
