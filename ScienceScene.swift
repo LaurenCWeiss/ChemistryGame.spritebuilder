@@ -157,7 +157,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
 func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
     //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
     
-    gameOver()
+//    gameOver()
     
     return true
     
