@@ -25,7 +25,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     weak var startPointNode: CCNode!
     var points: NSInteger = 0
     weak var ground1: Ground!
-
+    var currentLevelData: Data?
     
     
     
@@ -40,7 +40,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func didLoadFromCCB() {
         gamePhysicsNode.collisionDelegate = self
-        gamePhysicsNode.debugDraw = true
         loadLevel()
     }
     override func onEnter() {
@@ -64,7 +63,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         if !moleculeNodes.isEmpty {
             var molecule = moleculeNodes.removeLast()
             gamePhysicsNode.addChild(molecule)
-            molecule.physicsBody.applyImpulse(ccp(0, 20))
         }
     }
     
@@ -128,13 +126,10 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         let scene = CCBReader.loadAsScene("LevelTransitionScene")
         CCDirector.sharedDirector().presentScene(scene)
         
-        //        gamePhysicsNode.addChild(beaker) //had to add "beaker" to ScienceScene under the beaker object in Sprite Builder
         
-        // gamePhysicsNode.addChild(ground1)
     }
     
     override func update(delta: CCTime) {
-        //if the number of points equals the number of molecules, then move on to the next level
         
         
         if points == levelData.levels[LevelData.curLevel].goal {
@@ -149,15 +144,12 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func loadLevel() {
         
-        let newLevelData: Data = levelData.levels[LevelData.curLevel]
         
-        if(newLevelData.oxygen > 0) {
             var levelObject = LevelObject(name: "Oxygen", number: newLevelData.oxygen)
             moleculesArray.append(levelObject)
         }
         
         
-        if(newLevelData.hydrogen > 0) {
             var levelObject = LevelObject(name: "Hydrogen", number: newLevelData.hydrogen)
             moleculesArray.append(levelObject)
         }

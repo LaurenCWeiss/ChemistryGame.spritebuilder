@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>73</integer>
+	<integer>76</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -109,8 +109,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>1.0468392372131348</real>
+							<real>1.0098080635070801</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -137,6 +137,8 @@
 						<real>1</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1500,7 +1502,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>5</string>
+						<string>4</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -2178,7 +2180,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>2</string>
+						<string>6</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -2517,7 +2519,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>2</string>
+						<string>7</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -2856,7 +2858,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>2</string>
+						<string>8</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -3195,7 +3197,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>6</string>
+						<string>5</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -3514,8 +3516,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -3536,7 +3536,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>3</string>
+						<string>9</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -3875,7 +3875,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>3</string>
+						<string>10</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -4214,7 +4214,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>3</string>
+						<string>11</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -4553,7 +4553,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>3</string>
+						<string>12</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -4892,7 +4892,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>3</string>
+						<string>13</string>
 					</dict>
 				</array>
 				<key>displayName</key>
@@ -5231,7 +5231,7 @@
 						<key>type</key>
 						<integer>0</integer>
 						<key>value</key>
-						<string>3</string>
+						<string>14</string>
 					</dict>
 				</array>
 				<key>displayName</key>

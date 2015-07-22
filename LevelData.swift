@@ -19,6 +19,7 @@ struct Data {
     var goal: Int = 0
     var smallLabel: String = " "
     var level: Int = 0
+    var magnitude:CGPoint = CGPointZero
     
 }
 
@@ -46,9 +47,11 @@ struct LevelData {
         var level1 = Data()
         level1.hydrogen = 2
         level1.oxygen = 1
+//        level1.nitrogen = 4
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
+        level1.magnitude = ccp(50,30)
         
         levels.append(level1)
         
@@ -58,14 +61,16 @@ struct LevelData {
         level2.level = 2
         level2.smallLabel = "Oxygen gas"
 
+
         levels.append(level2)
         
         var level3 = Data()
         level3.hydrogen = 2
         level3.oxygen = 5
         level3.goal = 7
-        level2.level = 3
+        level3.level = 3
         level3.smallLabel = "Water"
+
 
         levels.append(level3)
         
@@ -73,10 +78,68 @@ struct LevelData {
         level4.hydrogen = 1
         level4.oxygen = 4
         level4.goal = 5
-        level2.level = 4
+        level4.level = 4
         level4.smallLabel = "Water"
 
+
         levels.append(level4)
+        
+        var level5 = Data()
+        level5.hydrogen = 1
+        level5.oxygen = 4
+        level5.goal = 5
+        level5.level = 4
+        level5.smallLabel = "Water"
+
+        
+        levels.append(level5)
+        
+        var level6 = Data()
+        level6.hydrogen = 1
+        level6.oxygen = 4
+        level6.goal = 5
+        level6.level = 4
+        level6.smallLabel = "Water"
+
+        
+        levels.append(level6)
+        
+        var level7 = Data()
+        level7.hydrogen = 1
+        level7.oxygen = 4
+        level7.goal = 5
+        level7.level = 4
+        level7.smallLabel = "Water"
+
+        
+        levels.append(level7)
+        
+        var level8 = Data()
+        level8.hydrogen = 1
+        level8.oxygen = 4
+        level8.goal = 5
+        level8.level = 4
+        level8.smallLabel = "Water"
+  
+        
+        levels.append(level8)
+        
+
+        
+        var level15 = Data()
+        level15.hydrogen = 1
+        level15.oxygen = 4
+        level15.goal = 5
+        level15.level = 4
+        level15.smallLabel = "Water"
+        
+        
+        levels.append(level15)
+       
+    
+        
+        
+        
     }
 
 }

@@ -13,7 +13,7 @@ import Foundation
 class PauseScene: CCNode, CCPhysicsCollisionDelegate {
     
     weak var contentNode: CCNode!
- 
+    
     func startMainMenu() {
         let PauseScene = CCBReader.loadAsScene("MainScene")
         CCDirector.sharedDirector().presentScene(PauseScene)
@@ -27,14 +27,9 @@ class PauseScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     func startContinue() {
-    let PauseScene = CCBReader.loadAsScene("ScienceScene")
-    CCDirector.sharedDirector().presentScene(PauseScene)
-        
-        
+        CCDirector.sharedDirector().popScene()
     }
     
-    
-
-    
-    
 }
+
+

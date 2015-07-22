@@ -71,7 +71,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-73.789276123046875</real>
+							<real>-72</real>
 							<real>-60.999984741210938</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -125,7 +125,7 @@
 							<real>0.32796007394790649</real>
 							<real>0.80593615770339966</real>
 							<real>1</real>
-							<real>0.0</real>
+							<real>0.10000000149011612</real>
 						</array>
 					</dict>
 					<dict>
@@ -134,7 +134,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>0.10000000149011612</real>
 					</dict>
 				</array>
 				<key>selected</key>
