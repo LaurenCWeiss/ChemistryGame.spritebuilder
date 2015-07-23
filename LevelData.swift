@@ -14,8 +14,7 @@ struct Data {
     var nextLevelName: String!
     var oxygen: Int = 0
     var hydrogen: Int = 0
-    var nitrogen: Int = 0
-    var potassium: Int = 0
+    var carbon: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
     var level: Int = 0
@@ -48,12 +47,12 @@ struct LevelData {
         var level1 = Data()
         level1.hydrogen = 2
         level1.oxygen = 1
-//      level1.nitrogen = 4
+        level1.carbon = 0
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
         level1.magnitude = ccp(0,30)
-        level1.spawnThese = [1,2,1]
+        level1.spawnThese = [1,2,3]
         
         levels.append(level1)
         

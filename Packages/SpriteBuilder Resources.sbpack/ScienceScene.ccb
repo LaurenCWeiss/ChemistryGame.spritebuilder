@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>60</integer>
+	<integer>61</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -836,8 +836,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>-6.3291726112365723</real>
-											<real>167.03501892089844</real>
+											<real>32.559471130371094</real>
+											<real>163.91120910644531</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>

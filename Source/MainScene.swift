@@ -20,7 +20,7 @@ class MainScene: CCNode {
         var n: AnyObject = scene.children[0]
         var image = screenShotWithStartNode(n as! CCNode)
         
-        let sharedText = "Share text"
+        let sharedText = "Come play this awesome game! STEM 4 KIDS!"
         let itemsToShare = [image, sharedText]
         
         var excludedActivities = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard,

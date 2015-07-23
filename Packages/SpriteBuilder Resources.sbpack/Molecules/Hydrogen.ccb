@@ -78,8 +78,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>32.291912078857422</real>
-									<real>27.582799911499023</real>
+									<real>65.857330322265625</real>
+									<real>61.567108154296875</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -103,8 +103,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>3.3220610618591309</real>
-									<real>3.6777067184448242</real>
+									<real>5.8498897552490234</real>
+									<real>4.8830480575561523</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -305,8 +305,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.43354508280754089</real>
-							<real>0.43354508280754089</real>
+							<real>0.19960324466228485</real>
+							<real>0.21167568862438202</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -380,7 +380,7 @@
 			<key>collisionType</key>
 			<string>molec</string>
 			<key>cornerRadius</key>
-			<real>14.125</real>
+			<real>13.77734375</real>
 			<key>density</key>
 			<real>0.5</real>
 			<key>dynamic</key>

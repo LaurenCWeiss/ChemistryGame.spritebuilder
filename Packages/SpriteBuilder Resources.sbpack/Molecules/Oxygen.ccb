@@ -96,8 +96,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.67311292886734009</real>
-							<real>0.65645730495452881</real>
+							<real>0.29444748163223267</real>
+							<real>0.28303167223930359</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -171,7 +171,7 @@
 			<key>collisionType</key>
 			<string>molec</string>
 			<key>cornerRadius</key>
-			<real>15.08203125</real>
+			<real>17.734777450561523</real>
 			<key>density</key>
 			<real>0.10000000149011612</real>
 			<key>dynamic</key>

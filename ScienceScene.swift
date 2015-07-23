@@ -69,6 +69,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             fileName = "Hydrogen"
         case 2:
             fileName = "Oxygen"
+        case 3:
+            fileName = "Carbon"
         default:
             println("No Molecule :(")
         }
@@ -136,6 +138,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         case "Hydrogen":
             if currentLevelData?.hydrogen > 0 {
                 currentLevelData?.hydrogen--
+                collectMolecule = true
+            }
+        case "Carbon":
+            if currentLevelData?.carbon > 0 {
+                currentLevelData?.carbon--
                 collectMolecule = true
             }
         default:

@@ -21,7 +21,7 @@ class PauseScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     func startLevelSelect() {
-        let PauseScene = CCBReader.loadAsScene("LevelSelect")
+        let PauseScene = CCBReader.loadAsScene("LevelSelect") 
         CCDirector.sharedDirector().presentScene(PauseScene)
         
     }
