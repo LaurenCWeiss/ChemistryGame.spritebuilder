@@ -71,8 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-72</real>
-							<real>-60.999984741210938</real>
+							<real>-164.85733032226562</real>
+							<real>-120.25599670410156</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -109,8 +109,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.6157855987548828</real>
-							<real>1.7847309112548828</real>
+							<real>3.6154506206512451</real>
+							<real>2.9955527782440186</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -122,10 +122,10 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.32796007394790649</real>
-							<real>0.80593615770339966</real>
 							<real>1</real>
-							<real>0.10000000149011612</real>
+							<real>1</real>
+							<real>1</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -134,7 +134,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.10000000149011612</real>
+						<real>0.5</real>
 					</dict>
 				</array>
 				<key>selected</key>

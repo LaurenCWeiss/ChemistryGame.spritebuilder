@@ -69,7 +69,7 @@
 					<key>collisionType</key>
 					<string>goal</string>
 					<key>cornerRadius</key>
-					<real>29.009729385375977</real>
+					<real>41.736289978027344</real>
 					<key>density</key>
 					<real>1</real>
 					<key>dynamic</key>
@@ -81,8 +81,8 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>51.20703125</real>
-							<real>226.51718139648438</real>
+							<real>51.55859375</real>
+							<real>162.42733764648438</real>
 						</array>
 					</array>
 					<key>polygons</key>

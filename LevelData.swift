@@ -52,7 +52,7 @@ struct LevelData {
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
-        level1.magnitude = ccp(50,30)
+        level1.magnitude = ccp(0,30)
         level1.spawnThese = [1,2,1]
         
         levels.append(level1)
@@ -60,7 +60,7 @@ struct LevelData {
         var level2 = Data()
         level2.oxygen = 2
         level2.hydrogen = 1
-        level2.goal = 2
+        level2.goal = 3
         level2.level = 2
         level2.smallLabel = "Oxygen gas"
         level2.magnitude = ccp(50,30)

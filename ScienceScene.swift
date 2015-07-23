@@ -165,7 +165,10 @@ func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, grou
 
 func gameOver() {
     
-    //if the molecule hits the ground, end the game
+    //Stop gameplay
+    //Disable goal node
+    //set points really high so that person would have to get so many points in order to make the goal node register the level as being passed
+    points = 100000000
     
     //LOAD RESTART POPUP HERE
     
