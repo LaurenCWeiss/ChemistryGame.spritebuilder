@@ -159,54 +159,77 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         }
         
         return true
-}
-
-func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
-    //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
+    }
     
-//    gameOver()
-    
-    return true
-    
-}
-
-func gameOver() {
-    
-    //Stop gameplay
-    //Disable goal node
-    //set points really high so that person would have to get so many points in order to make the goal node register the level as being passed
-    points = 100000000
-    
-    //LOAD RESTART POPUP HERE
-    
-    let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
-    popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
-    popup.position = CGPoint(x: 0.5, y: 0.5)
-    parent.addChild(popup)
-    
-}
-
-func startLevelTransitionScene() {
-    
-    let scene = CCBReader.loadAsScene("LevelTransitionScene")
-    
-    let transition = CCTransition(fadeWithDuration: 0.8)
-    
-    CCDirector.sharedDirector().presentScene(scene)
-    
-}
-
-override func update(delta: CCTime) {
-    
-    //if the number of points equals the number of molecules released, then move on to the next level
-    
-    if points == levelData.levels[LevelData.curLevel].goal {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
+        //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
         
-        cleanup()
-        //call scene transition here
-        startLevelTransitionScene()
+        //    gameOver()
+        
+        return true
         
     }
-}
-
+    
+    func gameOver() {
+        
+        //Stop gameplay
+        //Disable goal node
+        //set points really high so that person would have to get so many points in order to make the goal node register the level as being passed
+        points = 100000000
+        
+        //LOAD RESTART POPUP HERE
+        
+        let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
+        popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
+        popup.position = CGPoint(x: 0.5, y: 0.5)
+        parent.addChild(popup)
+        
+    }
+    
+    func startLevelTransitionScene() {
+        
+        let scene = CCBReader.loadAsScene("LevelTransitionScene")
+        
+        let transition = CCTransition(fadeWithDuration: 0.8)
+        
+        CCDirector.sharedDirector().presentScene(scene)
+        
+    }
+    
+    override func update(delta: CCTime) {
+        
+        //if the number of points equals the number of molecules released, then move on to the next level
+        
+        if points == levelData.levels[LevelData.curLevel].goal {
+            
+            cleanup()
+            //call scene transition here
+            startLevelTransitionScene()
+            
+        }
+    }
+    
+//    func setGroundLayout() {
+//        let currentLevelData = levelData.levels[LevelData.curLevel]
+//        var numImages = currentLevelData.MoleculeImage1 + currentLevelData.MoleculeImage2 + currentLevelData.MoleculeImage3 + currentLevelData.MoleculeImage4
+//        if numImages == 2 {
+//            screen.width / 4
+//             MoleculeImage1.position = ccp(CGFloat(80.0,73.0)) //MoleculeImage1.position = ccp(CGFloat(screen.width/4, 73.0))
+//             MoleculeImage2.position = ccp(CGFloat(240.0,73.0)) //MoleculeImage2.position = ccp(CGFloat(screen.width/4 + screen.width/2, 73.0))
+//        }
+//        if numImages == 3 {
+//            MoleculeImage1.position = ccp(CGFloat(80.0,73.0))
+//            MoleculeImage2.position = ccp(CGFloat(240.0,73.0))
+//            MoleculeImage3.position = ccp(CGFloat(160.0,73.0))
+//        }
+//        if numImages == 4 {
+//            MoleculeImage1.position = ccp(CGFloat(40.0,73.0))
+//            MoleculeImage2.position = ccp(CGFloat(124.4,73.0))
+//            MoleculeImage3.position = ccp(CGFloat(205.4,73.0))
+//            MoleculeImage4.position = ccp(CGFloat(280.5,73.0))
+//
+//        }
+//        
+//        
+//    }
 }

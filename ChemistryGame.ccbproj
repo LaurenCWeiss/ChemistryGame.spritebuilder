@@ -78,6 +78,16 @@
 			<key>previewFolderHidden</key>
 			<true/>
 		</dict>
+		<key>Art Assets/Billiard_Balls_01_Green_256x256@4x.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Art Assets/Billiard_Balls_01_Pink_256x256@4x.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
 		<key>Art Assets/Scientist1.png</key>
 		<dict>
 			<key>scaleFrom</key>

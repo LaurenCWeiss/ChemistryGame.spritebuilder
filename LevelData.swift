@@ -8,6 +8,48 @@
 
 import Foundation
 
+
+
+
+//struct Atom {
+//    var name: String
+//    var goal: Int
+//    var imageName: String
+//    
+//    init(name: String, goal: Int, imageName: String) {
+//        self.name = name
+//        self.goal = goal
+//        self.imageName = imageName
+//    }
+//}
+//
+//struct Level {
+//    var levelNumber: Int
+//    var catchAtoms: [Atom] = [Atom]()
+//    var avoidAtoms: [Atom] = [Atom]()
+//    
+//    var smallLabel: String
+//    
+//    init(levelNumber: Int, smallLabel: String) {
+//        self.levelNumber = levelNumber
+//        self.smallLabel = smallLabel
+//    }
+//}
+//
+//struct LevelData {
+//    var levels: [Level] = [Level]()
+//    
+//    var level1 = Level(levelNumber: 0, smallLabel: "")
+//    
+//    let l1hydrogen = Atom(name: "hydrogen", goal: 3, imageName: "atoms/hydrogen.png")
+//    let l1oxygen = Atom(name: "oxygen", goal: 2, imageName: "atoms/oxygen.png")
+//    
+//    levels["level1"].hydrogen = 1
+//    let hydrogens = levels[1].hydrogen.imageName
+//
+//    level1.catchAtoms
+//}
+
 //Data not inheriting from anything, and it makes logical sense that data objects are unique, so we
 //make defined a struct, as opposed to a class
 struct Data {
@@ -20,8 +62,23 @@ struct Data {
     var level: Int = 0
     var magnitude:CGPoint = CGPointZero
     var spawnThese: [Int] = []
+//    weak var MoleculeImage1: CCSprite!
+//    weak var MoleculeImage2: CCSprite!
+//    weak var MoleculeImage3: CCSprite!
+//    weak var MoleculeImage4: CCSprite!
     
 }
+
+//struct MoleculeImage1 {
+//    //set parameters here for MoleculeImage1
+//    //parameters include the CCSprite image and an integer to count whether or not the molecule image 1 actually exists
+//}
+//struct MoleculeImage2 {
+//    
+//}
+
+
+
 
 //TODO: make singleton
 struct LevelData {
@@ -51,8 +108,19 @@ struct LevelData {
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
+        //level1.MoleculeImage1 = Oxygen
+        //level1.MoleculeImage2 = Hydrogen
+        //level1.MoleculeImage3 = Carbon
+        //level1.MoleculeImage4 = //no molecule image 4 so this would not exist
+        
+        
+        //level1.MoleculeImage1 = 1
+        //level1.MoleculeImage2 = 1
+        //level1.MoleculeImage3 = 1
+        //level1.MoleculeImage4 = 0
+      
         level1.magnitude = ccp(0,30)
-        level1.spawnThese = [1,2,3]
+        level1.spawnThese = [3,1,2,3]
         
         levels.append(level1)
         
