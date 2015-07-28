@@ -96,8 +96,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.25131240487098694</real>
-							<real>0.22204776108264923</real>
+							<real>0.26673999428749084</real>
+							<real>0.24311798810958862</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -149,7 +149,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Molecule</string>
+		<string>Atom</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -169,9 +169,9 @@
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>molec</string>
+			<string>atomCollision</string>
 			<key>cornerRadius</key>
-			<real>24.187250137329102</real>
+			<real>18.281000137329102</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>

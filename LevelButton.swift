@@ -9,7 +9,7 @@
 import Foundation
 
 class LevelButton: CCButton {
-    
+    //shows different level buttons in the level select scene
     var level: Int = 0
     
     func didLoadFromCCB() {

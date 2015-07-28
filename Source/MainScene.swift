@@ -6,16 +6,30 @@ class MainScene: CCNode {
     
     
     func didLoadFromCCB() {
-        
+     
     }
     
     func startScience() {
-        
+        //loads the gameplay scene
         let firstLevel = CCBReader.loadAsScene("ScienceScene")
         let transition = CCTransition(fadeWithDuration: 0.8)
         CCDirector.sharedDirector().presentScene(firstLevel, withTransition: transition)
     }
+    func careerButtonTapped() {
+        //loads information about the player's career
+        let MainScene = CCBReader.loadAsScene("CareerScene")
+        CCDirector.sharedDirector().presentScene(MainScene)
+
+    }
+    
+    func helpButtonTapped() {
+        //loads scene that tells the player how to the play the game
+        let MainScene = CCBReader.loadAsScene("HelpScene")
+        CCDirector.sharedDirector().presentScene(MainScene)
+    }
+    
     func shareButtonTapped() {
+        //allows the user to send a screenshot of the main scene
         var scene = CCDirector.sharedDirector().runningScene
         var n: AnyObject = scene.children[0]
         var image = screenShotWithStartNode(n as! CCNode)
@@ -42,9 +56,5 @@ class MainScene: CCNode {
         rtx.end()
         return rtx.getUIImage()
     }
-
   
-
-    
-    
 }

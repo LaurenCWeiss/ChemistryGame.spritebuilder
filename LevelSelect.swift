@@ -20,10 +20,11 @@ class LevelSelect: CCNode {
     }
     
     func startLevel(button:LevelButton) {
+        //println checks that correct level loads when its button is pressed in level select
         println("StartLevel: \(button.level)")
         
         LevelData.curLevel = button.level
-        
+        //loads gameplay scene for the level that is pressed
         let LevelSelect = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().presentScene(LevelSelect)
 

@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Molecule: CCNode {
-   
+class Atom: CCNode {
+    //atom defaults its boolean inBeaker to false so that it won't pass through goal node unless otherwise specified to do so
     var inBeaker: Bool = false
     var type: String = ""
     

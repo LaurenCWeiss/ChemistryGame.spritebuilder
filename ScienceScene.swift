@@ -8,7 +8,7 @@
 
 import Foundation
 
-//container to store the name of a moelcule and corresponding number of molecules
+//container to store the name of a moelcule and corresponding number of atoms
 struct LevelObject {
     var name: String
     var number: Int
@@ -19,39 +19,48 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     weak var contentNode: CCNode!
     weak var beaker: Beaker!
-    weak var molecule: Molecule!
+    weak var atom: Atom!
     weak var gamePhysicsNode: CCPhysicsNode!
-    weak var loadMoleculesPhysicsNode: CCPhysicsNode!
+    weak var loadAtomsPhysicsNode: CCPhysicsNode!
     weak var startPointNode: CCNode!
     var points: NSInteger = 0
     weak var ground1: Ground!
-    var moleculeNode: CCNode!
+    var atomNode: CCNode!
     var currentLevelData: Data?
     
     
     
-    //stores the information (number of molecules for each level) for all levels
+    //stores the information (number of atoms for each level) for all levels
     //this is the global storage for all levels
     var levelData: LevelData = LevelData()
     
     //this is the local storage for specific parameters of current level
-    var moleculeNodes: [CCNode] = [CCNode]()
+    var atomNodes: [CCNode] = [CCNode]()
     
-    var moleculesArray = [LevelObject]()
+    var atomsArray = [LevelObject]()
     
     func didLoadFromCCB() {
         gamePhysicsNode.collisionDelegate = self
         //  gamePhysicsNode.debugDraw = true
         currentLevelData = levelData.levels[LevelData.curLevel]
+        
+        var sprite = CCSprite(imageNamed:"Art Assets/Scientist5.png")
+        sprite.position = ccp(100,100)
+        self.addChild(sprite)
+        
+        var label = CCLabelTTF(string: "TEST", fontName: "Arial", fontSize: 20.0)
+        label.position = ccp(100,150)
+        self.addChild(label)
+        label.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
     }
     override func onEnter() {
         super.onEnter()
         
-        self.schedule(Selector("dropMolecule"), interval: 2)
+        self.schedule(Selector("dropAtom"), interval: 2)
     }
     
     
-    func dropMolecule(){
+    func dropAtom(){
         //should this be in the update function?
         //for spawning random atoms
         //how to know the difference of spawning atoms to avoid and atoms that must be spawned?
@@ -62,9 +71,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //need mechanism that will ensure that the atoms from level data are spawned, that enough of them are actually spawned
         var fileName:String = ""
         
-        var spawnMolecule:Int = currentLevelData!.spawnThese.randomItem()
+        var spawnAtom:Int = currentLevelData!.spawnThese.randomItem()
         
-        switch spawnMolecule {
+        switch spawnAtom {
         case 1:
             fileName = "Hydrogen"
         case 2:
@@ -72,32 +81,32 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         case 3:
             fileName = "Carbon"
         default:
-            println("No Molecule :(")
+            println("No Atom :(")
         }
         
-        var moleculeNode = CCBReader.load("Molecules/\(fileName)") as! Molecule
-        moleculeNode.type = fileName // Dynamicaly set molecule type
+        var atomNode = CCBReader.load("Atoms/\(fileName)") as! Atom
+        atomNode.type = fileName // Dynamicaly set atom type
         
         //after atom obstalce has been randomly chosen, drop the atom at a random position
-        moleculeNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
+        atomNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
         
-        moleculeNodes.append(moleculeNode)
+        atomNodes.append(atomNode)
         
         
-        if !moleculeNodes.isEmpty {
-            var molecule = moleculeNodes.removeLast()
-            gamePhysicsNode.addChild(molecule)
+        if !atomNodes.isEmpty {
+            var atom = atomNodes.removeLast()
+            gamePhysicsNode.addChild(atom)
             
             let magnitude = levelData.levels[LevelData.curLevel].magnitude
             let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
             
-            molecule.physicsBody.applyImpulse(randomImpulse)
+            atom.physicsBody.applyImpulse(randomImpulse)
         }
     }
     
     func cleanup() {
-        moleculeNodes.removeAll(keepCapacity: false)
-        moleculesArray.removeAll(keepCapacity: false)
+        atomNodes.removeAll(keepCapacity: false)
+        atomsArray.removeAll(keepCapacity: false)
     }
     
     override func onEnterTransitionDidFinish() {
@@ -119,40 +128,40 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     
     //MARK:- Physics
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, molec: Molecule!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, atomCollision: Atom!) -> Bool {
         //this collision is the circle collision at the top of the beaker/flask...this collision adds one to the score in the system so that the program knows to move up a level
         
         // If in beaker, bounce
-        if molec.inBeaker == true {
+        if atomCollision.inBeaker == true {
             return true
         }
         
-        var collectMolecule = false
+        var collectAtom = false
         
-        switch molec.type {
+        switch atomCollision.type {
         case "Oxygen":
             if currentLevelData?.oxygen > 0 {
                 currentLevelData?.oxygen--
-                collectMolecule = true
+                collectAtom = true
             }
         case "Hydrogen":
             if currentLevelData?.hydrogen > 0 {
                 currentLevelData?.hydrogen--
-                collectMolecule = true
+                collectAtom = true
             }
         case "Carbon":
             if currentLevelData?.carbon > 0 {
                 currentLevelData?.carbon--
-                collectMolecule = true
+                collectAtom = true
             }
         default:
-            collectMolecule = false
+            collectAtom = false
             break;
         }
         
-        if collectMolecule == true {
+        if collectAtom == true {
             points++
-            molec.inBeaker = true
+            atomCollision.inBeaker = true
             return false
         } else {
             gameOver()
@@ -161,14 +170,14 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         return true
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, molec: CCNode!, ground: CCNode!) -> Bool {
-        //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a molecule)
-        
-        //    gameOver()
-        
-        return true
-        
-    }
+//    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: CCNode!, ground: CCNode!) -> Bool {
+//        //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a atom)
+//        
+//        //    gameOver()
+//        
+//        return true
+//        
+//    }
     
     func gameOver() {
         
@@ -198,7 +207,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     override func update(delta: CCTime) {
         
-        //if the number of points equals the number of molecules released, then move on to the next level
+        //if the number of points equals the number of atoms released, then move on to the next level
         
         if points == levelData.levels[LevelData.curLevel].goal {
             

@@ -101,6 +101,7 @@ struct LevelData {
     var levels:[Data] = [Data]()
     
     init() {
+        
         var level1 = Data()
         level1.hydrogen = 2
         level1.oxygen = 1
@@ -206,11 +207,7 @@ struct LevelData {
         
         
         levels.append(level15)
-       
-    
-        
-        
-        
+
     }
 
 }

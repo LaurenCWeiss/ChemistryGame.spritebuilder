@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string>Goal</string>
 				<key>displayName</key>
-				<string>MolBeakerCollisionDetection</string>
+				<string>AtomBeakerCollisionDetection</string>
 				<key>memberVarAssignmentName</key>
 				<string>top</string>
 				<key>memberVarAssignmentType</key>
@@ -179,8 +179,6 @@
 						<real>1</real>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -289,6 +287,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
