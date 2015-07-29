@@ -28,6 +28,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     weak var ground1: Ground!
     var atomNode: CCNode!
     var currentLevelData: Data?
+    var collectAtom = false
     
     
     
@@ -132,7 +133,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             return true
         }
         
-        var collectAtom = false
+//        var collectAtom = false
         
         switch atomCollision.type {
         case "Oxygen":
@@ -232,6 +233,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         
         if numImages == 1{
+            
             var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
             sprite1.position = ccp(screenWidth/2,73.0)
             self.addChild(sprite1)
@@ -240,7 +242,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             label1.position = ccp(screenWidth/4,25)
             self.addChild(label1)
             label1.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-         
 
         }
         
@@ -341,22 +342,49 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     
     func startRemovingText() {
-//        let currentLevelData = levelData.levels[LevelData.curLevel]
-//        if(currentLevelData.label1){
-//            currentLevelData.label1Title --
+        let currentLevelData = levelData.levels[LevelData.curLevel]
+//        if(collectAtom == true){
+//            currentLevelData.label1Title--
+//          
 //        }
 //        if(currentLevelData.label2){
-//            currentLevelData.label2Title --
+//            currentLevelData.label2Title--
 //        }
 //        if(currentLevelData.label3){
-//            currentLevelData.label3Title --
+//            currentLevelData.label3Title--
 //        }
 //        if(currentLevelData.label4){
-//            currentLevelData.label4Title --
+//            currentLevelData.label4Title--
 //        }
-////        if currentLevelData.label1Title ==
-//        
-//    }
+        if currentLevelData.label1Title == "0" {
+            //convert label to checkmark
+            //or load checkmark over label
+            
+            var spriteA = CCSprite(imageNamed:"Art Assets/CheckMark.png")
+            spriteA.position = ccp(100,100)
+            self.addChild(spriteA)
+            
+        }
+//        if currentLevelData.label2Title == "0" {
+//            
+//            var spriteB = CCSprite(imageNamed:"Art Assets/Scientist5.png")
+//            spriteB.position = ccp(100,100)
+//            self.addChild(spriteB)
+//        }
+//        if currentLevelData.label3Title == "0" {
+//            
+//            var spriteC = CCSprite(imageNamed:"Art Assets/Scientist5.png")
+//            spriteC.position = ccp(100,100)
+//            self.addChild(spriteC)
+//        }
+//        if currentLevelData.label4Title == "0" {
+//            
+//            var spriteD = CCSprite(imageNamed:"Art Assets/Scientist5.png")
+//            spriteD.position = ccp(100,100)
+//            self.addChild(spriteD)
+//        }
+
+    }
 }
 
 //        var sprite = CCSprite(imageNamed:"Art Assets/Scientist5.png")
@@ -368,7 +396,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
 //        self.addChild(label)
 //        label.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
     
-    
+//    
 //    func setGroundLayout() {
 //        let currentLevelData = levelData.levels[LevelData.curLevel]
 //        var numImages = currentLevelData.MoleculeImage1 + currentLevelData.MoleculeImage2 + currentLevelData.MoleculeImage3 + currentLevelData.MoleculeImage4
@@ -392,4 +420,3 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
 //        
 //        
 //    }
-}
