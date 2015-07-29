@@ -80,6 +80,8 @@ struct Data {
     var labelColor2: CGFloat = 0.0
     var labelColor3: CGFloat = 0.0
     var labelColor4: CGFloat = 0.0
+    var randomMin: Int = 0
+    var randomMax: Int = 0
 }
 
 //struct MoleculeImage1 {
@@ -116,7 +118,7 @@ struct LevelData {
     init() {
         
         var level1 = Data()
-        level1.hydrogen = 2
+        level1.hydrogen = 3
         level1.oxygen = 1
         level1.carbon = 0
         level1.goal = 3
@@ -130,6 +132,8 @@ struct LevelData {
         level1.label2Title = "1"
         level1.magnitude = ccp(0,30)
         level1.spawnThese = [3,1,2,3]
+        level1.randomMin = 1
+        level1.randomMax = 3
         
         levels.append(level1)
         

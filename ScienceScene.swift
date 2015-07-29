@@ -41,19 +41,24 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //gamePhysicsNode.debugDraw = true
         //gamePhysicsNode.space.dampining = 0.80
         currentLevelData = levelData.levels[LevelData.curLevel]
+
         
+//        if spawn.count == 0 {
+//            gameOver()
+//        }
+
         if(currentLevelData?.hydrogen>0) {
             for i in 1...currentLevelData!.hydrogen {
                 spawn.append(1)
             }
         }
         
-        // Random Stuff
-//        for i in 1...3 {
-//            spawn.append(Int.random(min: 1, max: 3))
-//        }
-//        
-//        spawn.randomItem()
+//      Random Stuff
+        for i in 1...3 {
+            spawn.append(Int.random(min: currentLevelData!.randomMin, max: currentLevelData!.randomMax))
+        }
+        
+        spawn.randomItem()
     }
     
     override func onEnter() {
@@ -75,10 +80,20 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //need mechanism that will ensure that the atoms from level data are spawned, that enough of them are actually spawned
         var fileName:String = ""
         
-        println(spawn.count)
+       println(spawn.count)
+       
+        if spawn.count == 0 {
+            gameOver()
+            return
+        }
         var spawnIndex:Int = spawn.randomItem()
         var spawnAtom = spawn[spawnIndex]
         spawn.removeAtIndex(spawnIndex)
+     
+        //check if array is empty using spawn.count == 0 or spawn.isEmpty
+       
+        
+        
         
         switch spawnAtom {
         case 1:
@@ -89,6 +104,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             fileName = "Carbon"
         default:
             println("No Atom :(")
+            //return so that if integer is equal to zero(which is what it is set at in level data) atoms will just stop falling
+            return
+            
         }
         
         var atomNode = CCBReader.load("Atoms/\(fileName)") as! Atom
@@ -191,6 +209,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func gameOver() {
         
+        self.unscheduleAllSelectors()
+        self.gamePhysicsNode.paused = true
+        
         //Stop gameplay
         //Disable goal node
         //set points really high so that person would have to get so many points in order to make the goal node register the level as being passed
@@ -202,6 +223,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
         popup.position = CGPoint(x: 0.5, y: 0.5)
         parent.addChild(popup)
+        
+    
         
         
     }
