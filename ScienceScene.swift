@@ -28,6 +28,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     weak var ground1: Ground!
     var atomNode: CCNode!
     var currentLevelData: Data?
+     var spawn:[Int] = []
     
     
     
@@ -35,19 +36,26 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     //this is the global storage for all levels
     var levelData: LevelData = LevelData()
     
-    //this is the local storage for specific parameters of current level
-    var atomNodes: [CCNode] = [CCNode]()
-    
-    var atomsArray = [LevelObject]()
-    
     func didLoadFromCCB() {
         gamePhysicsNode.collisionDelegate = self
-//        gamePhysicsNode.debugDraw = true
+        //gamePhysicsNode.debugDraw = true
         //gamePhysicsNode.space.dampining = 0.80
         currentLevelData = levelData.levels[LevelData.curLevel]
-      
-
+        
+        if(currentLevelData?.hydrogen>0) {
+            for i in 1...currentLevelData!.hydrogen {
+                spawn.append(1)
+            }
+        }
+        
+        // Random Stuff
+//        for i in 1...3 {
+//            spawn.append(Int.random(min: 1, max: 3))
+//        }
+//        
+//        spawn.randomItem()
     }
+    
     override func onEnter() {
         super.onEnter()
         
@@ -67,7 +75,10 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //need mechanism that will ensure that the atoms from level data are spawned, that enough of them are actually spawned
         var fileName:String = ""
         
-        var spawnAtom:Int = currentLevelData!.spawnThese.randomItem()
+        println(spawn.count)
+        var spawnIndex:Int = spawn.randomItem()
+        var spawnAtom = spawn[spawnIndex]
+        spawn.removeAtIndex(spawnIndex)
         
         switch spawnAtom {
         case 1:
@@ -86,23 +97,17 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //after atom obstalce has been randomly chosen, drop the atom at a random position
         atomNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
         
-        atomNodes.append(atomNode)
+        gamePhysicsNode.addChild(atomNode)
         
+        let magnitude = levelData.levels[LevelData.curLevel].magnitude
+        let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
         
-        if !atomNodes.isEmpty {
-            var atom = atomNodes.removeLast()
-            gamePhysicsNode.addChild(atom)
-            
-            let magnitude = levelData.levels[LevelData.curLevel].magnitude
-            let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
-            
-            atom.physicsBody.applyImpulse(randomImpulse)
-        }
+        atomNode.physicsBody.applyImpulse(randomImpulse)
+    
     }
     
     func cleanup() {
-        atomNodes.removeAll(keepCapacity: false)
-        atomsArray.removeAll(keepCapacity: false)
+       
     }
     
     override func onEnterTransitionDidFinish() {
@@ -130,6 +135,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         // If in beaker, bounce
         if atomCollision.inBeaker == true {
             return true
+            
         }
         
         var collectAtom = false
@@ -169,19 +175,19 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beaker: Beaker!, border: CCNode!) -> Bool {
-    
-    return false
+        
+        return false
     }
     
     
-//    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: CCNode!, ground: CCNode!) -> Bool {
-//        //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a atom)
-//        
-//        //    gameOver()
-//        
-//        return true
-//        
-//    }
+    //    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: CCNode!, ground: CCNode!) -> Bool {
+    //        //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a atom)
+    //
+    //        //    gameOver()
+    //
+    //        return true
+    //
+    //    }
     
     func gameOver() {
         
@@ -196,7 +202,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
         popup.position = CGPoint(x: 0.5, y: 0.5)
         parent.addChild(popup)
-      
+        
         
     }
     
@@ -240,15 +246,15 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             label1.position = ccp(screenWidth/4,25)
             self.addChild(label1)
             label1.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-         
-
+            
+            
         }
         
         if numImages == 2 {
             var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
             sprite1.position = ccp(screenWidth/4,73.0)
             self.addChild(sprite1)
-           
+            
             var sprite2 = CCSprite(imageNamed:currentLevelData.ElementImage2Name)
             sprite2.position = ccp(screenWidth/4 * 3,73.0)
             self.addChild(sprite2)
@@ -333,7 +339,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             self.addChild(label4)
             label4.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
             
-     
+            
         }
         
         
@@ -341,55 +347,55 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     
     func startRemovingText() {
-//        let currentLevelData = levelData.levels[LevelData.curLevel]
-//        if(currentLevelData.label1){
-//            currentLevelData.label1Title --
-//        }
-//        if(currentLevelData.label2){
-//            currentLevelData.label2Title --
-//        }
-//        if(currentLevelData.label3){
-//            currentLevelData.label3Title --
-//        }
-//        if(currentLevelData.label4){
-//            currentLevelData.label4Title --
-//        }
-////        if currentLevelData.label1Title ==
-//        
-//    }
-}
-
-//        var sprite = CCSprite(imageNamed:"Art Assets/Scientist5.png")
-//        sprite.position = ccp(100,100)
-//        self.addChild(sprite)
-
-//        var label = CCLabelTTF(string: "TEST", fontName: "Arial", fontSize: 20.0)
-//        label.position = ccp(100,150)
-//        self.addChild(label)
-//        label.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        //        let currentLevelData = levelData.levels[LevelData.curLevel]
+        //        if(currentLevelData.label1){
+        //            currentLevelData.label1Title --
+        //        }
+        //        if(currentLevelData.label2){
+        //            currentLevelData.label2Title --
+        //        }
+        //        if(currentLevelData.label3){
+        //            currentLevelData.label3Title --
+        //        }
+        //        if(currentLevelData.label4){
+        //            currentLevelData.label4Title --
+        //        }
+        ////        if currentLevelData.label1Title ==
+        //
+        //    }
+    }
+    
+    //        var sprite = CCSprite(imageNamed:"Art Assets/Scientist5.png")
+    //        sprite.position = ccp(100,100)
+    //        self.addChild(sprite)
+    
+    //        var label = CCLabelTTF(string: "TEST", fontName: "Arial", fontSize: 20.0)
+    //        label.position = ccp(100,150)
+    //        self.addChild(label)
+    //        label.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
     
     
-//    func setGroundLayout() {
-//        let currentLevelData = levelData.levels[LevelData.curLevel]
-//        var numImages = currentLevelData.MoleculeImage1 + currentLevelData.MoleculeImage2 + currentLevelData.MoleculeImage3 + currentLevelData.MoleculeImage4
-//        if numImages == 2 {
-//            screen.width / 4
-//             MoleculeImage1.position = ccp(CGFloat(80.0,73.0)) //MoleculeImage1.position = ccp(CGFloat(screen.width/4, 73.0))
-//             MoleculeImage2.position = ccp(CGFloat(240.0,73.0)) //MoleculeImage2.position = ccp(CGFloat(screen.width/4 + screen.width/2, 73.0))
-//        }
-//        if numImages == 3 {
-//            MoleculeImage1.position = ccp(CGFloat(80.0,73.0))
-//            MoleculeImage2.position = ccp(CGFloat(240.0,73.0))
-//            MoleculeImage3.position = ccp(CGFloat(160.0,73.0))
-//        }
-//        if numImages == 4 {
-//            MoleculeImage1.position = ccp(CGFloat(40.0,73.0))
-//            MoleculeImage2.position = ccp(CGFloat(124.4,73.0))
-//            MoleculeImage3.position = ccp(CGFloat(205.4,73.0))
-//            MoleculeImage4.position = ccp(CGFloat(280.5,73.0))
-//
-//        }
-//        
-//        
-//    }
+    //    func setGroundLayout() {
+    //        let currentLevelData = levelData.levels[LevelData.curLevel]
+    //        var numImages = currentLevelData.MoleculeImage1 + currentLevelData.MoleculeImage2 + currentLevelData.MoleculeImage3 + currentLevelData.MoleculeImage4
+    //        if numImages == 2 {
+    //            screen.width / 4
+    //             MoleculeImage1.position = ccp(CGFloat(80.0,73.0)) //MoleculeImage1.position = ccp(CGFloat(screen.width/4, 73.0))
+    //             MoleculeImage2.position = ccp(CGFloat(240.0,73.0)) //MoleculeImage2.position = ccp(CGFloat(screen.width/4 + screen.width/2, 73.0))
+    //        }
+    //        if numImages == 3 {
+    //            MoleculeImage1.position = ccp(CGFloat(80.0,73.0))
+    //            MoleculeImage2.position = ccp(CGFloat(240.0,73.0))
+    //            MoleculeImage3.position = ccp(CGFloat(160.0,73.0))
+    //        }
+    //        if numImages == 4 {
+    //            MoleculeImage1.position = ccp(CGFloat(40.0,73.0))
+    //            MoleculeImage2.position = ccp(CGFloat(124.4,73.0))
+    //            MoleculeImage3.position = ccp(CGFloat(205.4,73.0))
+    //            MoleculeImage4.position = ccp(CGFloat(280.5,73.0))
+    //
+    //        }
+    //        
+    //        
+    //    }
 }

@@ -12,9 +12,9 @@ import CoreGraphics
 // MARK: - Random Selection/Generators
 
 extension Array {
-    func randomItem() -> T {
+    func randomItem() -> Int {
         let index = Int(arc4random_uniform(UInt32(self.count)))
-        return self[index]
+        return index
     }
 }
 
