@@ -71,11 +71,15 @@ struct Data {
     var ElementImage3Name: String!
     var ElementImage4Name: String!
     var label1Title: String!
+    var label2Title: String!
+    var label3Title: String!
+    var label4Title: String!
     var label1FontName: String!
-    var label1FontSize: CGFloat = 0.0
+    var label1FontSize: CGFloat = 30.0
     var labelColor1: CGFloat = 0.0
     var labelColor2: CGFloat = 0.0
     var labelColor3: CGFloat = 0.0
+    var labelColor4: CGFloat = 0.0
 }
 
 //struct MoleculeImage1 {
@@ -120,8 +124,10 @@ struct LevelData {
         level1.level = 1
         level1.ElementImage1 = 1
         level1.ElementImage2 = 1
-        level1.ElementImage1Name = "Art Assets/Scientist5.png"
-        level1.ElementImage2Name = "Art Assets/Scientist5.png"
+        level1.ElementImage1Name = "Art Assets/Hydrogen.png"
+        level1.ElementImage2Name = "Art Assets/Oxygen.png"
+        level1.label1Title = "2"
+        level1.label2Title = "1"
         level1.magnitude = ccp(0,30)
         level1.spawnThese = [3,1,2,3]
         
@@ -200,15 +206,6 @@ struct LevelData {
         
 
         
-        var level15 = Data()
-        level15.hydrogen = 1
-        level15.oxygen = 4
-        level15.goal = 5
-        level15.level = 4
-        level15.smallLabel = "Water"
-        
-        
-        levels.append(level15)
 
     }
 

@@ -13,7 +13,6 @@ class LevelButton: CCButton {
     var level: Int = 0
     
     func didLoadFromCCB() {
-        print(level)
         self.title = "Level: \(level + 1)"
     }
     

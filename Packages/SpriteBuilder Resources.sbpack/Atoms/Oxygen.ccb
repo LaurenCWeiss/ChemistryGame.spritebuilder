@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Billiard_Balls_01_Blue_256x256@4x.png</string>
+							<string>Art Assets/Oxygen.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -171,7 +171,7 @@
 			<key>collisionType</key>
 			<string>atomCollision</string>
 			<key>cornerRadius</key>
-			<real>15.605175018310547</real>
+			<real>14.812536239624023</real>
 			<key>density</key>
 			<real>0.10000000149011612</real>
 			<key>dynamic</key>

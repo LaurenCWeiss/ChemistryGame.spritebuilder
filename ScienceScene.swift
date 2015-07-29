@@ -20,6 +20,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     weak var contentNode: CCNode!
     weak var beaker: Beaker!
     weak var atom: Atom!
+    weak var border: CCNode!
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var loadAtomsPhysicsNode: CCPhysicsNode!
     weak var startPointNode: CCNode!
@@ -51,7 +52,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         super.onEnter()
         
         self.schedule(Selector("dropAtom"), interval: 2)
-//            setImage()
+        setImage()
     }
     
     
@@ -157,6 +158,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         if collectAtom == true {
             points++
             atomCollision.inBeaker = true
+            startRemovingText()
+            
             return false
         } else {
             gameOver()
@@ -164,6 +167,12 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         return true
     }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beaker: Beaker!, border: CCNode!) -> Bool {
+    
+    return false
+    }
+    
     
 //    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: CCNode!, ground: CCNode!) -> Bool {
 //        //"level" is referring to the ground or table; the game will end if this collision is detected(collision between the ground and a atom)
@@ -213,73 +222,139 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             
         }
     }
-//    
-//    func setImage() {
-//        
+    
+    func setImage() {
+        
+        let currentLevelData = levelData.levels[LevelData.curLevel]
+        var numImages = currentLevelData.ElementImage1 + currentLevelData.ElementImage2 + currentLevelData.ElementImage3 + currentLevelData.ElementImage4
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
+        
+        
+        if numImages == 1{
+            var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
+            sprite1.position = ccp(screenWidth/2,73.0)
+            self.addChild(sprite1)
+            
+            var label1 = CCLabelTTF(string: currentLevelData.label1Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label1.position = ccp(screenWidth/4,25)
+            self.addChild(label1)
+            label1.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+         
+
+        }
+        
+        if numImages == 2 {
+            var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
+            sprite1.position = ccp(screenWidth/4,73.0)
+            self.addChild(sprite1)
+           
+            var sprite2 = CCSprite(imageNamed:currentLevelData.ElementImage2Name)
+            sprite2.position = ccp(screenWidth/4 * 3,73.0)
+            self.addChild(sprite2)
+            
+            var label1 = CCLabelTTF(string: currentLevelData.label1Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label1.position = ccp(screenWidth/4,25)
+            self.addChild(label1)
+            label1.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            
+            var label2 = CCLabelTTF(string: currentLevelData.label2Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label2.position = ccp(screenWidth/4 * 3,25)
+            self.addChild(label2)
+            label2.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            
+        }
+        //this one is messed up
+        if numImages == 3 {
+            var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
+            sprite1.position = ccp(screenWidth/4,73.0)
+            self.addChild(sprite1)
+            
+            var sprite2 = CCSprite(imageNamed:currentLevelData.ElementImage2Name)
+            sprite2.position = ccp(screenWidth/4 * 3,73.0)
+            self.addChild(sprite2)
+            
+            var sprite3 = CCSprite(imageNamed:currentLevelData.ElementImage3Name)
+            sprite3.position = ccp(screenWidth/4,73.0)
+            self.addChild(sprite3)
+            
+            var label1 = CCLabelTTF(string: currentLevelData.label1Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label1.position = ccp(screenWidth/4,25)
+            self.addChild(label1)
+            label1.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            
+            var label2 = CCLabelTTF(string: currentLevelData.label2Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label2.position = ccp(screenWidth/4 * 3,25)
+            self.addChild(label2)
+            label2.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            
+            var label3 = CCLabelTTF(string: currentLevelData.label3Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label3.position = ccp(screenWidth/4 * 3,25)
+            self.addChild(label3)
+            label3.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        }
+        
+        if numImages == 4 {
+            var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
+            sprite1.position = ccp(screenWidth/5,73.0)
+            self.addChild(sprite1)
+            
+            var sprite2 = CCSprite(imageNamed:currentLevelData.ElementImage2Name)
+            sprite2.position = ccp(screenWidth/5 * 2,73.0)
+            self.addChild(sprite2)
+            
+            var sprite3 = CCSprite(imageNamed:currentLevelData.ElementImage3Name)
+            sprite3.position = ccp(screenWidth/5 * 3,73.0)
+            self.addChild(sprite3)
+            
+            var sprite4 = CCSprite(imageNamed:currentLevelData.ElementImage4Name)
+            sprite4.position = ccp(screenWidth/5 * 4,73.0)
+            self.addChild(sprite4)
+            
+            //this part is messed up
+            
+            var label1 = CCLabelTTF(string: currentLevelData.label1Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label1.position = ccp(screenWidth/4,25)
+            self.addChild(label1)
+            label1.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            
+            var label2 = CCLabelTTF(string: currentLevelData.label2Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label2.position = ccp(screenWidth/4 * 3,25)
+            self.addChild(label2)
+            label2.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            
+            var label3 = CCLabelTTF(string: currentLevelData.label3Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label3.position = ccp(screenWidth/4 * 3,25)
+            self.addChild(label3)
+            label3.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            
+            var label4 = CCLabelTTF(string: currentLevelData.label4Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+            label4.position = ccp(screenWidth/4,25)
+            self.addChild(label4)
+            label4.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            
+     
+        }
+        
+        
+    }
+    
+    
+    func startRemovingText() {
 //        let currentLevelData = levelData.levels[LevelData.curLevel]
-//        var numImages = currentLevelData.ElementImage1 + currentLevelData.ElementImage2 + currentLevelData.ElementImage3 + currentLevelData.ElementImage4
-//        let screenSize: CGRect = UIScreen.mainScreen().bounds
-//        let screenWidth = screenSize.width
-//        
-//        
-//        if numImages == 1{
-//            var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
-//            sprite1.position = ccp(screenWidth/2,73.0)
-//            self.addChild(sprite1)
-//         
-//
+//        if(currentLevelData.label1){
+//            currentLevelData.label1Title --
 //        }
-//        
-//        if numImages == 2 {
-//            var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
-//            sprite1.position = ccp(screenWidth/4,73.0)
-//            self.addChild(sprite1)
-//           
-//            var sprite2 = CCSprite(imageNamed:currentLevelData.ElementImage2Name)
-//            sprite2.position = ccp(screenWidth/4 + screenWidth/2,73.0)
-//            self.addChild(sprite2)
-//            
-//            var label1 = CCLabelTTF(string: currentLevelData.label1Title, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
-//            label1.position = ccp(100,150)
-//            self.addChild(label1)
-//            label1.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
-//            
+//        if(currentLevelData.label2){
+//            currentLevelData.label2Title --
 //        }
-//        
-//        if numImages == 3 {
-//            var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
-//            sprite1.position = ccp(screenWidth/4,73.0)
-//            self.addChild(sprite1)
-//            
-//            var sprite2 = CCSprite(imageNamed:currentLevelData.ElementImage2Name)
-//            sprite2.position = ccp(screenWidth/4 + screenWidth/2,73.0)
-//            self.addChild(sprite2)
-//            
-//            var sprite3 = CCSprite(imageNamed:currentLevelData.ElementImage3Name)
-//            sprite3.position = ccp(screenWidth/4,73.0)
-//            self.addChild(sprite3)
-//            
+//        if(currentLevelData.label3){
+//            currentLevelData.label3Title --
 //        }
-//        
-//        if numImages == 4 {
-//            var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
-//            sprite1.position = ccp(screenWidth/5,73.0)
-//            self.addChild(sprite1)
-//            
-//            var sprite2 = CCSprite(imageNamed:currentLevelData.ElementImage2Name)
-//            sprite2.position = ccp(screenWidth/5 + screenWidth/5,73.0)
-//            self.addChild(sprite2)
-//            
-//            var sprite3 = CCSprite(imageNamed:currentLevelData.ElementImage3Name)
-//            sprite3.position = ccp(screenWidth/5 + screenWidth/5 + screenWidth/5,73.0)
-//            self.addChild(sprite3)
-//            
-//            var sprite4 = CCSprite(imageNamed:currentLevelData.ElementImage4Name)
-//            sprite4.position = ccp(screenWidth/5 + screenWidth/5 + screenWidth/5 + screenWidth/5,73.0)
-//            self.addChild(sprite4)
-//            
+//        if(currentLevelData.label4){
+//            currentLevelData.label4Title --
 //        }
-//        
+////        if currentLevelData.label1Title ==
 //        
 //    }
 }
@@ -287,8 +362,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
 //        var sprite = CCSprite(imageNamed:"Art Assets/Scientist5.png")
 //        sprite.position = ccp(100,100)
 //        self.addChild(sprite)
-//        
-        var label = CCLabelTTF(string: "TEST", fontName: "Arial", fontSize: 20.0)
+
+//        var label = CCLabelTTF(string: "TEST", fontName: "Arial", fontSize: 20.0)
 //        label.position = ccp(100,150)
 //        self.addChild(label)
 //        label.color = CCColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
@@ -317,3 +392,4 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
 //        
 //        
 //    }
+}
