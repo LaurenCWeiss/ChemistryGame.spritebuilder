@@ -42,10 +42,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //gamePhysicsNode.space.dampining = 0.80
         currentLevelData = levelData.levels[LevelData.curLevel]
         
-        if(currentLevelData?.hydrogen>0) {
-            for i in 1...currentLevelData!.hydrogen {
-                spawn.append(1)
+        if(currentLevelData?.numHydrogen>0) {
+            for i in levelData.levels[LevelData.curLevel].numHydrogen...currentLevelData!.numHydrogen {
+                spawn.append(8)
             }
+    
         }
         
         // Random Stuff
@@ -79,6 +80,14 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         var spawnIndex:Int = spawn.randomItem()
         var spawnAtom = spawn[spawnIndex]
         spawn.removeAtIndex(spawnIndex)
+        
+        if spawn.count == 0 {
+            gameOver()
+        }
+        
+        
+        
+        
         
         switch spawnAtom {
         case 1:
@@ -142,18 +151,18 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         switch atomCollision.type {
         case "Oxygen":
-            if currentLevelData?.oxygen > 0 {
-                currentLevelData?.oxygen--
+            if currentLevelData?.numOxygen > 0 {
+                currentLevelData?.numOxygen--
                 collectAtom = true
             }
         case "Hydrogen":
-            if currentLevelData?.hydrogen > 0 {
-                currentLevelData?.hydrogen--
+            if currentLevelData?.numHydrogen > 0 {
+                currentLevelData?.numHydrogen--
                 collectAtom = true
             }
         case "Carbon":
-            if currentLevelData?.carbon > 0 {
-                currentLevelData?.carbon--
+            if currentLevelData?.numCarbon > 0 {
+                currentLevelData?.numCarbon--
                 collectAtom = true
             }
         default:
