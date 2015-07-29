@@ -16,16 +16,14 @@ class MainScene: CCNode {
         CCDirector.sharedDirector().presentScene(firstLevel, withTransition: transition)
     }
     func careerButtonTapped() {
-        //loads information about the player's career
+        //loads scene that tells the player how to the play the game
         let MainScene = CCBReader.loadAsScene("CareerScene")
-        CCDirector.sharedDirector().presentScene(MainScene)
-
+        CCDirector.sharedDirector().pushScene(MainScene)
     }
-    
     func helpButtonTapped() {
         //loads scene that tells the player how to the play the game
         let MainScene = CCBReader.loadAsScene("HelpScene")
-        CCDirector.sharedDirector().presentScene(MainScene)
+        CCDirector.sharedDirector().pushScene(MainScene)
     }
     
     func shareButtonTapped() {

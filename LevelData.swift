@@ -62,11 +62,20 @@ struct Data {
     var level: Int = 0
     var magnitude:CGPoint = CGPointZero
     var spawnThese: [Int] = []
-//    weak var MoleculeImage1: CCSprite!
-//    weak var MoleculeImage2: CCSprite!
-//    weak var MoleculeImage3: CCSprite!
-//    weak var MoleculeImage4: CCSprite!
-    
+    var ElementImage1: Int = 0
+    var ElementImage2: Int = 0
+    var ElementImage3: Int = 0
+    var ElementImage4: Int = 0
+    var ElementImage1Name: String!
+    var ElementImage2Name: String!
+    var ElementImage3Name: String!
+    var ElementImage4Name: String!
+    var label1Title: String!
+    var label1FontName: String!
+    var label1FontSize: CGFloat = 0.0
+    var labelColor1: CGFloat = 0.0
+    var labelColor2: CGFloat = 0.0
+    var labelColor3: CGFloat = 0.0
 }
 
 //struct MoleculeImage1 {
@@ -109,17 +118,10 @@ struct LevelData {
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
-        //level1.MoleculeImage1 = Oxygen
-        //level1.MoleculeImage2 = Hydrogen
-        //level1.MoleculeImage3 = Carbon
-        //level1.MoleculeImage4 = //no molecule image 4 so this would not exist
-        
-        
-        //level1.MoleculeImage1 = 1
-        //level1.MoleculeImage2 = 1
-        //level1.MoleculeImage3 = 1
-        //level1.MoleculeImage4 = 0
-      
+        level1.ElementImage1 = 1
+        level1.ElementImage2 = 1
+        level1.ElementImage1Name = "Art Assets/Scientist5.png"
+        level1.ElementImage2Name = "Art Assets/Scientist5.png"
         level1.magnitude = ccp(0,30)
         level1.spawnThese = [3,1,2,3]
         

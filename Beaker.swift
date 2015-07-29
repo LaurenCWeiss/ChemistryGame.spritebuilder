@@ -11,13 +11,14 @@ import Foundation
 class Beaker: CCNode {
     
     var top: CCNode!
+    var topPosition: CGPoint = CGPointZero
 
     func didLoadFromCCB(){
         
         userInteractionEnabled = true
+        topPosition = ccp(137,237)
 
     }
-    
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         
@@ -30,14 +31,25 @@ class Beaker: CCNode {
         var diffPosition = ccpSub(lastTouch,curTouch)
         diffPosition.x *= -1
        
-        position = ccpAdd(position,ccpMult(diffPosition,2.0))
+        self.physicsBody.velocity = ccpMult(diffPosition,70)
+        top.physicsBody.velocity = ccpMult(diffPosition,70)
         
+    }
+    
+    override func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+        self.physicsBody.velocity = ccp(0,0)
+        top.physicsBody.velocity = ccp(0,0)
     }
     
     override func update(delta: CCTime) {
         if position.y<=155 {
             position.y=150
         }
+        
+        top.position = topPosition
+        self.physicsBody.velocity = ccp(0,0)
+        top.physicsBody.velocity = ccp(0,0)
+        
     }
 
 }

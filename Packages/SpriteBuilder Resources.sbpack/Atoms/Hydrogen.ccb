@@ -253,8 +253,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -321,7 +319,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Billiard_Balls_01_Pink_256x256@4x.png</string>
+							<string>Art Assets/Hydrogen.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -382,7 +380,7 @@
 			<key>collisionType</key>
 			<string>atomCollision</string>
 			<key>cornerRadius</key>
-			<real>13.77734375</real>
+			<real>11.496330261230469</real>
 			<key>density</key>
 			<real>0.5</real>
 			<key>dynamic</key>
@@ -463,6 +461,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

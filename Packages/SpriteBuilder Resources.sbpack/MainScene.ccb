@@ -272,7 +272,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -283,7 +283,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -307,7 +307,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -326,7 +326,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -621,8 +621,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>52.813129425048828</real>
-							<real>509.08596801757812</real>
+							<real>57.514759063720703</real>
+							<real>513.162109375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -660,7 +660,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/letterS@4x-4.png</string>
+							<string>Art Assets/letterS.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -768,7 +768,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/letterT@4x.png</string>
+							<string>Art Assets/letterT.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -876,7 +876,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/letterE@4x.png</string>
+							<string>Art Assets/letterE.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -984,7 +984,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/letterM@4x.png</string>
+							<string>Art Assets/letterM.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1153,7 +1153,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1164,7 +1164,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1188,7 +1188,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1207,7 +1207,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1486,7 +1486,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1497,7 +1497,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1521,7 +1521,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1540,7 +1540,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1819,7 +1819,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1830,7 +1830,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1854,7 +1854,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1873,7 +1873,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>

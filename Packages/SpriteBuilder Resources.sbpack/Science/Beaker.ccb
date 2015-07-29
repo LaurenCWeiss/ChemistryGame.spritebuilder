@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>13</integer>
+	<integer>14</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -57,9 +57,9 @@
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<true/>
+					<false/>
 					<key>allowsRotation</key>
-					<true/>
+					<false/>
 					<key>bodyShape</key>
 					<integer>1</integer>
 					<key>collisionCategories</key>
@@ -69,11 +69,11 @@
 					<key>collisionType</key>
 					<string>goal</string>
 					<key>cornerRadius</key>
-					<real>41.736289978027344</real>
+					<real>28.421875</real>
 					<key>density</key>
-					<real>1</real>
+					<real>10</real>
 					<key>dynamic</key>
-					<false/>
+					<true/>
 					<key>elasticity</key>
 					<real>0.30000001192092896</real>
 					<key>friction</key>
@@ -81,8 +81,8 @@
 					<key>points</key>
 					<array>
 						<array>
-							<real>51.55859375</real>
-							<real>162.42733764648438</real>
+							<real>12.5</real>
+							<real>12.5</real>
 						</array>
 					</array>
 					<key>polygons</key>
@@ -113,8 +113,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>101</real>
-							<real>90.12347412109375</real>
+							<real>137</real>
+							<real>279.12347412109375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -179,6 +179,8 @@
 						<real>1</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -237,8 +239,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.48389577865600586</real>
+							<real>0.48224529623985291</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -251,7 +253,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/erlenmeyer-303336_1280.png</string>
+							<string>Art Assets/Beaker.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -287,8 +289,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -316,9 +316,9 @@
 			<key>cornerRadius</key>
 			<real>0.0</real>
 			<key>density</key>
-			<real>4</real>
+			<real>10</real>
 			<key>dynamic</key>
-			<false/>
+			<true/>
 			<key>elasticity</key>
 			<real>0.30000001192092896</real>
 			<key>friction</key>
@@ -651,9 +651,9 @@
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>0.35314655303955078</real>
 			<key>position</key>
-			<real>1.3999999761581421</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

@@ -195,7 +195,7 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>1.343260645866394</real>
 							<real>1</real>
 							<false/>
 							<integer>0</integer>
@@ -265,7 +265,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -276,7 +276,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -300,7 +300,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -319,7 +319,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -591,7 +591,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -602,7 +602,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -626,7 +626,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -645,7 +645,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -873,8 +873,6 @@
 										<string>Science/Beaker.ccb</string>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
@@ -1347,8 +1345,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.0</real>
-									<real>533.86846923828125</real>
+									<real>-499.79791259765625</real>
+									<real>560.1610107421875</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -1400,6 +1398,8 @@
 								<real>71.576133728027344</real>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -1498,8 +1498,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.0</real>
-									<real>499.75735473632812</real>
+									<real>-285.8692626953125</real>
+									<real>495.97100830078125</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>

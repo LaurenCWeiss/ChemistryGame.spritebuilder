@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Billiard_Balls_01_Green_256x256@4x.png</string>
+							<string>Art Assets/Carbon.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -171,7 +171,7 @@
 			<key>collisionType</key>
 			<string>atomCollision</string>
 			<key>cornerRadius</key>
-			<real>18.281000137329102</real>
+			<real>14.02381420135498</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -183,8 +183,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>-0.15625</real>
-					<real>1.0586090087890625</real>
+					<real>0.38546839356422424</real>
+					<real>-0.16402663290500641</real>
 				</array>
 			</array>
 			<key>polygons</key>
