@@ -54,9 +54,9 @@ import Foundation
 //make defined a struct, as opposed to a class
 struct Data {
     var nextLevelName: String!
-    var numOxygen: Int = 0
-    var numHydrogen: Int = 0
-    var numCarbon: Int = 0
+    var oxygen: Int = 0
+    var hydrogen: Int = 0
+    var carbon: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
     var level: Int = 0
@@ -116,9 +116,9 @@ struct LevelData {
     init() {
         
         var level1 = Data()
-        level1.numHydrogen = 5
-        level1.numOxygen = 1
-        level1.numCarbon = 0
+        level1.hydrogen = 2
+        level1.oxygen = 1
+        level1.carbon = 0
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
@@ -134,8 +134,8 @@ struct LevelData {
         levels.append(level1)
         
         var level2 = Data()
-        level2.numOxygen = 2
-        level2.numHydrogen = 1
+        level2.oxygen = 2
+        level2.hydrogen = 1
         level2.goal = 3
         level2.level = 2
         level2.smallLabel = "Oxygen gas"
@@ -145,8 +145,8 @@ struct LevelData {
         levels.append(level2)
         
         var level3 = Data()
-        level3.numHydrogen = 2
-        level3.numOxygen = 5
+        level3.hydrogen = 2
+        level3.oxygen = 5
         level3.goal = 7
         level3.level = 3
         level3.smallLabel = "Water"
@@ -155,8 +155,8 @@ struct LevelData {
         levels.append(level3)
         
         var level4 = Data()
-        level4.numHydrogen = 1
-        level4.numOxygen = 4
+        level4.hydrogen = 1
+        level4.oxygen = 4
         level4.goal = 5
         level4.level = 4
         level4.smallLabel = "Water"
@@ -165,8 +165,8 @@ struct LevelData {
         levels.append(level4)
         
         var level5 = Data()
-        level5.numHydrogen = 1
-        level5.numOxygen = 4
+        level5.hydrogen = 1
+        level5.oxygen = 4
         level5.goal = 5
         level5.level = 4
         level5.smallLabel = "Water"
@@ -175,8 +175,8 @@ struct LevelData {
         levels.append(level5)
         
         var level6 = Data()
-        level6.numHydrogen = 1
-        level6.numOxygen = 4
+        level6.hydrogen = 1
+        level6.oxygen = 4
         level6.goal = 5
         level6.level = 4
         level6.smallLabel = "Water"
@@ -185,8 +185,8 @@ struct LevelData {
         levels.append(level6)
         
         var level7 = Data()
-        level7.numHydrogen = 1
-        level7.numOxygen = 4
+        level7.hydrogen = 1
+        level7.oxygen = 4
         level7.goal = 5
         level7.level = 4
         level7.smallLabel = "Water"
@@ -195,8 +195,8 @@ struct LevelData {
         levels.append(level7)
         
         var level8 = Data()
-        level8.numHydrogen = 1
-        level8.numOxygen = 4
+        level8.hydrogen = 1
+        level8.oxygen = 4
         level8.goal = 5
         level8.level = 4
         level8.smallLabel = "Water"
