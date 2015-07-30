@@ -72,6 +72,9 @@ struct LevelData {
  
         var level1 = Data()
         
+        //need to this ensure that hydrogen atoms are dropped
+        level1.hydrogenCounter = 8
+        
         
         // How many of an element do you have left
         level1.counters["Oxygen"] = 1
@@ -86,8 +89,6 @@ struct LevelData {
         level1.ElementImage1Name = "Art Assets/Hydrogen.png"
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
         
-//        level1.label1Title = "2"
-//        level1.label2Title = "1"
         level1.magnitude = ccp(0,30)
         level1.spawnThese = [3,1,2,3]
         level1.randomMin = 1

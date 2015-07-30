@@ -169,7 +169,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 collectAtom = true
                 currentLevelData?.counters[atomCollision.type] = collection - 1
                 var label:CCLabelTTF = self.getChildByName("\(atomCollision.type)Label", recursively: true) as! CCLabelTTF
-                label.string = "100"
+                //allows correct # of atoms left of each element to be printed
+                label.string = "\(currentLevelData?.counters[atomCollision.type])"
+
             }
         }
         
