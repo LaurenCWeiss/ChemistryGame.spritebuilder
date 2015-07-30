@@ -56,6 +56,9 @@
     //incrase physics samping
     //1.0/180.0 default is 1/60 - now will run at 180 frames per second
     [[CCDirector sharedDirector] setFixedUpdateInterval: 1.0/180.0];
+    
+    [[CCDirector sharedDirector]  setDisplayStats:true];
+    
     return YES;
 }
 
