@@ -44,6 +44,10 @@ struct Data {
     var randomMax: Int = 0
     var labelLinks = [String: Int]()
     var counters = [String: Int]()
+    var counter1 : Int = 0
+    var counter2 : Int = 0
+    var counter3 : Int = 0
+    var counter4 : Int = 0
 }
 
 
@@ -73,15 +77,17 @@ struct LevelData {
  
         var level1 = Data()
         
+        level1.counter1 = 1
+        level1.counter2 = 2
+        
         // lets you know what index you're using for the label
         level1.labelLinks["Oxygen"] = 1
         level1.labelLinks["Carbon"] = 2
         
         
         // How many of an element do you have left
-        level1.counters["Oxygen"] = 20
-        level1.counters["Carbon"] = 15
-        
+        level1.counters["Oxygen"] = level1.counter1
+        level1.counters["Hydrogen"] = level1.counter2
         
         
         level1.carbonCounter = 0
@@ -92,14 +98,10 @@ struct LevelData {
         level1.ElementImage2 = 1
         level1.ElementImage1Name = "Art Assets/Hydrogen.png"
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
-        
-//        level1.label1Title = "2"
-//        level1.label2Title = "1"
         level1.magnitude = ccp(0,30)
         level1.spawnThese = [3,1,2,3]
         level1.randomMin = 1
         level1.randomMax = 3
-//        level1.labelA = 2
         
         levels.append(level1)
         
@@ -120,7 +122,6 @@ struct LevelData {
 //        level3.goal = 7
 //        level3.level = 3
 //        level3.smallLabel = "Water"
-//
 //
 //        levels.append(level3)
 //        

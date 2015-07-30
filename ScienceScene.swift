@@ -170,10 +170,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 if indexOfButton == 2 {
                     label2?.string = "\(currentLevelData?.oxygenCounter)"
                 }
-                
-                
-                
-                
+     
             }
         case "Hydrogen":
             if currentLevelData?.hydrogenCounter > 0 {
@@ -207,9 +204,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             if indexOfButton == 2 {
                 label2?.string = "\(currentLevelData?.carbonCounter)"
             }
-            
-      
-            }
+                    }
         default:
             collectAtom = false
             break;
@@ -250,9 +245,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
         popup.position = CGPoint(x: 0.5, y: 0.5)
         parent.addChild(popup)
-        
-    
-        
         
     }
     
@@ -341,30 +333,23 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
 //        sprite4.position = ccp(xpos4,73.0)
 //        self.addChild(sprite4)
         
-        
-        label1 = CCLabelTTF(string: currentLevelData.counters/*currentLevelData.label1Title*/, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
-//           level1.counters["Oxygen"] = 20
-//         level1.labelLinks["Oxygen"] = 1
+
+        label1 = CCLabelTTF(string: "\(currentLevelData.counter1)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
         label1?.position = ccp(xpos1,25)
         self.addChild(label1!)
         label1?.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         
-        label2 = CCLabelTTF(string:  "\(currentLevelData.oxygenCounter)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+        label2 = CCLabelTTF(string:  "\(currentLevelData.counter2)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
         label2?.position = ccp(xpos2,25)
         self.addChild(label2!)
         
-        label3 = CCLabelTTF(string: "\(currentLevelData.hydrogenCounter)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+        label3 = CCLabelTTF(string: "\(currentLevelData.counter3)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
         label3?.position = ccp(xpos3,25)
         self.addChild(label3!)
         
-        label4 = CCLabelTTF(string:  "\(currentLevelData.hydrogenCounter)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+        label4 = CCLabelTTF(string:  "\(currentLevelData.counter4)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
         label4?.position = ccp(xpos4,25)
         self.addChild(label4!)
-        
-        
-        
-
-        
         
            }
 
