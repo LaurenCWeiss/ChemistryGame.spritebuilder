@@ -168,10 +168,10 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             if let collection: Int = currentLevelData?.counters[atomCollision.type] {
                 collectAtom = true
                 currentLevelData?.counters[atomCollision.type] = collection - 1
-                var label:CCLabelTTF = self.getChildByName("\(atomCollision.type)Label", recursively: true) as! CCLabelTTF
+                var label:CCLabelTTF! = self.getChildByName("\(atomCollision.type)Label", recursively: true) as! CCLabelTTF
                 //allows correct # of atoms left of each element to be printed
-                label.string = "\(currentLevelData?.counters[atomCollision.type])"
-
+                label.string = "\(currentLevelData!.counters[atomCollision.type]!)"
+                //  label.string = "\(currentLevelData?.counters[atomCollision.type]!)"
             }
         }
         
@@ -226,9 +226,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     override func update(delta: CCTime) {
-        //
-        //        setImage()
-        
+
         //if the number of points equals the number of atoms released, then move on to the next level
         
         if points == levelData.levels[LevelData.curLevel].goal {
