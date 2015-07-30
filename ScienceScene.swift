@@ -28,10 +28,10 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     weak var ground1: Ground!
     var atomNode: CCNode!
     var currentLevelData: Data?
-     var spawn:[Int] = []
+    var spawn:[Int] = []
     
     // Labels
-   
+    
     var label1 : CCLabelTTF?
     var label2 : CCLabelTTF?
     var label3 : CCLabelTTF?
@@ -46,20 +46,21 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //gamePhysicsNode.debugDraw = true
         //gamePhysicsNode.space.dampining = 0.80
         currentLevelData = levelData.levels[LevelData.curLevel]
-
+        
         if(currentLevelData?.hydrogenCounter>0) {
             for i in 1...currentLevelData!.hydrogenCounter {
                 spawn.append(1)
             }
         }
         
-//      Random Stuff
+        //      Random Stuff
         for i in 1...3 {
             spawn.append(Int.random(min: currentLevelData!.randomMin, max: currentLevelData!.randomMax))
         }
         
         spawn.randomItem()
     }
+    
     
     override func onEnter() {
         super.onEnter()
@@ -70,18 +71,14 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     
     func dropAtom(){
-        //should this be in the update function?
-        //for spawning random atoms
-        //how to know the difference of spawning atoms to avoid and atoms that must be spawned?
         
-        
-        //use spawnThisNumber to run through how many times I want something to randomly spawn
         //problem is that what if atoms that need to be spawned aren't spawned
+
         //need mechanism that will ensure that the atoms from level data are spawned, that enough of them are actually spawned
         var fileName:String = ""
         
-       println(spawn.count)
-       
+        println(spawn.count)
+        
         if spawn.count == 0 {
             gameOver()
             return
@@ -89,9 +86,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         var spawnIndex:Int = spawn.randomItem()
         var spawnAtom = spawn[spawnIndex]
         spawn.removeAtIndex(spawnIndex)
-     
+        
         //check if array is empty using spawn.count == 0 or spawn.isEmpty
-       
+        
         switch spawnAtom {
         case 1:
             fileName = "Hydrogen"
@@ -118,11 +115,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
         
         atomNode.physicsBody.applyImpulse(randomImpulse)
-    
+        
     }
     
     func cleanup() {
-       
+        
     }
     
     override func onEnterTransitionDidFinish() {
@@ -141,6 +138,14 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         let ScienceScene = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().presentScene(ScienceScene)
     }
+//    
+//    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: CCNode!, ground: CCNode!) -> Bool {
+//    
+//        atomCollision.removeFromParent()
+//        return true
+//
+//    
+//        }
     
     
     //MARK:- Physics
@@ -155,71 +160,23 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         var collectAtom = false
         
-        switch atomCollision.type {
-        case "Oxygen":
-           
-        let indexOfButton = currentLevelData?.labelLinks["Oxygen"]
-            if currentLevelData?.oxygenCounter > 0 {
-                currentLevelData?.oxygenCounter--
-                 
+        // Check Counters
+        //println(atomCollision.type)
+        //println(currentLevelData?.counters[atomCollision.type])
+       
+        if currentLevelData?.counters[atomCollision.type] > 0 {
+            if let collection: Int = currentLevelData?.counters[atomCollision.type] {
                 collectAtom = true
-                
-                if indexOfButton == 1 {
-                    label1?.string = "\(currentLevelData?.oxygenCounter)"
-                }
-                if indexOfButton == 2 {
-                    label2?.string = "\(currentLevelData?.oxygenCounter)"
-                }
-                
-                
-                
-                
+                currentLevelData?.counters[atomCollision.type] = collection - 1
+                var label:CCLabelTTF = self.getChildByName("\(atomCollision.type)Label", recursively: true) as! CCLabelTTF
+                label.string = "100"
             }
-        case "Hydrogen":
-            if currentLevelData?.hydrogenCounter > 0 {
-                
-                let indexOfButton = currentLevelData?.labelLinks["Hydrogen"]
-                if currentLevelData?.hydrogenCounter > 0 {
-                    currentLevelData?.hydrogenCounter--
-                    
-                    collectAtom = true
-                    
-                    if indexOfButton == 1 {
-                        label1?.string = "\(currentLevelData?.hydrogenCounter)"
-                    }
-                    if indexOfButton == 2 {
-                        label2?.string = "\(currentLevelData?.hydrogenCounter)"
-                    }
-                    
-                currentLevelData?.hydrogenCounter--
-                collectAtom = true
-                }}
-        case "Carbon":
-            let indexOfButton = currentLevelData?.labelLinks["Carbon"]
-           
-            if currentLevelData?.carbonCounter > 0 {
-                currentLevelData?.carbonCounter--
-                collectAtom = true
-                
-            if indexOfButton == 1 {
-                label1?.string = "\(currentLevelData?.carbonCounter)"
-            }
-            if indexOfButton == 2 {
-                label2?.string = "\(currentLevelData?.carbonCounter)"
-            }
-            
-      
-            }
-        default:
-            collectAtom = false
-            break;
         }
         
+        //println(currentLevelData?.counters[atomCollision.type])
+        
         if collectAtom == true {
-            
-//            println("labelA: \(currentLevelData!.labelA)")
 
-         
             points++
             atomCollision.inBeaker = true
             return false
@@ -237,7 +194,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     
-
+    
     
     func gameOver() {
         
@@ -251,7 +208,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         popup.position = CGPoint(x: 0.5, y: 0.5)
         parent.addChild(popup)
         
-    
+        
         
         
     }
@@ -267,8 +224,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     override func update(delta: CCTime) {
-//        
-//        setImage()
+        //
+        //        setImage()
         
         //if the number of points equals the number of atoms released, then move on to the next level
         
@@ -281,92 +238,65 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     func setImage() {
-      
+        
+        // Calculate Required Atoms
+        var requiredAtoms:[String] = []
+        
         let currentLevelData = levelData.levels[LevelData.curLevel]
-        var numImages = currentLevelData.ElementImage1 + currentLevelData.ElementImage2 + currentLevelData.ElementImage3 + currentLevelData.ElementImage4
+        
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width
         
-        var xpos1: CGFloat = 0.0
-        var xpos2: CGFloat = 0.0
-        var xpos3: CGFloat = 0.0
-        var xpos4: CGFloat = 0.0
+        var xpos:[CGFloat] = [0,0,0,0]
+        
+        // Calculate Required Atoms
+        //still use hydrogenCounter and oxygenCounter here...
+        
+        if currentLevelData.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
+        if currentLevelData.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
+        
+        let numImages = requiredAtoms.count
         
         if numImages == 1 {
-            xpos1 = screenWidth/2
+            xpos[0] = screenWidth/2
         }
         if numImages == 2 {
             
-            xpos1 = screenWidth/4
-            xpos2 = screenWidth/4 * 3
+            xpos[0] = screenWidth/4
+            xpos[1] = screenWidth/4 * 3
             
         }
         if numImages == 3 {
             //positioning is incorrect for this one
-            xpos1 = screenWidth/4
-            xpos2 = screenWidth/2
-            xpos3 = screenWidth/3
-            
-            
+            xpos[0] = screenWidth/4
+            xpos[1] = screenWidth/2
+            xpos[2] = screenWidth/3
         }
+        
         if numImages == 4 {
-            xpos1 = screenWidth/5
-            xpos2 = screenWidth/5 * 2
-            xpos3 = screenWidth/5 * 3
-            xpos4 = screenWidth/5 * 4
+            xpos[0] = screenWidth/5
+            xpos[1] = screenWidth/5 * 2
+            xpos[2] = screenWidth/5 * 3
+            xpos[3] = screenWidth/5 * 4
         }
-       
         
-        //image 1
-        var sprite1 = CCSprite(imageNamed:currentLevelData.ElementImage1Name)
-        sprite1.position = ccp(xpos1,73.0)
-        self.addChild(sprite1)
+        // Setup Images for Atoms
+        for (index,atomType) in enumerate(requiredAtoms) {
+            
+            // Add Images
+            var sprite = CCSprite(imageNamed:"Art Assets/\(atomType).png")
+            sprite.position = ccp(xpos[index],73.0)
+            self.addChild(sprite)
+            
+            // Add Labels
+            var label = CCLabelTTF(string: "\(currentLevelData.counters[atomType]!)", fontName: "Arial", fontSize: 20)
+            label.name = "\(atomType)Label"
+            label.position = ccp(xpos[index],25)
+            self.addChild(label)
+            
+        }
         
-       
-        //image 2
-        var sprite2 = CCSprite(imageNamed:currentLevelData.ElementImage2Name)
-        sprite2.position = ccp(xpos2,73.0)
-        self.addChild(sprite2)
+    }
     
-       
-        
-        //image 3
-//        var sprite3 = CCSprite(imageNamed:currentLevelData.ElementImage3Name)
-//        sprite3.position = ccp(xpos3,73.0)
-//        self.addChild(sprite3)
-//        
-//        
-//        //image 4
-//        var sprite4 = CCSprite(imageNamed:currentLevelData.ElementImage4Name)
-//        sprite4.position = ccp(xpos4,73.0)
-//        self.addChild(sprite4)
-        
-        
-        label1 = CCLabelTTF(string: currentLevelData.counters/*currentLevelData.label1Title*/, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
-//           level1.counters["Oxygen"] = 20
-//         level1.labelLinks["Oxygen"] = 1
-        label1?.position = ccp(xpos1,25)
-        self.addChild(label1!)
-        label1?.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-        
-        label2 = CCLabelTTF(string:  "\(currentLevelData.oxygenCounter)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
-        label2?.position = ccp(xpos2,25)
-        self.addChild(label2!)
-        
-        label3 = CCLabelTTF(string: "\(currentLevelData.hydrogenCounter)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
-        label3?.position = ccp(xpos3,25)
-        self.addChild(label3!)
-        
-        label4 = CCLabelTTF(string:  "\(currentLevelData.hydrogenCounter)", fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
-        label4?.position = ccp(xpos4,25)
-        self.addChild(label4!)
-        
-        
-        
-
-        
-        
-           }
-
-
+    
 }

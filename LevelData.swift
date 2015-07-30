@@ -13,7 +13,7 @@ import Foundation
 //Data not inheriting from anything, and it makes logical sense that data objects are unique, so we
 //make defined a struct, as opposed to a class
 struct Data {
-    var nextLevelName: String!
+//    var nextLevelName: String!
     var oxygenCounter: Int = 0
     var hydrogenCounter: Int = 0
     var carbonCounter: Int = 0
@@ -42,7 +42,6 @@ struct Data {
     var labelColor4: CGFloat = 0.0
     var randomMin: Int = 0
     var randomMax: Int = 0
-    var labelLinks = [String: Int]()
     var counters = [String: Int]()
 }
 
@@ -73,18 +72,12 @@ struct LevelData {
  
         var level1 = Data()
         
-        // lets you know what index you're using for the label
-        level1.labelLinks["Oxygen"] = 1
-        level1.labelLinks["Carbon"] = 2
-        
         
         // How many of an element do you have left
-        level1.counters["Oxygen"] = 20
-        level1.counters["Carbon"] = 15
-        
-        
-        
-        level1.carbonCounter = 0
+        level1.counters["Oxygen"] = 1
+        level1.counters["Hydrogen"] = 2
+    
+//        level1.carbonCounter = 0
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
@@ -104,8 +97,8 @@ struct LevelData {
         levels.append(level1)
         
         var level2 = Data()
-        level2.oxygenCounter = 2
-        level2.hydrogenCounter = 0
+//        level2.oxygenCounter = 2
+//        level2.hydrogenCounter = 0
         level2.goal = 2
         level2.level = 2
         level2.smallLabel = "Oxygen gas"
