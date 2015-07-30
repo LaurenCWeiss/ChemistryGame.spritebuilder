@@ -16,7 +16,7 @@ struct Data {
     var nextLevelName: String!
     var oxygenCounter: Int = 0
     var hydrogenCounter: Int = 0
-    var carbon: Int = 0
+    var carbonCounter: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
     var level: Int = 0
@@ -43,6 +43,7 @@ struct Data {
     var randomMin: Int = 0
     var randomMax: Int = 0
     var labelLinks = [String: Int]()
+    var counters = [String: Int]()
 }
 
 
@@ -69,16 +70,21 @@ struct LevelData {
     
     init() {
         //numbers of atoms of elements
-       
-        
-        
-        
-        
-        
+ 
         var level1 = Data()
-        level1.hydrogenCounter = 2
-        level1.oxygenCounter = 1
-        level1.carbon = 0
+        
+        // lets you know what index you're using for the label
+        level1.labelLinks["Oxygen"] = 1
+        level1.labelLinks["Carbon"] = 2
+        
+        
+        // How many of an element do you have left
+        level1.counters["Oxygen"] = 20
+        level1.counters["Carbon"] = 15
+        
+        
+        
+        level1.carbonCounter = 0
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
@@ -86,17 +92,13 @@ struct LevelData {
         level1.ElementImage2 = 1
         level1.ElementImage1Name = "Art Assets/Hydrogen.png"
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
-//        level1.ElementImage3Name = nil
-//        level1.ElementImage3Name = nil
+        
 //        level1.label1Title = "2"
-        level1.label2Title = "1"
+//        level1.label2Title = "1"
         level1.magnitude = ccp(0,30)
         level1.spawnThese = [3,1,2,3]
         level1.randomMin = 1
         level1.randomMax = 3
-        level1.labelLinks = [
-            "Carbon" : 2
-        ]
 //        level1.labelA = 2
         
         levels.append(level1)

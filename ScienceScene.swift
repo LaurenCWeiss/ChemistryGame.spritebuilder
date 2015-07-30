@@ -157,26 +157,58 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         switch atomCollision.type {
         case "Oxygen":
+           
+        let indexOfButton = currentLevelData?.labelLinks["Oxygen"]
             if currentLevelData?.oxygenCounter > 0 {
                 currentLevelData?.oxygenCounter--
-                
+                 
                 collectAtom = true
+                
+                if indexOfButton == 1 {
+                    label1?.string = "\(currentLevelData?.oxygenCounter)"
+                }
+                if indexOfButton == 2 {
+                    label2?.string = "\(currentLevelData?.oxygenCounter)"
+                }
+                
+                
+                
+                
             }
         case "Hydrogen":
             if currentLevelData?.hydrogenCounter > 0 {
+                
+                let indexOfButton = currentLevelData?.labelLinks["Hydrogen"]
+                if currentLevelData?.hydrogenCounter > 0 {
+                    currentLevelData?.hydrogenCounter--
+                    
+                    collectAtom = true
+                    
+                    if indexOfButton == 1 {
+                        label1?.string = "\(currentLevelData?.hydrogenCounter)"
+                    }
+                    if indexOfButton == 2 {
+                        label2?.string = "\(currentLevelData?.hydrogenCounter)"
+                    }
+                    
                 currentLevelData?.hydrogenCounter--
                 collectAtom = true
-            }
+                }}
         case "Carbon":
             let indexOfButton = currentLevelData?.labelLinks["Carbon"]
-            
+           
+            if currentLevelData?.carbonCounter > 0 {
+                currentLevelData?.carbonCounter--
+                collectAtom = true
+                
             if indexOfButton == 1 {
-                label1?.string = ""
+                label1?.string = "\(currentLevelData?.carbonCounter)"
+            }
+            if indexOfButton == 2 {
+                label2?.string = "\(currentLevelData?.carbonCounter)"
             }
             
-            if currentLevelData?.carbon > 0 {
-                currentLevelData?.carbon--
-                collectAtom = true
+      
             }
         default:
             collectAtom = false
@@ -186,18 +218,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         if collectAtom == true {
             
 //            println("labelA: \(currentLevelData!.labelA)")
-//            currentLevelData!.labelA -= 1
-//            currentLevelData!.oxygenCounter -= 1
-//            currentLevelData!.hydrogenCounter -= 1
-            
-            //if case "Oxygen" { currentLevelData!.oxygenCounter -= 1
-         
-            
-            
-            
-         var label1 = CCLabelTTF(string: "\(currentLevelData!.hydrogenCounter)")
-         
-        
+
          
             points++
             atomCollision.inBeaker = true
@@ -310,18 +331,20 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
        
         
         //image 3
-        var sprite3 = CCSprite(imageNamed:currentLevelData.ElementImage3Name)
-        sprite3.position = ccp(xpos3,73.0)
-        self.addChild(sprite3)
+//        var sprite3 = CCSprite(imageNamed:currentLevelData.ElementImage3Name)
+//        sprite3.position = ccp(xpos3,73.0)
+//        self.addChild(sprite3)
+//        
+//        
+//        //image 4
+//        var sprite4 = CCSprite(imageNamed:currentLevelData.ElementImage4Name)
+//        sprite4.position = ccp(xpos4,73.0)
+//        self.addChild(sprite4)
         
         
-        //image 4
-        var sprite4 = CCSprite(imageNamed:currentLevelData.ElementImage4Name)
-        sprite4.position = ccp(xpos4,73.0)
-        self.addChild(sprite4)
-        
-        
-        label1 = CCLabelTTF(string: "\(currentLevelData.hydrogenCounter)"/*currentLevelData.label1Title*/, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+        label1 = CCLabelTTF(string: currentLevelData.counters/*currentLevelData.label1Title*/, fontName: currentLevelData.label1FontName, fontSize: currentLevelData.label1FontSize)
+//           level1.counters["Oxygen"] = 20
+//         level1.labelLinks["Oxygen"] = 1
         label1?.position = ccp(xpos1,25)
         self.addChild(label1!)
         label1?.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
