@@ -172,6 +172,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 //allows correct # of atoms left of each element to be printed
                 label.string = "\(currentLevelData!.counters[atomCollision.type]!)"
                 //  label.string = "\(currentLevelData?.counters[atomCollision.type]!)"
+                if currentLevelData!.counters[atomCollision.type]! == 0 {
+                label.string = "✔️"
+                }
             }
         }
         
