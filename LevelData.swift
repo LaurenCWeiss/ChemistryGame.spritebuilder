@@ -10,52 +10,12 @@ import Foundation
 
 
 
-
-//struct Atom {
-//    var name: String
-//    var goal: Int
-//    var imageName: String
-//    
-//    init(name: String, goal: Int, imageName: String) {
-//        self.name = name
-//        self.goal = goal
-//        self.imageName = imageName
-//    }
-//}
-//
-//struct Level {
-//    var levelNumber: Int
-//    var catchAtoms: [Atom] = [Atom]()
-//    var avoidAtoms: [Atom] = [Atom]()
-//    
-//    var smallLabel: String
-//    
-//    init(levelNumber: Int, smallLabel: String) {
-//        self.levelNumber = levelNumber
-//        self.smallLabel = smallLabel
-//    }
-//}
-//
-//struct LevelData {
-//    var levels: [Level] = [Level]()
-//    
-//    var level1 = Level(levelNumber: 0, smallLabel: "")
-//    
-//    let l1hydrogen = Atom(name: "hydrogen", goal: 3, imageName: "atoms/hydrogen.png")
-//    let l1oxygen = Atom(name: "oxygen", goal: 2, imageName: "atoms/oxygen.png")
-//    
-//    levels["level1"].hydrogen = 1
-//    let hydrogens = levels[1].hydrogen.imageName
-//
-//    level1.catchAtoms
-//}
-
 //Data not inheriting from anything, and it makes logical sense that data objects are unique, so we
 //make defined a struct, as opposed to a class
 struct Data {
     var nextLevelName: String!
-    var oxygen: Int = 0
-    var hydrogen: Int = 0
+    var oxygenCounter: Int = 0
+    var hydrogenCounter: Int = 0
     var carbon: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
@@ -82,16 +42,8 @@ struct Data {
     var labelColor4: CGFloat = 0.0
     var randomMin: Int = 0
     var randomMax: Int = 0
+    var labelLinks = [String: Int]()
 }
-
-//struct MoleculeImage1 {
-//    //set parameters here for MoleculeImage1
-//    //parameters include the CCSprite image and an integer to count whether or not the molecule image 1 actually exists
-//}
-//struct MoleculeImage2 {
-//    
-//}
-
 
 
 
@@ -116,10 +68,16 @@ struct LevelData {
     var levels:[Data] = [Data]()
     
     init() {
+        //numbers of atoms of elements
+       
+        
+        
+        
+        
         
         var level1 = Data()
-        level1.hydrogen = 3
-        level1.oxygen = 1
+        level1.hydrogenCounter = 2
+        level1.oxygenCounter = 1
         level1.carbon = 0
         level1.goal = 3
         level1.smallLabel = "Water"
@@ -128,19 +86,25 @@ struct LevelData {
         level1.ElementImage2 = 1
         level1.ElementImage1Name = "Art Assets/Hydrogen.png"
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
-        level1.label1Title = "2"
+//        level1.ElementImage3Name = nil
+//        level1.ElementImage3Name = nil
+//        level1.label1Title = "2"
         level1.label2Title = "1"
         level1.magnitude = ccp(0,30)
         level1.spawnThese = [3,1,2,3]
         level1.randomMin = 1
         level1.randomMax = 3
+        level1.labelLinks = [
+            "Carbon" : 2
+        ]
+//        level1.labelA = 2
         
         levels.append(level1)
         
         var level2 = Data()
-        level2.oxygen = 2
-        level2.hydrogen = 1
-        level2.goal = 3
+        level2.oxygenCounter = 2
+        level2.hydrogenCounter = 0
+        level2.goal = 2
         level2.level = 2
         level2.smallLabel = "Oxygen gas"
         level2.magnitude = ccp(50,30)
@@ -148,66 +112,66 @@ struct LevelData {
 
         levels.append(level2)
         
-        var level3 = Data()
-        level3.hydrogen = 2
-        level3.oxygen = 5
-        level3.goal = 7
-        level3.level = 3
-        level3.smallLabel = "Water"
-
-
-        levels.append(level3)
-        
-        var level4 = Data()
-        level4.hydrogen = 1
-        level4.oxygen = 4
-        level4.goal = 5
-        level4.level = 4
-        level4.smallLabel = "Water"
-
-
-        levels.append(level4)
-        
-        var level5 = Data()
-        level5.hydrogen = 1
-        level5.oxygen = 4
-        level5.goal = 5
-        level5.level = 4
-        level5.smallLabel = "Water"
-
-        
-        levels.append(level5)
-        
-        var level6 = Data()
-        level6.hydrogen = 1
-        level6.oxygen = 4
-        level6.goal = 5
-        level6.level = 4
-        level6.smallLabel = "Water"
-
-        
-        levels.append(level6)
-        
-        var level7 = Data()
-        level7.hydrogen = 1
-        level7.oxygen = 4
-        level7.goal = 5
-        level7.level = 4
-        level7.smallLabel = "Water"
-
-        
-        levels.append(level7)
-        
-        var level8 = Data()
-        level8.hydrogen = 1
-        level8.oxygen = 4
-        level8.goal = 5
-        level8.level = 4
-        level8.smallLabel = "Water"
-  
-        
-        levels.append(level8)
-        
+//        var level3 = Data()
+//        level3.hydrogenCounter = 2
+//        level3.oxygenCounter = 5
+//        level3.goal = 7
+//        level3.level = 3
+//        level3.smallLabel = "Water"
+//
+//
+//        levels.append(level3)
+//        
+//        var level4 = Data()
+//        level4.hydrogen = 1
+//        level4.oxygen = 4
+//        level4.goal = 5
+//        level4.level = 4
+//        level4.smallLabel = "Water"
+//
+//
+//        levels.append(level4)
+//        
+//        var level5 = Data()
+//        level5.hydrogen = 1
+//        level5.oxygen = 4
+//        level5.goal = 5
+//        level5.level = 4
+//        level5.smallLabel = "Water"
+//
+//        
+//        levels.append(level5)
+//        
+//        var level6 = Data()
+//        level6.hydrogen = 1
+//        level6.oxygen = 4
+//        level6.goal = 5
+//        level6.level = 4
+//        level6.smallLabel = "Water"
+//
+//        
+//        levels.append(level6)
+//        
+//        var level7 = Data()
+//        level7.hydrogen = 1
+//        level7.oxygen = 4
+//        level7.goal = 5
+//        level7.level = 4
+//        level7.smallLabel = "Water"
+//
+//        
+//        levels.append(level7)
+//        
+//        var level8 = Data()
+//        level8.hydrogen = 1
+//        level8.oxygen = 4
+//        level8.goal = 5
+//        level8.level = 4
+//        level8.smallLabel = "Water"
+//  
+//        
+//        levels.append(level8)
+//        
 
         
 
