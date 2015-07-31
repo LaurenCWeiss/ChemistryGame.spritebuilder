@@ -13,8 +13,7 @@ class LevelTransitionScene: CCNode {
     
     func didLoadFromCCB() {
         
-        checkIfCareerUpSceneShouldLoad()
-        
+               
         var levelData: LevelData = LevelData()
         let currentLevelData = levelData.levels[LevelData.curLevel]
         
@@ -31,16 +30,7 @@ class LevelTransitionScene: CCNode {
     }
     
     
-    func checkIfCareerUpSceneShouldLoad() {
-        
-  
-        if LevelData.curLevel == 0 {
-            
-            let LevelTransitionScene = CCBReader.loadAsScene("CareerUpScene")
-            CCDirector.sharedDirector().pushScene(LevelTransitionScene)
-            println("curLevelhs:\(LevelData.curLevel)")
-        }}
-
+    
     func startContinueButton() {
         
         var levelData: LevelData = LevelData()

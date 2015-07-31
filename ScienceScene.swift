@@ -229,13 +229,21 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func startLevelTransitionScene() {
         
-        let scene = CCBReader.loadAsScene("LevelTransitionScene")
-        
-        let transition = CCTransition(fadeWithDuration: 0.8)
-        
-        CCDirector.sharedDirector().presentScene(scene)
+        checkIfCareerUpSceneShouldLoad()
+
+      
         
     }
+    func checkIfCareerUpSceneShouldLoad() {
+        
+        
+        if LevelData.curLevel == 0 {
+            
+            let LevelTransitionScene = CCBReader.loadAsScene("CareerUpScene")
+            CCDirector.sharedDirector().pushScene(LevelTransitionScene)
+            println("curLevelhs:\(LevelData.curLevel)")
+        }}
+
     
     override func update(delta: CCTime) {
 

@@ -14,7 +14,7 @@ class CareerUpScene: CCNode {
     var currentLevelData: Data?
     
     func didLoadFromCCB() {
-        
+        loadLevelTransitionScene()
         let currentLevelData = levelData.levels[LevelData.curLevel]
         
         //add the image of the new career to the scene
@@ -22,6 +22,14 @@ class CareerUpScene: CCNode {
         spriteB.position = ccp(50.0,73.0)
         self.addChild(spriteB)
         
+    }
+    func loadLevelTransitionScene(){
+        let scene = CCBReader.loadAsScene("LevelTransitionScene")
+        
+        let transition = CCTransition(fadeWithDuration: 0.8)
+        
+        CCDirector.sharedDirector().presentScene(scene)
+
     }
     
     
