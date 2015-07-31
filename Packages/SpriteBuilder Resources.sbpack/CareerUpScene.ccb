@@ -391,7 +391,7 @@
 						<key>value</key>
 						<array>
 							<real>157.5</real>
-							<real>238.83937072753906</real>
+							<real>191.83937072753906</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -415,8 +415,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.76827895641326904</real>
+							<real>0.85163390636444092</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -613,7 +613,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<real>157.5</real>
-							<real>146.69943237304688</real>
+							<real>115.92132568359375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -626,8 +626,8 @@ Improvement:
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>2.6679551601409912</real>
-							<real>2.5526611804962158</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -641,6 +641,8 @@ Improvement:
 						<string>CareerLevelUpLabel.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -675,7 +677,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<real>157.5</real>
-							<real>60.225788116455078</real>
+							<real>47.139003753662109</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1039,8 +1041,6 @@ Improvement:
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

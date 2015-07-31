@@ -39,8 +39,13 @@ class LevelTransitionScene: CCNode {
         } else {
             LevelData.curLevel++
         }
-        let scene = CCBReader.loadAsScene("ScienceScene")
-        CCDirector.sharedDirector().presentScene(scene)
+
+     
+    
+        let LevelTransitionScene = CCBReader.loadAsScene("LabReportOrderScene")
+        CCDirector.sharedDirector().pushScene(LevelTransitionScene)
+
+
 
     }
    

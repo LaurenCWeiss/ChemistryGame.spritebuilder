@@ -44,6 +44,7 @@ struct Data {
     var labelColor4: CGFloat = 0.0
     var randomMin: Int = 0
     var randomMax: Int = 0
+    var smallOrderLabel: String = " "
     
     var counters = [String: Int]()
     
@@ -108,6 +109,10 @@ struct LevelData {
         level1.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //career level scene from main menu
         level1.careerUpSmallLabelForLevel = "Intern"
+        
+        //add an order label of what the user is making in this level
+        
+        level1.smallOrderLabel = "Water"
         
         levels.append(level1)
         

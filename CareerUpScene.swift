@@ -12,6 +12,9 @@ class CareerUpScene: CCNode {
     
     var levelData: LevelData = LevelData()
     var currentLevelData: Data?
+ 
+ 
+    
     
     func didLoadFromCCB() {
         loadLevelTransitionScene()
@@ -19,7 +22,7 @@ class CareerUpScene: CCNode {
         
         //add the image of the new career to the scene
         var spriteB = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
-        spriteB.position = ccp(50.0,73.0)
+        spriteB.position = ccp(172,320)
         self.addChild(spriteB)
         
     }

@@ -29,18 +29,22 @@ class CareerScene: CCNode, CCPhysicsCollisionDelegate {
         
         let currentLevelData = levelData.levels[LevelData.curLevel]
         
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        
         //show career image
      
         
-        //add the image of the new career to the scene
-        var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
-        spriteC.position = ccp(50.0,73.0)
-        self.addChild(spriteC)
+//        //add the image of the new career to the scene
+//        var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
+//        spriteC.position = ccp(screenWidth/2,150)
+//        self.addChild(spriteC)
 
         
         
         //show career title
-        var labelCareer = CCLabelTTF(string: "\(currentLevelData.careerUpSmallLabelForLevel)", fontName: "Arial", fontSize: 100)
+        var labelCareer = CCLabelTTF(string: "\(currentLevelData.careerUpSmallLabelForLevel)", fontName: "Arial", fontSize: 10)
         labelCareer.name = "\(currentLevelData.careerUpSmallLabelForLevel)Label"
         labelCareer.position = ccp(50,25)
         self.addChild(labelCareer)

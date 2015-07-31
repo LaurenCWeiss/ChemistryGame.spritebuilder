@@ -24,9 +24,9 @@
 	<key>fileVersion</key>
 	<integer>4</integer>
 	<key>gridspaceHeight</key>
-	<integer>64</integer>
+	<integer>36</integer>
 	<key>gridspaceWidth</key>
-	<integer>64</integer>
+	<integer>35</integer>
 	<key>guides</key>
 	<array/>
 	<key>joints</key>
@@ -47,11 +47,11 @@
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
-				<string></string>
+				<string>OrderLabel</string>
 				<key>displayName</key>
 				<string>CCLabelTTF</string>
 				<key>memberVarAssignmentName</key>
-				<string>careerUpSmallLabel</string>
+				<string>smallOrderLabel</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -71,7 +71,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
+							<real>-10.000030517578125</real>
 							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -128,7 +128,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>8</real>
+							<real>15</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -245,12 +245,10 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>CareerLevelUpLabel</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
