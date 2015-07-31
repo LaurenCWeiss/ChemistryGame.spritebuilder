@@ -41,6 +41,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     //this is the global storage for all levels
     var levelData: LevelData = LevelData()
     
+   
     func didLoadFromCCB() {
         gamePhysicsNode.collisionDelegate = self
         //gamePhysicsNode.debugDraw = true
@@ -146,6 +147,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
 //
 //    
 //        }
+    
+
+    
     
     
     //MARK:- Physics

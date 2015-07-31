@@ -170,8 +170,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>146.78443908691406</real>
-							<real>432.01443481445312</real>
+							<real>166.5</real>
+							<real>469.0404052734375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -208,7 +208,8 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Show career level </string>
+							<string>Your Career:
+</string>
 							<false/>
 						</array>
 					</dict>
@@ -912,8 +913,6 @@ compounds made here</string>
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

@@ -13,10 +13,35 @@ class CareerScene: CCNode, CCPhysicsCollisionDelegate {
     //loads the main menu from the career scene using the back button
 
     weak var contentNode: CCNode!
+    var levelData: LevelData = LevelData()
+    var currentLevelData: Data?
+    
+    func didLoadFromCCB() {
+        showCareerImageAndLabel()
+    }
     
     func startMainMenu() {
+        
         CCDirector.sharedDirector().popScene()
         
     }
-    
+    func showCareerImageAndLabel() {
+        
+        let currentLevelData = levelData.levels[LevelData.curLevel]
+        
+        //show career image
+     
+        
+        //add the image of the new career to the scene
+        var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
+        spriteC.position = ccp(50.0,73.0)
+        self.addChild(spriteC)
+
+        
+        
+        //show career title
+        
+        
+        
+    }
 }

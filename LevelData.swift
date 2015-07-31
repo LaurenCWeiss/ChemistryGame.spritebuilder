@@ -19,6 +19,8 @@ struct Data {
     var carbonCounter: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
+    var careerUpSmallLabel: String = " "
+    var careerUpSmallLabelForLevel: String = ""
     var level: Int = 0
     var magnitude:CGPoint = CGPointZero
     var spawnThese: [Int] = []
@@ -42,7 +44,12 @@ struct Data {
     var labelColor4: CGFloat = 0.0
     var randomMin: Int = 0
     var randomMax: Int = 0
+    
     var counters = [String: Int]()
+    
+    var MyNewCareerScientistImage: String!
+    
+    
 }
 
 
@@ -93,9 +100,16 @@ struct LevelData {
         level1.spawnThese = [3,1,2,3]
         level1.randomMin = 1
         level1.randomMax = 3
-//        level1.labelA = 2
+        
+        
+        //add intern career level
+        level1.careerUpSmallLabel = "Congrats! You're an intern!"
+        level1.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+        //career level scene from main menu
+        level1.careerUpSmallLabelForLevel = "Intern"
         
         levels.append(level1)
+        
         
         var level2 = Data()
 //        level2.oxygenCounter = 2
