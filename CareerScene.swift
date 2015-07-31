@@ -40,7 +40,11 @@ class CareerScene: CCNode, CCPhysicsCollisionDelegate {
         
         
         //show career title
-        
+        var labelCareer = CCLabelTTF(string: "\(currentLevelData.careerUpSmallLabelForLevel)", fontName: "Arial", fontSize: 100)
+        labelCareer.name = "\(currentLevelData.careerUpSmallLabelForLevel)Label"
+        labelCareer.position = ccp(50,25)
+        self.addChild(labelCareer)
+
         
         
     }

@@ -80,7 +80,8 @@ struct LevelData {
         var level1 = Data()
         
         //need to this ensure that hydrogen atoms are dropped
-        level1.hydrogenCounter = 8
+        level1.hydrogenCounter = 3
+        level1.oxygenCounter = 5
         
         
         // How many of an element do you have left

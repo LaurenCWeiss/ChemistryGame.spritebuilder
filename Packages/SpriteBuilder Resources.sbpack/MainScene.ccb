@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>44</integer>
+	<integer>53</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -1981,9 +1981,9 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.7790324687957764</real>
-							<real>1.7475312948226929</real>
-							<false/>
+							<real>1</real>
+							<real>1</real>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2031,6 +2031,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

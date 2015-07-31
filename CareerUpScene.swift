@@ -26,8 +26,6 @@ class CareerUpScene: CCNode {
     
     
     func startContinueButton() {
-       
-        
         
         CCDirector.sharedDirector().popScene()
 

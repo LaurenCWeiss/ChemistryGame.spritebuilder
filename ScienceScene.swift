@@ -52,6 +52,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             for i in 1...currentLevelData!.hydrogenCounter {
                 spawn.append(1)
             }
+            
+            if(currentLevelData?.oxygenCounter>0) {
+                for i in 2...currentLevelData!.oxygenCounter {
+                    spawn.append(2)
+                }
         }
         
         //      Random Stuff
@@ -60,7 +65,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         }
         
         spawn.randomItem()
-    }
+        }}
     
     
     override func onEnter() {
@@ -139,14 +144,14 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         let ScienceScene = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().presentScene(ScienceScene)
     }
-//    
-//    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: CCNode!, ground: CCNode!) -> Bool {
-//    
-//        atomCollision.removeFromParent()
-//        return true
-//
-//    
-//        }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, ground: Ground!) -> Bool {
+    
+        atomCollision.removeFromParent()
+        return true
+
+    
+        }
     
 
     

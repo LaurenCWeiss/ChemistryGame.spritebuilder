@@ -9,28 +9,37 @@
 import Foundation
 
 class LevelTransitionScene: CCNode {
-   
+    
     
     func didLoadFromCCB() {
         
-        ////////important
         checkIfCareerUpSceneShouldLoad()
         
-
+        var levelData: LevelData = LevelData()
+        let currentLevelData = levelData.levels[LevelData.curLevel]
+        
+        
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
+        
+        //shows current career scientist image
+        var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
+        spriteC.position = ccp(screenWidth/2,screenWidth/2)
+        self.addChild(spriteC)
+        
         
     }
     
     
     func checkIfCareerUpSceneShouldLoad() {
-            var levelData: LevelData = LevelData()
-        let currentLevelData = levelData.levels[LevelData.curLevel]
         
-        if LevelData.curLevel == 1 || LevelData.curLevel == 10 {
+  
+        if LevelData.curLevel == 0 {
             
             let LevelTransitionScene = CCBReader.loadAsScene("CareerUpScene")
             CCDirector.sharedDirector().pushScene(LevelTransitionScene)
-            
-        }
+            println("curLevelhs:\(LevelData.curLevel)")
+        }}
 
     func startContinueButton() {
         
@@ -44,9 +53,5 @@ class LevelTransitionScene: CCNode {
         CCDirector.sharedDirector().presentScene(scene)
 
     }
-
-    }
-    
-    
    
 }
