@@ -239,8 +239,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         if LevelData.curLevel == 0 {
             
-            let LevelTransitionScene = CCBReader.loadAsScene("CareerUpScene")
-            CCDirector.sharedDirector().pushScene(LevelTransitionScene)
+            let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
+            CCDirector.sharedDirector().pushScene(ScienceScene)
             println("curLevelhs:\(LevelData.curLevel)")
         }}
 

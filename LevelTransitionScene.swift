@@ -13,6 +13,7 @@ class LevelTransitionScene: CCNode {
     
     func didLoadFromCCB() {
         
+        loadCareerUpScene()
                
         var levelData: LevelData = LevelData()
         let currentLevelData = levelData.levels[LevelData.curLevel]
@@ -26,6 +27,8 @@ class LevelTransitionScene: CCNode {
         spriteC.position = ccp(screenWidth/2,screenWidth/2)
         self.addChild(spriteC)
         
+      
+        
         
     }
     
@@ -33,20 +36,26 @@ class LevelTransitionScene: CCNode {
     
     func startContinueButton() {
         
+        CCDirector.sharedDirector().popScene()
+        
+        
         var levelData: LevelData = LevelData()
         if (LevelData.curLevel + 1) >= levelData.levels.count {
             LevelData.curLevel = 0
         } else {
             LevelData.curLevel++
+        }}
+    
+        func loadCareerUpScene(){
+            let scene = CCBReader.loadAsScene("CareerUpScene")
+            
+            let transition = CCTransition(fadeWithDuration: 0.8)
+            
+            CCDirector.sharedDirector().presentScene(scene)
+            
         }
 
      
-    
-        let LevelTransitionScene = CCBReader.loadAsScene("LabReportOrderScene")
-        CCDirector.sharedDirector().pushScene(LevelTransitionScene)
-
-
 
     }
    
-}

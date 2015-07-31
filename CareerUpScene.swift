@@ -17,7 +17,7 @@ class CareerUpScene: CCNode {
     
     
     func didLoadFromCCB() {
-        loadLevelTransitionScene()
+
         let currentLevelData = levelData.levels[LevelData.curLevel]
         
         //add the image of the new career to the scene
@@ -26,21 +26,20 @@ class CareerUpScene: CCNode {
         self.addChild(spriteB)
         
     }
-    func loadLevelTransitionScene(){
-        let scene = CCBReader.loadAsScene("LevelTransitionScene")
-        
-        let transition = CCTransition(fadeWithDuration: 0.8)
-        
-        CCDirector.sharedDirector().presentScene(scene)
 
-    }
     
     
     func startContinueButton() {
         
-        CCDirector.sharedDirector().popScene()
-
+        //what if scene is not level transition scene? For certain levels, it is the careerUpScene
+        
+        let LevelTransitionScene = CCBReader.loadAsScene("LabReportOrderScene")
+        CCDirector.sharedDirector().pushScene(LevelTransitionScene)
         
     }
+
+    
+    
+
 
 }
