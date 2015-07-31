@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LabReportOrderScene: CCNode {
+class LabReport: CCNode {
     
     var levelData: LevelData = LevelData()
     var currentLevelData: Data?
@@ -20,7 +20,7 @@ class LabReportOrderScene: CCNode {
     func touchBegan() {
         //if screen is clicked, load science scene
         
-            let LabReportOrderScene = CCBReader.loadAsScene("ScienceScene")
+            let LabReport = CCBReader.loadAsScene("ScienceScene")
             CCDirector.sharedDirector().presentScene(scene)
     
      //        let scene = CCBReader.loadAsScene("")

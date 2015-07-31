@@ -26,7 +26,7 @@
 		2EF767341B6AD4F6001050E0 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767331B6AD4F6001050E0 /* SettingsScene.swift */; };
 		2EF767361B6AE01E001050E0 /* CareerLevelUpLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767351B6AE01E001050E0 /* CareerLevelUpLabel.swift */; };
 		2EF767381B6AE136001050E0 /* CareerUpScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767371B6AE136001050E0 /* CareerUpScene.swift */; };
-		2EF7673A1B6BFAA3001050E0 /* LabReportOrderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767391B6BFAA3001050E0 /* LabReportOrderScene.swift */; };
+		2EF7673A1B6BFAA3001050E0 /* LabReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767391B6BFAA3001050E0 /* LabReport.swift */; };
 		2EF7673C1B6BFB77001050E0 /* smallOrderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7673B1B6BFB77001050E0 /* smallOrderLabel.swift */; };
 		5B121030197484FA004C1E1D /* ChemistryGameActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* ChemistryGameActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
@@ -188,7 +188,7 @@
 		2EF767331B6AD4F6001050E0 /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 		2EF767351B6AE01E001050E0 /* CareerLevelUpLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerLevelUpLabel.swift; sourceTree = "<group>"; };
 		2EF767371B6AE136001050E0 /* CareerUpScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerUpScene.swift; sourceTree = "<group>"; };
-		2EF767391B6BFAA3001050E0 /* LabReportOrderScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabReportOrderScene.swift; sourceTree = "<group>"; };
+		2EF767391B6BFAA3001050E0 /* LabReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabReport.swift; sourceTree = "<group>"; };
 		2EF7673B1B6BFB77001050E0 /* smallOrderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = smallOrderLabel.swift; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -489,7 +489,7 @@
 				2EF767351B6AE01E001050E0 /* CareerLevelUpLabel.swift */,
 				2E343E571B5DC29A00E4CDA3 /* LevelButton.swift */,
 				2EE5DF4F1B54776A0059A184 /* LevelData.swift */,
-				2EF767391B6BFAA3001050E0 /* LabReportOrderScene.swift */,
+				2EF767391B6BFAA3001050E0 /* LabReport.swift */,
 				2EE982521B50679C00FE25DF /* LevelSelect.swift */,
 				2EA0B1701B580BFA00BEFFC4 /* LevelTransitionScene.swift */,
 				2EF7673B1B6BFB77001050E0 /* smallOrderLabel.swift */,
@@ -876,7 +876,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EF7673A1B6BFAA3001050E0 /* LabReportOrderScene.swift in Sources */,
+				2EF7673A1B6BFAA3001050E0 /* LabReport.swift in Sources */,
 				2E343E581B5DC29A00E4CDA3 /* LevelButton.swift in Sources */,
 				2E59F7E71B62A8ED009B4453 /* HelpScene.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
