@@ -16,6 +16,7 @@ class Beaker: CCNode {
     func didLoadFromCCB(){
         
         userInteractionEnabled = true
+        
         topPosition = ccp(137,237)
 
     }

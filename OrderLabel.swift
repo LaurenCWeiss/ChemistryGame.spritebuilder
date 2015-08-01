@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class smallOrderLabel: CCNode {
+class OrderLabel: CCNode {
     
     var smallOrderLabel: CCLabelTTF!
     var levelData: LevelData = LevelData()

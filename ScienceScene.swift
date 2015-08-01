@@ -153,6 +153,15 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
         }
     
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, border: Border!) -> Bool {
+        let magnitude = levelData.levels[LevelData.curLevel].magnitude
+        let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
+        
+        atomCollision.physicsBody.applyImpulse(randomImpulse)
+       
+        return true
+    }
+    
 
     
     

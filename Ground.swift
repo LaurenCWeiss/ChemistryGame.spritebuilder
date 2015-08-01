@@ -15,7 +15,6 @@ import Foundation
 //  Copyright (c) 2015 Apportable. All rights reserved.
 //
 
-import Foundation
 
 class Ground: CCNode, CCPhysicsCollisionDelegate {
     
