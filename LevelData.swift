@@ -49,7 +49,6 @@ struct Data {
     var counters = [String: Int]()
     
     var MyNewCareerScientistImage: String!
-    var unlocked:Bool = false
     
     
 }
@@ -103,7 +102,6 @@ struct LevelData {
         level1.spawnThese = [3,1,2,3]
         level1.randomMin = 1
         level1.randomMax = 3
-//        level1.passed = false
         
         
         //add intern career level
