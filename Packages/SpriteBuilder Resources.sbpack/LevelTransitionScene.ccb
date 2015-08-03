@@ -171,7 +171,7 @@
 						<key>value</key>
 						<array>
 							<real>160</real>
-							<real>519.79693603515625</real>
+							<real>488.4652099609375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -208,7 +208,8 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Good job! </string>
+							<string>Good job! 
+ </string>
 							<false/>
 						</array>
 					</dict>
@@ -378,7 +379,7 @@
 						<key>value</key>
 						<array>
 							<real>160</real>
-							<real>431.69696044921875</real>
+							<real>437.39364624023438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -585,7 +586,7 @@
 						<key>value</key>
 						<array>
 							<real>160</real>
-							<real>52.081974029541016</real>
+							<real>50.657806396484375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -679,7 +680,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -690,7 +691,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -714,7 +715,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -733,7 +734,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/buttons-05@4x.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -750,7 +751,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>AmericanTypewriter-Bold</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -877,6 +878,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -924,8 +927,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>2.8810434341430664</real>
-							<real>1.823744535446167</real>
+							<real>2</real>
+							<real>2</real>
 							<false/>
 							<integer>0</integer>
 						</array>
