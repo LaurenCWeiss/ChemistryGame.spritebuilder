@@ -29,7 +29,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var atomNode: CCNode!
     var currentLevelData: Data?
     var spawn:[Int] = []
-    var passed = false
+
     // Labels
     
     var label1 : CCLabelTTF?
@@ -270,16 +270,15 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
 
     
     override func update(delta: CCTime) {
-
         //if the number of points equals the number of atoms released, then move on to the next level
         
-        if points == levelData.levels[LevelData.curLevel].goal {
+        if points == currentLevelData?.goal {
             
             cleanup()
             //call scene transition here
+            
             startLevelTransitionScene()
-            passed = true
-       
+            
         }
     }
     

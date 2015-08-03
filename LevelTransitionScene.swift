@@ -35,7 +35,7 @@ class LevelTransitionScene: CCNode {
     
     
     func startContinueButton() {
-        
+        //if current level  = 0(level 1) then pop scene
         CCDirector.sharedDirector().popScene()
         
         
