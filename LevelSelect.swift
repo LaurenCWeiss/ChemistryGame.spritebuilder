@@ -14,7 +14,7 @@ class LevelSelect: CCNode {
 
     func startMainMenu2() {
         
-        let LevelSelect = CCBReader.loadAsScene("MainScene")
+        let LevelSelect = CCBReader.loadAsScene("PauseScene")
         CCDirector.sharedDirector().presentScene(LevelSelect)
         
     }
@@ -23,11 +23,26 @@ class LevelSelect: CCNode {
         //println checks that correct level loads when its button is pressed in level select
         println("StartLevel: \(button.level)")
         
+        
+        
         LevelData.curLevel = button.level
-        //loads gameplay scene for the level that is pressed
-        let LevelSelect = CCBReader.loadAsScene("ScienceScene")
-        CCDirector.sharedDirector().presentScene(LevelSelect)
+        let currentLevelData = levelData.levels[LevelData.curLevel]
 
+        
+//        if currentLevelData.passed = true {
+//        //loads gameplay scene for the level that is pressed
+//        let LevelSelect = CCBReader.loadAsScene("ScienceScene")
+//        CCDirector.sharedDirector().presentScene(LevelSelect)
+//        
+//            
+//            //load unlocked image
+//        }
+//        if currentLevelData.passed  = false {
+//        
+//            userInteractionEnabled = false
+//            //curLevel.button.level.userInteractionEnabled = false
+//      
+//        }
      
     }
     
