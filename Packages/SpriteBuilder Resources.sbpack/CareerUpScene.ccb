@@ -675,7 +675,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<real>157.5</real>
-							<real>47.139003753662109</real>
+							<real>48.600753784179688</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -967,6 +967,8 @@ Improvement:
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

@@ -62,7 +62,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                     for i in 1...currentLevelData!.carbonCounter {
                         spawn.append(3)
                     }
-                
+            
         }
         
         //      Random Stuff
@@ -273,7 +273,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //if the number of points equals the number of atoms released, then move on to the next level
         
         if points == currentLevelData?.goal {
-            
+//            LevelData.curLevel += 1
             cleanup()
             //call scene transition here
             

@@ -90,7 +90,7 @@ struct LevelData {
         level1.counters["Oxygen"] = 1
         level1.counters["Hydrogen"] = 2
     
-//        level1.carbonCounter = 0
+//      level1.carbonCounter = 0
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
@@ -147,8 +147,6 @@ struct LevelData {
         
         
         //add an order label of what the user is making in this level
-        
-       
         
         levels.append(level2)
 
