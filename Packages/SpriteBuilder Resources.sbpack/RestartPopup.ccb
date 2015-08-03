@@ -486,7 +486,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -497,7 +497,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -521,7 +521,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -540,7 +540,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -557,7 +557,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>AmericanTypewriter-Bold</string>
 					</dict>
 					<dict>
 						<key>name</key>
