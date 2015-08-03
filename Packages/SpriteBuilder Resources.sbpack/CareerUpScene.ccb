@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>8</integer>
+	<integer>9</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -170,8 +170,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>160</real>
-							<real>494.56222534179688</real>
+							<real>160.49606323242188</real>
+							<real>510.64144897460938</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -641,8 +641,6 @@ Improvement:
 						<string>CareerLevelUpLabel.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

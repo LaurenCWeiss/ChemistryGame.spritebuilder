@@ -105,7 +105,7 @@ struct LevelData {
         
         
         //add intern career level
-        level1.careerUpSmallLabel = "Congrats! You're an intern!"
+        level1.careerUpSmallLabel = "You're an intern!"
         level1.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //career level scene from main menu
         level1.careerUpSmallLabelForLevel = "Intern"
@@ -130,8 +130,7 @@ struct LevelData {
         level2.counters["Carbon"] = 1
         level2.counters["Oxygen"] = 1
         
-        //        level1.carbonCounter = 0
-        level2.goal = 3
+        level2.goal = 2
         level2.smallLabel = "Carbon Monoxide"
         level2.level = 2
         level2.ElementImage1 = 1
@@ -147,7 +146,7 @@ struct LevelData {
         
         //add an order label of what the user is making in this level
         
-        level2.smallOrderLabel = "Carbon Monoxide"
+       
         
         levels.append(level2)
 

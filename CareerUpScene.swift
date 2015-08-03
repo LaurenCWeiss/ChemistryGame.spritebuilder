@@ -12,17 +12,23 @@ class CareerUpScene: CCNode {
     
     var levelData: LevelData = LevelData()
     var currentLevelData: Data?
- 
- 
+
     
+    
+    var screenSize:CGRect = CGRectZero
+    var screenWidth:CGFloat = 0.0
+
+        
     
     func didLoadFromCCB() {
+        screenSize = UIScreen.mainScreen().bounds
+        screenWidth = screenSize.size.width
 
         let currentLevelData = levelData.levels[LevelData.curLevel]
         
         //add the image of the new career to the scene
         var spriteB = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
-        spriteB.position = ccp(172,320)
+        spriteB.position = ccp(screenWidth/2,350)
         self.addChild(spriteB)
         
     }

@@ -26,7 +26,6 @@
 		2EF767341B6AD4F6001050E0 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767331B6AD4F6001050E0 /* SettingsScene.swift */; };
 		2EF767361B6AE01E001050E0 /* CareerLevelUpLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767351B6AE01E001050E0 /* CareerLevelUpLabel.swift */; };
 		2EF767381B6AE136001050E0 /* CareerUpScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767371B6AE136001050E0 /* CareerUpScene.swift */; };
-		2EF7673C1B6BFB77001050E0 /* OrderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7673B1B6BFB77001050E0 /* OrderLabel.swift */; };
 		2EF767481B6C2C62001050E0 /* LabReport2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767471B6C2C62001050E0 /* LabReport2.swift */; };
 		2EF7674A1B6C2FBD001050E0 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767491B6C2FBD001050E0 /* Border.swift */; };
 		5B121030197484FA004C1E1D /* ChemistryGameActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* ChemistryGameActivity.m */; };
@@ -189,7 +188,6 @@
 		2EF767331B6AD4F6001050E0 /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
 		2EF767351B6AE01E001050E0 /* CareerLevelUpLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerLevelUpLabel.swift; sourceTree = "<group>"; };
 		2EF767371B6AE136001050E0 /* CareerUpScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerUpScene.swift; sourceTree = "<group>"; };
-		2EF7673B1B6BFB77001050E0 /* OrderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLabel.swift; sourceTree = "<group>"; };
 		2EF767471B6C2C62001050E0 /* LabReport2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabReport2.swift; sourceTree = "<group>"; };
 		2EF767491B6C2FBD001050E0 /* Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
@@ -495,7 +493,6 @@
 				2EF767471B6C2C62001050E0 /* LabReport2.swift */,
 				2EE982521B50679C00FE25DF /* LevelSelect.swift */,
 				2EA0B1701B580BFA00BEFFC4 /* LevelTransitionScene.swift */,
-				2EF7673B1B6BFB77001050E0 /* OrderLabel.swift */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				2EE982501B5058D000FE25DF /* PauseScene.swift */,
 				2EA0B17A1B582CEB00BEFFC4 /* RestartPopup.swift */,
@@ -893,7 +890,6 @@
 				2EE5DF501B54776A0059A184 /* LevelData.swift in Sources */,
 				2E59F7E11B62A1E1009B4453 /* ViewController.swift in Sources */,
 				2EF767361B6AE01E001050E0 /* CareerLevelUpLabel.swift in Sources */,
-				2EF7673C1B6BFB77001050E0 /* OrderLabel.swift in Sources */,
 				2EA0B16F1B57176600BEFFC4 /* Ground.swift in Sources */,
 				2EE5DF581B556D520059A184 /* Goal.swift in Sources */,
 				2EF767341B6AD4F6001050E0 /* SettingsScene.swift in Sources */,

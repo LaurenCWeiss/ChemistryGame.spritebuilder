@@ -24,7 +24,7 @@ class LevelTransitionScene: CCNode {
         
         //shows current career scientist image
         var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
-        spriteC.position = ccp(screenWidth/2,screenWidth/2)
+        spriteC.position = ccp(screenWidth/2,250)
         self.addChild(spriteC)
         
       
