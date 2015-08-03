@@ -14,7 +14,7 @@ class LevelSelect: CCNode {
 
     func startMainMenu2() {
         
-        let LevelSelect = CCBReader.loadAsScene("PauseScene")
+        let LevelSelect = CCBReader.loadAsScene("MainScene")
         CCDirector.sharedDirector().presentScene(LevelSelect)
         
     }
