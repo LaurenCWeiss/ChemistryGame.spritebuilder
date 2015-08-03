@@ -53,8 +53,6 @@ struct Data {
     
 }
 
-
-
 //TODO: make singleton
 struct LevelData {
     private static let defaults = NSUserDefaults.standardUserDefaults()
