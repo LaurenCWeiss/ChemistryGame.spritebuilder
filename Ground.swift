@@ -7,20 +7,12 @@
 //
 
 import Foundation
-//
-//  Beaker.swift
-//  ChemistryGame
-//
-//  Created by Lauren Weiss on 7/9/15.
-//  Copyright (c) 2015 Apportable. All rights reserved.
-//
 
-
-class Ground: CCNode, CCPhysicsCollisionDelegate {
+class Ground: CCNode {
     
-       func didLoadFromCCB(){
+    func didLoadFromCCB(){
         
         userInteractionEnabled = true
-        }
+    }
     
 }

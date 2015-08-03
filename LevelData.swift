@@ -69,7 +69,7 @@ struct LevelData {
         //could say set(newLevel) but then we would have to put newLevel in the setter which would be bad code when we can just use newValue that is built into the systme
         set {
             defaults.setInteger(newValue, forKey: "curLevel")
-            println(curLevel)
+            println(newValue)
         }
     }
     
