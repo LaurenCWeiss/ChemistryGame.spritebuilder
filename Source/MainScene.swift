@@ -6,11 +6,22 @@ class MainScene: CCNode {
     
     
     func didLoadFromCCB() {
-     
+        
+      
+            
+            //what if scene is not level transition scene? For certain levels, it is the careerUpScene
+            
+        
+        
+        
     }
     
     func startScience() {
         //loads the gameplay scene
+        let MainScene = CCBReader.loadAsScene("LabReport2")
+        CCDirector.sharedDirector().presentScene(MainScene)
+        return
+        
         let firstLevel = CCBReader.loadAsScene("ScienceScene")
         let transition = CCTransition(fadeWithDuration: 0.8)
         CCDirector.sharedDirector().presentScene(firstLevel, withTransition: transition)

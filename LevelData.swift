@@ -115,19 +115,42 @@ struct LevelData {
         level1.smallOrderLabel = "Water"
         
         levels.append(level1)
+
+        
         
         
         var level2 = Data()
-//        level2.oxygenCounter = 2
-//        level2.hydrogenCounter = 0
-        level2.goal = 2
-        level2.level = 2
-        level2.smallLabel = "Oxygen gas"
-        level2.magnitude = ccp(50,30)
-        level2.spawnThese = [1,1,1,1,2]
-
-        levels.append(level2)
         
+        //need to this ensure that hydrogen atoms are dropped
+        level2.carbonCounter = 3
+        level2.oxygenCounter = 3
+        
+        
+        // How many of an element do you have left
+        level2.counters["Carbon"] = 1
+        level2.counters["Oxygen"] = 1
+        
+        //        level1.carbonCounter = 0
+        level2.goal = 3
+        level2.smallLabel = "Carbon Monoxide"
+        level2.level = 2
+        level2.ElementImage1 = 1
+        level2.ElementImage2 = 1
+        level2.ElementImage1Name = "Art Assets/Carbon.png"
+        level2.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        level2.magnitude = ccp(0,30)
+        level2.spawnThese = [3,1,2,3]
+        level2.randomMin = 1
+        level2.randomMax = 3
+        
+        
+        //add an order label of what the user is making in this level
+        
+        level2.smallOrderLabel = "Carbon Monoxide"
+        
+        levels.append(level2)
+
 //        var level3 = Data()
 //        level3.hydrogenCounter = 2
 //        level3.oxygenCounter = 5

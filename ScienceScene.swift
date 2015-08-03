@@ -43,6 +43,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
    
     func didLoadFromCCB() {
+        
         gamePhysicsNode.collisionDelegate = self
         //gamePhysicsNode.debugDraw = true
         //gamePhysicsNode.space.dampining = 0.80
@@ -57,6 +58,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 for i in 2...currentLevelData!.oxygenCounter {
                     spawn.append(2)
                 }
+                if(currentLevelData?.carbonCounter>0) {
+                    for i in 1...currentLevelData!.carbonCounter {
+                        spawn.append(3)
+                    }
+                
         }
         
         //      Random Stuff
@@ -66,9 +72,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         spawn.randomItem()
         }}
-    
+    }
     
     override func onEnter() {
+       
+
         super.onEnter()
         
         self.schedule(Selector("dropAtom"), interval: 2)
@@ -283,6 +291,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         if currentLevelData.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
         if currentLevelData.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
+        if currentLevelData.counters["Carbon"]>0 { requiredAtoms.append("Carbon") }
         
         let numImages = requiredAtoms.count
         

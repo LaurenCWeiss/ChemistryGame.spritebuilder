@@ -95,7 +95,7 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
-		<key>Art Assets/Carbon.png</key>
+		<key>Art Assets/E@4x.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>
@@ -103,9 +103,24 @@
 		<key>Art Assets/Hydrogen.png</key>
 		<dict>
 			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/M@4x.png</key>
+		<dict>
+			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
-		<key>Art Assets/Oxygen.png</key>
+		<key>Art Assets/PauseButton.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Art Assets/RestartButton.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Art Assets/S@4x-4.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>
@@ -115,6 +130,8 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>Art Assets/Scientist1A.png</key>
+		<dict/>
 		<key>Art Assets/Scientist2.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -140,6 +157,18 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>Art Assets/Scientist7.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Art Assets/T@4x.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
+		<key>Art Assets/c.png</key>
+		<dict/>
 		<key>Art Assets/letterT@4x.png</key>
 		<dict>
 			<key>scaleFrom</key>

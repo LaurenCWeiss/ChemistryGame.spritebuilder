@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>4</integer>
+	<integer>20</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -96,8 +96,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.50214856863021851</real>
-							<real>0.47780871391296387</real>
+							<real>0.60000002384185791</real>
+							<real>0.60000002384185791</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -131,7 +131,7 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
+							<real>1</real>
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
@@ -143,27 +143,7 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array>
-							<dict>
-								<key>UUID</key>
-								<integer>2</integer>
-								<key>baseClass</key>
-								<string>CCEffectHue</string>
-								<key>className</key>
-								<string>CCBPEffectHue</string>
-								<key>properties</key>
-								<array>
-									<dict>
-										<key>name</key>
-										<string>hue</string>
-										<key>type</key>
-										<string>Float</string>
-										<key>value</key>
-										<real>145.43675231933594</real>
-									</dict>
-								</array>
-							</dict>
-						</array>
+						<array/>
 					</dict>
 				</array>
 				<key>selected</key>

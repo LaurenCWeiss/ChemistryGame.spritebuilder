@@ -19,13 +19,12 @@ class LabReport2: CCNode {
     var screenSize:CGRect = CGRectZero
     var screenWidth:CGFloat = 0.0
     
-    var xpos:[CGFloat] = [0,0,0,0]
+
 
     
     func didLoadFromCCB() {
         
-//       setReportImages()
-        userInteractionEnabled = true
+                userInteractionEnabled = true
         
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.size.width
@@ -33,6 +32,11 @@ class LabReport2: CCNode {
         currentLevelData = levelData.levels[LevelData.curLevel]
         
        
+    }
+    
+    override func onEnter() {
+        setReportImages()
+
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
@@ -43,63 +47,73 @@ class LabReport2: CCNode {
         let LabReport2 = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().replaceScene(LabReport2)
     }
- 
+
     
-        //        let scene = CCBReader.loadAsScene("")
+    
+    
+//                let scene = CCBReader.loadAsScene("")
+//        
+//                let scene = CCBReader.loadAsScene("ScienceScene")
+//                CCDirector.sharedDirector().presentScene(scene)
+    
+//     Calculate Required Atoms
+//    still use hydrogenCounter and oxygenCounter here...
+    
+    func setReportImages() {
+       
+        if currentLevelData?.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
+        if currentLevelData?.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
+        if currentLevelData?.counters["Carbon"]>0 { requiredAtoms.append("Carbon") }
+      
+        var ypos:[CGFloat] = [0,0,0,0]
         
-        //        let scene = CCBReader.loadAsScene("ScienceScene")
-        //        CCDirector.sharedDirector().presentScene(scene)
+        let numImages = requiredAtoms.count
     
-    // Calculate Required Atoms
-    //still use hydrogenCounter and oxygenCounter here...
-//    
-//    func setReportImages() {
-//        if currentLevelData!.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
-//        if currentLevelData!.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
-//        
-//        let numImages = requiredAtoms.count
-//        
-//        if numImages == 1 {
-//            xpos[0] = screenWidth/2
-//        }
-//        if numImages == 2 {
-//            
-//            xpos[0] = screenWidth/4
-//            xpos[1] = screenWidth/4 * 3
-//            
-//        }
-//        if numImages == 3 {
-//            //positioning is incorrect for this one
-//            xpos[0] = screenWidth/4
-//            xpos[1] = screenWidth/2
-//            xpos[2] = screenWidth/3
-//        }
-//        
-//        if numImages == 4 {
-//            xpos[0] = screenWidth/5
-//            xpos[1] = screenWidth/5 * 2
-//            xpos[2] = screenWidth/5 * 3
-//            xpos[3] = screenWidth/5 * 4
-//        }
-//        
-//        // Setup Images for Atoms
-//        for (index,atomType) in enumerate(requiredAtoms) {
-//            
-//            // Add Images
-//            var sprite = CCSprite(imageNamed:"Art Assets/\(atomType).png")
-//            sprite.position = ccp(xpos[index],73.0)
-//            self.addChild(sprite)
-//            
-//            // Add Labels
-//            var label = CCLabelTTF(string: "\(currentLevelData!.counters[atomType]!)", fontName: "Arial", fontSize: 20)
-//            label.name = "\(atomType)Label"
-//            label.position = ccp(xpos[index],25)
-//            self.addChild(label)
-//            
-//        }
-//        
+        
+        if numImages == 1 {
+            ypos[0] = 338
+        }
+        if numImages == 2 {
+            
+            ypos[0] = 338
+            ypos[1] = 247
+            
+        }
+        if numImages == 3 {
+            //positioning is incorrect for this one
+            ypos[0] = 337
+            ypos[1] = 289
+            ypos[2] = screenWidth/3
+        }
+        
+        if numImages == 4 {
+            //positioning is incorrect for this one
+
+            ypos[0] = screenWidth/5
+            ypos[1] = screenWidth/5 * 2
+            ypos[2] = screenWidth/5 * 3
+            ypos[3] = screenWidth/5 * 4
+        }
+        
+        // Setup Images for Atoms
+        for (index,atomType) in enumerate(requiredAtoms) {
+            
+            // Add Images
+            var sprite = CCSprite(imageNamed:"Art Assets/\(atomType).png")
+            sprite.position = ccp(screenWidth/2 - 30,ypos[index])
+            self.addChild(sprite)
+            
+            // Add Labels
+            var label = CCLabelTTF(string: "\(currentLevelData!.counters[atomType]!)", fontName: "Chalkduster", fontSize: 50)
+            label.name = "\(atomType)Label"
+            label.position = ccp(screenWidth/2 + 50,ypos[index])
+            label.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            self.addChild(label)
+            
+        }
+
     
-    }
+        }}
     
    
 
