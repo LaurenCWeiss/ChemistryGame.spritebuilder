@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>198</integer>
+	<integer>150</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -177,8 +177,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>82.627212524414062</real>
-							<real>137.36833190917969</real>
+							<real>64.397911071777344</real>
+							<real>142.98471069335938</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -272,7 +272,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -283,7 +283,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -307,7 +307,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -326,7 +326,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -343,7 +343,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>AmericanTypewriter-Bold</string>
+						<string>Helvetica</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -510,8 +510,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>240.30470275878906</real>
-							<real>137.36833190917969</real>
+							<real>193.45208740234375</real>
+							<real>142.98471069335938</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -605,7 +605,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -616,7 +616,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -640,7 +640,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -659,7 +659,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -676,7 +676,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>AmericanTypewriter-Bold</string>
+						<string>Helvetica</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -843,8 +843,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>240.30470275878906</real>
-							<real>61.242759704589844</real>
+							<real>193.45208740234375</real>
+							<real>78.091865539550781</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -938,7 +938,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -949,7 +949,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -973,7 +973,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -992,7 +992,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1009,7 +1009,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>AmericanTypewriter-Bold</string>
+						<string>Helvetica</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1176,8 +1176,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>82.627212524414062</real>
-							<real>61.242759704589844</real>
+							<real>62.640609741210938</real>
+							<real>78.091865539550781</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1271,7 +1271,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1282,7 +1282,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1306,7 +1306,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1325,7 +1325,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1342,7 +1342,340 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>AmericanTypewriter-Bold</string>
+						<string>Helvetica</string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontSize</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>17</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>horizontalAlignment</string>
+						<key>type</key>
+						<string>IntegerLabeled</string>
+						<key>value</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>verticalAlignment</string>
+						<key>type</key>
+						<string>IntegerLabeled</string>
+						<key>value</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>horizontalPadding</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>10</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>verticalPadding</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontColor</string>
+						<key>type</key>
+						<string>Color4</string>
+						<key>value</key>
+						<array>
+							<real>255</real>
+							<real>255</real>
+							<real>255</real>
+							<real>255</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>outlineColor</string>
+						<key>type</key>
+						<string>Color4</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>outlineWidth</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>shadowColor</string>
+						<key>type</key>
+						<string>Color4</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>127</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>shadowBlurRadius</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>2</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>shadowOffset</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>-2</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+				</array>
+				<key>seqExpanded</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>39</integer>
+				<key>animatedProperties</key>
+				<dict>
+					<key>0</key>
+					<dict/>
+				</dict>
+				<key>baseClass</key>
+				<string>CCButton</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>shareButton</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>221.848388671875</real>
+							<real>31.8138427734375</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>2.1034293174743652</real>
+							<real>1.5906921625137329</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>block</string>
+						<key>type</key>
+						<string>Block</string>
+						<key>value</key>
+						<array>
+							<string>settingsButtonTapped</string>
+							<integer>1</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>preferredSize</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>40</real>
+							<real>40</real>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>maxSize</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>userInteractionEnabled</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>title</string>
+						<key>type</key>
+						<string>String</string>
+						<key>value</key>
+						<array>
+							<string>Settings</string>
+							<false/>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundSpriteFrame|Normal</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>Art Assets/Button.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundSpriteFrame|Highlighted</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>Art Assets/Button.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>labelColor|Highlighted</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundSpriteFrame|Disabled</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>Art Assets/Button.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>labelOpacity|Disabled</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>1</real>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundSpriteFrame|Selected</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>Art Assets/Button.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>labelOpacity|Selected</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>1</real>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontName</string>
+						<key>type</key>
+						<string>FontTTF</string>
+						<key>value</key>
+						<string>Helvetica</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1504,7 +1837,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>229.55253601074219</real>
+							<real>240.71952819824219</real>
 							<real>332.54556274414062</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1529,8 +1862,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.17000000178813934</real>
-							<real>0.17000000178813934</real>
+							<real>0.15000000596046448</real>
+							<real>0.15000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1640,7 +1973,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>85.663215637207031</real>
+							<real>94.771270751953125</real>
 							<real>332.54556274414062</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1665,8 +1998,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.17000000178813934</real>
-							<real>0.17000000178813934</real>
+							<real>0.15000000596046448</real>
+							<real>0.15000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>

@@ -49,12 +49,9 @@ struct Data {
     var counters = [String: Int]()
     
     var MyNewCareerScientistImage: String!
-    var unlocked:Bool = false
     
     
 }
-
-
 
 //TODO: make singleton
 struct LevelData {
@@ -90,7 +87,7 @@ struct LevelData {
         level1.counters["Oxygen"] = 1
         level1.counters["Hydrogen"] = 2
     
-//      level1.carbonCounter = 0
+//        level1.carbonCounter = 0
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
@@ -103,7 +100,6 @@ struct LevelData {
         level1.spawnThese = [3,1,2,3]
         level1.randomMin = 1
         level1.randomMax = 3
-//        level1.passed = false
         
         
         //add intern career level
@@ -147,6 +143,8 @@ struct LevelData {
         
         
         //add an order label of what the user is making in this level
+        
+       
         
         levels.append(level2)
 

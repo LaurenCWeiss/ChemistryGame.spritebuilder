@@ -675,7 +675,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<real>157.5</real>
-							<real>48.600753784179688</real>
+							<real>47.139003753662109</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -769,7 +769,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -780,7 +780,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -804,7 +804,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -823,7 +823,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/NewButton.png</string>
+							<string>Art Assets/Button.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -840,7 +840,7 @@ Improvement:
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>AmericanTypewriter-Bold</string>
+						<string>Helvetica</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -967,8 +967,6 @@ Improvement:
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
