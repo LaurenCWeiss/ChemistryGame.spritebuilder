@@ -137,6 +137,8 @@ struct LevelData {
         level2.ElementImage2 = 1
         level2.ElementImage1Name = "Art Assets/Carbon.png"
         level2.ElementImage2Name = "Art Assets/Oxygen.png"
+        level2.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level2.magnitude = ccp(0,30)
         level2.spawnThese = [3,1,2,3]
@@ -145,71 +147,43 @@ struct LevelData {
         
         
         //add an order label of what the user is making in this level
-        
-       
+
         
         levels.append(level2)
 
-//        var level3 = Data()
-//        level3.hydrogenCounter = 2
-//        level3.oxygenCounter = 5
-//        level3.goal = 7
-//        level3.level = 3
-//        level3.smallLabel = "Water"
-//
-//
-//        levels.append(level3)
-//        
-//        var level4 = Data()
-//        level4.hydrogen = 1
-//        level4.oxygen = 4
-//        level4.goal = 5
-//        level4.level = 4
-//        level4.smallLabel = "Water"
-//
-//
-//        levels.append(level4)
-//        
-//        var level5 = Data()
-//        level5.hydrogen = 1
-//        level5.oxygen = 4
-//        level5.goal = 5
-//        level5.level = 4
-//        level5.smallLabel = "Water"
-//
-//        
-//        levels.append(level5)
-//        
-//        var level6 = Data()
-//        level6.hydrogen = 1
-//        level6.oxygen = 4
-//        level6.goal = 5
-//        level6.level = 4
-//        level6.smallLabel = "Water"
-//
-//        
-//        levels.append(level6)
-//        
-//        var level7 = Data()
-//        level7.hydrogen = 1
-//        level7.oxygen = 4
-//        level7.goal = 5
-//        level7.level = 4
-//        level7.smallLabel = "Water"
-//
-//        
-//        levels.append(level7)
-//        
-//        var level8 = Data()
-//        level8.hydrogen = 1
-//        level8.oxygen = 4
-//        level8.goal = 5
-//        level8.level = 4
-//        level8.smallLabel = "Water"
-//  
-//        
-//        levels.append(level8)
-//        
+        
+        var level3 = Data()
+        
+        //need to this ensure that hydrogen atoms are dropped
+        level3.carbonCounter = 3
+        level3.oxygenCounter = 3
+        
+        
+        // How many of an element do you have left
+        level3.counters["Carbon"] = 1
+        level3.counters["Oxygen"] = 1
+        
+        level3.goal = 2
+        level3.smallLabel = "Carbon Monoxide"
+        level3.level = 3
+        level3.ElementImage1 = 1
+        level3.ElementImage2 = 1
+        level3.ElementImage1Name = "Art Assets/Carbon.png"
+        level3.ElementImage2Name = "Art Assets/Oxygen.png"
+        level3.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+        
+        
+        level3.magnitude = ccp(0,30)
+        level3.spawnThese = [3,1,2,3]
+        level3.randomMin = 1
+        level3.randomMax = 3
+    
+        
+        //add an order label of what the user is making in this level
+        
+        
+        
+        levels.append(level3)
 
         
 

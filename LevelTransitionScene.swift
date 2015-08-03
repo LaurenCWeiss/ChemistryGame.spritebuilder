@@ -12,8 +12,8 @@ class LevelTransitionScene: CCNode {
     
     
     func didLoadFromCCB() {
+      
         
-        loadCareerUpScene()
                
         var levelData: LevelData = LevelData()
         let currentLevelData = levelData.levels[LevelData.curLevel]
@@ -21,6 +21,14 @@ class LevelTransitionScene: CCNode {
         
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width
+        
+        
+        
+        if currentLevelData.level == 0 {
+            loadCareerUpScene()
+        } else {
+            loadLabReport2()
+        }
         
         //shows current career scientist image
         var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
@@ -47,6 +55,8 @@ class LevelTransitionScene: CCNode {
         }}
     
         func loadCareerUpScene(){
+            
+            
             let scene = CCBReader.loadAsScene("CareerUpScene")
             
             let transition = CCTransition(fadeWithDuration: 0.8)
@@ -55,7 +65,13 @@ class LevelTransitionScene: CCNode {
             
         }
 
-     
+    func loadLabReport2() {
+        
+        let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
+        CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
+        
+        
+    }
 
     }
    

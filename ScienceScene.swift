@@ -232,7 +232,7 @@ func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beaker: Beaker!, bor
 
 func gameOver() {
     
-    self.unscheduleAllSelectors()
+    unscheduleAllSelectors()
     self.gamePhysicsNode.paused = true
     
     //LOAD RESTART POPUP HERE
@@ -265,7 +265,7 @@ func checkIfCareerUpSceneShouldLoad() {
     }
             else {
                 let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
-                CCDirector.sharedDirector().pushScene(ScienceScene)
+                CCDirector.sharedDirector().replaceScene(ScienceScene)
     
             }
     
