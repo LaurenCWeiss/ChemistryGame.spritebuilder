@@ -29,7 +29,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var atomNode: CCNode!
     var currentLevelData: Data?
     var spawn:[Int] = []
-    
+    var passed = false
     // Labels
     
     var label1 : CCLabelTTF?
@@ -259,7 +259,14 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
             CCDirector.sharedDirector().pushScene(ScienceScene)
             println("curLevelhs:\(LevelData.curLevel)")
-        }}
+        }
+//        else {
+//            let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
+//            CCDirector.sharedDirector().pushScene(ScienceScene)
+//    
+//        }
+    
+    }
 
     
     override func update(delta: CCTime) {
@@ -271,6 +278,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             cleanup()
             //call scene transition here
             startLevelTransitionScene()
+            passed = true
+       
         }
     }
     
