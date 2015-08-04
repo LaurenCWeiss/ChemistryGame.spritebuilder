@@ -80,6 +80,11 @@
 		</dict>
 		<key>Art Assets</key>
 		<dict/>
+		<key>Art Assets/Aluminum.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
 		<key>Art Assets/Beaker.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -95,12 +100,47 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>Art Assets/Bromine.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Calcium.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Chloride.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Copper.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
 		<key>Art Assets/E@4x.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>Art Assets/Gallium.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
 		<key>Art Assets/Hydrogen.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Iron.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Lithium.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>4</integer>
@@ -110,7 +150,22 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>Art Assets/Mercury.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
 		<key>Art Assets/NewButton.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Nitrogen.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Notebook.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>4</integer>
@@ -124,6 +179,16 @@
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>
+		</dict>
+		<key>Art Assets/Phosphorus.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Potassium.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
 		</dict>
 		<key>Art Assets/RestartButton.png</key>
 		<dict>
@@ -185,10 +250,25 @@
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
+		<key>Art Assets/Sodium.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Art Assets/Sulfur.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
 		<key>Art Assets/T@4x.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>
+		</dict>
+		<key>Art Assets/Telluride.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
 		</dict>
 		<key>Art Assets/c.png</key>
 		<dict/>

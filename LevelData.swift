@@ -38,6 +38,7 @@ struct Data {
     var careerUpSmallLabel: String = " "
     var careerUpSmallLabelForLevel: String = ""
     var level: Int = 0
+    
     var magnitude:CGPoint = CGPointZero
     var spawnThese: [Int] = []
     var ElementImage1: Int = 0
@@ -79,13 +80,18 @@ struct LevelData {
     //saves the level that the user was most currently on so that when they open their phone again the level has been saved!
     static var curLevel: Int {
         get {
+        println("Get Level:")
+        println(defaults.integerForKey("curLevel"))
+
         return defaults.integerForKey("curLevel")
+        
+        
         
         }
         //could say set(newLevel) but then we would have to put newLevel in the setter which would be bad code when we can just use newValue that is built into the systme
         set {
             defaults.setInteger(newValue, forKey: "curLevel")
-            println(newValue)
+            println("Set Level:\(newValue)")
         }
     }
     
@@ -93,6 +99,8 @@ struct LevelData {
     
     init() {
         //numbers of atoms of elements
+
+        
         
         var level1 = Data()
         
@@ -179,9 +187,9 @@ struct LevelData {
         level3.counters["Nitrogen"] = 1
         level3.counters["Hydrogen"] = 3
         
-        level3.goal = 4
+        level3.goal = 3
         level3.smallLabel = "Ammonia"
-        level3.level = 3
+        level3.level = 2
         level3.ElementImage1 = 1
         level3.ElementImage2 = 1
         level3.ElementImage1Name = "Art Assets/Nitrogen.png"
@@ -197,7 +205,7 @@ struct LevelData {
         
         //add an order label of what the user is making in this level
         
-        
+          levels.append(level3)
         
         
         
@@ -1167,6 +1175,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level30.smallOrderLabel = "Sulfur Dioxide"
+        level30.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         levels.append(level30)
         

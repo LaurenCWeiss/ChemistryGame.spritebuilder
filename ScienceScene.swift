@@ -45,11 +45,15 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func didLoadFromCCB() {
         
+        
+        
         gamePhysicsNode.collisionDelegate = self
         //gamePhysicsNode.debugDraw = true
         //gamePhysicsNode.space.dampining = 0.80
         currentLevelData = levelData.levels[LevelData.curLevel]
         
+        
+        println(currentLevelData?.level)
         if(currentLevelData?.hydrogenCounter>0) {
             
             for i in 1...currentLevelData!.hydrogenCounter {
