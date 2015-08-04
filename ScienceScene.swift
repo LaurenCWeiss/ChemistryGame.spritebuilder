@@ -65,12 +65,13 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             for i in 1...currentLevelData!.carbonCounter {
                 spawn.append(3)
             }
+        }
             if(currentLevelData?.nitrogenCounter>0) {
                 for i in 1...currentLevelData!.nitrogenCounter {
                     spawn.append(3)
                 }
-            
-        }
+            }
+          
         
         //      Random Stuff
         for i in 1...3 {

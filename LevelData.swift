@@ -164,7 +164,7 @@ struct LevelData {
         level3.counters["Nitrogen"] = 1
         level3.counters["Hydrogen"] = 3
         
-        level3.goal = 2
+        level3.goal = 4
         level3.smallLabel = "Ammonia"
         level3.level = 3
         level3.ElementImage1 = 1
@@ -219,6 +219,10 @@ struct LevelData {
         
         
         levels.append(level4)
+        
+        
+        
+        
         
 
         
