@@ -68,7 +68,8 @@ class LabReport2: CCNode {
         if currentLevelData?.counters["Lithium"]>0 { requiredAtoms.append("Lithium") }
         if currentLevelData?.counters["Aluminum"]>0 { requiredAtoms.append("Aluminum") }
         if currentLevelData?.counters["Chloride"]>0 { requiredAtoms.append("Chloride") }
-      
+        if currentLevelData?.counters["Copper"]>0 { requiredAtoms.append("Copper") }
+        if currentLevelData?.counters["Sulfur"]>0 { requiredAtoms.append("Sulfur") }
         var ypos:[CGFloat] = [0,0,0,0]
         
         let numImages = requiredAtoms.count

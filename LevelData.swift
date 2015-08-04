@@ -21,6 +21,8 @@ struct Data {
     var lithiumCounter: Int = 0
     var aluminumCounter: Int = 0
     var chlorideCounter: Int = 0
+    var copperCounter: Int = 0
+    var sulfurCounter: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
     var careerUpSmallLabel: String = " "
@@ -369,6 +371,44 @@ struct LevelData {
         
         levels.append(level8)
         
+        
+        
+        //copper sulfate - CuSO4
+        var level9 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level9.copperCounter = 3
+        level9.sulfurCounter = 3
+        level9.oxygenCounter = 5
+        
+        
+        // How many of an element do you have left
+        level9.counters["Copper"] = 1
+        level9.counters["Sulfur"] = 1
+        level9.counters["Oxygen"] = 4
+        
+        level9.goal = 6
+        level9.smallLabel = "Copper Sulfate"
+        level9.level = 9
+        level9.ElementImage1 = 1
+        level9.ElementImage2 = 1
+        level9.ElementImage3 = 1
+        level9.ElementImage1Name = "Art Assets/Copper.png"
+        level9.ElementImage2Name = "Art Assets/Sulfur.png"
+        level9.ElementImage3Name = "Art Assets/Oxygen.png"
+        
+        level9.magnitude = ccp(0,30)
+        level9.spawnThese = [3,1,2,3]
+        level9.randomMin = 1
+        level9.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level9.smallOrderLabel = "Copper Sulfate"
+        
+        levels.append(level9)
+        
+
 
         
         

@@ -90,6 +90,16 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 spawn.append(7)
             }
         }
+        if(currentLevelData?.copperCounter>0) {
+            for i in 1...currentLevelData!.copperCounter {
+                spawn.append(8)
+            }
+        }
+        if(currentLevelData?.sulfurCounter>0) {
+            for i in 1...currentLevelData!.sulfurCounter {
+                spawn.append(9)
+            }
+        }
         
         //      Random Stuff
         for i in 1...3 {
@@ -144,6 +154,10 @@ func dropAtom(){
         fileName = "Aluminum"
     case 7:
         fileName = "Chloride"
+    case 8:
+        fileName = "Copper"
+    case 9:
+        fileName = "Sulfur"
     default:
         println("No Atom :(")
         //return so that if integer is equal to zero(which is what it is set at in level data) atoms will just stop falling
@@ -339,6 +353,8 @@ func setImage() {
     if currentLevelData.counters["Lithium"]>0 { requiredAtoms.append("Lithium") }
     if currentLevelData.counters["Aluminum"]>0 { requiredAtoms.append("Aluminum") }
     if currentLevelData.counters["Chloride"]>0 { requiredAtoms.append("Chloride") }
+    if currentLevelData.counters["Copper"]>0 { requiredAtoms.append("Copper") }
+    if currentLevelData.counters["Sulfur"]>0 { requiredAtoms.append("Sulfur") }
     
     let numImages = requiredAtoms.count
     
