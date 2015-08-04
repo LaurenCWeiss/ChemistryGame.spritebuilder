@@ -408,17 +408,738 @@ struct LevelData {
         
         levels.append(level9)
         
+        
+        //aluminum oxide - Al2O3
+        var level10 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level10.aluminumCounter = 3
+        level10.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level10.counters["Aluminum"] = 2
+        level10.counters["Oxygen"] = 3
 
+        
+        level10.goal = 5
+        level10.smallLabel = "Aluminum Oxide"
+        level10.level = 10
+        level10.ElementImage1 = 1
+        level10.ElementImage2 = 1
+      
+        level10.ElementImage1Name = "Art Assets/Aluminum.png"
+        level10.ElementImage2Name = "Art Assets/Oxygen.png"
+   
+        
+        level10.magnitude = ccp(0,30)
+        level10.spawnThese = [3,1,2,3]
+        level10.randomMin = 1
+        level10.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level10.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level10)
+        
+
+/////////////////////////////////////////////////////////////////////////////////////////
+        //aluminum oxide - Al2O3
+        var level11 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level11.aluminumCounter = 3
+        level11.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level11.counters["Aluminum"] = 2
+        level11.counters["Oxygen"] = 3
+        
+        
+        level11.goal = 5
+        level11.smallLabel = "Aluminum Oxide"
+        level11.level = 11
+        level11.ElementImage1 = 1
+        level11.ElementImage2 = 1
+        
+        level11.ElementImage1Name = "Art Assets/Aluminum.png"
+        level11.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level11.magnitude = ccp(0,30)
+        level11.spawnThese = [3,1,2,3]
+        level11.randomMin = 1
+        level11.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level11.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level11)
+        
+        
+        
+        //aluminum oxide - Al2O3
+        var level12 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level12.aluminumCounter = 3
+        level12.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level12.counters["Aluminum"] = 2
+        level12.counters["Oxygen"] = 3
+        
+        
+        level12.goal = 5
+        level12.smallLabel = "Aluminum Oxide"
+        level12.level = 12
+        level12.ElementImage1 = 1
+        level12.ElementImage2 = 1
+        
+        level12.ElementImage1Name = "Art Assets/Aluminum.png"
+        level12.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level12.magnitude = ccp(0,30)
+        level12.spawnThese = [3,1,2,3]
+        level12.randomMin = 1
+        level12.randomMax = 3
+    
+        //add an order label of what the user is making in this level
+        
+        level12.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level12)
+        
+        
+        
+        //aluminum oxide - Al2O3
+        var level13 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level13.aluminumCounter = 3
+        level13.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level13.counters["Aluminum"] = 2
+        level13.counters["Oxygen"] = 3
+        
+        
+        level13.goal = 5
+        level13.smallLabel = "Aluminum Oxide"
+        level13.level = 13
+        level13.ElementImage1 = 1
+        level13.ElementImage2 = 1
+        
+        level13.ElementImage1Name = "Art Assets/Aluminum.png"
+        level13.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level13.magnitude = ccp(0,30)
+        level13.spawnThese = [3,1,2,3]
+        level13.randomMin = 1
+        level13.randomMax = 3
+    
+        //add an order label of what the user is making in this level
+        
+        level13.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level13)
+        
+        
+        //aluminum oxide - Al2O3
+        var level14 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level14.aluminumCounter = 3
+        level14.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level14.counters["Aluminum"] = 2
+        level14.counters["Oxygen"] = 3
+        
+        
+        level14.goal = 5
+        level14.smallLabel = "Aluminum Oxide"
+        level14.level = 14
+        level14.ElementImage1 = 1
+        level14.ElementImage2 = 1
+        
+        level14.ElementImage1Name = "Art Assets/Aluminum.png"
+        level14.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level14.magnitude = ccp(0,30)
+        level14.spawnThese = [3,1,2,3]
+        level14.randomMin = 1
+        level14.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level14.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level14)
+        
+        
+        
+        //aluminum oxide - Al2O3
+        var level15 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level15.aluminumCounter = 3
+        level15.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level15.counters["Aluminum"] = 2
+        level15.counters["Oxygen"] = 3
+        
+        
+        level15.goal = 5
+        level15.smallLabel = "Aluminum Oxide"
+        level15.level = 15
+        level15.ElementImage1 = 1
+        level15.ElementImage2 = 1
+        
+        level15.ElementImage1Name = "Art Assets/Aluminum.png"
+        level15.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level15.magnitude = ccp(0,30)
+        level15.spawnThese = [3,1,2,3]
+        level15.randomMin = 1
+        level15.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level15.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level15)
+        
+        
+        
+        
+        //aluminum oxide - Al2O3
+        var level16 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level16.aluminumCounter = 3
+        level16.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level16.counters["Aluminum"] = 2
+        level16.counters["Oxygen"] = 3
+        
+        
+        level16.goal = 5
+        level16.smallLabel = "Aluminum Oxide"
+        level16.level = 16
+        level16.ElementImage1 = 1
+        level16.ElementImage2 = 1
+        
+        level16.ElementImage1Name = "Art Assets/Aluminum.png"
+        level16.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level16.magnitude = ccp(0,30)
+        level16.spawnThese = [3,1,2,3]
+        level16.randomMin = 1
+        level16.randomMax = 3
+    
+        //add an order label of what the user is making in this level
+        
+        level16.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level16)
+        
+        
+        
+        //aluminum oxide - Al2O3
+        var level17 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level17.aluminumCounter = 3
+        level17.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level17.counters["Aluminum"] = 2
+        level17.counters["Oxygen"] = 3
+        
+        
+        level17.goal = 5
+        level17.smallLabel = "Aluminum Oxide"
+        level17.level = 17
+        level17.ElementImage1 = 1
+        level17.ElementImage2 = 1
+        
+        level17.ElementImage1Name = "Art Assets/Aluminum.png"
+        level17.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level17.magnitude = ccp(0,30)
+        level17.spawnThese = [3,1,2,3]
+        level17.randomMin = 1
+        level17.randomMax = 3
+    
+        //add an order label of what the user is making in this level
+        
+        level17.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level17)
+        
+        
+        
+        
+        //aluminum oxide - Al2O3
+        var level18 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level18.aluminumCounter = 3
+        level18.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level18.counters["Aluminum"] = 2
+        level18.counters["Oxygen"] = 3
+        
+        
+        level18.goal = 5
+        level18.smallLabel = "Aluminum Oxide"
+        level18.level = 18
+        level18.ElementImage1 = 1
+        level18.ElementImage2 = 1
+        
+        level18.ElementImage1Name = "Art Assets/Aluminum.png"
+        level18.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level18.magnitude = ccp(0,30)
+        level18.spawnThese = [3,1,2,3]
+        level18.randomMin = 1
+        level18.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level18.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level18)
+        
 
         
         
+        //aluminum oxide - Al2O3
+        var level19 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level19.aluminumCounter = 3
+        level19.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level19.counters["Aluminum"] = 2
+        level19.counters["Oxygen"] = 3
+        
+        
+        level19.goal = 5
+        level19.smallLabel = "Aluminum Oxide"
+        level19.level = 19
+        level19.ElementImage1 = 1
+        level19.ElementImage2 = 1
+        
+        level19.ElementImage1Name = "Art Assets/Aluminum.png"
+        level19.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level19.magnitude = ccp(0,30)
+        level19.spawnThese = [3,1,2,3]
+        level19.randomMin = 1
+        level19.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level19.smallOrderLabel = "Aluminum Oxide"
+    
+        levels.append(level19)
         
         
         
+        //aluminum oxide - Al2O3
+        var level20 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level20.aluminumCounter = 3
+        level20.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level20.counters["Aluminum"] = 2
+        level20.counters["Oxygen"] = 3
+        
+        
+        level20.goal = 5
+        level20.smallLabel = "Aluminum Oxide"
+        level20.level = 20
+        level20.ElementImage1 = 1
+        level20.ElementImage2 = 1
+        
+        level20.ElementImage1Name = "Art Assets/Aluminum.png"
+        level20.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level20.magnitude = ccp(0,30)
+        level20.spawnThese = [3,1,2,3]
+        level20.randomMin = 1
+        level20.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level20.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level20)
+        
+        
+        //aluminum oxide - Al2O3
+        var level21 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level21.aluminumCounter = 3
+        level21.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level21.counters["Aluminum"] = 2
+        level21.counters["Oxygen"] = 3
+        
+        
+        level21.goal = 5
+        level21.smallLabel = "Aluminum Oxide"
+        level21.level = 21
+        level21.ElementImage1 = 1
+        level21.ElementImage2 = 1
+        
+        level21.ElementImage1Name = "Art Assets/Aluminum.png"
+        level21.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level21.magnitude = ccp(0,30)
+        level21.spawnThese = [3,1,2,3]
+        level21.randomMin = 1
+        level21.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level21.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level21)
+        
+        //aluminum oxide - Al2O3
+        var level22 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level22.aluminumCounter = 3
+        level22.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level22.counters["Aluminum"] = 2
+        level22.counters["Oxygen"] = 3
+        
+        
+        level22.goal = 5
+        level22.smallLabel = "Aluminum Oxide"
+        level22.level = 22
+        level22.ElementImage1 = 1
+        level22.ElementImage2 = 1
+        
+        level22.ElementImage1Name = "Art Assets/Aluminum.png"
+        level22.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level22.magnitude = ccp(0,30)
+        level22.spawnThese = [3,1,2,3]
+        level22.randomMin = 1
+        level22.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level22.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level22)
         
         
         
+        //aluminum oxide - Al2O3
+        var level23 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level23.aluminumCounter = 3
+        level23.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level23.counters["Aluminum"] = 2
+        level23.counters["Oxygen"] = 3
+        
+        
+        level23.goal = 5
+        level23.smallLabel = "Aluminum Oxide"
+        level23.level = 23
+        level23.ElementImage1 = 1
+        level23.ElementImage2 = 1
+        
+        level23.ElementImage1Name = "Art Assets/Aluminum.png"
+        level23.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level23.magnitude = ccp(0,30)
+        level23.spawnThese = [3,1,2,3]
+        level23.randomMin = 1
+        level23.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level23.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level23)
 
+        
+        
+        //aluminum oxide - Al2O3
+        var level24 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level24.aluminumCounter = 3
+        level24.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level24.counters["Aluminum"] = 2
+        level24.counters["Oxygen"] = 3
+        
+        
+        level24.goal = 5
+        level24.smallLabel = "Aluminum Oxide"
+        level24.level = 24
+        level24.ElementImage1 = 1
+        level24.ElementImage2 = 1
+        
+        level24.ElementImage1Name = "Art Assets/Aluminum.png"
+        level24.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level24.magnitude = ccp(0,30)
+        level24.spawnThese = [3,1,2,3]
+        level24.randomMin = 1
+        level24.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level24.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level24)
+        
+        
+        
+        //aluminum oxide - Al2O3
+        var level25 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level25.aluminumCounter = 3
+        level25.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level25.counters["Aluminum"] = 2
+        level25.counters["Oxygen"] = 3
+        
+        
+        level25.goal = 5
+        level25.smallLabel = "Aluminum Oxide"
+        level25.level = 25
+        level25.ElementImage1 = 1
+        level25.ElementImage2 = 1
+        
+        level25.ElementImage1Name = "Art Assets/Aluminum.png"
+        level25.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level25.magnitude = ccp(0,30)
+        level25.spawnThese = [3,1,2,3]
+        level25.randomMin = 1
+        level25.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level25.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level25)
+        
+        //aluminum oxide - Al2O3
+        var level26 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level26.aluminumCounter = 3
+        level26.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level26.counters["Aluminum"] = 2
+        level26.counters["Oxygen"] = 3
+        
+        
+        level26.goal = 5
+        level26.smallLabel = "Aluminum Oxide"
+        level26.level = 26
+        level26.ElementImage1 = 1
+        level26.ElementImage2 = 1
+        
+        level26.ElementImage1Name = "Art Assets/Aluminum.png"
+        level26.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level26.magnitude = ccp(0,30)
+        level26.spawnThese = [3,1,2,3]
+        level26.randomMin = 1
+        level26.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level26.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level26)
+        
+        
+        //aluminum oxide - Al2O3
+        var level27 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level27.aluminumCounter = 3
+        level27.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level27.counters["Aluminum"] = 2
+        level27.counters["Oxygen"] = 3
+        
+        
+        level27.goal = 5
+        level27.smallLabel = "Aluminum Oxide"
+        level27.level = 27
+        level27.ElementImage1 = 1
+        level27.ElementImage2 = 1
+        
+        level27.ElementImage1Name = "Art Assets/Aluminum.png"
+        level27.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level27.magnitude = ccp(0,30)
+        level27.spawnThese = [3,1,2,3]
+        level27.randomMin = 1
+        level27.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level27.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level27)
+        
+        
+        
+        
+        //aluminum oxide - Al2O3
+        var level28 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level28.aluminumCounter = 3
+        level28.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level28.counters["Aluminum"] = 2
+        level28.counters["Oxygen"] = 3
+        
+        
+        level28.goal = 5
+        level28.smallLabel = "Aluminum Oxide"
+        level28.level = 28
+        level28.ElementImage1 = 1
+        level28.ElementImage2 = 1
+        
+        level28.ElementImage1Name = "Art Assets/Aluminum.png"
+        level28.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level28.magnitude = ccp(0,30)
+        level28.spawnThese = [3,1,2,3]
+        level28.randomMin = 1
+        level28.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level28.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level28)
+        
+        
+        //aluminum oxide - Al2O3
+        var level29 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level29.aluminumCounter = 3
+        level29.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level29.counters["Aluminum"] = 2
+        level29.counters["Oxygen"] = 3
+        
+        
+        level29.goal = 5
+        level29.smallLabel = "Aluminum Oxide"
+        level29.level = 29
+        level29.ElementImage1 = 1
+        level29.ElementImage2 = 1
+        
+        level29.ElementImage1Name = "Art Assets/Aluminum.png"
+        level29.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level29.magnitude = ccp(0,30)
+        level29.spawnThese = [3,1,2,3]
+        level29.randomMin = 1
+        level29.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level29.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level29)
+        
+        
+        //aluminum oxide - Al2O3
+        var level30 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level30.aluminumCounter = 3
+        level30.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level30.counters["Aluminum"] = 2
+        level30.counters["Oxygen"] = 3
+        
+        
+        level30.goal = 5
+        level30.smallLabel = "Aluminum Oxide"
+        level30.level = 30
+        level30.ElementImage1 = 1
+        level30.ElementImage2 = 1
+        
+        level30.ElementImage1Name = "Art Assets/Aluminum.png"
+        level30.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        
+        level30.magnitude = ccp(0,30)
+        level30.spawnThese = [3,1,2,3]
+        level30.randomMin = 1
+        level30.randomMax = 3
+        
+        //add an order label of what the user is making in this level
+        
+        level30.smallOrderLabel = "Aluminum Oxide"
+        
+        levels.append(level30)
+        
+        
+        
+        
         
 
     }
