@@ -186,6 +186,41 @@ struct LevelData {
         levels.append(level3)
 
         
+        var level4 = Data()
+        
+        //need to this ensure that hydrogen atoms are dropped
+//        level4.carbonCounter = 3
+        level4.oxygenCounter = 2
+        
+        
+        // How many of an element do you have left
+//        level4.counters["Carbon"] = 1
+        level4.counters["Oxygen"] = 2
+        
+        level4.goal = 2
+        level4.smallLabel = "Oxygen Gas"
+        level4.level = 4
+        level4.ElementImage1 = 1
+        level4.ElementImage2 = 1
+        level4.ElementImage1Name = "Art Assets/Carbon.png"
+        level4.ElementImage2Name = "Art Assets/Oxygen.png"
+        level4.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+        
+        
+        level4.magnitude = ccp(0,30)
+        level4.spawnThese = [3,1,2,3]
+        level4.randomMin = 1
+        level4.randomMax = 3
+        
+        
+        //add an order label of what the user is making in this level
+        
+        
+        
+        levels.append(level4)
+        
+
+        
 
     }
 

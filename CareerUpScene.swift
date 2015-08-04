@@ -40,7 +40,7 @@ class CareerUpScene: CCNode {
         //what if scene is not level transition scene? For certain levels, it is the careerUpScene
         
         let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
-        CCDirector.sharedDirector().pushScene(LevelTransitionScene)
+        CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
         
     }
 

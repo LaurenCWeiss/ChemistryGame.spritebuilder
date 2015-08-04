@@ -24,11 +24,7 @@ class LevelTransitionScene: CCNode {
         
         
         
-        if currentLevelData.level == 0 {
-            loadCareerUpScene()
-        } else {
-            loadLabReport2()
-        }
+       
         
         //shows current career scientist image
         var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
@@ -43,16 +39,31 @@ class LevelTransitionScene: CCNode {
     
     
     func startContinueButton() {
+             var levelData: LevelData = LevelData()
+         let currentLevelData = levelData.levels[LevelData.curLevel]
         
-        CCDirector.sharedDirector().popScene()
+       LevelData.curLevel += 1
+          if currentLevelData.level - 1 == 0 {
+            loadCareerUpScene()
+        }
+          else {
+            
+            let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
+            CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
+        }
         
         
-        var levelData: LevelData = LevelData()
-        if (LevelData.curLevel + 1) >= levelData.levels.count {
-            LevelData.curLevel = 0
-        } else {
-            LevelData.curLevel++
-        }}
+        
+//        CCDirector.sharedDirector().popScene()
+        
+        
+        
+//        if (LevelData.curLevel + 1) >= levelData.levels.count {
+//            LevelData.curLevel = 0
+//        } else {
+//            LevelData.curLevel++
+//        }
+    }
     
         func loadCareerUpScene(){
             
@@ -67,9 +78,16 @@ class LevelTransitionScene: CCNode {
 
     func loadLabReport2() {
         
-        let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
-        CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
+//        let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
+//        CCDirector.sharedDirector().pushScene(LevelTransitionScene)
+
         
+//        let scene = CCBReader.loadAsScene("LabReport2")
+//        
+//        let transition = CCTransition(fadeWithDuration: 0.8)
+//        
+//        CCDirector.sharedDirector().presentScene(scene)
+//        
         
     }
 

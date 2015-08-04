@@ -260,7 +260,7 @@ func checkIfCareerUpSceneShouldLoad() {
     if LevelData.curLevel == 0 {
         
         let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
-        CCDirector.sharedDirector().pushScene(ScienceScene)
+        CCDirector.sharedDirector().replaceScene(ScienceScene)
         println("curLevelhs:\(LevelData.curLevel)")
     }
             else {
@@ -277,7 +277,7 @@ override func update(delta: CCTime) {
     //if the number of points equals the number of atoms released, then move on to the next level
     
     if points == levelData.levels[LevelData.curLevel].goal {
-        //       LevelData.curLevel += 1
+//               LevelData.curLevel += 1
         cleanup()
         //call scene transition here
         startLevelTransitionScene()

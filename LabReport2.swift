@@ -40,7 +40,7 @@ class LabReport2: CCNode {
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-//             CCDirector.sharedDirector().popScene()
+//            CCDirector.sharedDirector().popScene()
         
         
 //        let scene = CCBReader.loadAsScene("")
