@@ -444,26 +444,28 @@ struct LevelData {
         
 
 /////////////////////////////////////////////////////////////////////////////////////////
-        //aluminum oxide - Al2O3
+        
+        
+        //ammonium - NH4
         var level11 = Data()
-        //carbon dioxide-CO2
+        
         //need to this ensure that hydrogen atoms are dropped
-        level11.aluminumCounter = 3
-        level11.oxygenCounter = 3
+        level11.nitrogenCounter = 3
+        level11.hydrogenCounter = 3
         
         // How many of an element do you have left
-        level11.counters["Aluminum"] = 2
-        level11.counters["Oxygen"] = 3
+        level11.counters["Nitrogen"] = 1
+        level11.counters["Hydrogen"] = 4
         
         
         level11.goal = 5
-        level11.smallLabel = "Aluminum Oxide"
+        level11.smallLabel = "Ammonium"
         level11.level = 11
         level11.ElementImage1 = 1
         level11.ElementImage2 = 1
         
-        level11.ElementImage1Name = "Art Assets/Aluminum.png"
-        level11.ElementImage2Name = "Art Assets/Oxygen.png"
+        level11.ElementImage1Name = "Art Assets/Nitrogen.png"
+        level11.ElementImage2Name = "Art Assets/Hydrogen.png"
         
         
         level11.magnitude = ccp(0,30)
@@ -473,31 +475,31 @@ struct LevelData {
         
         //add an order label of what the user is making in this level
         
-        level11.smallOrderLabel = "Aluminum Oxide"
+        level11.smallOrderLabel = "Ammonium"
         
         levels.append(level11)
         
         
         
-        //aluminum oxide - Al2O3
+        //nitrite - NO2
         var level12 = Data()
-        //carbon dioxide-CO2
+  
         //need to this ensure that hydrogen atoms are dropped
-        level12.aluminumCounter = 3
+        level12.nitrogenCounter = 3
         level12.oxygenCounter = 3
         
         // How many of an element do you have left
-        level12.counters["Aluminum"] = 2
-        level12.counters["Oxygen"] = 3
+        level12.counters["Nitrogen"] = 1
+        level12.counters["Oxygen"] = 2
         
         
-        level12.goal = 5
-        level12.smallLabel = "Aluminum Oxide"
+        level12.goal = 3
+        level12.smallLabel = "Nitrite"
         level12.level = 12
         level12.ElementImage1 = 1
         level12.ElementImage2 = 1
         
-        level12.ElementImage1Name = "Art Assets/Aluminum.png"
+        level12.ElementImage1Name = "Art Assets/Nitrogen.png"
         level12.ElementImage2Name = "Art Assets/Oxygen.png"
         
         
@@ -508,31 +510,31 @@ struct LevelData {
     
         //add an order label of what the user is making in this level
         
-        level12.smallOrderLabel = "Aluminum Oxide"
+        level12.smallOrderLabel = "Nitrite"
         
         levels.append(level12)
         
         
         
-        //aluminum oxide - Al2O3
+        //hydronium - H3O
         var level13 = Data()
-        //carbon dioxide-CO2
+        
         //need to this ensure that hydrogen atoms are dropped
-        level13.aluminumCounter = 3
+        level13.hydrogenCounter = 3
         level13.oxygenCounter = 3
         
         // How many of an element do you have left
-        level13.counters["Aluminum"] = 2
-        level13.counters["Oxygen"] = 3
+        level13.counters["Hydrogen"] = 3
+        level13.counters["Oxygen"] = 1
         
         
-        level13.goal = 5
-        level13.smallLabel = "Aluminum Oxide"
+        level13.goal = 4
+        level13.smallLabel = "Hydronium"
         level13.level = 13
         level13.ElementImage1 = 1
         level13.ElementImage2 = 1
         
-        level13.ElementImage1Name = "Art Assets/Aluminum.png"
+        level13.ElementImage1Name = "Art Assets/Hydrogen.png"
         level13.ElementImage2Name = "Art Assets/Oxygen.png"
         
         
@@ -543,32 +545,35 @@ struct LevelData {
     
         //add an order label of what the user is making in this level
         
-        level13.smallOrderLabel = "Aluminum Oxide"
+        level13.smallOrderLabel = "Hydronium"
         
         levels.append(level13)
         
         
-        //aluminum oxide - Al2O3
+        //Hydrogen Sulfate - HSO4
         var level14 = Data()
-        //carbon dioxide-CO2
+     
         //need to this ensure that hydrogen atoms are dropped
-        level14.aluminumCounter = 3
+        level14.hydrogenCounter = 3
+        level14.sulfurCounter = 3
         level14.oxygenCounter = 3
         
         // How many of an element do you have left
-        level14.counters["Aluminum"] = 2
-        level14.counters["Oxygen"] = 3
+        level14.counters["Hydrogen"] = 1
+        level14.counters["Sulfur"] = 1
+        level14.counters["Oxygen"] = 4
         
         
-        level14.goal = 5
-        level14.smallLabel = "Aluminum Oxide"
+        level14.goal = 6
+        level14.smallLabel = "Hydrogen Sulfate"
         level14.level = 14
         level14.ElementImage1 = 1
         level14.ElementImage2 = 1
+        level14.ElementImage3 = 1
         
-        level14.ElementImage1Name = "Art Assets/Aluminum.png"
-        level14.ElementImage2Name = "Art Assets/Oxygen.png"
-        
+        level14.ElementImage1Name = "Art Assets/Hydrogen.png"
+        level14.ElementImage2Name = "Art Assets/Sulfur.png"
+        level14.ElementImage3Name = "Art Assets/Oxygen.png"
         
         level14.magnitude = ccp(0,30)
         level14.spawnThese = [3,1,2,3]
@@ -577,32 +582,32 @@ struct LevelData {
         
         //add an order label of what the user is making in this level
         
-        level14.smallOrderLabel = "Aluminum Oxide"
+        level14.smallOrderLabel = "Hydrogen Sulfate"
         
         levels.append(level14)
         
         
         
-        //aluminum oxide - Al2O3
+        //hydroxide - OH
         var level15 = Data()
-        //carbon dioxide-CO2
+    
         //need to this ensure that hydrogen atoms are dropped
-        level15.aluminumCounter = 3
         level15.oxygenCounter = 3
+        level15.hydrogenCounter = 3
         
         // How many of an element do you have left
-        level15.counters["Aluminum"] = 2
-        level15.counters["Oxygen"] = 3
+        level15.counters["Oxygen"] = 1
+        level15.counters["Hydrogen"] = 1
         
         
-        level15.goal = 5
-        level15.smallLabel = "Aluminum Oxide"
+        level15.goal = 2
+        level15.smallLabel = "Hydroxide"
         level15.level = 15
         level15.ElementImage1 = 1
         level15.ElementImage2 = 1
         
-        level15.ElementImage1Name = "Art Assets/Aluminum.png"
-        level15.ElementImage2Name = "Art Assets/Oxygen.png"
+        level15.ElementImage1Name = "Art Assets/Oxygen.png"
+        level15.ElementImage2Name = "Art Assets/Hydrogen.png"
         
         
         level15.magnitude = ccp(0,30)
@@ -612,32 +617,36 @@ struct LevelData {
         
         //add an order label of what the user is making in this level
         
-        level15.smallOrderLabel = "Aluminum Oxide"
+        level15.smallOrderLabel = "Hydroxide"
         
         levels.append(level15)
         
         
         
         
-        //aluminum oxide - Al2O3
+        //Calcium carbonate - CaCO3
         var level16 = Data()
-        //carbon dioxide-CO2
+    
         //need to this ensure that hydrogen atoms are dropped
-        level16.aluminumCounter = 3
+        level16.calciumCounter = 3
+        level16.carbonCounter = 3
         level16.oxygenCounter = 3
         
         // How many of an element do you have left
-        level16.counters["Aluminum"] = 2
+        level16.counters["Calcium"] = 1
+        level16.counters["Carbon"] = 1
         level16.counters["Oxygen"] = 3
         
         
         level16.goal = 5
-        level16.smallLabel = "Aluminum Oxide"
+        level16.smallLabel = "Calcium Carbonate"
         level16.level = 16
         level16.ElementImage1 = 1
         level16.ElementImage2 = 1
+        level16.ElementImage3 = 1
         
-        level16.ElementImage1Name = "Art Assets/Aluminum.png"
+        level16.ElementImage1Name = "Art Assets/Calcium.png"
+        level16.ElementImage2Name = "Art Assets/Carbon.png"
         level16.ElementImage2Name = "Art Assets/Oxygen.png"
         
         
@@ -648,7 +657,7 @@ struct LevelData {
     
         //add an order label of what the user is making in this level
         
-        level16.smallOrderLabel = "Aluminum Oxide"
+        level16.smallOrderLabel = "Calcium Carbonate"
         
         levels.append(level16)
         
