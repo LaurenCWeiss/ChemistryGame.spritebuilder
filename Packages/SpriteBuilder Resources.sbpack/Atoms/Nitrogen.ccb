@@ -41,7 +41,7 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/carbon.png</string>
+							<string>Art Assets/Nitrogen.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -171,7 +171,7 @@
 			<key>collisionType</key>
 			<string>atomCollision</string>
 			<key>cornerRadius</key>
-			<real>8.6331892013549805</real>
+			<real>7.7500276565551758</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -183,8 +183,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.38546839356422424</real>
-					<real>-0.16402663290500641</real>
+					<real>-0.3264097273349762</real>
+					<real>-0.61937940120697021</real>
 				</array>
 			</array>
 			<key>polygons</key>

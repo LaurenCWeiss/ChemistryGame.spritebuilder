@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>3</integer>
+	<integer>2</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -96,8 +96,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.30000001192092896</real>
-							<real>0.30000001192092896</real>
+							<real>0.60000002384185791</real>
+							<real>0.60000002384185791</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/carbon.png</string>
+							<string>Art Assets/Aluminum.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -171,7 +171,7 @@
 			<key>collisionType</key>
 			<string>atomCollision</string>
 			<key>cornerRadius</key>
-			<real>8.6331892013549805</real>
+			<real>15.405558586120605</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -183,8 +183,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.38546839356422424</real>
-					<real>-0.16402663290500641</real>
+					<real>-0.12897756695747375</real>
+					<real>-1.6858367919921875</real>
 				</array>
 			</array>
 			<key>polygons</key>

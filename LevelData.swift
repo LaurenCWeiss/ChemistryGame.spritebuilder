@@ -18,6 +18,9 @@ struct Data {
     var hydrogenCounter: Int = 0
     var carbonCounter: Int = 0
     var nitrogenCounter: Int = 0
+    var lithiumCounter: Int = 0
+    var aluminumCounter: Int = 0
+    var chlorideCounter: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
     var careerUpSmallLabel: String = " "
@@ -184,29 +187,28 @@ struct LevelData {
         
         
         
-        levels.append(level3)
+      
 
-        
         var level4 = Data()
         
         //need to this ensure that hydrogen atoms are dropped
-//        level4.carbonCounter = 3
-        level4.oxygenCounter = 2
+        level4.carbonCounter = 2
+        level4.hydrogenCounter = 2
         
         
         // How many of an element do you have left
-//        level4.counters["Carbon"] = 1
-        level4.counters["Oxygen"] = 2
+        level4.counters["Carbon"] = 2
+        level4.counters["Hydrogen"] = 2
         
-        level4.goal = 2
-        level4.smallLabel = "Oxygen Gas"
+        level4.goal = 4
+        level4.smallLabel = "Acetylene"
         level4.level = 4
         level4.ElementImage1 = 1
         level4.ElementImage2 = 1
         level4.ElementImage1Name = "Art Assets/Carbon.png"
-        level4.ElementImage2Name = "Art Assets/Oxygen.png"
+        level4.ElementImage2Name = "Art Assets/Hydrogen.png"
         level4.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-        
+    
         
         level4.magnitude = ccp(0,30)
         level4.spawnThese = [3,1,2,3]
@@ -216,9 +218,161 @@ struct LevelData {
         
         //add an order label of what the user is making in this level
         
-        
-        
         levels.append(level4)
+        
+        
+        
+        
+        var level5 = Data()
+        //C2H4O2
+        //need to this ensure that hydrogen atoms are dropped
+        level5.carbonCounter = 2
+        level5.hydrogenCounter = 2
+        level5.oxygenCounter = 3
+        
+        // How many of an element do you have left
+        level5.counters["Carbon"] = 2
+        level5.counters["Hydrogen"] = 4
+        level5.counters["Oxygen"] = 2
+        
+        level5.goal = 8
+        level5.smallLabel = "Acetic Acid"
+        level5.level = 5
+        level5.ElementImage1 = 1
+        level5.ElementImage2 = 1
+        level5.ElementImage3 = 1
+
+        level5.ElementImage1Name = "Art Assets/Carbon.png"
+        level5.ElementImage2Name = "Art Assets/Hydrogen.png"
+        level5.ElementImage3Name =  "Art Assets/Oxygen.png"
+
+        level5.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+        
+        
+        level5.magnitude = ccp(0,30)
+        level5.spawnThese = [3,1,2,3]
+        level5.randomMin = 1
+        level5.randomMax = 3
+        
+        
+        //add an order label of what the user is making in this level
+        
+        levels.append(level5)
+        
+        
+        var level6 = Data()
+        //Lithium Nitrite-LiNO2
+        //need to this ensure that hydrogen atoms are dropped
+        level6.lithiumCounter = 3
+        level6.nitrogenCounter = 2
+        level6.oxygenCounter = 4
+        
+        // How many of an element do you have left
+        level6.counters["Lithium"] = 1
+        level6.counters["Nitrogen"] = 1
+        level6.counters["Oxygen"] = 2
+        
+        level6.goal = 4
+        level6.smallLabel = "Lithium Nitrite"
+        level6.level = 6
+        level6.ElementImage1 = 1
+        level6.ElementImage2 = 1
+        level6.ElementImage3 = 1
+        
+        level6.ElementImage1Name = "Art Assets/Lithium.png"
+        level6.ElementImage2Name = "Art Assets/Nitrogen.png"
+        level6.ElementImage3Name =  "Art Assets/Oxygen.png"
+        
+        level6.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+        
+        
+        level6.magnitude = ccp(0,30)
+        level6.spawnThese = [3,1,2,3]
+        level6.randomMin = 1
+        level6.randomMax = 3
+        
+        
+        //add an order label of what the user is making in this level
+        
+        levels.append(level6)
+        
+        
+       
+        //AlCl3-aluminum chloride
+        var level7 = Data()
+       
+        //need to this ensure that hydrogen atoms are dropped
+        level7.aluminumCounter = 3
+        level7.chlorideCounter = 2
+//        level7.oxygenCounter = 4
+        
+        // How many of an element do you have left
+        level7.counters["Aluminum"] = 1
+        level7.counters["Chloride"] = 3
+
+        
+        level7.goal = 4
+        level7.smallLabel = "Aluminum Chloride"
+        level7.level = 7
+        level7.ElementImage1 = 1
+        level7.ElementImage2 = 1
+  
+        
+        level7.ElementImage1Name = "Art Assets/Aluminum.png"
+        level7.ElementImage2Name = "Art Assets/Chloride.png"
+       
+        
+        level7.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+        
+        
+        level7.magnitude = ccp(0,30)
+        level7.spawnThese = [3,1,2,3]
+        level7.randomMin = 1
+        level7.randomMax = 3
+        
+        
+        //add an order label of what the user is making in this level
+        
+        levels.append(level7)
+        
+        
+        var level8 = Data()
+        //carbon dioxide-CO2
+        //need to this ensure that hydrogen atoms are dropped
+        level8.carbonCounter = 3
+        level8.oxygenCounter = 5
+        
+        
+        // How many of an element do you have left
+        level8.counters["Carbon"] = 1
+        level8.counters["Oxygen"] = 2
+   
+        level8.goal = 3
+        level8.smallLabel = "Carbon Dioxide"
+        level8.level = 8
+        level8.ElementImage1 = 1
+        level8.ElementImage2 = 1
+        level8.ElementImage1Name = "Art Assets/Carbon.png"
+        level8.ElementImage2Name = "Art Assets/Oxygen.png"
+        
+        level8.magnitude = ccp(0,30)
+        level8.spawnThese = [3,1,2,3]
+        level8.randomMin = 1
+        level8.randomMax = 3
+    
+     
+        level8.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+     
+        //add an order label of what the user is making in this level
+        
+        level8.smallOrderLabel = "Carbon Dioxide"
+        
+        levels.append(level8)
+        
+
+        
+        
+        
         
         
         
