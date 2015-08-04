@@ -64,6 +64,7 @@ class LabReport2: CCNode {
         if currentLevelData?.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
         if currentLevelData?.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
         if currentLevelData?.counters["Carbon"]>0 { requiredAtoms.append("Carbon") }
+        if currentLevelData?.counters["Nitrogen"]>0 { requiredAtoms.append("Nitrogen") }
       
         var ypos:[CGFloat] = [0,0,0,0]
         

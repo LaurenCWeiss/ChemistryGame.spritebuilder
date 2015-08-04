@@ -17,6 +17,7 @@ struct Data {
     var oxygenCounter: Int = 0
     var hydrogenCounter: Int = 0
     var carbonCounter: Int = 0
+    var nitrogenCounter: Int = 0
     var goal: Int = 0
     var smallLabel: String = " "
     var careerUpSmallLabel: String = " "
@@ -155,21 +156,21 @@ struct LevelData {
         var level3 = Data()
         
         //need to this ensure that hydrogen atoms are dropped
-        level3.carbonCounter = 3
-        level3.oxygenCounter = 3
+        level3.nitrogenCounter = 2
+        level3.hydrogenCounter = 5
         
         
         // How many of an element do you have left
-        level3.counters["Carbon"] = 1
-        level3.counters["Oxygen"] = 1
+        level3.counters["Nitrogen"] = 1
+        level3.counters["Hydrogen"] = 3
         
         level3.goal = 2
-        level3.smallLabel = "Carbon Monoxide"
+        level3.smallLabel = "Ammonia"
         level3.level = 3
         level3.ElementImage1 = 1
         level3.ElementImage2 = 1
-        level3.ElementImage1Name = "Art Assets/Carbon.png"
-        level3.ElementImage2Name = "Art Assets/Oxygen.png"
+        level3.ElementImage1Name = "Art Assets/Nitrogen.png"
+        level3.ElementImage2Name = "Art Assets/Hydrogen.png"
         level3.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         

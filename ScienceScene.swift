@@ -65,6 +65,10 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             for i in 1...currentLevelData!.carbonCounter {
                 spawn.append(3)
             }
+            if(currentLevelData?.nitrogenCounter>0) {
+                for i in 1...currentLevelData!.nitrogenCounter {
+                    spawn.append(3)
+                }
             
         }
         
@@ -113,6 +117,8 @@ func dropAtom(){
         fileName = "Oxygen"
     case 3:
         fileName = "Carbon"
+    case 4:
+        fileName = "Nitrogen"
     default:
         println("No Atom :(")
         //return so that if integer is equal to zero(which is what it is set at in level data) atoms will just stop falling
@@ -304,6 +310,7 @@ func setImage() {
     if currentLevelData.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
     if currentLevelData.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
     if currentLevelData.counters["Carbon"]>0 { requiredAtoms.append("Carbon") }
+    if currentLevelData.counters["Nitrogen"]>0 { requiredAtoms.append("Nitrogen") }
     
     let numImages = requiredAtoms.count
     
