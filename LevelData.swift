@@ -13,16 +13,26 @@ import Foundation
 //Data not inheriting from anything, and it makes logical sense that data objects are unique, so we
 //make defined a struct, as opposed to a class
 struct Data {
-//    var nextLevelName: String!
+    //    var nextLevelName: String!
     var oxygenCounter: Int = 0
     var hydrogenCounter: Int = 0
     var carbonCounter: Int = 0
     var nitrogenCounter: Int = 0
     var lithiumCounter: Int = 0
     var aluminumCounter: Int = 0
-    var chlorideCounter: Int = 0
+    var chlorineCounter: Int = 0
     var copperCounter: Int = 0
     var sulfurCounter: Int = 0
+    var calciumCounter: Int = 0
+    var phosphorusCounter: Int = 0
+    var ironCounter: Int = 0
+    var potassiumCounter: Int = 0
+    var sodiumCounter: Int = 0
+    var tellurideCounter: Int = 0
+    var galliumCounter: Int = 0
+    var bromineCounter: Int = 0
+    var mercuryCounter: Int = 0
+    
     var goal: Int = 0
     var smallLabel: String = " "
     var careerUpSmallLabel: String = " "
@@ -66,11 +76,11 @@ struct LevelData {
     private static let defaults = NSUserDefaults.standardUserDefaults()
     
     //init to level - 1 (because array index starting at 0)
-   //saves the level that the user was most currently on so that when they open their phone again the level has been saved!
+    //saves the level that the user was most currently on so that when they open their phone again the level has been saved!
     static var curLevel: Int {
         get {
-           return defaults.integerForKey("curLevel")
-       
+        return defaults.integerForKey("curLevel")
+        
         }
         //could say set(newLevel) but then we would have to put newLevel in the setter which would be bad code when we can just use newValue that is built into the systme
         set {
@@ -83,7 +93,7 @@ struct LevelData {
     
     init() {
         //numbers of atoms of elements
- 
+        
         var level1 = Data()
         
         //need to this ensure that hydrogen atoms are dropped
@@ -94,8 +104,8 @@ struct LevelData {
         // How many of an element do you have left
         level1.counters["Oxygen"] = 1
         level1.counters["Hydrogen"] = 2
-    
-//        level1.carbonCounter = 0
+        
+        //        level1.carbonCounter = 0
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.level = 1
@@ -121,7 +131,7 @@ struct LevelData {
         level1.smallOrderLabel = "Water"
         
         levels.append(level1)
-
+        
         
         
         
@@ -144,7 +154,7 @@ struct LevelData {
         level2.ElementImage1Name = "Art Assets/Carbon.png"
         level2.ElementImage2Name = "Art Assets/Oxygen.png"
         level2.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-
+        
         
         level2.magnitude = ccp(0,30)
         level2.spawnThese = [3,1,2,3]
@@ -153,10 +163,10 @@ struct LevelData {
         
         
         //add an order label of what the user is making in this level
-
+        
         
         levels.append(level2)
-
+        
         
         var level3 = Data()
         
@@ -183,14 +193,14 @@ struct LevelData {
         level3.spawnThese = [3,1,2,3]
         level3.randomMin = 1
         level3.randomMax = 3
-    
+        
         
         //add an order label of what the user is making in this level
         
         
         
-      
-
+        
+        
         var level4 = Data()
         
         //need to this ensure that hydrogen atoms are dropped
@@ -210,7 +220,7 @@ struct LevelData {
         level4.ElementImage1Name = "Art Assets/Carbon.png"
         level4.ElementImage2Name = "Art Assets/Hydrogen.png"
         level4.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-    
+        
         
         level4.magnitude = ccp(0,30)
         level4.spawnThese = [3,1,2,3]
@@ -243,11 +253,11 @@ struct LevelData {
         level5.ElementImage1 = 1
         level5.ElementImage2 = 1
         level5.ElementImage3 = 1
-
+        
         level5.ElementImage1Name = "Art Assets/Carbon.png"
         level5.ElementImage2Name = "Art Assets/Hydrogen.png"
         level5.ElementImage3Name =  "Art Assets/Oxygen.png"
-
+        
         level5.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
@@ -299,30 +309,30 @@ struct LevelData {
         levels.append(level6)
         
         
-       
+        
         //AlCl3-aluminum chloride
         var level7 = Data()
-       
+        
         //need to this ensure that hydrogen atoms are dropped
         level7.aluminumCounter = 3
-        level7.chlorideCounter = 2
-//        level7.oxygenCounter = 4
+        level7.chlorineCounter = 2
+        //        level7.oxygenCounter = 4
         
         // How many of an element do you have left
         level7.counters["Aluminum"] = 1
-        level7.counters["Chloride"] = 3
-
+        level7.counters["Chlorine"] = 3
+        
         
         level7.goal = 4
         level7.smallLabel = "Aluminum Chloride"
         level7.level = 7
         level7.ElementImage1 = 1
         level7.ElementImage2 = 1
-  
+        
         
         level7.ElementImage1Name = "Art Assets/Aluminum.png"
-        level7.ElementImage2Name = "Art Assets/Chloride.png"
-       
+        level7.ElementImage2Name = "Art Assets/Chlorine.png"
+        
         
         level7.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
@@ -348,7 +358,7 @@ struct LevelData {
         // How many of an element do you have left
         level8.counters["Carbon"] = 1
         level8.counters["Oxygen"] = 2
-   
+        
         level8.goal = 3
         level8.smallLabel = "Carbon Dioxide"
         level8.level = 8
@@ -361,10 +371,10 @@ struct LevelData {
         level8.spawnThese = [3,1,2,3]
         level8.randomMin = 1
         level8.randomMax = 3
-    
-     
+        
+        
         level8.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-     
+        
         //add an order label of what the user is making in this level
         
         level8.smallOrderLabel = "Carbon Dioxide"
@@ -419,17 +429,17 @@ struct LevelData {
         // How many of an element do you have left
         level10.counters["Aluminum"] = 2
         level10.counters["Oxygen"] = 3
-
+        
         
         level10.goal = 5
         level10.smallLabel = "Aluminum Oxide"
         level10.level = 10
         level10.ElementImage1 = 1
         level10.ElementImage2 = 1
-      
+        
         level10.ElementImage1Name = "Art Assets/Aluminum.png"
         level10.ElementImage2Name = "Art Assets/Oxygen.png"
-   
+        
         
         level10.magnitude = ccp(0,30)
         level10.spawnThese = [3,1,2,3]
@@ -442,8 +452,8 @@ struct LevelData {
         
         levels.append(level10)
         
-
-/////////////////////////////////////////////////////////////////////////////////////////
+        
+        /////////////////////////////////////////////////////////////////////////////////////////
         
         
         //ammonium - NH4
@@ -483,7 +493,7 @@ struct LevelData {
         
         //nitrite - NO2
         var level12 = Data()
-  
+        
         //need to this ensure that hydrogen atoms are dropped
         level12.nitrogenCounter = 3
         level12.oxygenCounter = 3
@@ -507,7 +517,7 @@ struct LevelData {
         level12.spawnThese = [3,1,2,3]
         level12.randomMin = 1
         level12.randomMax = 3
-    
+        
         //add an order label of what the user is making in this level
         
         level12.smallOrderLabel = "Nitrite"
@@ -542,7 +552,7 @@ struct LevelData {
         level13.spawnThese = [3,1,2,3]
         level13.randomMin = 1
         level13.randomMax = 3
-    
+        
         //add an order label of what the user is making in this level
         
         level13.smallOrderLabel = "Hydronium"
@@ -552,7 +562,7 @@ struct LevelData {
         
         //Hydrogen Sulfate - HSO4
         var level14 = Data()
-     
+        
         //need to this ensure that hydrogen atoms are dropped
         level14.hydrogenCounter = 3
         level14.sulfurCounter = 3
@@ -590,7 +600,7 @@ struct LevelData {
         
         //hydroxide - OH
         var level15 = Data()
-    
+        
         //need to this ensure that hydrogen atoms are dropped
         level15.oxygenCounter = 3
         level15.hydrogenCounter = 3
@@ -626,7 +636,7 @@ struct LevelData {
         
         //Calcium carbonate - CaCO3
         var level16 = Data()
-    
+        
         //need to this ensure that hydrogen atoms are dropped
         level16.calciumCounter = 3
         level16.carbonCounter = 3
@@ -654,7 +664,7 @@ struct LevelData {
         level16.spawnThese = [3,1,2,3]
         level16.randomMin = 1
         level16.randomMax = 3
-    
+        
         //add an order label of what the user is making in this level
         
         level16.smallOrderLabel = "Calcium Carbonate"
@@ -665,7 +675,7 @@ struct LevelData {
         
         //Nitrate - NO3
         var level17 = Data()
-      
+        
         //need to this ensure that hydrogen atoms are dropped
         level17.nitrogenCounter = 3
         level17.oxygenCounter = 3
@@ -689,7 +699,7 @@ struct LevelData {
         level17.spawnThese = [3,1,2,3]
         level17.randomMin = 1
         level17.randomMax = 3
-    
+        
         //add an order label of what the user is making in this level
         
         level17.smallOrderLabel = "Nitrate"
@@ -704,7 +714,7 @@ struct LevelData {
         //need to this ensure that hydrogen atoms are dropped
         level18.carbonCounter = 3
         level18.hydrogenCounter = 3
-        level18.chlorideCounter = 3
+        level18.chlorineCounter = 3
         
         // How many of an element do you have left
         level18.counters["Carbon"] = 1
@@ -718,7 +728,7 @@ struct LevelData {
         level18.ElementImage1 = 1
         level18.ElementImage2 = 1
         level18.ElementImage3 = 1
-
+        
         
         level18.ElementImage1Name = "Art Assets/Carbon.png"
         level18.ElementImage2Name = "Art Assets/Hydrogen.png"
@@ -736,7 +746,7 @@ struct LevelData {
         
         levels.append(level18)
         
-
+        
         
         
         //ethane- C2H6
@@ -769,14 +779,14 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level19.smallOrderLabel = "Ethane"
-    
+        
         levels.append(level19)
         
         
         
         //Iron(tri) phosphide- Fe3P
         var level20 = Data()
-
+        
         //need to this ensure that hydrogen atoms are dropped
         level20.ironCounter = 3
         level20.phosphorusCounter = 3
@@ -810,7 +820,7 @@ struct LevelData {
         
         //Potassium nitrite - KNO2
         var level21 = Data()
-       
+        
         //need to this ensure that hydrogen atoms are dropped
         level21.potassiumCounter = 3
         level21.nitrogenCounter = 3
@@ -831,7 +841,7 @@ struct LevelData {
         level21.ElementImage1Name = "Art Assets/Potassium.png"
         level21.ElementImage2Name = "Art Assets/Nitrogen.png"
         level21.ElementImage3Name = "Art Assets/Oxygen.png"
-
+        
         
         
         
@@ -849,7 +859,7 @@ struct LevelData {
         
         //Sodium chloride - NaCl
         var level22 = Data()
-      
+        
         //need to this ensure that hydrogen atoms are dropped
         level22.sodiumCounter = 3
         level22.chlorineCounter = 3
@@ -884,7 +894,7 @@ struct LevelData {
         
         //Disodium telluride - Na2Te
         var level23 = Data()
-    
+        
         //need to this ensure that hydrogen atoms are dropped
         level23.sodiumCounter = 3
         level23.tellurideCounter = 3
@@ -914,12 +924,12 @@ struct LevelData {
         level23.smallOrderLabel = "Disodium Telluride"
         
         levels.append(level23)
-
+        
         
         
         //Galium(lll) bromide - GaBr3
         var level24 = Data()
-
+        
         //need to this ensure that hydrogen atoms are dropped
         level24.galliumCounter = 3
         level24.bromineCounter = 3
@@ -954,7 +964,7 @@ struct LevelData {
         
         //Mercury(l) bromide - HgBr2
         var level25 = Data()
-
+        
         //need to this ensure that hydrogen atoms are dropped
         level25.mercuryCounter = 3
         level25.bromineCounter = 3
@@ -987,7 +997,7 @@ struct LevelData {
         
         //Potassium oxide - K2O
         var level26 = Data()
-       
+        
         //need to this ensure that hydrogen atoms are dropped
         level26.potassiumCounter = 3
         level26.oxygenCounter = 3
@@ -1091,7 +1101,7 @@ struct LevelData {
         
         //Potassium hydroxide - KOH
         var level29 = Data()
-      
+        
         //need to this ensure that hydrogen atoms are dropped
         level29.potassiumCounter = 3
         level29.oxygenCounter = 3
@@ -1129,7 +1139,7 @@ struct LevelData {
         
         //Sulfur dioxide - SO2
         var level30 = Data()
-     
+        
         //need to this ensure that hydrogen atoms are dropped
         level30.sulfurCounter = 3
         level30.oxygenCounter = 3
@@ -1160,8 +1170,8 @@ struct LevelData {
         
         levels.append(level30)
         
- 
-
+        
+        
     }
-
+    
 }

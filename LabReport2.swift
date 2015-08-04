@@ -10,70 +10,79 @@ import Foundation
 
 
 class LabReport2: CCNode {
-
+    
     var levelData: LevelData = LevelData()
     var currentLevelData: Data?
- 
+    
     var requiredAtoms:[String] = []
     
     var screenSize:CGRect = CGRectZero
     var screenWidth:CGFloat = 0.0
     
-
-
+    
+    
     
     func didLoadFromCCB() {
         
-                userInteractionEnabled = true
+        userInteractionEnabled = true
         
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.size.width
         
         currentLevelData = levelData.levels[LevelData.curLevel]
         
-       
+        
     }
     
     override func onEnter() {
         setReportImages()
-
+        
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-//            CCDirector.sharedDirector().popScene()
+        //            CCDirector.sharedDirector().popScene()
         
         
-//        let scene = CCBReader.loadAsScene("")
+        //        let scene = CCBReader.loadAsScene("")
         let LabReport2 = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().replaceScene(LabReport2)
     }
-
     
     
     
-//                let scene = CCBReader.loadAsScene("")
-//        
-//                let scene = CCBReader.loadAsScene("ScienceScene")
-//                CCDirector.sharedDirector().presentScene(scene)
     
-//     Calculate Required Atoms
-//    still use hydrogenCounter and oxygenCounter here...
+    //                let scene = CCBReader.loadAsScene("")
+    //
+    //                let scene = CCBReader.loadAsScene("ScienceScene")
+    //                CCDirector.sharedDirector().presentScene(scene)
+    
+    //     Calculate Required Atoms
+    //    still use hydrogenCounter and oxygenCounter here...
     
     func setReportImages() {
-       
+        
         if currentLevelData?.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
         if currentLevelData?.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
         if currentLevelData?.counters["Carbon"]>0 { requiredAtoms.append("Carbon") }
         if currentLevelData?.counters["Nitrogen"]>0 { requiredAtoms.append("Nitrogen") }
         if currentLevelData?.counters["Lithium"]>0 { requiredAtoms.append("Lithium") }
         if currentLevelData?.counters["Aluminum"]>0 { requiredAtoms.append("Aluminum") }
-        if currentLevelData?.counters["Chloride"]>0 { requiredAtoms.append("Chloride") }
+        if currentLevelData?.counters["Chlorine"]>0 { requiredAtoms.append("Chlorine") }
         if currentLevelData?.counters["Copper"]>0 { requiredAtoms.append("Copper") }
         if currentLevelData?.counters["Sulfur"]>0 { requiredAtoms.append("Sulfur") }
+        if currentLevelData?.counters["Calcium"]>0 { requiredAtoms.append("Calcium") }
+        if currentLevelData?.counters["Phosphorus"]>0 { requiredAtoms.append("Phosphorus") }
+        if currentLevelData?.counters["Iron"]>0 { requiredAtoms.append("Iron") }
+        if currentLevelData?.counters["Potassium"]>0 { requiredAtoms.append("Potassium") }
+        if currentLevelData?.counters["Sodium"]>0 { requiredAtoms.append("Sodium") }
+        if currentLevelData?.counters["Telluride"]>0 { requiredAtoms.append("Telluride") }
+        if currentLevelData?.counters["Gallium"]>0 { requiredAtoms.append("Gallium") }
+        if currentLevelData?.counters["Bromine"]>0 { requiredAtoms.append("Bromine") }
+        if currentLevelData?.counters["Mercury"]>0 { requiredAtoms.append("Mercury") }
         var ypos:[CGFloat] = [0,0,0,0]
         
         let numImages = requiredAtoms.count
-    
+        
         
         if numImages == 1 {
             ypos[0] = 338
@@ -93,7 +102,7 @@ class LabReport2: CCNode {
         
         if numImages == 4 {
             //positioning is incorrect for this one
-
+            
             ypos[0] = screenWidth/5
             ypos[1] = screenWidth/5 * 2
             ypos[2] = screenWidth/5 * 3
@@ -116,12 +125,12 @@ class LabReport2: CCNode {
             self.addChild(label)
             
         }
+        
+        
+    }}
 
-    
-        }}
-    
-   
 
-    
-    
-    
+
+
+
+

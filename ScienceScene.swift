@@ -85,8 +85,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             }
         }
         
-        if(currentLevelData?.chlorideCounter>0) {
-            for i in 1...currentLevelData!.chlorideCounter {
+        if(currentLevelData?.chlorineCounter>0) {
+            for i in 1...currentLevelData!.chlorineCounter {
                 spawn.append(7)
             }
         }
@@ -100,6 +100,62 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 spawn.append(9)
             }
         }
+        
+        if(currentLevelData?.calciumCounter>0) {
+            
+            for i in 1...currentLevelData!.calciumCounter {
+                spawn.append(10)
+            }
+        }
+        if(currentLevelData?.phosphorusCounter>0) {
+            
+            for i in 1...currentLevelData!.phosphorusCounter {
+                spawn.append(11)
+            }
+        }
+        if(currentLevelData?.ironCounter>0) {
+            
+            for i in 1...currentLevelData!.ironCounter {
+                spawn.append(12)
+            }
+        }
+        if(currentLevelData?.potassiumCounter>0) {
+            
+            for i in 1...currentLevelData!.potassiumCounter {
+                spawn.append(13)
+            }
+        }
+        if(currentLevelData?.sodiumCounter>0) {
+            
+            for i in 1...currentLevelData!.sodiumCounter {
+                spawn.append(14)
+            }
+        }
+        if(currentLevelData?.tellurideCounter>0) {
+            
+            for i in 1...currentLevelData!.tellurideCounter {
+                spawn.append(15)
+            }
+        }
+        if(currentLevelData?.galliumCounter>0) {
+            
+            for i in 1...currentLevelData!.galliumCounter {
+                spawn.append(16)
+            }
+        }
+        if(currentLevelData?.bromineCounter>0) {
+            
+            for i in 1...currentLevelData!.bromineCounter {
+                spawn.append(17)
+            }
+        }
+        if(currentLevelData?.mercuryCounter>0) {
+            
+            for i in 1...currentLevelData!.mercuryCounter {
+                spawn.append(18)
+            }
+        }
+        
         
         //      Random Stuff
         for i in 1...3 {
@@ -153,11 +209,30 @@ func dropAtom(){
     case 6:
         fileName = "Aluminum"
     case 7:
-        fileName = "Chloride"
+        fileName = "Chlorine"
     case 8:
         fileName = "Copper"
     case 9:
         fileName = "Sulfur"
+    case 10:
+        fileName = "Calcium"
+    case 11:
+        fileName = "Phosphorus"
+    case 12:
+        fileName = "Iron"
+    case 13:
+        fileName = "Potassium"
+    case 14:
+        fileName = "Sodium"
+    case 15:
+        fileName = "Telluride"
+    case 16:
+        fileName = "Gallium"
+    case 17:
+        fileName = "Bromine"
+    case 18:
+        fileName = "Mercury"
+        
     default:
         println("No Atom :(")
         //return so that if integer is equal to zero(which is what it is set at in level data) atoms will just stop falling
@@ -352,9 +427,18 @@ func setImage() {
     if currentLevelData.counters["Nitrogen"]>0 { requiredAtoms.append("Nitrogen") }
     if currentLevelData.counters["Lithium"]>0 { requiredAtoms.append("Lithium") }
     if currentLevelData.counters["Aluminum"]>0 { requiredAtoms.append("Aluminum") }
-    if currentLevelData.counters["Chloride"]>0 { requiredAtoms.append("Chloride") }
+    if currentLevelData.counters["Chlorine"]>0 { requiredAtoms.append("Chlorine") }
     if currentLevelData.counters["Copper"]>0 { requiredAtoms.append("Copper") }
     if currentLevelData.counters["Sulfur"]>0 { requiredAtoms.append("Sulfur") }
+    if currentLevelData.counters["Calcium"]>0 { requiredAtoms.append("Calcium") }
+    if currentLevelData.counters["Phosphorus"]>0 { requiredAtoms.append("Phosphorus") }
+    if currentLevelData.counters["Iron"]>0 { requiredAtoms.append("Iron") }
+    if currentLevelData.counters["Potassium"]>0 { requiredAtoms.append("Potassium") }
+    if currentLevelData.counters["Sodium"]>0 { requiredAtoms.append("Sodium") }
+    if currentLevelData.counters["Telluride"]>0 { requiredAtoms.append("Telluride") }
+    if currentLevelData.counters["Gallium"]>0 { requiredAtoms.append("Gallium") }
+    if currentLevelData.counters["Bromine"]>0 { requiredAtoms.append("Bromine") }
+    if currentLevelData.counters["Mercury"]>0 { requiredAtoms.append("Mercury") }
     
     let numImages = requiredAtoms.count
     
