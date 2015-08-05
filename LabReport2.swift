@@ -18,6 +18,7 @@ class LabReport2: CCNode {
     
     var screenSize:CGRect = CGRectZero
     var screenWidth:CGFloat = 0.0
+    var screenHeight:CGFloat = 0.0
     
     
     
@@ -28,6 +29,7 @@ class LabReport2: CCNode {
         
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.size.width
+        screenHeight = screenSize.size.height
         
         currentLevelData = levelData.levels[LevelData.curLevel]
         
@@ -85,28 +87,27 @@ class LabReport2: CCNode {
         
         
         if numImages == 1 {
-            ypos[0] = 338
+            ypos[0] = screenHeight/2.16216216
         }
         if numImages == 2 {
             
-            ypos[0] = 338
-            ypos[1] = 247
+            ypos[0] = screenHeight/1.87026671
+            ypos[1] = screenHeight/2.57479601
             
         }
         if numImages == 3 {
-            //positioning is incorrect for this one
-            ypos[0] = 337
-            ypos[1] = 289
-            ypos[2] = screenWidth/3
+    
+            ypos[0] = screenHeight/1.87026671
+            ypos[1] = screenHeight/2.57479601
+            ypos[2] = screenHeight/4.1459854
         }
         
         if numImages == 4 {
-            //positioning is incorrect for this one
-            
-            ypos[0] = screenWidth/5
-            ypos[1] = screenWidth/5 * 2
-            ypos[2] = screenWidth/5 * 3
-            ypos[3] = screenWidth/5 * 4
+       
+            ypos[0] = screenHeight/1.787916
+            ypos[1] = screenHeight/2.22734
+            ypos[2] = screenHeight/2.948652
+            ypos[3] = screenHeight/4.3219
         }
         
         // Setup Images for Atoms
