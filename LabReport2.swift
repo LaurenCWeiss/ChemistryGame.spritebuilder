@@ -25,6 +25,15 @@ class LabReport2: CCNode {
     
     func didLoadFromCCB() {
         
+                if (LevelData.curLevel + 1) > 29 {
+                    LevelData.curLevel = 0
+                } else {
+                    LevelData.curLevel++
+                }
+        
+
+        
+        
         userInteractionEnabled = true
         
         screenSize = UIScreen.mainScreen().bounds
@@ -32,7 +41,8 @@ class LabReport2: CCNode {
         screenHeight = screenSize.size.height
         
         currentLevelData = levelData.levels[LevelData.curLevel]
-        
+       // Label.smallLabel.string = levelData.levels[LevelData.curLevel].smallLabel
+
         
     }
     

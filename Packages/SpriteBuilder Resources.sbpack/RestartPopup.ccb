@@ -171,7 +171,7 @@
 						<key>value</key>
 						<array>
 							<real>8.789276123046875</real>
-							<real>95.000015258789062</real>
+							<real>87.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -209,7 +209,7 @@
 						<key>value</key>
 						<array>
 							<string>You lost!
-You collected the wrong element.</string>
+</string>
 							<false/>
 						</array>
 					</dict>

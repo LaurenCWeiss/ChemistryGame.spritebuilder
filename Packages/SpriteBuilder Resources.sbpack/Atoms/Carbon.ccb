@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/carbon.png</string>
+							<string>Art Assets/Carbon.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -146,8 +146,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -173,7 +171,7 @@
 			<key>collisionType</key>
 			<string>atomCollision</string>
 			<key>cornerRadius</key>
-			<real>8.6331892013549805</real>
+			<real>14.079354286193848</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -185,8 +183,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.38546839356422424</real>
-					<real>-0.16402663290500641</real>
+					<real>-0.81553930044174194</real>
+					<real>-1.6077432632446289</real>
 				</array>
 			</array>
 			<key>polygons</key>
@@ -254,6 +252,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

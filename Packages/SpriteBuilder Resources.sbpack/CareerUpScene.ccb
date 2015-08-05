@@ -391,7 +391,7 @@
 						<key>value</key>
 						<array>
 							<real>157.5</real>
-							<real>191.83937072753906</real>
+							<real>200.83937072753906</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -613,7 +613,7 @@ Improvement:
 						<key>value</key>
 						<array>
 							<real>157.5</real>
-							<real>115.92132568359375</real>
+							<real>124.92132568359375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -641,6 +641,8 @@ Improvement:
 						<string>CareerLevelUpLabel.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

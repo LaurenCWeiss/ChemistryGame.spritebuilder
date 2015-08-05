@@ -41,7 +41,7 @@ class LevelTransitionScene: CCNode {
     func startContinueButton() {
              var levelData: LevelData = LevelData()
          let currentLevelData = levelData.levels[LevelData.curLevel]
-        
+//        
 //       LevelData.curLevel += 1
           if currentLevelData.level - 1 == 0 {
             loadCareerUpScene()
@@ -52,7 +52,12 @@ class LevelTransitionScene: CCNode {
             CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
         }
         
-        
+//        if (LevelData.curLevel + 1) > 29 {
+//            LevelData.curLevel = 0
+//        } else {
+//            LevelData.curLevel++
+//        }
+//        
         
 //        CCDirector.sharedDirector().popScene()
         
@@ -65,11 +70,7 @@ class LevelTransitionScene: CCNode {
 //        }
         
         
-                if (LevelData.curLevel + 1) > 29 {
-                    LevelData.curLevel = 0
-                } else {
-                    LevelData.curLevel++
-                }
+        
 
 //
 //                if (LevelData.curLevel + 1) >= levelData.levels.count {

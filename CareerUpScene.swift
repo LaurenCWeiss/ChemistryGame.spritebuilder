@@ -38,7 +38,7 @@ class CareerUpScene: CCNode {
     func startContinueButton() {
         
         //what if scene is not level transition scene? For certain levels, it is the careerUpScene
-        
+//        LevelData.curLevel += 1
         let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
         CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
         

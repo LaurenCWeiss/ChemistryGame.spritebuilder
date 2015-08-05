@@ -146,8 +146,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -173,7 +171,7 @@
 			<key>collisionType</key>
 			<string>atomCollision</string>
 			<key>cornerRadius</key>
-			<real>4.2790131568908691</real>
+			<real>13.406797409057617</real>
 			<key>density</key>
 			<real>0.5</real>
 			<key>dynamic</key>
@@ -185,8 +183,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>-0.076619260013103485</real>
-					<real>-0.55918490886688232</real>
+					<real>0.06692802906036377</real>
+					<real>-1.2763972282409668</real>
 				</array>
 			</array>
 			<key>polygons</key>
@@ -254,6 +252,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

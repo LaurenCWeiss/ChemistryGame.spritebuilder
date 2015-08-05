@@ -122,7 +122,7 @@ struct LevelData {
         level1.ElementImage1Name = "Art Assets/Hydrogen.png"
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
         
-        level1.magnitude = ccp(0,30)
+        level1.magnitude = ccp(50,1000)
         level1.spawnThese = [3,1,2,3]
         level1.randomMin = 1
         level1.randomMax = 3
@@ -165,7 +165,7 @@ struct LevelData {
         level2.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
-        level2.magnitude = ccp(0,30)
+        level2.magnitude = ccp(50,100)
         level2.spawnThese = [3,1,2,3]
         level2.randomMin = 1
         level2.randomMax = 3
@@ -174,7 +174,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         
-             level1.smallOrderLabel = "Carbon Monoxide"
+             level2.smallOrderLabel = "Carbon Monoxide"
         levels.append(level2)
         
         
@@ -189,9 +189,9 @@ struct LevelData {
         level3.counters["Nitrogen"] = 1
         level3.counters["Hydrogen"] = 3
         
-        level3.goal = 3
+        level3.goal = 4
         level3.smallLabel = "Ammonia"
-        level3.level = 2
+        level3.level = 3
         level3.ElementImage1 = 1
         level3.ElementImage2 = 1
         level3.ElementImage1Name = "Art Assets/Nitrogen.png"
@@ -422,6 +422,7 @@ struct LevelData {
         level9.randomMin = 1
         level9.randomMax = 3
         
+        level9.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //add an order label of what the user is making in this level
         
         level9.smallOrderLabel = "Copper Sulfate"
@@ -455,6 +456,7 @@ struct LevelData {
         level10.spawnThese = [3,1,2,3]
         level10.randomMin = 1
         level10.randomMax = 3
+        level10.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         //add an order label of what the user is making in this level
         
@@ -492,6 +494,7 @@ struct LevelData {
         level11.spawnThese = [3,1,2,3]
         level11.randomMin = 1
         level11.randomMax = 3
+        level11.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         //add an order label of what the user is making in this level
         
@@ -527,7 +530,7 @@ struct LevelData {
         level12.spawnThese = [3,1,2,3]
         level12.randomMin = 1
         level12.randomMax = 3
-        
+        level12.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //add an order label of what the user is making in this level
         
         level12.smallOrderLabel = "Nitrite"
@@ -562,7 +565,7 @@ struct LevelData {
         level13.spawnThese = [3,1,2,3]
         level13.randomMin = 1
         level13.randomMax = 3
-        
+        level13.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //add an order label of what the user is making in this level
         
         level13.smallOrderLabel = "Hydronium"
@@ -594,7 +597,7 @@ struct LevelData {
         level14.ElementImage1Name = "Art Assets/Hydrogen.png"
         level14.ElementImage2Name = "Art Assets/Sulfur.png"
         level14.ElementImage3Name = "Art Assets/Oxygen.png"
-        
+        level14.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         level14.magnitude = ccp(0,30)
         level14.spawnThese = [3,1,2,3]
         level14.randomMin = 1
@@ -628,7 +631,8 @@ struct LevelData {
         
         level15.ElementImage1Name = "Art Assets/Oxygen.png"
         level15.ElementImage2Name = "Art Assets/Hydrogen.png"
-        
+        level15.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level15.magnitude = ccp(0,30)
         level15.spawnThese = [3,1,2,3]
@@ -668,7 +672,8 @@ struct LevelData {
         level16.ElementImage1Name = "Art Assets/Calcium.png"
         level16.ElementImage2Name = "Art Assets/Carbon.png"
         level16.ElementImage2Name = "Art Assets/Oxygen.png"
-        
+        level16.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level16.magnitude = ccp(0,30)
         level16.spawnThese = [3,1,2,3]
@@ -703,7 +708,8 @@ struct LevelData {
         
         level17.ElementImage1Name = "Art Assets/Nitrogen.png"
         level17.ElementImage2Name = "Art Assets/Oxygen.png"
-        
+        level17.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level17.magnitude = ccp(0,30)
         level17.spawnThese = [3,1,2,3]
@@ -743,7 +749,8 @@ struct LevelData {
         level18.ElementImage1Name = "Art Assets/Carbon.png"
         level18.ElementImage2Name = "Art Assets/Hydrogen.png"
         level18.ElementImage2Name = "Art Assets/Chlorine.png"
-        
+        level18.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level18.magnitude = ccp(0,30)
         level18.spawnThese = [3,1,2,3]
@@ -779,7 +786,8 @@ struct LevelData {
         
         level19.ElementImage1Name = "Art Assets/Carbon.png"
         level19.ElementImage2Name = "Art Assets/Hydrogen.png"
-        
+        level19.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level19.magnitude = ccp(0,30)
         level19.spawnThese = [3,1,2,3]
@@ -814,7 +822,8 @@ struct LevelData {
         
         level20.ElementImage1Name = "Art Assets/Iron.png"
         level20.ElementImage2Name = "Art Assets/Phosphorus.png"
-        
+        level20.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level20.magnitude = ccp(0,30)
         level20.spawnThese = [3,1,2,3]
@@ -851,7 +860,8 @@ struct LevelData {
         level21.ElementImage1Name = "Art Assets/Potassium.png"
         level21.ElementImage2Name = "Art Assets/Nitrogen.png"
         level21.ElementImage3Name = "Art Assets/Oxygen.png"
-        
+        level21.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         
         
@@ -887,7 +897,8 @@ struct LevelData {
         
         level22.ElementImage1Name = "Art Assets/Sodium.png"
         level22.ElementImage2Name = "Art Assets/Chlorine.png"
-        
+        level22.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level22.magnitude = ccp(0,30)
         level22.spawnThese = [3,1,2,3]
@@ -922,7 +933,8 @@ struct LevelData {
         
         level23.ElementImage1Name = "Art Assets/Sodium.png"
         level23.ElementImage2Name = "Art Assets/Telluride.png"
-        
+        level23.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level23.magnitude = ccp(0,30)
         level23.spawnThese = [3,1,2,3]
@@ -957,7 +969,8 @@ struct LevelData {
         
         level24.ElementImage1Name = "Art Assets/Gallium.png"
         level24.ElementImage2Name = "Art Assets/Bromine.png"
-        
+        level24.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level24.magnitude = ccp(0,30)
         level24.spawnThese = [3,1,2,3]
@@ -992,7 +1005,8 @@ struct LevelData {
         
         level25.ElementImage1Name = "Art Assets/Mercury.png"
         level25.ElementImage2Name = "Art Assets/Bromine.png"
-        
+        level25.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level25.magnitude = ccp(0,30)
         level25.spawnThese = [3,1,2,3]
@@ -1025,7 +1039,8 @@ struct LevelData {
         
         level26.ElementImage1Name = "Art Assets/Potassium.png"
         level26.ElementImage2Name = "Art Assets/Oxygen.png"
-        
+        level26.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level26.magnitude = ccp(0,30)
         level26.spawnThese = [3,1,2,3]
@@ -1059,7 +1074,8 @@ struct LevelData {
         
         level27.ElementImage1Name = "Art Assets/Mercury.png"
         level27.ElementImage2Name = "Art Assets/Chlorine.png"
-        
+        level27.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level27.magnitude = ccp(0,30)
         level27.spawnThese = [3,1,2,3]
@@ -1095,7 +1111,8 @@ struct LevelData {
         
         level28.ElementImage1Name = "Art Assets/Nitrogen.png"
         level28.ElementImage2Name = "Art Assets/Oxygen.png"
-        
+        level28.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level28.magnitude = ccp(0,30)
         level28.spawnThese = [3,1,2,3]
@@ -1133,7 +1150,8 @@ struct LevelData {
         level29.ElementImage1Name = "Art Assets/Potassium.png"
         level29.ElementImage2Name = "Art Assets/Oxygen.png"
         level29.ElementImage3Name = "Art Assets/Hydrogen.png"
-        
+        level29.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level29.magnitude = ccp(0,30)
         level29.spawnThese = [3,1,2,3]
@@ -1167,7 +1185,8 @@ struct LevelData {
         
         level30.ElementImage1Name = "Art Assets/Sulfur.png"
         level30.ElementImage2Name = "Art Assets/Oxygen.png"
-        
+        level30.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+
         
         level30.magnitude = ccp(0,30)
         level30.spawnThese = [3,1,2,3]

@@ -54,6 +54,8 @@
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<dict>
+		<key>metal</key>
+		<true/>
 		<key>accelerometer</key>
 		<true/>
 		<key>opengles-2</key>

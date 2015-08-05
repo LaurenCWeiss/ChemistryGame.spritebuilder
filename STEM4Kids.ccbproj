@@ -110,11 +110,6 @@
 			<key>scaleFrom</key>
 			<integer>4</integer>
 		</dict>
-		<key>Art Assets/Carbon.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>4</integer>
-		</dict>
 		<key>Art Assets/Chlorine.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -277,6 +272,11 @@
 		</dict>
 		<key>Art Assets/c.png</key>
 		<dict/>
+		<key>Art Assets/carbon.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
 		<key>Art Assets/letterT@4x.png</key>
 		<dict>
 			<key>scaleFrom</key>
