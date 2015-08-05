@@ -457,16 +457,16 @@ func setImage() {
     }
     if numImages == 3 {
         //positioning is incorrect for this one
-        xpos[0] = screenWidth/4
+        xpos[0] = screenWidth/5.333
         xpos[1] = screenWidth/2
-        xpos[2] = screenWidth/3
+        xpos[2] = screenWidth/1.2307
     }
     
     if numImages == 4 {
-        xpos[0] = screenWidth/5
-        xpos[1] = screenWidth/5 * 2
-        xpos[2] = screenWidth/5 * 3
-        xpos[3] = screenWidth/5 * 4
+        xpos[0] = screenWidth/6.4
+        xpos[1] = screenWidth/2.607986
+        xpos[2] = screenWidth/1.6186
+        xpos[3] = screenWidth/1.1851
     }
     
     // Setup Images for Atoms

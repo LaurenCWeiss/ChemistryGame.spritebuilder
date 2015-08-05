@@ -170,8 +170,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>7</real>
-							<real>86.000015258789062</real>
+							<real>8.789276123046875</real>
+							<real>95.000015258789062</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -209,7 +209,7 @@
 						<key>value</key>
 						<array>
 							<string>You lost!
-</string>
+You collected the wrong element.</string>
 							<false/>
 						</array>
 					</dict>
@@ -358,6 +358,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -684,8 +686,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
