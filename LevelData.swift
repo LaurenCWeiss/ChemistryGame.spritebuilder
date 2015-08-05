@@ -161,6 +161,7 @@ struct LevelData {
         level2.ElementImage2 = 1
         level2.ElementImage1Name = "Art Assets/Carbon.png"
         level2.ElementImage2Name = "Art Assets/Oxygen.png"
+        level1.careerUpSmallLabel = "You're an intern!"
         level2.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
@@ -173,6 +174,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         
+             level1.smallOrderLabel = "Carbon Monoxide"
         levels.append(level2)
         
         

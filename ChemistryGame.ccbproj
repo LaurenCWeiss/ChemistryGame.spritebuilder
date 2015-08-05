@@ -178,7 +178,7 @@
 		<key>Art Assets/PauseButton.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Art Assets/Phosphorus.png</key>
 		<dict>
@@ -193,7 +193,7 @@
 		<key>Art Assets/RestartButton.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Art Assets/S@4x-4.png</key>
 		<dict>

@@ -137,8 +137,6 @@
 						<real>1</real>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -180,32 +178,32 @@
 					<real>0.0</real>
 				</array>
 				<array>
-					<real>0.0</real>
-					<real>32</real>
+					<real>0.14962257444858551</real>
+					<real>100.75339508056641</real>
 				</array>
 				<array>
-					<real>32</real>
-					<real>32</real>
+					<real>366.825927734375</real>
+					<real>101.35288238525391</real>
 				</array>
 				<array>
-					<real>32</real>
-					<real>0.0</real>
+					<real>367.1302490234375</real>
+					<real>1.7545115947723389</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>32</real>
-						<real>0.0</real>
+						<real>367.1302490234375</real>
+						<real>1.7545115947723389</real>
 					</array>
 					<array>
-						<real>32</real>
-						<real>32</real>
+						<real>366.825927734375</real>
+						<real>101.35288238525391</real>
 					</array>
 					<array>
-						<real>0.0</real>
-						<real>32</real>
+						<real>0.14962257444858551</real>
+						<real>100.75339508056641</real>
 					</array>
 					<array>
 						<real>0.0</real>
@@ -306,6 +304,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
