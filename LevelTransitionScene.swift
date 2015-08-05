@@ -51,7 +51,7 @@ class LevelTransitionScene: CCNode {
             let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
             CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
         }
-        
+//        
 //        if (LevelData.curLevel + 1) > 29 {
 //            LevelData.curLevel = 0
 //        } else {
