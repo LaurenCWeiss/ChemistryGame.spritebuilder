@@ -79,7 +79,10 @@
 			<true/>
 		</dict>
 		<key>Art Assets</key>
-		<dict/>
+		<dict>
+			<key>isDirty</key>
+			<true/>
+		</dict>
 		<key>Art Assets/Aluminum.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -274,6 +277,16 @@
 		<dict>
 			<key>scaleFrom</key>
 			<integer>4</integer>
+		</dict>
+		<key>Art Assets/beaker123.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Art Assets/beaker_new.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
 		</dict>
 		<key>Art Assets/c.png</key>
 		<dict/>

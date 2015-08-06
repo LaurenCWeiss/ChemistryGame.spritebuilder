@@ -43,10 +43,10 @@ class Beaker: CCNode {
     }
     
     override func update(delta: CCTime) {
-        if position.y<=155 {
-            position.y=150
-        }
-        
+//        if position.y<= 155 {
+//            position.y= 150
+//        }
+//        
         top.position = topPosition
         self.physicsBody.velocity = ccp(0,0)
         top.physicsBody.velocity = ccp(0,0)

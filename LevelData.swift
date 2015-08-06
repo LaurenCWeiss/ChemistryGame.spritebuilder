@@ -36,6 +36,7 @@ struct Data {
     var goal: Int = 0
     var smallLabel: String = " "
     var smallLabelA: String = " "
+    var smallLevelLabel: String = " "
     var careerUpSmallLabel: String = " "
     var careerUpSmallLabelForLevel: String = ""
     var level: Int = 0
@@ -139,6 +140,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level1.smallOrderLabel = "Water"
+       level1.smallLevelLabel = "Level 1"
        
         
         levels.append(level1)
