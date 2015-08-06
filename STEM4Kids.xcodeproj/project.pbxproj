@@ -28,8 +28,6 @@
 		2EF767381B6AE136001050E0 /* CareerUpScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767371B6AE136001050E0 /* CareerUpScene.swift */; };
 		2EF767481B6C2C62001050E0 /* LabReport2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767471B6C2C62001050E0 /* LabReport2.swift */; };
 		2EF7674A1B6C2FBD001050E0 /* Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767491B6C2FBD001050E0 /* Border.swift */; };
-		2EFDD0A31B73E2F800ED062B /* LeveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFDD0A21B73E2F800ED062B /* LeveLabel.swift */; };
-		2EFDD0A51B73E96900ED062B /* CareerSceneLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFDD0A41B73E96900ED062B /* CareerSceneLabel.swift */; };
 		5B121030197484FA004C1E1D /* ChemistryGameActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* ChemistryGameActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A046D7519E84C36004C4763 /* MainScene.swift */; };
@@ -192,8 +190,6 @@
 		2EF767371B6AE136001050E0 /* CareerUpScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerUpScene.swift; sourceTree = "<group>"; };
 		2EF767471B6C2C62001050E0 /* LabReport2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabReport2.swift; sourceTree = "<group>"; };
 		2EF767491B6C2FBD001050E0 /* Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Border.swift; sourceTree = "<group>"; };
-		2EFDD0A21B73E2F800ED062B /* LeveLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeveLabel.swift; sourceTree = "<group>"; };
-		2EFDD0A41B73E96900ED062B /* CareerSceneLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerSceneLabel.swift; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121011197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -492,10 +488,8 @@
 				2E59F7E61B62A8ED009B4453 /* HelpScene.swift */,
 				2EC3876D1B5D9C7A00E4DF7F /* Label.swift */,
 				2EF767351B6AE01E001050E0 /* CareerLevelUpLabel.swift */,
-				2EFDD0A41B73E96900ED062B /* CareerSceneLabel.swift */,
 				2E343E571B5DC29A00E4CDA3 /* LevelButton.swift */,
 				2EE5DF4F1B54776A0059A184 /* LevelData.swift */,
-				2EFDD0A21B73E2F800ED062B /* LeveLabel.swift */,
 				2EF767471B6C2C62001050E0 /* LabReport2.swift */,
 				2EE982521B50679C00FE25DF /* LevelSelect.swift */,
 				2EA0B1701B580BFA00BEFFC4 /* LevelTransitionScene.swift */,
@@ -889,7 +883,6 @@
 				2E59F7E71B62A8ED009B4453 /* HelpScene.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				2EE982531B50679C00FE25DF /* LevelSelect.swift in Sources */,
-				2EFDD0A31B73E2F800ED062B /* LeveLabel.swift in Sources */,
 				2EC3876E1B5D9C7A00E4DF7F /* Label.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				2E0B14B51B59A7A800E4E378 /* Beaker.swift in Sources */,
@@ -903,7 +896,6 @@
 				2EE9824F1B4F845900FE25DF /* ScienceScene.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 				2EE982511B5058D000FE25DF /* PauseScene.swift in Sources */,
-				2EFDD0A51B73E96900ED062B /* CareerSceneLabel.swift in Sources */,
 				2EA0B1711B580BFA00BEFFC4 /* LevelTransitionScene.swift in Sources */,
 				2E59F7E51B62A7A5009B4453 /* CareerScene.swift in Sources */,
 				2EE982551B50683100FE25DF /* Atom.swift in Sources */,
