@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>103</integer>
+	<integer>159</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -135,6 +135,134 @@
 						<string>Float</string>
 						<key>value</key>
 						<real>1</real>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>141</integer>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>Untitled</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>133.90589904785156</real>
+							<real>323</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>2.4500000476837158</real>
+							<real>2.5</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>Art Assets/Untitled.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>143</integer>
+								<key>baseClass</key>
+								<string>CCEffectBrightness</string>
+								<key>className</key>
+								<string>CCBPEffectBrightness</string>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>brightness</string>
+										<key>type</key>
+										<string>Float</string>
+										<key>value</key>
+										<real>0.092206329107284546</real>
+									</dict>
+								</array>
+							</dict>
+						</array>
 					</dict>
 				</array>
 			</dict>
@@ -836,8 +964,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>9.7904119491577148</real>
-											<real>202.64675903320312</real>
+											<real>82.234428405761719</real>
+											<real>185.67558288574219</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -873,6 +1001,8 @@
 										<string>Science/Beaker.ccb</string>
 									</dict>
 								</array>
+								<key>selected</key>
+								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
@@ -906,8 +1036,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>-653.94805908203125</real>
-											<real>-40.723018646240234</real>
+											<real>-839.6903076171875</real>
+											<real>-116.62085723876953</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -920,8 +1050,8 @@
 										<string>ScaleLock</string>
 										<key>value</key>
 										<array>
-											<real>4.1440362930297852</real>
-											<real>2.2939884662628174</real>
+											<real>4.6560344696044922</real>
+											<real>2.7033023834228516</real>
 											<false/>
 											<integer>0</integer>
 										</array>
@@ -969,7 +1099,7 @@
 										<key>value</key>
 										<array>
 											<real>45.893558502197266</real>
-											<real>0.0</real>
+											<real>2.9018824100494385</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
