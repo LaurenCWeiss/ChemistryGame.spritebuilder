@@ -31,7 +31,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var spawn:[Int] = []
     var passed = false
     weak var ground: Ground!
-    var tilt = true
     
     // Labels
     
@@ -187,8 +186,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     func setupDeviceMotion() {
         
         //make sure device has motion capabilities
+<<<<<<< HEAD
 //      
         if tilt == true {
+=======
+>>>>>>> parent of 3a2b1f1... Settings scene loads
         
         if manager.deviceMotionAvailable {
             
@@ -234,6 +236,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 
             })
             
+<<<<<<< HEAD
             }
     }
     
@@ -284,6 +287,12 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
 
 
+=======
+        }
+        
+    }
+    
+>>>>>>> parent of 3a2b1f1... Settings scene loads
     
     override func onEnter() {
         
