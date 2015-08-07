@@ -24,34 +24,34 @@ class Beaker: CCNode {
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         
     }
-    
-    override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        let curTouch = touch.locationInView(CCDirector.sharedDirector().view as! CCGLView)
-        let lastTouch = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
-        
-        var diffPosition = ccpSub(lastTouch,curTouch)
-        diffPosition.x *= -1
-       
-        self.physicsBody.velocity = ccpMult(diffPosition,70)
-        top.physicsBody.velocity = ccpMult(diffPosition,70)
-        
-    }
-    
-    override func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        self.physicsBody.velocity = ccp(0,0)
-        top.physicsBody.velocity = ccp(0,0)
-    }
-    
-    override func update(delta: CCTime) {
-//        if position.y<= 155 {
-//            position.y= 150
-//        }
+//
+//    override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+//        let curTouch = touch.locationInView(CCDirector.sharedDirector().view as! CCGLView)
+//        let lastTouch = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
 //        
-        top.position = topPosition
-        self.physicsBody.velocity = ccp(0,0)
-        top.physicsBody.velocity = ccp(0,0)
-        
-    }
+//        var diffPosition = ccpSub(lastTouch,curTouch)
+//        diffPosition.x *= -1
+//       
+//        self.physicsBody.velocity = ccpMult(diffPosition,70)
+//        top.physicsBody.velocity = ccpMult(diffPosition,70)
+//        
+//    }
+//    
+//    override func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+//        self.physicsBody.velocity = ccp(0,0)
+//        top.physicsBody.velocity = ccp(0,0)
+//    }
+//    
+//    override func update(delta: CCTime) {
+////        if position.y<= 155 {
+////            position.y= 150
+////        }
+////        
+//        top.position = topPosition
+//        self.physicsBody.velocity = ccp(0,0)
+//        top.physicsBody.velocity = ccp(0,0)
+//        
+//    }
 
 }
 
