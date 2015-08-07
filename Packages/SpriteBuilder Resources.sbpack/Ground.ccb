@@ -72,7 +72,7 @@
 						<key>value</key>
 						<array>
 							<real>163.50001525878906</real>
-							<real>73.589218139648438</real>
+							<real>74.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -313,8 +313,6 @@
 				<array/>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
