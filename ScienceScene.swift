@@ -315,6 +315,7 @@ func restartButton() {
 func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, ground: Ground!) -> Bool {
     
     atomCollision.removeFromParent()
+
     //add sound here
     //add glass crack here
  
@@ -322,6 +323,7 @@ func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!
 //    sprite.position = ccp(50,73.0)
 //    self.addChild(sprite)
 //
+
     return true
     
     
@@ -398,8 +400,6 @@ func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beaker: Beaker!, bor
 
 
 func gameOver() {
-    
-    //shake screen here
     
     unscheduleAllSelectors()
     self.gamePhysicsNode.paused = true
