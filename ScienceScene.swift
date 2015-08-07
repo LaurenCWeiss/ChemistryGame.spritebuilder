@@ -174,32 +174,56 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
 }
     
-    
     func setupDeviceMotion() {
+        
         //make sure device has motion capabilities
+        
         if manager.deviceMotionAvailable {
+            
             //set the number of times the device should update motion data (in seconds)
+            
             manager.deviceMotionUpdateInterval = 0.1
+            
             //setup callback for everytime the motion data is updated
+            
             manager.startDeviceMotionUpdatesToQueue(queue, withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+                
                 ///checking device attitude will allow us to check devices current orientation in 3D space
+                
                 var attitude = motion.attitude
+                
                 var pitch = attitude.pitch
+                
                 var roll = attitude.roll
+                
                 let pitchMultiplier: Double = -1000
+                
                 let rollMultiplier: Double = 1000
+                
                 if let beaker = self.beaker {
+                    
                     let beakerPositionY = beaker.positionInPoints.y
+                    
                     let groundTop = self.ground.positionInPoints.y + self.ground.contentSize.height
+                    
                     println(self.ground.contentSize.height)
+                    
                     println(groundTop)
+                    
                     let cushion:CGFloat = 200
+                    
                     if beakerPositionY >= groundTop + cushion {
+                        
                         beaker.physicsBody.velocity = ccp(CGFloat(roll * rollMultiplier), 0)
+                        
                     }
+                    
                 }
+                
             })
+            
         }
+        
     }
 
 override func onEnter() {
