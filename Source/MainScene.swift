@@ -38,6 +38,15 @@ class MainScene: CCNode {
         let MainScene = CCBReader.loadAsScene("HelpScene")
         CCDirector.sharedDirector().pushScene(MainScene)
     }
+    func settingsButtonTapped() {
+        
+        let MainScene = CCBReader.loadAsScene("SettingsScene")
+        CCDirector.sharedDirector().pushScene(MainScene)
+    
+    
+    }
+
+    
     
     func shareButtonTapped() {
         //allows the user to send a screenshot of the main scene
