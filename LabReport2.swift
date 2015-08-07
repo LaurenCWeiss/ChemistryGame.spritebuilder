@@ -19,7 +19,7 @@ class LabReport2: CCNode {
     var screenSize:CGRect = CGRectZero
     var screenWidth:CGFloat = 0.0
     var screenHeight:CGFloat = 0.0
-//     let  curLevel = 0
+     let  curLevel = 0
     
     
     
