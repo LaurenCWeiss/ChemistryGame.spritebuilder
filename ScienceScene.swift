@@ -413,7 +413,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         let magnitude = levelData.levels[LevelData.curLevel].magnitude
         let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
         
-        atomCollision.physicsBody.applyImpulse(randomImpulse)
+        atomCollision.physicsBody!.applyImpulse(randomImpulse)
         
         return true
     }
@@ -514,9 +514,18 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
             
             CCDirector.sharedDirector().replaceScene(ScienceScene)
+            
+            
             if (LevelData.curLevel) > 29 {
                 LevelData.curLevel = 0
             } else {
+                
+//        var spriteStar = CCSprite(imageNamed:"star.png")
+//        spriteStar.position = ccp(50,150)
+//        self.addChild(spriteStar)
+
+                
+                
                 LevelData.curLevel++
             }
             
