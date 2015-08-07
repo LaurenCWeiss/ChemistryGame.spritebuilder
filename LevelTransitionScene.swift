@@ -68,16 +68,7 @@ class LevelTransitionScene: CCNode {
 //        } else {
 //            LevelData.curLevel++
 //        }
-        
-        
-        
 
-//
-//                if (LevelData.curLevel + 1) >= levelData.levels.count {
-//                    LevelData.curLevel = 0
-//                } else {
-//                    LevelData.curLevel++
-//                }
 
     }
     
