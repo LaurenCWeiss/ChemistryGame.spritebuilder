@@ -31,7 +31,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var spawn:[Int] = []
     var passed = false
     weak var ground: Ground!
-    var tilt = true
     
     // Labels
     
@@ -47,7 +46,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     let manager = CMMotionManager()
     let queue = NSOperationQueue.mainQueue()
     
-func didLoadFromCCB() {
+    func didLoadFromCCB() {
         
         
         
@@ -55,8 +54,8 @@ func didLoadFromCCB() {
         //gamePhysicsNode.debugDraw = true
         //gamePhysicsNode.space.dampining = 0.80
         currentLevelData = levelData.levels[LevelData.curLevel]
-    
-    setupDeviceMotion()
+        
+        setupDeviceMotion()
         
         println(currentLevelData?.level)
         if(currentLevelData?.hydrogenCounter>0) {
@@ -75,11 +74,11 @@ func didLoadFromCCB() {
                 spawn.append(3)
             }
         }
-            if(currentLevelData?.nitrogenCounter>0) {
-                for i in 1...currentLevelData!.nitrogenCounter {
-                    spawn.append(4)
-                }
+        if(currentLevelData?.nitrogenCounter>0) {
+            for i in 1...currentLevelData!.nitrogenCounter {
+                spawn.append(4)
             }
+        }
         
         if(currentLevelData?.lithiumCounter>0) {
             for i in 1...currentLevelData!.lithiumCounter {
@@ -172,439 +171,397 @@ func didLoadFromCCB() {
         }
         
         spawn.randomItem()
-    
-}
-
-func setupDeviceMotion() {
-    
-    //make sure device has motion capabilities
-    
-    if manager.deviceMotionAvailable {
         
-<<<<<<< HEAD
+    }
+    
+    func setupDeviceMotion() {
+        
         //make sure device has motion capabilities
-//      
-//        if tilt == true {
-=======
-        //set the number of times the device should update motion data (in seconds)
->>>>>>> parent of 6e1eb4b... Working level transitions
         
-        manager.deviceMotionUpdateInterval = 0.1
-        
-        //setup callback for everytime the motion data is updated
-        
-        manager.startDeviceMotionUpdatesToQueue(queue, withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+        if manager.deviceMotionAvailable {
             
-            ///checking device attitude will allow us to check devices current orientation in 3D space
+            //set the number of times the device should update motion data (in seconds)
             
-            var attitude = motion.attitude
+            manager.deviceMotionUpdateInterval = 0.1
             
-            var pitch = attitude.pitch
+            //setup callback for everytime the motion data is updated
             
-            var roll = attitude.roll
-            
-            let pitchMultiplier: Double = -1000
-            
-            let rollMultiplier: Double = 1000
-            
-            if let beaker = self.beaker {
+            manager.startDeviceMotionUpdatesToQueue(queue, withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
                 
-                let beakerPositionY = beaker.positionInPoints.y
+                ///checking device attitude will allow us to check devices current orientation in 3D space
                 
-                let groundTop = self.ground.positionInPoints.y + self.ground.contentSize.height
+                var attitude = motion.attitude
                 
-                println(self.ground.contentSize.height)
+                var pitch = attitude.pitch
                 
-                println(groundTop)
+                var roll = attitude.roll
                 
-                let cushion:CGFloat = 200
+                let pitchMultiplier: Double = -1000
                 
-//                if beakerPositionY >= groundTop + cushion {
+                let rollMultiplier: Double = 1000
                 
-                beaker.physicsBody.velocity = ccp(CGFloat(roll * rollMultiplier), 0)
+                if let beaker = self.beaker {
                     
-//                }
+                    let beakerPositionY = beaker.positionInPoints.y
+                    
+                    let groundTop = self.ground.positionInPoints.y + self.ground.contentSize.height
+                    
+                    println(self.ground.contentSize.height)
+                    
+                    println(groundTop)
+                    
+                    let cushion:CGFloat = 200
+                    
+                    //                if beakerPositionY >= groundTop + cushion {
+                    
+                    beaker.physicsBody.velocity = ccp(CGFloat(roll * rollMultiplier), 0)
+                    
+                    //                }
+                    
+                }
                 
-            }
+            })
             
-<<<<<<< HEAD
-            }}
-//        else if tilt == false {
-//            //mechanics for touch
-//                override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-//            
-//                }
-//            
-//                override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-//                    let curTouch = touch.locationInView(CCDirector.sharedDirector().view as! CCGLView)
-//                    let lastTouch = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
-//            
-//                    var diffPosition = ccpSub(lastTouch,curTouch)
-//                    diffPosition.x *= -1
-//            
-//                    self.physicsBody.velocity = ccpMult(diffPosition,70)
-//                    top.physicsBody.velocity = ccpMult(diffPosition,70)
-//            
-//                }
-//            
-//                override func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-//                    self.physicsBody.velocity = ccp(0,0)
-//                    top.physicsBody.velocity = ccp(0,0)
-//                }
-//            
-//                override func update(delta: CCTime) {
-//            //        if position.y<= 155 {
-//            //            position.y= 150
-//            //        }
-//            //        
-//                    top.position = topPosition
-//                    self.physicsBody.velocity = ccp(0,0)
-//                    top.physicsBody.velocity = ccp(0,0)
-//                    
-//                }
-//            
-//            
-//        }
-//        
-//        
-        
-        
-        
-
-
-=======
-        })
+        }
         
     }
     
-}
->>>>>>> parent of 6e1eb4b... Working level transitions
     
-    
-override func onEnter() {
-    
-    
-    super.onEnter()
-    
-    self.schedule(Selector("dropAtom"), interval: 2)
-    setImage()
-}
-
-func dropAtom(){
-    
-    //problem is that what if atoms that need to be spawned aren't spawned
-    
-    //need mechanism that will ensure that the atoms from level data are spawned, that enough of them are actually spawned
-    var fileName:String = ""
-    
-    //        println(spawn.count)
-
-    if spawn.count == 0 {
-        gameOver()
-        return
-    }
-    var spawnIndex:Int = spawn.randomItem()
-    var spawnAtom = spawn[spawnIndex]
-    spawn.removeAtIndex(spawnIndex)
-    
-    //check if array is empty using spawn.count == 0 or spawn.isEmpty
-    
-    switch spawnAtom {
-    case 1:
-        fileName = "Hydrogen"
-    case 2:
-        fileName = "Oxygen"
-    case 3:
-        fileName = "Carbon"
-    case 4:
-        fileName = "Nitrogen"
-    case 5:
-        fileName = "Lithium"
-    case 6:
-        fileName = "Aluminum"
-    case 7:
-        fileName = "Chlorine"
-    case 8:
-        fileName = "Copper"
-    case 9:
-        fileName = "Sulfur"
-    case 10:
-        fileName = "Calcium"
-    case 11:
-        fileName = "Phosphorus"
-    case 12:
-        fileName = "Iron"
-    case 13:
-        fileName = "Potassium"
-    case 14:
-        fileName = "Sodium"
-    case 15:
-        fileName = "Telluride"
-    case 16:
-        fileName = "Gallium"
-    case 17:
-        fileName = "Bromine"
-    case 18:
-        fileName = "Mercury"
+    override func onEnter() {
         
-    default:
-        println("No Atom :(")
-        //return so that if integer is equal to zero(which is what it is set at in level data) atoms will just stop falling
-        return
         
+        super.onEnter()
+        
+        self.schedule(Selector("dropAtom"), interval: 2)
+        setImage()
     }
     
-    var atomNode = CCBReader.load("Atoms/\(fileName)") as! Atom
-    atomNode.type = fileName // Dynamicaly set atom type
+    func dropAtom(){
+        
+        //problem is that what if atoms that need to be spawned aren't spawned
+        
+        //need mechanism that will ensure that the atoms from level data are spawned, that enough of them are actually spawned
+        var fileName:String = ""
+        
+        //        println(spawn.count)
+        
+        if spawn.count == 0 {
+            gameOver()
+            return
+        }
+        var spawnIndex:Int = spawn.randomItem()
+        var spawnAtom = spawn[spawnIndex]
+        spawn.removeAtIndex(spawnIndex)
+        
+        //check if array is empty using spawn.count == 0 or spawn.isEmpty
+        
+        switch spawnAtom {
+        case 1:
+            fileName = "Hydrogen"
+        case 2:
+            fileName = "Oxygen"
+        case 3:
+            fileName = "Carbon"
+        case 4:
+            fileName = "Nitrogen"
+        case 5:
+            fileName = "Lithium"
+        case 6:
+            fileName = "Aluminum"
+        case 7:
+            fileName = "Chlorine"
+        case 8:
+            fileName = "Copper"
+        case 9:
+            fileName = "Sulfur"
+        case 10:
+            fileName = "Calcium"
+        case 11:
+            fileName = "Phosphorus"
+        case 12:
+            fileName = "Iron"
+        case 13:
+            fileName = "Potassium"
+        case 14:
+            fileName = "Sodium"
+        case 15:
+            fileName = "Telluride"
+        case 16:
+            fileName = "Gallium"
+        case 17:
+            fileName = "Bromine"
+        case 18:
+            fileName = "Mercury"
+            
+        default:
+            println("No Atom :(")
+            //return so that if integer is equal to zero(which is what it is set at in level data) atoms will just stop falling
+            return
+            
+        }
+        
+        var atomNode = CCBReader.load("Atoms/\(fileName)") as! Atom
+        atomNode.type = fileName // Dynamicaly set atom type
+        
+        //after atom obstalce has been randomly chosen, drop the atom at a random position
+        atomNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
+        
+        gamePhysicsNode.addChild(atomNode)
+        
+        let magnitude = levelData.levels[LevelData.curLevel].magnitude
+        let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
+        
+        atomNode.physicsBody.applyImpulse(randomImpulse)
+        
+    }
     
-    //after atom obstalce has been randomly chosen, drop the atom at a random position
-    atomNode.position = ccp(CGFloat.random(min: 50.0, max: 200.0),600)
+    func cleanup() {
+        
+    }
     
-    gamePhysicsNode.addChild(atomNode)
+    override func onEnterTransitionDidFinish() {
+        super.onEnterTransitionDidFinish()
+        
+        self.userInteractionEnabled = true
+    }
     
-    let magnitude = levelData.levels[LevelData.curLevel].magnitude
-    let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
-    
-    atomNode.physicsBody.applyImpulse(randomImpulse)
-    
-}
-
-func cleanup() {
-    
-}
-
-override func onEnterTransitionDidFinish() {
-    super.onEnterTransitionDidFinish()
-    
-    self.userInteractionEnabled = true
-}
-
-func startPause() {
-    let ScienceScene = CCBReader.loadAsScene("PauseScene")
-    CCDirector.sharedDirector().pushScene(ScienceScene)
-}
-
-
-func restartButton() {
-    let ScienceScene = CCBReader.loadAsScene("ScienceScene")
-    CCDirector.sharedDirector().presentScene(ScienceScene)
-}
-
-func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, ground: Ground!) -> Bool {
-    
-    atomCollision.removeFromParent()
-    //add sound here
-    //add glass crack here
- 
-//    var sprite = CCSprite(imageNamed:"glass.png")
-//    sprite.position = ccp(50,73.0)
-//    self.addChild(sprite)
-
-    return true
+    func startPause() {
+        let ScienceScene = CCBReader.loadAsScene("PauseScene")
+        CCDirector.sharedDirector().pushScene(ScienceScene)
+    }
     
     
-}
-
-func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, border: Border!) -> Bool {
-    let magnitude = levelData.levels[LevelData.curLevel].magnitude
-    let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
+    func restartButton() {
+        let ScienceScene = CCBReader.loadAsScene("ScienceScene")
+        CCDirector.sharedDirector().presentScene(ScienceScene)
+    }
     
-    atomCollision.physicsBody.applyImpulse(randomImpulse)
-    
-    return true
-}
-
-
-
-
-
-//MARK:- Physics
-func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, atomCollision: Atom!) -> Bool {
-    //this collision is the circle collision at the top of the beaker/flask...this collision adds one to the score in the system so that the program knows to move up a level
-    
-    // If in beaker, bounce
-    if atomCollision.inBeaker == true {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, ground: Ground!) -> Bool {
+        
+        atomCollision.removeFromParent()
+        //add sound here
+        //add glass crack here
+        
+        //    var sprite = CCSprite(imageNamed:"glass.png")
+        //    sprite.position = ccp(50,73.0)
+        //    self.addChild(sprite)
+        
         return true
         
+        
     }
     
-    var collectAtom = false
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, border: Border!) -> Bool {
+        let magnitude = levelData.levels[LevelData.curLevel].magnitude
+        let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
+        
+        atomCollision.physicsBody.applyImpulse(randomImpulse)
+        
+        return true
+    }
     
-    // Check Counters
-    //println(atomCollision.type)
-    //println(currentLevelData?.counters[atomCollision.type])
     
-    if currentLevelData?.counters[atomCollision.type] > 0 {
-        if let collection: Int = currentLevelData?.counters[atomCollision.type] {
-            collectAtom = true
-            currentLevelData?.counters[atomCollision.type] = collection - 1
-            var label:CCLabelTTF! = self.getChildByName("\(atomCollision.type)Label", recursively: true) as! CCLabelTTF
-            //allows correct # of atoms left of each element to be printed
-            label.string = "\(currentLevelData!.counters[atomCollision.type]!)"
-            //  label.string = "\(currentLevelData?.counters[atomCollision.type]!)"
-            if currentLevelData!.counters[atomCollision.type]! == 0 {
-                label.string = "✔️"
+    
+    
+    
+    //MARK:- Physics
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, atomCollision: Atom!) -> Bool {
+        //this collision is the circle collision at the top of the beaker/flask...this collision adds one to the score in the system so that the program knows to move up a level
+        
+        // If in beaker, bounce
+        if atomCollision.inBeaker == true {
+            return true
+            
+        }
+        
+        var collectAtom = false
+        
+        // Check Counters
+        //println(atomCollision.type)
+        //println(currentLevelData?.counters[atomCollision.type])
+        
+        if currentLevelData?.counters[atomCollision.type] > 0 {
+            if let collection: Int = currentLevelData?.counters[atomCollision.type] {
+                collectAtom = true
+                currentLevelData?.counters[atomCollision.type] = collection - 1
+                var label:CCLabelTTF! = self.getChildByName("\(atomCollision.type)Label", recursively: true) as! CCLabelTTF
+                //allows correct # of atoms left of each element to be printed
+                label.string = "\(currentLevelData!.counters[atomCollision.type]!)"
+                //  label.string = "\(currentLevelData?.counters[atomCollision.type]!)"
+                if currentLevelData!.counters[atomCollision.type]! == 0 {
+                    label.string = "✔️"
+                }
             }
+        }
+        
+        //println(currentLevelData?.counters[atomCollision.type])
+        
+        if collectAtom == true {
+            
+            points++
+            atomCollision.inBeaker = true
+            return false
+            
+        } else {
+            gameOver()
+        }
+        
+        return true
+    }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beaker: Beaker!, border: CCNode!) -> Bool {
+        
+        return false
+    }
+    
+    
+    
+    
+    func gameOver() {
+        
+        //shake screen here
+        
+        unscheduleAllSelectors()
+        self.gamePhysicsNode.paused = true
+        
+        //LOAD RESTART POPUP HERE
+        
+        let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
+        popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
+        popup.position = CGPoint(x: 0.5, y: 0.5)
+        parent.addChild(popup)
+        
+        
+        
+        
+    }
+    
+    func startLevelTransitionScene() {
+        
+        checkIfCareerUpSceneShouldLoad()
+        
+        
+        
+    }
+    func checkIfCareerUpSceneShouldLoad() {
+        
+        
+        if LevelData.curLevel == 0 {
+            
+            let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
+            CCDirector.sharedDirector().replaceScene(ScienceScene)
+            println("curLevelhs:\(LevelData.curLevel)")
+        }
+        else {
+            let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
+            
+            CCDirector.sharedDirector().replaceScene(ScienceScene)
+            if (LevelData.curLevel) > 29 {
+                LevelData.curLevel = 0
+            } else {
+                LevelData.curLevel++
+            }
+            
+        }
+        
+    }
+    
+    
+    override func update(delta: CCTime) {
+        
+        //if the number of points equals the number of atoms released, then move on to the next level
+        
+        if points == levelData.levels[LevelData.curLevel].goal {
+            //               LevelData.curLevel += 1
+            
+            
+            
+            
+            cleanup()
+            //call scene transition here
+            passed = true
+            startLevelTransitionScene()
+            
+            
         }
     }
     
-    //println(currentLevelData?.counters[atomCollision.type])
-    
-    if collectAtom == true {
+    func setImage() {
         
-        points++
-        atomCollision.inBeaker = true
-        return false
+        // Calculate Required Atoms
+        var requiredAtoms:[String] = []
         
-    } else {
-        gameOver()
-    }
-    
-    return true
-}
-
-func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beaker: Beaker!, border: CCNode!) -> Bool {
-    
-    return false
-}
-
-
-
-
-func gameOver() {
-    
-    //shake screen here
-    
-    unscheduleAllSelectors()
-    self.gamePhysicsNode.paused = true
-    
-    //LOAD RESTART POPUP HERE
-    
-    let popup = CCBReader.load("RestartPopup", owner:self) as! RestartPopup
-    popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
-    popup.position = CGPoint(x: 0.5, y: 0.5)
-    parent.addChild(popup)
-    
-    
-    
-    
-}
-
-func startLevelTransitionScene() {
-    
-    checkIfCareerUpSceneShouldLoad()
-    
-    
-    
-}
-func checkIfCareerUpSceneShouldLoad() {
-    
-    
-    if LevelData.curLevel == 0 {
+        let currentLevelData = levelData.levels[LevelData.curLevel]
         
-        let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
-        CCDirector.sharedDirector().replaceScene(ScienceScene)
-        println("curLevelhs:\(LevelData.curLevel)")
-    }
-            else {
-                let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
-                CCDirector.sharedDirector().replaceScene(ScienceScene)
-    
-            }
-    
-}
-
-
-override func update(delta: CCTime) {
-    
-    //if the number of points equals the number of atoms released, then move on to the next level
-    
-    if points == levelData.levels[LevelData.curLevel].goal {
-//               LevelData.curLevel += 1
-        cleanup()
-        //call scene transition here
-        startLevelTransitionScene()
-        passed = true
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
         
-    }
-}
-
-func setImage() {
-    
-    // Calculate Required Atoms
-    var requiredAtoms:[String] = []
-    
-    let currentLevelData = levelData.levels[LevelData.curLevel]
-    
-    let screenSize: CGRect = UIScreen.mainScreen().bounds
-    let screenWidth = screenSize.width
-    
-    var xpos:[CGFloat] = [0,0,0,0]
-    
-    // Calculate Required Atoms
-    //still use hydrogenCounter and oxygenCounter here...
-    
-    if currentLevelData.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
-    if currentLevelData.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
-    if currentLevelData.counters["Carbon"]>0 { requiredAtoms.append("Carbon") }
-    if currentLevelData.counters["Nitrogen"]>0 { requiredAtoms.append("Nitrogen") }
-    if currentLevelData.counters["Lithium"]>0 { requiredAtoms.append("Lithium") }
-    if currentLevelData.counters["Aluminum"]>0 { requiredAtoms.append("Aluminum") }
-    if currentLevelData.counters["Chlorine"]>0 { requiredAtoms.append("Chlorine") }
-    if currentLevelData.counters["Copper"]>0 { requiredAtoms.append("Copper") }
-    if currentLevelData.counters["Sulfur"]>0 { requiredAtoms.append("Sulfur") }
-    if currentLevelData.counters["Calcium"]>0 { requiredAtoms.append("Calcium") }
-    if currentLevelData.counters["Phosphorus"]>0 { requiredAtoms.append("Phosphorus") }
-    if currentLevelData.counters["Iron"]>0 { requiredAtoms.append("Iron") }
-    if currentLevelData.counters["Potassium"]>0 { requiredAtoms.append("Potassium") }
-    if currentLevelData.counters["Sodium"]>0 { requiredAtoms.append("Sodium") }
-    if currentLevelData.counters["Telluride"]>0 { requiredAtoms.append("Telluride") }
-    if currentLevelData.counters["Gallium"]>0 { requiredAtoms.append("Gallium") }
-    if currentLevelData.counters["Bromine"]>0 { requiredAtoms.append("Bromine") }
-    if currentLevelData.counters["Mercury"]>0 { requiredAtoms.append("Mercury") }
-    
-    let numImages = requiredAtoms.count
-    
-    if numImages == 1 {
-        xpos[0] = screenWidth/2
-    }
-    if numImages == 2 {
+        var xpos:[CGFloat] = [0,0,0,0]
         
-        xpos[0] = screenWidth/4
-        xpos[1] = screenWidth/4 * 3
+        // Calculate Required Atoms
+        //still use hydrogenCounter and oxygenCounter here...
         
-    }
-    if numImages == 3 {
-        //positioning is incorrect for this one
-        xpos[0] = screenWidth/5.333
-        xpos[1] = screenWidth/2
-        xpos[2] = screenWidth/1.2307
-    }
-    
-    if numImages == 4 {
-        xpos[0] = screenWidth/6.4
-        xpos[1] = screenWidth/2.607986
-        xpos[2] = screenWidth/1.6186
-        xpos[3] = screenWidth/1.1851
-    }
-    
-    // Setup Images for Atoms
-    for (index,atomType) in enumerate(requiredAtoms) {
+        if currentLevelData.counters["Hydrogen"]>0 { requiredAtoms.append("Hydrogen") }
+        if currentLevelData.counters["Oxygen"]>0 { requiredAtoms.append("Oxygen") }
+        if currentLevelData.counters["Carbon"]>0 { requiredAtoms.append("Carbon") }
+        if currentLevelData.counters["Nitrogen"]>0 { requiredAtoms.append("Nitrogen") }
+        if currentLevelData.counters["Lithium"]>0 { requiredAtoms.append("Lithium") }
+        if currentLevelData.counters["Aluminum"]>0 { requiredAtoms.append("Aluminum") }
+        if currentLevelData.counters["Chlorine"]>0 { requiredAtoms.append("Chlorine") }
+        if currentLevelData.counters["Copper"]>0 { requiredAtoms.append("Copper") }
+        if currentLevelData.counters["Sulfur"]>0 { requiredAtoms.append("Sulfur") }
+        if currentLevelData.counters["Calcium"]>0 { requiredAtoms.append("Calcium") }
+        if currentLevelData.counters["Phosphorus"]>0 { requiredAtoms.append("Phosphorus") }
+        if currentLevelData.counters["Iron"]>0 { requiredAtoms.append("Iron") }
+        if currentLevelData.counters["Potassium"]>0 { requiredAtoms.append("Potassium") }
+        if currentLevelData.counters["Sodium"]>0 { requiredAtoms.append("Sodium") }
+        if currentLevelData.counters["Telluride"]>0 { requiredAtoms.append("Telluride") }
+        if currentLevelData.counters["Gallium"]>0 { requiredAtoms.append("Gallium") }
+        if currentLevelData.counters["Bromine"]>0 { requiredAtoms.append("Bromine") }
+        if currentLevelData.counters["Mercury"]>0 { requiredAtoms.append("Mercury") }
         
-        // Add Images
-        var sprite = CCSprite(imageNamed:"Art Assets/\(atomType).png")
-        sprite.position = ccp(xpos[index],73.0)
-        self.addChild(sprite)
+        let numImages = requiredAtoms.count
         
-        // Add Labels
-        var label = CCLabelTTF(string: "\(currentLevelData.counters[atomType]!)", fontName: "Arial", fontSize: 20)
-        label.name = "\(atomType)Label"
-        label.position = ccp(xpos[index],25)
-        self.addChild(label)
+        if numImages == 1 {
+            xpos[0] = screenWidth/2
+        }
+        if numImages == 2 {
+            
+            xpos[0] = screenWidth/4
+            xpos[1] = screenWidth/4 * 3
+            
+        }
+        if numImages == 3 {
+            //positioning is incorrect for this one
+            xpos[0] = screenWidth/5.333
+            xpos[1] = screenWidth/2
+            xpos[2] = screenWidth/1.2307
+        }
+        
+        if numImages == 4 {
+            xpos[0] = screenWidth/6.4
+            xpos[1] = screenWidth/2.607986
+            xpos[2] = screenWidth/1.6186
+            xpos[3] = screenWidth/1.1851
+        }
+        
+        // Setup Images for Atoms
+        for (index,atomType) in enumerate(requiredAtoms) {
+            
+            // Add Images
+            var sprite = CCSprite(imageNamed:"Art Assets/\(atomType).png")
+            sprite.position = ccp(xpos[index],73.0)
+            self.addChild(sprite)
+            
+            // Add Labels
+            var label = CCLabelTTF(string: "\(currentLevelData.counters[atomType]!)", fontName: "Arial", fontSize: 20)
+            label.name = "\(atomType)Label"
+            label.position = ccp(xpos[index],25)
+            self.addChild(label)
+            
+        }
         
     }
     
-}
-
-
+    
 }
