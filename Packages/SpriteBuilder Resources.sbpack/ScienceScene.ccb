@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>321</integer>
+	<integer>370</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -1098,8 +1098,6 @@
 										<string>Science/Ground.ccb</string>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 						</array>
 						<key>customClass</key>
@@ -1650,8 +1648,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>107.72270965576172</real>
-									<real>96.146743774414062</real>
+									<real>83.25</real>
+									<real>102.98766326904297</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -1890,7 +1888,7 @@
 						<key>value</key>
 						<array>
 							<real>172.16061401367188</real>
-							<real>530.6357421875</real>
+							<real>527.3077392578125</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
