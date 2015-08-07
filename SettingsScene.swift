@@ -14,24 +14,19 @@ class SettingsScene: CCNode, CCPhysicsCollisionDelegate  {
     
     weak var contentNode: CCNode!
     
-   var tilt=true
+  
     func startMainMenu() {
         //        let MainScene = CCBReader.loadAsScene("HelpScene")
         CCDirector.sharedDirector().popScene()
         
     }
     func tiltControlOn() {
-     
        //turn tilt on
-        tilt = true
-//       setupDeviceMotion(ScienceScene)
-        println("tilt on")
+        ScienceScene.tilt = true
     }
     func tiltControlOff() {
        //turn tilt off
-        tilt = false
-//         setupDeviceMotion(ScienceScene)
-        println("tilt off")
+        ScienceScene.tilt = false
     }
 
 
