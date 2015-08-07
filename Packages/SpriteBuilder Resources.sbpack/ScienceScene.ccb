@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>392</integer>
+	<integer>387</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -1098,6 +1098,8 @@
 										<string>Science/Ground.ccb</string>
 									</dict>
 								</array>
+								<key>selected</key>
+								<true/>
 							</dict>
 						</array>
 						<key>customClass</key>
@@ -1649,7 +1651,7 @@
 								<key>value</key>
 								<array>
 									<real>83.25</real>
-									<real>104.58832550048828</real>
+									<real>102.98766326904297</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -1677,8 +1679,6 @@
 								<string>Science/Beaker.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
