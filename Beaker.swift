@@ -21,10 +21,10 @@ class Beaker: CCNode {
 
     }
     
-    override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        
-    }
-//
+//    override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+//        
+//    }
+//    
 //    override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
 //        let curTouch = touch.locationInView(CCDirector.sharedDirector().view as! CCGLView)
 //        let lastTouch = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
@@ -52,6 +52,8 @@ class Beaker: CCNode {
 //        top.physicsBody.velocity = ccp(0,0)
 //        
 //    }
+    
+
 
 }
 
