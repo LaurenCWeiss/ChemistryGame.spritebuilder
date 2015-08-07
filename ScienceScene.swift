@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreMotion
 
 //container to store the name of a moelcule and corresponding number of atoms
 struct LevelObject {
@@ -42,6 +43,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     //this is the global storage for all levels
     var levelData: LevelData = LevelData()
     
+    let manager = CMMotionManager()
+    let queue = NSOperationQueue.mainQueue()
     
     func didLoadFromCCB() {
         
@@ -52,7 +55,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //gamePhysicsNode.space.dampining = 0.80
         currentLevelData = levelData.levels[LevelData.curLevel]
         
-        
+        setupDeviceMotion()
+
         println(currentLevelData?.level)
         if(currentLevelData?.hydrogenCounter>0) {
             
@@ -169,6 +173,34 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         spawn.randomItem()
     
 }
+    
+    
+    func setupDeviceMotion() {
+        //make sure device has motion capabilities
+        if manager.deviceMotionAvailable {
+            //set the number of times the device should update motion data (in seconds)
+            manager.deviceMotionUpdateInterval = 0.1
+            //setup callback for everytime the motion data is updated
+            manager.startDeviceMotionUpdatesToQueue(queue, withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+                ///checking device attitude will allow us to check devices current orientation in 3D space
+                var attitude = motion.attitude
+                var pitch = attitude.pitch
+                var roll = attitude.roll
+                let pitchMultiplier: Double = -1000
+                let rollMultiplier: Double = 1000
+                if let beaker = self.beaker {
+                    let beakerPositionY = beaker.positionInPoints.y
+                    let groundTop = self.ground.positionInPoints.y + self.ground.contentSize.height
+                    println(self.ground.contentSize.height)
+                    println(groundTop)
+                    let cushion:CGFloat = 200
+                    if beakerPositionY >= groundTop + cushion {
+                        beaker.physicsBody.velocity = ccp(CGFloat(roll * rollMultiplier), 0)
+                    }
+                }
+            })
+        }
+    }
 
 override func onEnter() {
     
@@ -286,10 +318,10 @@ func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!
     //add sound here
     //add glass crack here
  
-    var sprite = CCSprite(imageNamed:"glass.png")
-    sprite.position = ccp(50,73.0)
-    self.addChild(sprite)
-
+//    var sprite = CCSprite(imageNamed:"glass.png")
+//    sprite.position = ccp(50,73.0)
+//    self.addChild(sprite)
+//
     return true
     
     
@@ -357,6 +389,10 @@ func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beaker: Beaker!, bor
     
     return false
 }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, beaker: Beaker!, ground: CCNode!) -> Bool {
+        return true
+    }
 
 
 

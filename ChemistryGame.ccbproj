@@ -79,10 +79,7 @@
 			<true/>
 		</dict>
 		<key>Art Assets</key>
-		<dict>
-			<key>isDirty</key>
-			<true/>
-		</dict>
+		<dict/>
 		<key>Art Assets/Aluminum.png</key>
 		<dict>
 			<key>scaleFrom</key>
