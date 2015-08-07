@@ -143,7 +143,7 @@ struct LevelData {
         
         level1.smallOrderLabel = "Water"
        level1.smallLevelLabel = "Level 1"
-        level1.passed = true
+//        level1.passed = true
        
         
         levels.append(level1)

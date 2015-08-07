@@ -519,13 +519,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             if (LevelData.curLevel) > 29 {
                 LevelData.curLevel = 0
             } else {
-                
-//        var spriteStar = CCSprite(imageNamed:"star.png")
-//        spriteStar.position = ccp(50,150)
-//        self.addChild(spriteStar)
 
-                
-                
                 LevelData.curLevel++
             }
             
