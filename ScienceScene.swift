@@ -514,15 +514,17 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
             
             CCDirector.sharedDirector().replaceScene(ScienceScene)
-            if (LevelData.curLevel) > 29 {
-                LevelData.curLevel = 0
-            } else {
+//            if (LevelData.curLevel) > 29 {
+//                LevelData.curLevel = 0
+//            } else {
                 LevelData.curLevel++
-            }
+//            }
             
         }
         
     }
+    
+    
     
     
     override func update(delta: CCTime) {
