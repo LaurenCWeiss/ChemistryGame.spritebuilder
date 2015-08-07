@@ -40,26 +40,15 @@ class CareerScene: CCNode, CCPhysicsCollisionDelegate {
 //        var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
 //        spriteC.position = ccp(screenWidth/2,150)
 //        self.addChild(spriteC)
-//
-//        
-//        
-//        //show career title
-//        var labelCareer = CCLabelTTF(string: "\(currentLevelData.careerUpSmallLabelForLevel)", fontName: "Arial", fontSize: 10)
-//        labelCareer.name = "\(currentLevelData.careerUpSmallLabelForLevel)Label"
-//        labelCareer.position = ccp(50,25)
-//        self.addChild(labelCareer)
 
         
         
-        
-        //if the number of levels passed = 1, then show the intern sprite with intern label
-        
-        
-        //if the number of levels passed = 10, then show the next scientist sprite with next scientist label
-        
-        //and so on...
-        
-        
+        //show career title
+        var labelCareer = CCLabelTTF(string: "\(currentLevelData.careerUpSmallLabelForLevel)", fontName: "Arial", fontSize: 10)
+        labelCareer.name = "\(currentLevelData.careerUpSmallLabelForLevel)Label"
+        labelCareer.position = ccp(50,25)
+        self.addChild(labelCareer)
+
         
         
     }

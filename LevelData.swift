@@ -69,8 +69,6 @@ struct Data {
     
     var MyNewCareerScientistImage: String!
     
-    var passed = false
-    
     
 }
 
@@ -143,7 +141,6 @@ struct LevelData {
         
         level1.smallOrderLabel = "Water"
        level1.smallLevelLabel = "Level 1"
-        level1.passed = true
        
         
         levels.append(level1)
@@ -186,9 +183,7 @@ struct LevelData {
              level2.smallOrderLabel = "Carbon Monoxide"
         
         level2.smallLevelLabel = "Level 2"
-           level2.passed = false
         levels.append(level2)
-        
         
         
         var level3 = Data()
@@ -222,7 +217,6 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level3.smallLevelLabel = "Level 3"
-             level3.passed = false
         
           levels.append(level3)
         
@@ -253,7 +247,6 @@ struct LevelData {
         level4.spawnThese = [3,1,2,3]
         level4.randomMin = 1
         level4.randomMax = 3
-             level4.passed = false
         
         
         //add an order label of what the user is making in this level

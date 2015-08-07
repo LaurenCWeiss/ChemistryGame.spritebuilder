@@ -11,20 +11,6 @@ import Foundation
 class LevelSelect: CCNode {
     
     var levelData: LevelData = LevelData()
-    var currentLevelData: Data?
-//    
-//    let currentLevelData = levelData.levels[LevelData.curLevel]
-    
-    func didLoadFromCCB() {
-        
-        if currentLevelData?.passed == true {
-         userInteractionEnabled = true
-        } else {
-            userInteractionEnabled = false
-        }
-    }
-    
-    
 
     func startMainMenu2() {
         
@@ -44,8 +30,6 @@ class LevelSelect: CCNode {
 
      
     }
-    
-    
     
 }
 
