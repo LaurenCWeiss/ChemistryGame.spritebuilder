@@ -31,6 +31,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var spawn:[Int] = []
     var passed = false
     weak var ground: Ground!
+    var tilt = true
     
     // Labels
     
@@ -46,9 +47,18 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     let manager = CMMotionManager()
     let queue = NSOperationQueue.mainQueue()
     
+    var top: CCNode!
+    var topPosition: CGPoint = CGPointZero
+    
+
+        
+     
+    
     func didLoadFromCCB() {
         
+        userInteractionEnabled = true
         
+        topPosition = ccp(137,237)
         
         gamePhysicsNode.collisionDelegate = self
         //gamePhysicsNode.debugDraw = true
@@ -177,6 +187,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     func setupDeviceMotion() {
         
         //make sure device has motion capabilities
+//      
+        if tilt == true {
         
         if manager.deviceMotionAvailable {
             
@@ -222,10 +234,56 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                 
             })
             
-        }
-        
+            }
     }
     
+        else if tilt == false {
+            //mechanics for touch
+            
+            //all of these used to have override because they were in the beaker class....
+
+                 func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+            
+                }
+            
+            
+            func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+                    let curTouch = touch.locationInView(CCDirector.sharedDirector().view as! CCGLView)
+                    let lastTouch = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
+            
+                    var diffPosition = ccpSub(lastTouch,curTouch)
+                    diffPosition.x *= -1
+            
+                    self.physicsBody.velocity = ccpMult(diffPosition,70)
+                    top.physicsBody.velocity = ccpMult(diffPosition,70)
+            
+                }
+            
+                 func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+                    self.physicsBody.velocity = ccp(0,0)
+                    top.physicsBody.velocity = ccp(0,0)
+                }
+            
+                 func update(delta: CCTime) {
+            //        if position.y<= 155 {
+            //            position.y= 150
+            //        }
+            //        
+                    top.position = topPosition
+                    self.physicsBody.velocity = ccp(0,0)
+                    top.physicsBody.velocity = ccp(0,0)
+                    
+                }
+            
+            
+        }
+        
+        
+        
+        
+    }
+
+
     
     override func onEnter() {
         
