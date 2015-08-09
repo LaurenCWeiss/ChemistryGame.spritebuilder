@@ -31,7 +31,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var spawn:[Int] = []
     var passed = false
     weak var ground: Ground!
-    var tilt = true
+
+    
+    
     
     // Labels
     
@@ -44,6 +46,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     //this is the global storage for all levels
     var levelData: LevelData = LevelData()
     
+    
     let manager = CMMotionManager()
     let queue = NSOperationQueue.mainQueue()
     
@@ -51,9 +54,6 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var topPosition: CGPoint = CGPointZero
     
 
-        
-     
-    
     func didLoadFromCCB() {
         
         userInteractionEnabled = true
@@ -63,7 +63,17 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         gamePhysicsNode.collisionDelegate = self
         //gamePhysicsNode.debugDraw = true
         //gamePhysicsNode.space.dampining = 0.80
+        
+//        var tile: Boolean?
+        
+//        tilt = LevelData.tilt
+//        tilt = LevelData[LevelData.tilt]
+        
+        
+        
+        
         currentLevelData = levelData.levels[LevelData.curLevel]
+        
         
         setupDeviceMotion()
         
@@ -181,14 +191,14 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         }
         
         spawn.randomItem()
-        
+
     }
     
     func setupDeviceMotion() {
         
         //make sure device has motion capabilities
-//      
-        if tilt == true {
+LevelData.tilt = false
+        if LevelData.tilt == true {
         
         if manager.deviceMotionAvailable {
             
@@ -237,17 +247,22 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             }
     }
     
-        else if tilt == false {
+        else if LevelData.tilt == false {
             //mechanics for touch
             
             //all of these used to have override because they were in the beaker class....
+            func didLoadFromCCB() {
+                
+                userInteractionEnabled = true
+          
+            }
 
-                 func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+            
+            func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
             
                 }
             
-            
-            func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+                 func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
                     let curTouch = touch.locationInView(CCDirector.sharedDirector().view as! CCGLView)
                     let lastTouch = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
             
@@ -264,7 +279,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                     top.physicsBody.velocity = ccp(0,0)
                 }
             
-                 func update(delta: CCTime) {
+                func update(delta: CCTime) {
             //        if position.y<= 155 {
             //            position.y= 150
             //        }
@@ -274,15 +289,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
                     top.physicsBody.velocity = ccp(0,0)
                     
                 }
-            
-            
-        }
-        
         
         
         
     }
-
+    }
 
     
     override func onEnter() {
@@ -290,7 +301,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         super.onEnter()
         
-        self.schedule(Selector("dropAtom"), interval: 2)
+        self.schedule(Selector("dropAtom"), interval: 0.5)
         setImage()
     }
     
@@ -504,6 +515,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     func checkIfCareerUpSceneShouldLoad() {
         
         
+        
         if LevelData.curLevel == 0 {
             
             let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
@@ -521,8 +533,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             }
             
         }
-        
     }
+    
     
     
     override func update(delta: CCTime) {

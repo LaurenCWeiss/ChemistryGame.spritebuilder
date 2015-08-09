@@ -17,6 +17,8 @@ class Beaker: CCNode {
         
         userInteractionEnabled = true
         
+  
+        
         topPosition = ccp(137,237)
 
     }

@@ -82,7 +82,10 @@ struct LevelData {
     
     //init to level - 1 (because array index starting at 0)
     //saves the level that the user was most currently on so that when they open their phone again the level has been saved!
+   
     static var curLevel: Int {
+    
+        
         get {
         println("Get Level:")
         println(defaults.integerForKey("curLevel"))
@@ -99,6 +102,16 @@ struct LevelData {
         }
     }
     
+    static var tilt: Bool {
+  
+        get {
+         return defaults.boolForKey("tilt")
+        }
+            set {
+            defaults.setBool(newValue, forKey: "tilt")
+
+        }
+    }
     var levels:[Data] = [Data]()
     
     init() {
@@ -109,8 +122,8 @@ struct LevelData {
         var level1 = Data()
         
         //need to this ensure that hydrogen atoms are dropped
-        level1.hydrogenCounter = 3
-        level1.oxygenCounter = 5
+        level1.hydrogenCounter = 4
+        level1.oxygenCounter = 6
         
         
         // How many of an element do you have left
@@ -128,7 +141,7 @@ struct LevelData {
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
         
         level1.magnitude = ccp(50,1000)
-        level1.spawnThese = [3,1,2,3]
+        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
         level1.randomMin = 1
         level1.randomMax = 3
         
