@@ -12,9 +12,7 @@ class LevelTransitionScene: CCNode {
     
     
     func didLoadFromCCB() {
-      
-        
-               
+   
         var levelData: LevelData = LevelData()
         let currentLevelData = levelData.levels[LevelData.curLevel]
         
@@ -47,7 +45,9 @@ class LevelTransitionScene: CCNode {
             loadCareerUpScene()
         }
           else {
-            
+//            
+//
+
             let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
             CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
         }

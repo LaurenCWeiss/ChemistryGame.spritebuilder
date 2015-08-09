@@ -69,6 +69,8 @@ struct Data {
     
     var MyNewCareerScientistImage: String!
     
+    var passed = false
+    
     
 }
 
@@ -80,7 +82,10 @@ struct LevelData {
     
     //init to level - 1 (because array index starting at 0)
     //saves the level that the user was most currently on so that when they open their phone again the level has been saved!
+   
     static var curLevel: Int {
+    
+        
         get {
         println("Get Level:")
         println(defaults.integerForKey("curLevel"))
@@ -97,6 +102,16 @@ struct LevelData {
         }
     }
     
+    static var tilt: Bool {
+  
+        get {
+         return defaults.boolForKey("tilt")
+        }
+            set {
+            defaults.setBool(newValue, forKey: "tilt")
+
+        }
+    }
     var levels:[Data] = [Data]()
     
     init() {
@@ -107,8 +122,8 @@ struct LevelData {
         var level1 = Data()
         
         //need to this ensure that hydrogen atoms are dropped
-        level1.hydrogenCounter = 3
-        level1.oxygenCounter = 5
+        level1.hydrogenCounter = 4
+        level1.oxygenCounter = 6
         
         
         // How many of an element do you have left
@@ -126,7 +141,7 @@ struct LevelData {
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
         
         level1.magnitude = ccp(50,1000)
-        level1.spawnThese = [3,1,2,3]
+        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
         level1.randomMin = 1
         level1.randomMax = 3
         
@@ -141,6 +156,7 @@ struct LevelData {
         
         level1.smallOrderLabel = "Water"
        level1.smallLevelLabel = "Level 1"
+        level1.passed = true
        
         
         levels.append(level1)
@@ -181,7 +197,11 @@ struct LevelData {
         
         
              level2.smallOrderLabel = "Carbon Monoxide"
+        
+        level2.smallLevelLabel = "Level 2"
+           level2.passed = false
         levels.append(level2)
+        
         
         
         var level3 = Data()
@@ -214,6 +234,9 @@ struct LevelData {
         
         //add an order label of what the user is making in this level
         
+        level3.smallLevelLabel = "Level 3"
+             level3.passed = false
+        
           levels.append(level3)
         
         
@@ -243,9 +266,12 @@ struct LevelData {
         level4.spawnThese = [3,1,2,3]
         level4.randomMin = 1
         level4.randomMax = 3
+             level4.passed = false
         
         
         //add an order label of what the user is making in this level
+        
+        level4.smallLevelLabel = "Level 4"
         
         levels.append(level4)
         
@@ -283,7 +309,7 @@ struct LevelData {
         level5.randomMin = 1
         level5.randomMax = 3
         
-        
+        level5.smallLevelLabel = "Level 5"
         //add an order label of what the user is making in this level
         
         levels.append(level5)
@@ -319,7 +345,7 @@ struct LevelData {
         level6.spawnThese = [3,1,2,3]
         level6.randomMin = 1
         level6.randomMax = 3
-        
+        level6.smallLevelLabel = "Level 6"
         
         //add an order label of what the user is making in this level
         
@@ -358,7 +384,7 @@ struct LevelData {
         level7.spawnThese = [3,1,2,3]
         level7.randomMin = 1
         level7.randomMax = 3
-        
+        level7.smallLevelLabel = "Level 7"
         
         //add an order label of what the user is making in this level
         
@@ -395,7 +421,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level8.smallOrderLabel = "Carbon Dioxide"
-        
+        level8.smallLevelLabel = "Level 8"
         levels.append(level8)
         
         
@@ -433,6 +459,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level9.smallOrderLabel = "Copper Sulfate"
+        level9.smallLevelLabel = "Level 9"
         
         levels.append(level9)
         
@@ -468,7 +495,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level10.smallOrderLabel = "Aluminum Oxide"
-        
+        level10.smallLevelLabel = "Level 10"
         levels.append(level10)
         
         
@@ -506,7 +533,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level11.smallOrderLabel = "Ammonium"
-        
+        level11.smallLevelLabel = "Level 11"
         levels.append(level11)
         
         

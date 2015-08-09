@@ -19,18 +19,20 @@ class LabReport2: CCNode {
     var screenSize:CGRect = CGRectZero
     var screenWidth:CGFloat = 0.0
     var screenHeight:CGFloat = 0.0
-    
+     let  curLevel = 0
     
     
     
     func didLoadFromCCB() {
         
-                if (LevelData.curLevel + 1) > 29 {
-                    LevelData.curLevel = 0
-                } else {
-                    LevelData.curLevel++
-                }
-        
+     
+//        
+//                if (LevelData.curLevel + 1) > 29 {
+//                    LevelData.curLevel = 0
+//                } else  {
+//                    LevelData.curLevel++
+//                }
+//        
 
         
         
