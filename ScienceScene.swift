@@ -286,9 +286,9 @@ func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!
     //add sound here
     //add glass crack here
  
-    var sprite = CCSprite(imageNamed:"glass.png")
-    sprite.position = ccp(50,73.0)
-    self.addChild(sprite)
+////    var sprite = CCSprite(imageNamed:"glass.png")
+//    sprite.position = ccp(50,73.0)
+//    self.addChild(sprite)
 
     return true
     
