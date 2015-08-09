@@ -20,13 +20,11 @@ class MainScene: CCNode {
         //loads the gameplay scene
         let MainScene = CCBReader.loadAsScene("LabReport2")
         CCDirector.sharedDirector().presentScene(MainScene)
-        
-//        let firstLevel = CCBReader.loadAsScene("ScienceScene")
-//        let transition = CCTransition(fadeWithDuration: 0.8)
-//        CCDirector.sharedDirector().presentScene(firstLevel, withTransition: transition)
-//        
         return
-      
+        
+        let firstLevel = CCBReader.loadAsScene("ScienceScene")
+        let transition = CCTransition(fadeWithDuration: 0.8)
+        CCDirector.sharedDirector().presentScene(firstLevel, withTransition: transition)
     }
     func careerButtonTapped() {
         //loads scene that tells the player how to the play the game
@@ -38,15 +36,6 @@ class MainScene: CCNode {
         let MainScene = CCBReader.loadAsScene("HelpScene")
         CCDirector.sharedDirector().pushScene(MainScene)
     }
-    func settingsButtonTapped() {
-        
-        let MainScene = CCBReader.loadAsScene("SettingsScene")
-        CCDirector.sharedDirector().pushScene(MainScene)
-    
-    
-    }
-
-    
     
     func shareButtonTapped() {
         //allows the user to send a screenshot of the main scene
