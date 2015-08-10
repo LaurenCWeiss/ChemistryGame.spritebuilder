@@ -197,7 +197,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     func setupDeviceMotion() {
         
         //make sure device has motion capabilities
-LevelData.tilt = false
+
         if LevelData.tilt == true {
         
         if manager.deviceMotionAvailable {
@@ -301,7 +301,7 @@ LevelData.tilt = false
         
         super.onEnter()
         
-        self.schedule(Selector("dropAtom"), interval: 0.5)
+        self.schedule(Selector("dropAtom"), interval: 2)
         setImage()
     }
     
@@ -526,6 +526,7 @@ LevelData.tilt = false
             let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
             
             CCDirector.sharedDirector().replaceScene(ScienceScene)
+        }
             if (LevelData.curLevel) > 29 {
                 LevelData.curLevel = 0
             } else {
@@ -533,7 +534,7 @@ LevelData.tilt = false
             }
             
         }
-    }
+    
     
     
     
