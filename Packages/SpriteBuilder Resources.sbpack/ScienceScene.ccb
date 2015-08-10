@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>406</integer>
+	<integer>431</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -140,144 +140,15 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>265</integer>
+				<integer>430</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
-				<array>
-					<dict>
-						<key>UUID</key>
-						<integer>390</integer>
-						<key>baseClass</key>
-						<string>CCSprite</string>
-						<key>children</key>
-						<array/>
-						<key>customClass</key>
-						<string></string>
-						<key>displayName</key>
-						<string>Untitled</string>
-						<key>memberVarAssignmentName</key>
-						<string></string>
-						<key>memberVarAssignmentType</key>
-						<integer>1</integer>
-						<key>properties</key>
-						<array>
-							<dict>
-								<key>name</key>
-								<string>name</string>
-								<key>type</key>
-								<string>StringSimple</string>
-								<key>value</key>
-								<string></string>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>79.685592651367188</real>
-									<real>91.931869506835938</real>
-									<integer>0</integer>
-									<integer>0</integer>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>anchorPoint</string>
-								<key>type</key>
-								<string>Point</string>
-								<key>value</key>
-								<array>
-									<real>0.5</real>
-									<real>0.5</real>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>scale</string>
-								<key>type</key>
-								<string>ScaleLock</string>
-								<key>value</key>
-								<array>
-									<real>0.67064774036407471</real>
-									<real>0.69534438848495483</real>
-									<false/>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>spriteFrame</string>
-								<key>type</key>
-								<string>SpriteFrame</string>
-								<key>value</key>
-								<array>
-									<string></string>
-									<string>Art Assets/Untitled.png</string>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>normalMapSpriteFrame</string>
-								<key>type</key>
-								<string>SpriteFrame</string>
-								<key>value</key>
-								<array>
-									<string></string>
-									<string></string>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>color</string>
-								<key>type</key>
-								<string>Color3</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<real>1</real>
-									<real>1</real>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>effects</string>
-								<key>type</key>
-								<string>EffectControl</string>
-								<key>value</key>
-								<array>
-									<dict>
-										<key>UUID</key>
-										<integer>393</integer>
-										<key>baseClass</key>
-										<string>CCEffectBlur</string>
-										<key>className</key>
-										<string>CCBPEffectBlur</string>
-										<key>properties</key>
-										<array>
-											<dict>
-												<key>name</key>
-												<string>blurRadius</string>
-												<key>type</key>
-												<string>Integer</string>
-												<key>value</key>
-												<integer>2</integer>
-											</dict>
-										</array>
-									</dict>
-								</array>
-							</dict>
-						</array>
-					</dict>
-				</array>
+				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>a</string>
+				<string>newBackground</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -299,8 +170,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>250.27517700195312</real>
-							<real>344.11239624023438</real>
+							<real>160</real>
+							<real>345.17926025390625</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -324,19 +195,11 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>2.2718632221221924</real>
-							<real>3</real>
+							<real>0.40000000596046448</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>rotation</string>
-						<key>type</key>
-						<string>Degrees</string>
-						<key>value</key>
-						<real>0.2780914306640625</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -346,7 +209,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/a.png</string>
+							<string>Art Assets/newBackground.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -379,27 +242,7 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array>
-							<dict>
-								<key>UUID</key>
-								<integer>266</integer>
-								<key>baseClass</key>
-								<string>CCEffectBrightness</string>
-								<key>className</key>
-								<string>CCBPEffectBrightness</string>
-								<key>properties</key>
-								<array>
-									<dict>
-										<key>name</key>
-										<string>brightness</string>
-										<key>type</key>
-										<string>Float</string>
-										<key>value</key>
-										<real>0.2848832905292511</real>
-									</dict>
-								</array>
-							</dict>
-						</array>
+						<array/>
 					</dict>
 				</array>
 			</dict>
@@ -1442,8 +1285,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
