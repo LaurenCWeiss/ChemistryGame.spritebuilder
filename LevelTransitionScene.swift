@@ -41,7 +41,8 @@ class LevelTransitionScene: CCNode {
          let currentLevelData = levelData.levels[LevelData.curLevel]
 //        
 //       LevelData.curLevel += 1
-          if currentLevelData.level - 1 == 0 {
+          if currentLevelData.level - 1 == 0 && LevelData.Badge1 == false {
+            LevelData.Badge1 = true
             loadCareerUpScene()
         }
           else {

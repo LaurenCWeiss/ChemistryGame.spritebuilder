@@ -14,6 +14,8 @@ class LevelButton: CCButton {
     
     func didLoadFromCCB() {
         self.title = "Level: \(level + 1)"
+        
+        
     }
     
     

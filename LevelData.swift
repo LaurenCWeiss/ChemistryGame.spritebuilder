@@ -70,6 +70,7 @@ struct Data {
     var MyNewCareerScientistImage: String!
     
     var passed = false
+    var Badge1 = false
     
     
 }
@@ -112,6 +113,19 @@ struct LevelData {
 
         }
     }
+    
+    
+    static var Badge1: Bool {
+        
+        get {
+        return defaults.boolForKey("Badge1")
+        }
+        set {
+            defaults.setBool(newValue, forKey: "Badge1")
+            
+        }
+    }
+    
     var levels:[Data] = [Data]()
     
     init() {
@@ -156,7 +170,7 @@ struct LevelData {
         
         level1.smallOrderLabel = "Water"
        level1.smallLevelLabel = "Level 1"
-        level1.passed = true
+ 
        
         
         levels.append(level1)
@@ -183,9 +197,9 @@ struct LevelData {
         level2.ElementImage2 = 1
         level2.ElementImage1Name = "Art Assets/Carbon.png"
         level2.ElementImage2Name = "Art Assets/Oxygen.png"
-        level1.careerUpSmallLabel = "You're an intern!"
+        level2.careerUpSmallLabel = "sci"
         level2.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-        
+ 
         
         level2.magnitude = ccp(50,100)
         level2.spawnThese = [3,1,2,3]
@@ -199,7 +213,7 @@ struct LevelData {
              level2.smallOrderLabel = "Carbon Monoxide"
         
         level2.smallLevelLabel = "Level 2"
-           level2.passed = false
+        
         levels.append(level2)
         
         
@@ -235,7 +249,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
         
         level3.smallLevelLabel = "Level 3"
-             level3.passed = false
+  
         
           levels.append(level3)
         
@@ -265,9 +279,7 @@ struct LevelData {
         level4.magnitude = ccp(0,30)
         level4.spawnThese = [3,1,2,3]
         level4.randomMin = 1
-        level4.randomMax = 3
-             level4.passed = false
-        
+        level4.randomMax = 3        
         
         //add an order label of what the user is making in this level
         

@@ -29,9 +29,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var atomNode: CCNode!
     var currentLevelData: Data?
     var spawn:[Int] = []
-    var passed = false
+    
     weak var ground: Ground!
-
+    
     
     
     
@@ -53,7 +53,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     var top: CCNode!
     var topPosition: CGPoint = CGPointZero
     
-
+    
     func didLoadFromCCB() {
         
         userInteractionEnabled = true
@@ -64,10 +64,10 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //gamePhysicsNode.debugDraw = true
         //gamePhysicsNode.space.dampining = 0.80
         
-//        var tile: Boolean?
+        //        var tile: Boolean?
         
-//        tilt = LevelData.tilt
-//        tilt = LevelData[LevelData.tilt]
+        //        tilt = LevelData.tilt
+        //        tilt = LevelData[LevelData.tilt]
         
         
         
@@ -191,62 +191,62 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         }
         
         spawn.randomItem()
-
+        
     }
     
     func setupDeviceMotion() {
         
         //make sure device has motion capabilities
-
-        if LevelData.tilt == true {
         
-        if manager.deviceMotionAvailable {
+        if LevelData.tilt == true {
             
-            //set the number of times the device should update motion data (in seconds)
-            
-            manager.deviceMotionUpdateInterval = 0.1
-            
-            //setup callback for everytime the motion data is updated
-            
-            manager.startDeviceMotionUpdatesToQueue(queue, withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+            if manager.deviceMotionAvailable {
                 
-                ///checking device attitude will allow us to check devices current orientation in 3D space
+                //set the number of times the device should update motion data (in seconds)
                 
-                var attitude = motion.attitude
+                manager.deviceMotionUpdateInterval = 0.1
                 
-                var pitch = attitude.pitch
+                //setup callback for everytime the motion data is updated
                 
-                var roll = attitude.roll
+                manager.startDeviceMotionUpdatesToQueue(queue, withHandler: { (motion: CMDeviceMotion!, error: NSError!) -> Void in
+                    
+                    ///checking device attitude will allow us to check devices current orientation in 3D space
+                    
+                    var attitude = motion.attitude
+                    
+                    var pitch = attitude.pitch
+                    
+                    var roll = attitude.roll
+                    
+                    let pitchMultiplier: Double = -1000
+                    
+                    let rollMultiplier: Double = 1000
+                    
+                    if let beaker = self.beaker {
+                        
+                        let beakerPositionY = beaker.positionInPoints.y
+                        
+                        let groundTop = self.ground.positionInPoints.y + self.ground.contentSize.height
+                        
+                        println(self.ground.contentSize.height)
+                        
+                        println(groundTop)
+                        
+                        let cushion:CGFloat = 200
+                        
+                        //                if beakerPositionY >= groundTop + cushion {
+                        
+                        beaker.physicsBody.velocity = ccp(CGFloat(roll * rollMultiplier), 0)
+                        
+                        //                }
+                        
+                    }
+                    
+                })
                 
-                let pitchMultiplier: Double = -1000
-                
-                let rollMultiplier: Double = 1000
-                
-                if let beaker = self.beaker {
-                    
-                    let beakerPositionY = beaker.positionInPoints.y
-                    
-                    let groundTop = self.ground.positionInPoints.y + self.ground.contentSize.height
-                    
-                    println(self.ground.contentSize.height)
-                    
-                    println(groundTop)
-                    
-                    let cushion:CGFloat = 200
-                    
-                    //                if beakerPositionY >= groundTop + cushion {
-                    
-                    beaker.physicsBody.velocity = ccp(CGFloat(roll * rollMultiplier), 0)
-                    
-                    //                }
-                    
-                }
-                
-            })
-            
             }
-    }
-    
+        }
+            
         else if LevelData.tilt == false {
             //mechanics for touch
             
@@ -254,47 +254,47 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             func didLoadFromCCB() {
                 
                 userInteractionEnabled = true
-          
+                
             }
-
+            
             
             func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+                
+            }
             
-                }
+            func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+                let curTouch = touch.locationInView(CCDirector.sharedDirector().view as! CCGLView)
+                let lastTouch = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
+                
+                var diffPosition = ccpSub(lastTouch,curTouch)
+                diffPosition.x *= -1
+                
+                self.physicsBody.velocity = ccpMult(diffPosition,70)
+                top.physicsBody.velocity = ccpMult(diffPosition,70)
+                
+            }
             
-                 func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-                    let curTouch = touch.locationInView(CCDirector.sharedDirector().view as! CCGLView)
-                    let lastTouch = touch.previousLocationInView(CCDirector.sharedDirector().view as! CCGLView)
+            func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+                self.physicsBody.velocity = ccp(0,0)
+                top.physicsBody.velocity = ccp(0,0)
+            }
             
-                    var diffPosition = ccpSub(lastTouch,curTouch)
-                    diffPosition.x *= -1
+            func update(delta: CCTime) {
+                //        if position.y<= 155 {
+                //            position.y= 150
+                //        }
+                //
+                top.position = topPosition
+                self.physicsBody.velocity = ccp(0,0)
+                top.physicsBody.velocity = ccp(0,0)
+                
+            }
             
-                    self.physicsBody.velocity = ccpMult(diffPosition,70)
-                    top.physicsBody.velocity = ccpMult(diffPosition,70)
             
-                }
             
-                 func touchEnded(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-                    self.physicsBody.velocity = ccp(0,0)
-                    top.physicsBody.velocity = ccp(0,0)
-                }
-            
-                func update(delta: CCTime) {
-            //        if position.y<= 155 {
-            //            position.y= 150
-            //        }
-            //        
-                    top.position = topPosition
-                    self.physicsBody.velocity = ccp(0,0)
-                    top.physicsBody.velocity = ccp(0,0)
-                    
-                }
-        
-        
-        
+        }
     }
-    }
-
+    
     
     override func onEnter() {
         
@@ -488,7 +488,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func gameOver() {
         
+        
+        currentLevelData?.passed = true
         //shake screen here
+        
+        addStarToLevelSelect()
         
         unscheduleAllSelectors()
         self.gamePhysicsNode.paused = true
@@ -501,6 +505,20 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         parent.addChild(popup)
         
         
+        //load separate scenes for each badge?
+        
+//        if badge1 == false && currentLevelData.level1 == passed {
+//            badge1 = true
+  //      load badge 1
+//        }
+        
+//        if badge2 == true {
+//            
+//        }
+//        if badge 3 == true {
+//            
+//        }
+//        
         
         
     }
@@ -527,13 +545,13 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             
             CCDirector.sharedDirector().replaceScene(ScienceScene)
         }
-            if (LevelData.curLevel) > 29 {
-                LevelData.curLevel = 0
-            } else {
-                LevelData.curLevel++
-            }
-            
+        if (LevelData.curLevel) > 29 {
+            LevelData.curLevel = 0
+        } else {
+            LevelData.curLevel++
         }
+        
+    }
     
     
     
@@ -550,11 +568,12 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             
             cleanup()
             //call scene transition here
-            passed = true
+            
             startLevelTransitionScene()
             
             
         }
+        
     }
     
     func setImage() {
@@ -633,6 +652,21 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         }
         
     }
+    
+    
+    
+    func addStarToLevelSelect() {
+        
+        
+        //        if currentLevelData!.passed = true {
+        //            //add star next to level number in Level Select
+        //        }
+        //        
+        
+    }
+    
+    
+    
     
     
 }

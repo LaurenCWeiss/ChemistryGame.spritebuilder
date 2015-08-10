@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>16</integer>
+	<integer>21</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -881,8 +881,8 @@ compounds made here</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>171.30000305175781</real>
-							<real>488.6414794921875</real>
+							<real>160</real>
+							<real>453.6414794921875</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -919,8 +919,8 @@ compounds made here</string>
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>COMING 
-SOON!</string>
+							<string>Career 
+Scene</string>
 							<false/>
 						</array>
 					</dict>
@@ -1429,7 +1429,7 @@ SOON!</string>
 						<key>value</key>
 						<array>
 							<real>160</real>
-							<real>398.03793334960938</real>
+							<real>351.83364868164062</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1457,8 +1457,6 @@ SOON!</string>
 						<string>CareerLevelUpLabel.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

@@ -17,11 +17,27 @@ class LevelSelect: CCNode {
     
     func didLoadFromCCB() {
         
+//        if currentLevelData?.passed == true {
+//         userInteractionEnabled = true
+//        } else {
+//            userInteractionEnabled = false
+//        }
+        userInteractionEnabled = true
+        
         if currentLevelData?.passed == true {
-         userInteractionEnabled = true
-        } else {
-            userInteractionEnabled = false
+           
+//            var spriteC = CCSprite(imageNamed:"star.png")
+//            
+//            spriteC.position = CGPoint(self.positionInPoints + 40,self.positionInPoints + 40)
+////
+////            spriteC.position = CGPoint(self.positionInPoints + 40)
+//            self.addChild(spriteC)
+//            
+            
+            
         }
+        
+        
     }
     
     
@@ -44,6 +60,11 @@ class LevelSelect: CCNode {
 
      
     }
+    
+    
+    
+    
+    
     
     
     

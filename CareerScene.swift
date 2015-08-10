@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CareerScene: CCNode, CCPhysicsCollisionDelegate {
+class CareerScene: CCNode {
     //scene that shows information about the user's career
     //loads the main menu from the career scene using the back button
 
@@ -58,6 +58,13 @@ class CareerScene: CCNode, CCPhysicsCollisionDelegate {
         //if the number of levels passed = 10, then show the next scientist sprite with next scientist label
         
         //and so on...
+        
+        
+        
+        var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
+        spriteC.position = ccp(screenWidth/2,250)
+        self.addChild(spriteC)
+        
         
         
         
