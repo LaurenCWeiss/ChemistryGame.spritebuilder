@@ -60,8 +60,8 @@ class Beaker: CCNode {
         if LevelData.tilt == true {
         
         
-        if position.y <= 155 {
-            position.y = 150
+        if position.y <= 105 {
+            position.y = 100
         }
         }
         else if LevelData.tilt == false {
