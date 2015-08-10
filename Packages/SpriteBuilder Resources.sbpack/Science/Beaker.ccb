@@ -69,7 +69,7 @@
 					<key>collisionType</key>
 					<string>goal</string>
 					<key>cornerRadius</key>
-					<real>37.304573059082031</real>
+					<real>41.781135559082031</real>
 					<key>density</key>
 					<real>10</real>
 					<key>dynamic</key>
@@ -179,6 +179,8 @@
 						<real>1</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

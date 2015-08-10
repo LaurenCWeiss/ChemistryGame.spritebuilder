@@ -489,10 +489,9 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     func gameOver() {
         
         
-        currentLevelData?.passed = true
+      
         //shake screen here
-        
-        addStarToLevelSelect()
+
         
         unscheduleAllSelectors()
         self.gamePhysicsNode.paused = true
@@ -507,18 +506,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         //load separate scenes for each badge?
         
-//        if badge1 == false && currentLevelData.level1 == passed {
-//            badge1 = true
-  //      load badge 1
-//        }
         
-//        if badge2 == true {
-//            
-//        }
-//        if badge 3 == true {
-//            
-//        }
-//        
+
         
         
     }
@@ -532,7 +521,19 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     func checkIfCareerUpSceneShouldLoad() {
         
+        currentLevelData?.passed = true
+        //        if LevelData.badge1 == false && currentLevelData.level1 == passed {
+        //            LevelData.badge1 = true
+        //      load badge 1
+        //        }
         
+        //        if badge2 == true {
+        //
+        //        }
+        //        if badge 3 == true {
+        //            
+        //        }
+        //
         
         if LevelData.curLevel == 0 {
             
@@ -653,17 +654,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
     }
     
-    
-    
-    func addStarToLevelSelect() {
-        
-        
-        //        if currentLevelData!.passed = true {
-        //            //add star next to level number in Level Select
-        //        }
-        //        
-        
-    }
+
     
     
     

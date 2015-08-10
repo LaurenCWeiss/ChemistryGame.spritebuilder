@@ -76,10 +76,20 @@ struct Data {
 }
 
 
-
 //TODO: make singleton
 struct LevelData {
     private static let defaults = NSUserDefaults.standardUserDefaults()
+    
+    static var highestCompletedLevel = 1
+    static var careerUpSmallLabel: String {
+        if 5 < highestCompletedLevel || highestCompletedLevel >= 0 {
+            return "You're an intern"
+        } else if highestCompletedLevel >= 5 {
+            return "sci"
+        } else {
+            return ""
+        }
+    }
     
     //init to level - 1 (because array index starting at 0)
     //saves the level that the user was most currently on so that when they open their phone again the level has been saved!
