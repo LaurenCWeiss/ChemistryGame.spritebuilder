@@ -37,17 +37,15 @@ class LevelTransitionScene: CCNode {
     
     
     func startContinueButton() {
-             var levelData: LevelData = LevelData()
+         var levelData: LevelData = LevelData()
          let currentLevelData = levelData.levels[LevelData.curLevel]
 //        
 //       LevelData.curLevel += 1
-          if currentLevelData.level - 1 == 0 && LevelData.Badge1 == false {
-            LevelData.Badge1 = true
+          if currentLevelData.level - 1 == 0  {
+//            LevelData.Badge1 = true
             loadCareerUpScene()
         }
           else {
-//            
-//
 
             let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
             CCDirector.sharedDirector().replaceScene(LevelTransitionScene)

@@ -29,6 +29,7 @@ class SettingsScene: CCNode  {
     }
     func tiltControlOff() {
         //turn tilt off
+         //backgroundColor = CCColor(red: 20.0/255, green: 20.0/255, blue: 80.0/255)
         LevelData.tilt = false
         //         setupDeviceMotion(ScienceScene)
         println("tilt off")

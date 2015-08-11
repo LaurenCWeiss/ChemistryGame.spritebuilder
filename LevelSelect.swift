@@ -26,12 +26,13 @@ class LevelSelect: CCNode {
         
         if currentLevelData?.passed == true {
            
-//            var spriteC = CCSprite(imageNamed:"star.png")
-//            
-////            spriteC.position = CGPoint(self.positionInPoints + 40,self.positionInPoints + 40)
-//
-//            spriteC.position = CGPoint(self.positionInPoints += self.positionInPoints)
-//            self.addChild(spriteC)
+            var spriteC = CCSprite(imageNamed:"star.png")
+            
+//            spriteC.position = CGPoint(self.positionInPoints + 40,self.positionInPoints + 40)
+
+            spriteC.position = CGPoint(x: self.positionInPoints.x, y: self.positionInPoints.y)
+            
+            self.addChild(spriteC)
             
             
             

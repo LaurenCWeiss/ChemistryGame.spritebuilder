@@ -521,7 +521,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     func checkIfCareerUpSceneShouldLoad() {
         
-        currentLevelData?.passed = true
+   
         //        if LevelData.badge1 == false && currentLevelData.level1 == passed {
         //            LevelData.badge1 = true
         //      load badge 1
@@ -534,6 +534,15 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //            
         //        }
         //
+        
+        //currentLevelData.passed defaults to false
+        if currentLevelData?.passed == false {
+            currentLevelData?.passed = true
+            LevelData.highestCompletedLevel += 1
+    
+        }
+        
+        if currentLevelData?.passed == true {
         
         if LevelData.curLevel == 0 {
             
@@ -554,10 +563,13 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
     }
     
-    
+    }
     
     
     override func update(delta: CCTime) {
+        
+
+        println("highestcompletedlevel is:\(LevelData.highestCompletedLevel)")
         
         //if the number of points equals the number of atoms released, then move on to the next level
         

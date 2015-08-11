@@ -9,14 +9,20 @@
 import Foundation
 
 class CareerLevelUpLabel: CCNode {
-   
+//   
     var careerUpSmallLabel: CCLabelTTF!
+    //var careerUpSmallLabel: String!
+    
+//    var careerUpSmallLabel: String
+//    
     var levelData: LevelData = LevelData()
     
     func didLoadFromCCB() {
         
-        careerUpSmallLabel.string = levelData.levels[LevelData.curLevel].careerUpSmallLabel
+//        careerUpSmallLabel.string = levelData.levels[LevelData.highestCompletedLevel].careerUpSmallLabel
+        careerUpSmallLabel.string = LevelData.careerUpSmallLabel
     }
     
     
 }
+
