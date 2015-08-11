@@ -37,7 +37,7 @@ struct Data {
     var smallLabel: String = " "
     var smallLabelA: String = " "
     var smallLevelLabel: String = " "
-    //    var careerUpSmallLabel: String = " "
+    var careerUpSmallLabel: String = " "
     var careerUpSmallLabelForLevel: String = ""
     var level: Int = 0
     
@@ -69,10 +69,10 @@ struct Data {
     
     var MyNewCareerScientistImage: String!
     
-    var passed = false
+    var passed = true
     var Badge1 = false
     
-    var careerUpSmallLabel: CCLabelTTF!
+//    var careerUpSmallLabel: CCLabelTTF!
     
     
     
@@ -88,21 +88,21 @@ struct LevelData {
     
     static var highestCompletedLevel = 1
     
-    static var careerUpSmallLabel: String {
-        if 5 < highestCompletedLevel || highestCompletedLevel >= 0 {
-            
-            //            if 5 > highestCompletedLevel || highestCompletedLevel >= 0 {
-            return "You're an intern"
-        }
-            
-        else if highestCompletedLevel >= 2 {
-            return "sci"
-            
-        } else {
-            return ""
-        }
-        
-    }
+//    static var careerUpSmallLabel: String {
+//        if 5 < highestCompletedLevel || highestCompletedLevel >= 0 {
+//            
+//            //            if 5 > highestCompletedLevel || highestCompletedLevel >= 0 {
+//            return "You're an intern"
+//        }
+//            
+//        else if highestCompletedLevel >= 2 {
+//            return "sci"
+//            
+//        } else {
+//            return ""
+//        }
+//        
+//    }
     //init to level - 1 (because array index starting at 0)
     //saves the level that the user was most currently on so that when they open their phone again the level has been saved!
     
@@ -122,6 +122,20 @@ struct LevelData {
         set {
             defaults.setInteger(newValue, forKey: "curLevel")
             println("Set Level:\(newValue)")
+        }
+    }
+    
+    
+    static var currentRank: Int {
+        get {
+        
+        return defaults.integerForKey("currentRank")
+
+        
+        }
+        //could say set(newLevel) but then we would have to put newLevel in the setter which would be bad code when we can just use newValue that is built into the systme
+        set {
+            defaults.setInteger(newValue, forKey: "currentRank")
         }
     }
     
@@ -365,7 +379,7 @@ struct LevelData {
         level6.counters["Nitrogen"] = 1
         level6.counters["Oxygen"] = 2
         
-        level6.goal = 4
+        level6.goal = 3
         level6.smallLabel = "Lithium Nitrite"
         level6.level = 6
         level6.ElementImage1 = 1
@@ -380,9 +394,9 @@ struct LevelData {
         
         
         level6.magnitude = ccp(0,30)
-        level6.spawnThese = [3,1,2,3]
+        level6.spawnThese = [3,1,2,3,3,5,5,5,5,5]
         level6.randomMin = 1
-        level6.randomMax = 3
+        level6.randomMax = 200
         level6.smallLevelLabel = "Level 6"
         
         //add an order label of what the user is making in this level

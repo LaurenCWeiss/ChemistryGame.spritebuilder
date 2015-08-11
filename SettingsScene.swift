@@ -22,16 +22,20 @@ class SettingsScene: CCNode  {
     }
     func tiltControlOn() {
         
+        
+        var button = CCButton()
+        button.setBackgroundColor(CCColor.blueColor(), forState: CCControlState.Selected)
+        
+        CCColor(red: 20.0/255, green: 20.0/255, blue: 80.0/255)
+
         //turn tilt on
         LevelData.tilt = true
-        //       setupDeviceMotion(ScienceScene)
         println("tilt on")
+        
     }
     func tiltControlOff() {
         //turn tilt off
-         //backgroundColor = CCColor(red: 20.0/255, green: 20.0/255, blue: 80.0/255)
         LevelData.tilt = false
-        //         setupDeviceMotion(ScienceScene)
         println("tilt off")
     }
     

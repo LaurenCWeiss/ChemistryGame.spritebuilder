@@ -26,7 +26,7 @@ class LevelSelect: CCNode {
         
         if currentLevelData?.passed == true {
            
-            var spriteC = CCSprite(imageNamed:"star.png")
+            var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
             
 //            spriteC.position = CGPoint(self.positionInPoints + 40,self.positionInPoints + 40)
 

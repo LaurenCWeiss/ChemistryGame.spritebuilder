@@ -32,8 +32,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     weak var ground: Ground!
     
-    
-    
+//    
+//    var currentRank = 1
     
     // Labels
     
@@ -56,6 +56,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func didLoadFromCCB() {
         
+        LevelData.currentRank = 0
         userInteractionEnabled = true
         
         topPosition = ccp(137,237)
@@ -520,7 +521,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
     }
     func checkIfCareerUpSceneShouldLoad() {
-        
+        currentLevelData?.passed = true
+
    
         //        if LevelData.badge1 == false && currentLevelData.level1 == passed {
         //            LevelData.badge1 = true
@@ -535,37 +537,80 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //        }
         //
         
-        //currentLevelData.passed defaults to false
-        if currentLevelData?.passed == false {
-            currentLevelData?.passed = true
-            LevelData.highestCompletedLevel += 1
+//        //currentLevelData.passed defaults to false
+//        if currentLevelData?.passed == false {
+//            currentLevelData?.passed = true
+//            LevelData.highestCompletedLevel += 1
+//    
+//    
+    //}
+        
+        
+
+        
+
+        
+ if currentLevelData?.passed == true {
+        
+//        if LevelData.curLevel == 0 {
+//            
+//            let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
+//            CCDirector.sharedDirector().replaceScene(ScienceScene)
+//            println("curLevelhs:\(LevelData.curLevel)")
+//        }
+
     
-        }
+//    if LevelData.curLevel >= LevelData.currentRank {
+//        
+//        switch LevelData.curLevel {
+//        case 1...4:
+//            LevelData.currentRank = 1
+//        case 5...9:
+//            LevelData.currentRank = 5
+//        case 10...20:
+//            LevelData.currentRank = 10
+//            
+//        default:
+//           LevelData.currentRank = 1
+//            
+//        }
+    
+    
+    if LevelData.curLevel - 1 == LevelData.currentRank {
+//        if LevelData.curLevel >= LevelData.currentRank {
+
         
-        if currentLevelData?.passed == true {
+        switch LevelData.curLevel {
+        case 1:
+            LevelData.currentRank = 0
+        case 5:
+            LevelData.currentRank = 5
+        case 10:
+            LevelData.currentRank = 10
+            
+        default:
+            LevelData.currentRank = 5
+            
+        }
+    
+    }
+    
+    
+    
+            let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
+            
+            CCDirector.sharedDirector().replaceScene(ScienceScene)
         
-        if LevelData.curLevel == 0 {
-            
-            let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
-            CCDirector.sharedDirector().replaceScene(ScienceScene)
-            println("curLevelhs:\(LevelData.curLevel)")
-        }
-        else {
-            let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
-            
-            CCDirector.sharedDirector().replaceScene(ScienceScene)
-        }
         if (LevelData.curLevel) > 29 {
             LevelData.curLevel = 0
         } else {
             LevelData.curLevel++
-        }
         
-    }
-    
-    }
+        
     
     
+    }}
+        }
     override func update(delta: CCTime) {
         
 

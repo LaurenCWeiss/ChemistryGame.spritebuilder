@@ -307,6 +307,11 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>Art Assets/newBackground.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
 		<key>Art Assets/star.png</key>
 		<dict>
 			<key>scaleFrom</key>
