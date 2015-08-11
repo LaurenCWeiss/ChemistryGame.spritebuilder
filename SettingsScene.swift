@@ -13,7 +13,8 @@ import Foundation
 class SettingsScene: CCNode  {
     
     weak var contentNode: CCNode!
-    
+    weak var controlOn: CCButton!
+    weak var controlOff: CCButton!
     
     func startMainMenu() {
         //        let MainScene = CCBReader.loadAsScene("HelpScene")
@@ -22,12 +23,6 @@ class SettingsScene: CCNode  {
     }
     func tiltControlOn() {
         
-        
-        var button = CCButton()
-        button.setBackgroundColor(CCColor.blueColor(), forState: CCControlState.Selected)
-        
-        CCColor(red: 20.0/255, green: 20.0/255, blue: 80.0/255)
-
         //turn tilt on
         LevelData.tilt = true
         println("tilt on")

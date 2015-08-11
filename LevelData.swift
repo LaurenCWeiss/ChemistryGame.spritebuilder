@@ -125,6 +125,8 @@ struct LevelData {
         }
     }
     
+    static var showCareer = false
+    
     
     static var currentRank: Int {
         get {

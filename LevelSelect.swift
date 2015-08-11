@@ -23,20 +23,7 @@ class LevelSelect: CCNode {
 //            userInteractionEnabled = false
 //        }
         userInteractionEnabled = true
-        
-        if currentLevelData?.passed == true {
-           
-            var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
-            
-//            spriteC.position = CGPoint(self.positionInPoints + 40,self.positionInPoints + 40)
 
-            spriteC.position = CGPoint(x: self.positionInPoints.x, y: self.positionInPoints.y)
-            
-            self.addChild(spriteC)
-            
-            
-            
-        }
         
         
     }

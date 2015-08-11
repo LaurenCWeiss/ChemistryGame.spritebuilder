@@ -49,10 +49,6 @@ class CareerUpScene: CCNode {
 
         
         var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
-        
-        
-   //     var spriteB = CCSprite(imageNamed:"Art Assets/star.png")
-  
         spriteB.position = ccp(screenWidth/2,350)
         self.addChild(spriteB)
         

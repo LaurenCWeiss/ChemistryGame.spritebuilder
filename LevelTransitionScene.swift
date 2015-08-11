@@ -46,8 +46,7 @@ class LevelTransitionScene: CCNode {
 //            loadCareerUpScene()
 //        }
 
-        if LevelData.currentRank == 0 || LevelData.currentRank == 5 || LevelData.currentRank == 10 {
-            
+        if LevelData.showCareer == true {
             loadCareerUpScene()
         }
         
