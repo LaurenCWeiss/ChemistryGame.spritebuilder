@@ -12,8 +12,8 @@ class CareerUpScene: CCNode {
     
     var levelData: LevelData = LevelData()
     var currentLevelData: Data?
-    //weak var careerUpSmallLabel: CCLabelTTF!
-   var careerUpSmallLabel: String = " "
+
+    
     
     var screenSize:CGRect = CGRectZero
     var screenWidth:CGFloat = 0.0
@@ -29,16 +29,15 @@ class CareerUpScene: CCNode {
         if LevelData.currentRank == 0 {
 //            MyNewCareerScientistImage = "Scientist1.png"
             MyNewCareerScientistImage = "Art Assets/Scientist1.png"
-            careerUpSmallLabel = "You're an intern!"
 
         }
         else if LevelData.currentRank == 5 {
             MyNewCareerScientistImage = "Art Assets/Scientist2.png"
-            careerUpSmallLabel = "You're a technician!"
+
         }
         else if LevelData.currentRank == 10 {
             MyNewCareerScientistImage = "Art Assets/Scientist3.png"
-            careerUpSmallLabel = "You're an associate scientist!"
+
         }
         else if LevelData.currentRank == 15 {
             MyNewCareerScientistImage = "Art Assets/Scientist4.png"
@@ -52,15 +51,6 @@ class CareerUpScene: CCNode {
         var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
         spriteB.position = ccp(screenWidth/2,350)
         self.addChild(spriteB)
-        
-       
-        var label:CCLabelTTF! = self.getChildByName("\(careerUpSmallLabel)", recursively: true) as! CCLabelTTF
-        
-        label.string = "\(careerUpSmallLabel)"
-        
-       
-
-        
         
     }
 
