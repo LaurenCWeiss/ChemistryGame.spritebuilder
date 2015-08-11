@@ -87,6 +87,7 @@ struct LevelData {
     
     
     static var highestCompletedLevel = 1
+    static var careerUpSmallLabel: String!
     
 //    static var careerUpSmallLabel: String {
 //        if 5 < highestCompletedLevel || highestCompletedLevel >= 0 {
