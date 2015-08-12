@@ -69,7 +69,7 @@ struct Data {
     
     var MyNewCareerScientistImage: String!
     
-    var passed = true
+    var passed = false
     var Badge1 = false
     
 //    var careerUpSmallLabel: CCLabelTTF!
@@ -212,7 +212,8 @@ struct LevelData {
         
         level1.smallOrderLabel = "Water"
         level1.smallLevelLabel = "Level 1"
-        
+        level1.careerUpSmallLabel = "You're an intern!"
+        level1.passed = false
         
         
         levels.append(level1)
@@ -250,7 +251,8 @@ struct LevelData {
         
         
         //add an order label of what the user is making in this level
-        
+        level2.careerUpSmallLabel = "You're an intern!"
+
         
         level2.smallOrderLabel = "Carbon Monoxide"
         

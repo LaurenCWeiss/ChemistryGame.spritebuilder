@@ -17,11 +17,11 @@ class LevelButton: CCButton {
         
       
         
-        if currentLevelData?.passed == true {
-            
+      if currentLevelData?.passed == true {
+        
             var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
             
-            spriteC.position = ccpAdd(self.position,ccp(20,20))
+            spriteC.position = ccpAdd(self.position,ccp(20,0))
             
             self.addChild(spriteC)
             

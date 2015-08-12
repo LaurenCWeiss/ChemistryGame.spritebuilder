@@ -19,7 +19,7 @@ class CareerLevelUpLabel: CCNode {
     
     func didLoadFromCCB() {
         
-//        careerUpSmallLabel.string = levelData.levels[LevelData.highestCompletedLevel].careerUpSmallLabel
+      careerUpSmallLabel.string = levelData.levels[LevelData.highestCompletedLevel].careerUpSmallLabel
         //careerUpSmallLabel.string = LevelData.careerUpSmallLabel
     }
     
