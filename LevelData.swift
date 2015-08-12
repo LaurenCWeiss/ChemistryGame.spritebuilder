@@ -404,6 +404,8 @@ struct LevelData {
         level6.smallLevelLabel = "Level 6"
         
         //add an order label of what the user is making in this level
+         level6.careerUpSmallLabel = "You're a researcher!"
+        
         
         levels.append(level6)
         
@@ -443,7 +445,7 @@ struct LevelData {
         level7.smallLevelLabel = "Level 7"
         
         //add an order label of what the user is making in this level
-        
+        level7.careerUpSmallLabel = "You're an associate!"
         levels.append(level7)
         
         

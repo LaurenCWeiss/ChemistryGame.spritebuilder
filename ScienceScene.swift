@@ -410,7 +410,12 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         //        atomCollision.removeFromParent()
         
-        //  atomCollision.dropAtom()
+        
+//        atomCollision.dropAtom()
+
+      //  Atom.position = ccp(160,568)
+        
+        
         //add sound here
         //add glass crack here
         
