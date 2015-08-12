@@ -74,32 +74,36 @@ class CareerScene: CCNode {
         
         
         
-        if LevelData.currentRank == 0 {
-            //            MyNewCareerScientistImage = "Scientist1.png"
-            MyNewCareerScientistImage = "Art Assets/Scientist1.png"
-            
-        }
-        else if LevelData.currentRank == 5 {
-            MyNewCareerScientistImage = "Art Assets/Scientist2.png"
-            
-        }
-        else if LevelData.currentRank == 10 {
-            MyNewCareerScientistImage = "Art Assets/Scientist3.png"
-            
-        }
-        else if LevelData.currentRank == 15 {
-            MyNewCareerScientistImage = "Art Assets/Scientist4.png"
-            
-        }
-        
+//        if LevelData.currentRank == 0 {
+//            //            MyNewCareerScientistImage = "Scientist1.png"
+//            MyNewCareerScientistImage = "Art Assets/Scientist1.png"
+//            
+//        }
+//        else if LevelData.currentRank == 5 {
+//            MyNewCareerScientistImage = "Art Assets/Scientist2.png"
+//            
+//        }
+//        else if LevelData.currentRank == 10 {
+//            MyNewCareerScientistImage = "Art Assets/Scientist3.png"
+//            
+//        }
+//        else if LevelData.currentRank == 15 {
+//            MyNewCareerScientistImage = "Art Assets/Scientist4.png"
+//            
+//        }
+//        
         
         //add the image of the new career to the scene
         
         
-        var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
-        spriteB.position = ccp(screenWidth/2,screenHeight/2 - 40)
-        self.addChild(spriteB)
         
+        var MyNewCareerScientistImage = Gamestate.sharedInstance.levelUpData.imageName
+        
+        
+        var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
+        spriteB.position = ccp(screenWidth/2,350)
+        self.addChild(spriteB)
+
     }
         
         

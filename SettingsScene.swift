@@ -23,6 +23,10 @@ class SettingsScene: CCNode  {
     }
     func tiltControlOn() {
         
+//        setBackgroundColor: ForState: SelectedState
+//        backgroundImageForState(Selected State)
+        
+        
         //turn tilt on
         LevelData.tilt = true
         println("tilt on")

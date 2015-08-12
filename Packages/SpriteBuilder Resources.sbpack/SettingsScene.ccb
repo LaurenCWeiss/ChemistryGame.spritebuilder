@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>56</integer>
+	<integer>57</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -1000,8 +1000,8 @@
 						<key>value</key>
 						<array>
 							<real>1</real>
-							<real>0.16599182784557343</real>
-							<real>0.14593121409416199</real>
+							<real>0.0</real>
+							<real>0.036017991602420807</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -1333,6 +1333,19 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>backgroundColor|Selected</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>labelOpacity|Selected</string>
 						<key>type</key>
 						<string>Float</string>
@@ -1472,8 +1485,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

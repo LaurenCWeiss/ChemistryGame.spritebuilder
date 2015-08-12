@@ -24,6 +24,7 @@
 		2EE982511B5058D000FE25DF /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE982501B5058D000FE25DF /* PauseScene.swift */; };
 		2EE982531B50679C00FE25DF /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE982521B50679C00FE25DF /* LevelSelect.swift */; };
 		2EE982551B50683100FE25DF /* Atom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE982541B50683100FE25DF /* Atom.swift */; };
+		2EEE77A01B7BC85500C1B351 /* Gamestate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEE779F1B7BC85500C1B351 /* Gamestate.swift */; };
 		2EF767361B6AE01E001050E0 /* CareerLevelUpLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767351B6AE01E001050E0 /* CareerLevelUpLabel.swift */; };
 		2EF767381B6AE136001050E0 /* CareerUpScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767371B6AE136001050E0 /* CareerUpScene.swift */; };
 		2EF767481B6C2C62001050E0 /* LabReport2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF767471B6C2C62001050E0 /* LabReport2.swift */; };
@@ -188,6 +189,7 @@
 		2EE982501B5058D000FE25DF /* PauseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
 		2EE982521B50679C00FE25DF /* LevelSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelect.swift; sourceTree = "<group>"; };
 		2EE982541B50683100FE25DF /* Atom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atom.swift; sourceTree = "<group>"; };
+		2EEE779F1B7BC85500C1B351 /* Gamestate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gamestate.swift; sourceTree = "<group>"; };
 		2EF767351B6AE01E001050E0 /* CareerLevelUpLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerLevelUpLabel.swift; sourceTree = "<group>"; };
 		2EF767371B6AE136001050E0 /* CareerUpScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerUpScene.swift; sourceTree = "<group>"; };
 		2EF767471B6C2C62001050E0 /* LabReport2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabReport2.swift; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				2EE982501B5058D000FE25DF /* PauseScene.swift */,
 				2EA0B17A1B582CEB00BEFFC4 /* RestartPopup.swift */,
 				2EE9824E1B4F845900FE25DF /* ScienceScene.swift */,
+				2EEE779F1B7BC85500C1B351 /* Gamestate.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 			);
 			name = Source;
@@ -886,6 +889,7 @@
 				2EF767481B6C2C62001050E0 /* LabReport2.swift in Sources */,
 				2EF7674A1B6C2FBD001050E0 /* Border.swift in Sources */,
 				2E343E581B5DC29A00E4CDA3 /* LevelButton.swift in Sources */,
+				2EEE77A01B7BC85500C1B351 /* Gamestate.swift in Sources */,
 				2E59F7E71B62A8ED009B4453 /* HelpScene.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				2EE982531B50679C00FE25DF /* LevelSelect.swift in Sources */,

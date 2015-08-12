@@ -23,7 +23,7 @@ class CareerLevelUpLabel: CCNode {
 
         
         careerUpSmallLabel.string = levelData.levels[LevelData.curLevel].careerUpSmallLabel
-        //careerUpSmallLabel.string = LevelData.careerUpSmallLabel
+//        careerUpSmallLabel.string = LevelData.careerUpSmallLabel
     }
     
     

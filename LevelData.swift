@@ -398,7 +398,7 @@ struct LevelData {
         
         
         level6.magnitude = ccp(0,30)
-        level6.spawnThese = [3,1,2,3,3,5,5,5,5,5]
+        level6.spawnThese = []
         level6.randomMin = 1
         level6.randomMax = 200
         level6.smallLevelLabel = "Level 6"
@@ -445,7 +445,7 @@ struct LevelData {
         level7.smallLevelLabel = "Level 7"
         
         //add an order label of what the user is making in this level
-        level7.careerUpSmallLabel = "You're an associate!"
+//        level7.careerUpSmallLabel = "You're a researcher!"
         levels.append(level7)
         
         
