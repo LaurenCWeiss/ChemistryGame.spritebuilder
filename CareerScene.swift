@@ -15,6 +15,8 @@ class CareerScene: CCNode {
     weak var contentNode: CCNode!
     var levelData: LevelData = LevelData()
     var currentLevelData: Data?
+    var MyNewCareerScientistImage: String!
+
     
     func didLoadFromCCB() {
         showCareerImageAndLabel()
@@ -60,14 +62,59 @@ class CareerScene: CCNode {
         //and so on...
         
         
+//        
+//        var spriteC = CCSprite(imageNamed:"\(curLevel.MyNewCareerScientistImage)")
+//        spriteC.position = ccp(screenWidth/2,250)
+//        self.addChild(spriteC)
+//        
+//        
+//        
+//        careerUpSmallLabel.string = levelData.levels[LevelData.curLevel].careerUpSmallLabel
+//        
         
-        var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
-        spriteC.position = ccp(screenWidth/2,250)
-        self.addChild(spriteC)
+        
+        
+        if LevelData.currentRank == 0 {
+            //            MyNewCareerScientistImage = "Scientist1.png"
+            MyNewCareerScientistImage = "Art Assets/Scientist1.png"
+            
+        }
+        else if LevelData.currentRank == 5 {
+            MyNewCareerScientistImage = "Art Assets/Scientist2.png"
+            
+        }
+        else if LevelData.currentRank == 10 {
+            MyNewCareerScientistImage = "Art Assets/Scientist3.png"
+            
+        }
+        else if LevelData.currentRank == 15 {
+            MyNewCareerScientistImage = "Art Assets/Scientist4.png"
+            
+        }
+        
+        
+        //add the image of the new career to the scene
+        
+        
+        var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
+        spriteB.position = ccp(screenWidth/2,screenHeight/2 - 40)
+        self.addChild(spriteB)
+        
+    }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
         
         
     }
-}
