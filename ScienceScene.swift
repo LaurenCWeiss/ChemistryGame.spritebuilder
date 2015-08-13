@@ -426,7 +426,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         
         if points == levelData.levels[LevelData.curLevel].goal {
             
-            Gamestate.sharedInstance.passed[LevelData.curLevel] == true
+            Gamestate.sharedInstance.passed[LevelData.curLevel] = true
             
             checkIfCareerUpSceneShouldLoad()
         }

@@ -15,7 +15,7 @@ class LevelButton: CCButton {
     override func onEnter() {
         super.onEnter()
         
-        if Gamestate.sharedInstance.passed[LevelData.curLevel] == true {
+        if Gamestate.sharedInstance.passed[level] == true {
         var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
         spriteC.positionInPoints = ccpAdd(self.positionInPoints,ccp(0,0))
         self.parent.addChild(spriteC)

@@ -20,6 +20,7 @@ class SettingsScene: CCNode  {
     }
     
     func tiltControlOn() {
+        //setLabelColor for state
         LevelData.tilt = true
     }
     
