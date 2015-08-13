@@ -85,11 +85,6 @@
 			<key>scaleFrom</key>
 			<integer>4</integer>
 		</dict>
-		<key>Art Assets/Beaker.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>2</integer>
-		</dict>
 		<key>Art Assets/Billiard_Balls_01_Green_256x256@4x.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -105,7 +100,7 @@
 			<key>scaleFrom</key>
 			<integer>4</integer>
 		</dict>
-		<key>Art Assets/Button.png</key>
+		<key>Art Assets/CLetter.png</key>
 		<dict>
 			<key>scaleFrom</key>
 			<integer>2</integer>
@@ -139,6 +134,11 @@
 		<dict>
 			<key>scaleFrom</key>
 			<integer>4</integer>
+		</dict>
+		<key>Art Assets/HLetter.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
 		</dict>
 		<key>Art Assets/Hydrogen.png</key>
 		<dict>
