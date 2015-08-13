@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCLabelTTF</string>
+				<string>careerUpSmallLabel</string>
 				<key>memberVarAssignmentName</key>
 				<string>careerUpSmallLabel</string>
 				<key>memberVarAssignmentType</key>
@@ -245,14 +245,12 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
 		<string>CareerLevelUpLabel</string>
 		<key>displayName</key>
-		<string>CCNode</string>
+		<string>CareerLevelUpLabel</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
@@ -319,6 +317,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

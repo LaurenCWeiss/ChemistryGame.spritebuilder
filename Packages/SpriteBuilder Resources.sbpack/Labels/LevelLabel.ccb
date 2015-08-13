@@ -157,7 +157,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCLabelTTF</string>
+				<string>smallLevelLabel</string>
 				<key>memberVarAssignmentName</key>
 				<string>smallLevelLabel</string>
 				<key>memberVarAssignmentType</key>
@@ -353,12 +353,14 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
 		<string>LevelLabel</string>
 		<key>displayName</key>
-		<string>CCNode</string>
+		<string>LevelLabel</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>

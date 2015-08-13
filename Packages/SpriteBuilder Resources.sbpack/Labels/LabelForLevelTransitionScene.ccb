@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCLabelTTF</string>
+				<string>smallLabelA</string>
 				<key>memberVarAssignmentName</key>
 				<string>smallLabelA</string>
 				<key>memberVarAssignmentType</key>
@@ -252,7 +252,7 @@
 		<key>customClass</key>
 		<string>LabelForLevelTransitionScene</string>
 		<key>displayName</key>
-		<string>CCNode</string>
+		<string>LabelForLevelTransitionScene</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
