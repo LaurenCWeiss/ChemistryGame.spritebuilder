@@ -213,6 +213,12 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             
             func didLoadFromCCB() {
                 userInteractionEnabled = true
+                if LevelData.curLevel == 0 {
+                    let popup = CCBReader.load("TutorialPopUp", owner:self) as! TutorialPopUp
+                    popup.positionType = CCPositionType(xUnit: .Normalized, yUnit: .Normalized, corner: .BottomLeft)
+                    popup.position = CGPoint(x: 0.5, y: 0.5)
+                    parent.addChild(popup)
+                }
             }
             
             func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
@@ -336,6 +342,10 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, ground: Ground!) -> Bool {
         atomCollision.removeFromParent()
         
+        for i in 1...8 {
+            spawn.append(Int.random(min: currentLevelData!.randomMin, max: currentLevelData!.randomMax))
+        }
+        
         return true
     }
     
@@ -350,6 +360,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     //MARK:- Physics
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, goal: Goal!, atomCollision: Atom!) -> Bool {
+        
+        OALSimpleAudio.sharedInstance().playEffect("two_small_vinegar_bottles_glass_small_hit_together.wav")
         
         if atomCollision.inBeaker == true {
             return true
@@ -397,11 +409,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     func checkIfCareerUpSceneShouldLoad() {
         
-        currentLevelData?.passed = true
         
         let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
         CCDirector.sharedDirector().replaceScene(ScienceScene)
         
+    
         if (LevelData.curLevel) > 29 {
             LevelData.curLevel = 0
         } else {
@@ -413,6 +425,8 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     override func update(delta: CCTime) {
         
         if points == levelData.levels[LevelData.curLevel].goal {
+            
+            Gamestate.sharedInstance.passed[LevelData.curLevel] == true
             
             checkIfCareerUpSceneShouldLoad()
         }

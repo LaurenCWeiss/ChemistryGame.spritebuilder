@@ -61,11 +61,7 @@ struct Data {
     var ElementImage4: Int = 0
     var smallOrderLabel: String = " "
     var MyNewCareerScientistImage: String!
-    
-    //passed variable
-    var passed = false
-    
-    
+
 }
 
 
@@ -150,7 +146,7 @@ struct LevelData {
         level1.smallOrderLabel = "Water"
         level1.smallLevelLabel = "Level 1"
         level1.careerUpSmallLabel = "You're an intern!"
-        level1.passed = false
+
         
         
         levels.append(level1)

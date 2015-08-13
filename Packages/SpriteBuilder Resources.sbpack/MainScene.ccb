@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>347</integer>
+	<integer>349</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -3234,7 +3234,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>231.2252197265625</real>
+							<real>232.03373718261719</real>
 							<real>114.59302520751953</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3259,7 +3259,7 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.5</real>
+							<real>1.6760916709899902</real>
 							<real>1.5</real>
 							<false/>
 							<integer>0</integer>
@@ -3272,7 +3272,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string>helpButtonTapped</string>
+							<string>aboutScreenButtonTapped</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -3317,7 +3317,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Credits</string>
+							<string>About</string>
 							<false/>
 						</array>
 					</dict>

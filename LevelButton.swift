@@ -10,10 +10,15 @@ class LevelButton: CCButton {
     
     func didLoadFromCCB() {
         self.title = "Level: \(level + 1)"
-        
-        var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
-        spriteC.position = ccpAdd(self.position,ccp(20,0))
-        self.addChild(spriteC)
     }
     
+    override func onEnter() {
+        super.onEnter()
+        
+        if Gamestate.sharedInstance.passed[LevelData.curLevel] == true {
+        var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
+        spriteC.positionInPoints = ccpAdd(self.positionInPoints,ccp(0,0))
+        self.parent.addChild(spriteC)
+        }
+    }
 }

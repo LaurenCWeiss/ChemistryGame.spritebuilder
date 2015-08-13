@@ -25,6 +25,11 @@ class MainScene: CCNode {
         CCDirector.sharedDirector().pushScene(MainScene)
     }
     
+    func aboutScreenButtonTapped() {
+        let MainScene = CCBReader.loadAsScene("AboutScreen")
+        CCDirector.sharedDirector().pushScene(MainScene)
+    }
+    
     func shareButtonTapped() {
         var scene = CCDirector.sharedDirector().runningScene
         var n: AnyObject = scene.children[0]

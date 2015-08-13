@@ -16,6 +16,17 @@ class Gamestate {
     let internLevel = 1
     let researcherLevel = 5
     var highestCompletedLevel = 0
+    var passed:[Bool] = []
+    
+    //array of 30 levels all defaulted to passed being false
+    
+    init() {
+        
+        for i in 1...30 {
+            passed.append(false)
+        }
+        
+    }
     
     var levelUpData: (text: String, imageName: String) {
         switch highestCompletedLevel {
