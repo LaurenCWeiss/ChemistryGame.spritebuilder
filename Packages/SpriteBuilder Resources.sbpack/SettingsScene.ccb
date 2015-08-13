@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>59</integer>
+	<integer>60</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -940,6 +940,19 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>backgroundColor|Normal</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>0.98312139511108398</real>
+							<real>0.98948734998703003</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>backgroundSpriteFrame|Highlighted</string>
 						<key>type</key>
 						<string>SpriteFrame</string>
@@ -999,9 +1012,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
+							<real>0.0</real>
 							<real>1</real>
 							<real>0.0</real>
-							<real>0.036017991602420807</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -1146,6 +1159,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1338,8 +1353,8 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
 							<real>0.0</real>
+							<real>1</real>
 							<real>0.0</real>
 							<real>1</real>
 						</array>
@@ -1899,8 +1914,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
