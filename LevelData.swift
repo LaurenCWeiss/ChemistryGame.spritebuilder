@@ -8,12 +8,9 @@
 
 import Foundation
 
-
-
-//Data not inheriting from anything, and it makes logical sense that data objects are unique, so we
-//make defined a struct, as opposed to a class
 struct Data {
-    //    var nextLevelName: String!
+    
+    //counters for different elements
     var oxygenCounter: Int = 0
     var hydrogenCounter: Int = 0
     var carbonCounter: Int = 0
@@ -32,110 +29,74 @@ struct Data {
     var galliumCounter: Int = 0
     var bromineCounter: Int = 0
     var mercuryCounter: Int = 0
+    var counters = [String: Int]()
     
-    var goal: Int = 0
+    //labes necessary for each level
     var smallLabel: String = " "
     var smallLabelA: String = " "
     var smallLevelLabel: String = " "
     var careerUpSmallLabel: String = " "
     var careerUpSmallLabelForLevel: String = ""
-    var level: Int = 0
     
+    
+    //goal number and level number for each level
+    var level: Int = 0
+    var goal: Int = 0
+    
+    //speed of atoms + spawning
     var magnitude:CGPoint = CGPointZero
     var spawnThese: [Int] = []
-    var ElementImage1: Int = 0
-    var ElementImage2: Int = 0
-    var ElementImage3: Int = 0
-    var ElementImage4: Int = 0
+    var randomMin: Int = 0
+    var randomMax: Int = 0
+    
+    
+    //element images + order label
     var ElementImage1Name: String!
     var ElementImage2Name: String!
     var ElementImage3Name: String!
     var ElementImage4Name: String!
-    var label1Title: String!
-    var label2Title: String!
-    var label3Title: String!
-    var label4Title: String!
-    var label1FontName: String!
-    var label1FontSize: CGFloat = 30.0
-    var labelColor1: CGFloat = 0.0
-    var labelColor2: CGFloat = 0.0
-    var labelColor3: CGFloat = 0.0
-    var labelColor4: CGFloat = 0.0
-    var randomMin: Int = 0
-    var randomMax: Int = 0
+    var ElementImage1: Int = 0
+    var ElementImage2: Int = 0
+    var ElementImage3: Int = 0
+    var ElementImage4: Int = 0
     var smallOrderLabel: String = " "
-    
-    var counters = [String: Int]()
-    
     var MyNewCareerScientistImage: String!
     
+    //passed variable
     var passed = false
-    var Badge1 = false
-    
-//    var careerUpSmallLabel: CCLabelTTF!
-    
     
     
 }
 
 
-//TODO: make singleton
 struct LevelData {
     
-    private static let defaults = NSUserDefaults.standardUserDefaults()
-    //        var careerUpSmallLabel: CCLabelTTF!
     
-    
+    static let defaults = NSUserDefaults.standardUserDefaults()
     static var highestCompletedLevel = 1
+    static var showCareer = false
+    var levels:[Data] = [Data]()
     
-//    static var careerUpSmallLabel: String {
-//        if 5 < highestCompletedLevel || highestCompletedLevel >= 0 {
-//            
-//            //            if 5 > highestCompletedLevel || highestCompletedLevel >= 0 {
-//            return "You're an intern"
-//        }
-//            
-//        else if highestCompletedLevel >= 2 {
-//            return "sci"
-//            
-//        } else {
-//            return ""
-//        }
-//        
-//    }
-    //init to level - 1 (because array index starting at 0)
-    //saves the level that the user was most currently on so that when they open their phone again the level has been saved!
     
     static var curLevel: Int {
         
-        
         get {
-        println("Get Level:")
-        println(defaults.integerForKey("curLevel"))
-        
         return defaults.integerForKey("curLevel")
-        
-        
-        
         }
-        //could say set(newLevel) but then we would have to put newLevel in the setter which would be bad code when we can just use newValue that is built into the systme
+        
         set {
             defaults.setInteger(newValue, forKey: "curLevel")
             println("Set Level:\(newValue)")
         }
     }
     
-    static var showCareer = false
-    
     
     static var currentRank: Int {
+        
         get {
-        
         return defaults.integerForKey("currentRank")
-
-        
         }
-        //could say set(newLevel) but then we would have to put newLevel in the setter which would be bad code when we can just use newValue that is built into the systme
+        
         set {
             defaults.setInteger(newValue, forKey: "currentRank")
         }
@@ -152,27 +113,8 @@ struct LevelData {
         }
     }
     
-    //
-    //    static var Badge1: Bool {
-    //
-    //        get {
-    //        return defaults.boolForKey("Badge1")
-    //        }
-    //        set {
-    //            defaults.setBool(newValue, forKey: "Badge1")
-    //
-    //        }
-    //    }
-    
-    
-    
-    
-    
-    var levels:[Data] = [Data]()
     
     init() {
-        //numbers of atoms of elements
-        
         
         
         var level1 = Data()
@@ -182,11 +124,11 @@ struct LevelData {
         level1.oxygenCounter = 6
         
         
-        // How many of an element do you have left
+        //how many of an element do you have left
         level1.counters["Oxygen"] = 1
         level1.counters["Hydrogen"] = 2
         
-        //        level1.carbonCounter = 0
+        
         level1.goal = 3
         level1.smallLabel = "Water"
         level1.smallLabelA = "Water"
@@ -203,13 +145,8 @@ struct LevelData {
         
         
         //add intern career level
-        //        level1.careerUpSmallLabel = "You're an intern!"
         level1.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-        //career level scene from main menu
         level1.careerUpSmallLabelForLevel = "Intern"
-        
-        //add an order label of what the user is making in this level
-        
         level1.smallOrderLabel = "Water"
         level1.smallLevelLabel = "Level 1"
         level1.careerUpSmallLabel = "You're an intern!"
@@ -217,6 +154,39 @@ struct LevelData {
         
         
         levels.append(level1)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -252,7 +222,7 @@ struct LevelData {
         
         //add an order label of what the user is making in this level
         level2.careerUpSmallLabel = "You're an intern!"
-
+        
         
         level2.smallOrderLabel = "Carbon Monoxide"
         
@@ -404,7 +374,7 @@ struct LevelData {
         level6.smallLevelLabel = "Level 6"
         
         //add an order label of what the user is making in this level
-         level6.careerUpSmallLabel = "You're a researcher!"
+        level6.careerUpSmallLabel = "You're a researcher!"
         
         
         levels.append(level6)
@@ -445,7 +415,7 @@ struct LevelData {
         level7.smallLevelLabel = "Level 7"
         
         //add an order label of what the user is making in this level
-//        level7.careerUpSmallLabel = "You're a researcher!"
+        //        level7.careerUpSmallLabel = "You're a researcher!"
         levels.append(level7)
         
         

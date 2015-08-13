@@ -10,9 +10,5 @@ import Foundation
 
 
 class Border: CCNode, CCPhysicsCollisionDelegate {
-    
-    func didLoadFromCCB(){
-        
-        
-    }
+
 }

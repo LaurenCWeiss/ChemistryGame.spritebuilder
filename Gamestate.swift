@@ -9,17 +9,13 @@
 import Foundation
 
 class Gamestate {
+    
     static let sharedInstance = Gamestate()
     
     //level up constants
     let internLevel = 1
     let researcherLevel = 5
-    
     var highestCompletedLevel = 0
-    
-    var passed:[Bool] = []
-    
-    if passed[LevelData.curLevel]==true then unlock level
     
     var levelUpData: (text: String, imageName: String) {
         switch highestCompletedLevel {

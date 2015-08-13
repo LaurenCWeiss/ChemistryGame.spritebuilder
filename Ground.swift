@@ -10,9 +10,4 @@ import Foundation
 
 class Ground: CCNode {
     
-    func didLoadFromCCB(){
-        
-        userInteractionEnabled = true
-    }
-    
 }

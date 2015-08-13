@@ -1,8 +1,5 @@
 //
 //  Extensions.swift
-//  ballmadness
-//
-//  Created by Martin Walsh on 07/07/2015.
 //  Copyright (c) 2015 Apportable. All rights reserved.
 //
 

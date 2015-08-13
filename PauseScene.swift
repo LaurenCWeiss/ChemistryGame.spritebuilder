@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 class PauseScene: CCNode, CCPhysicsCollisionDelegate {
     
     weak var contentNode: CCNode!
@@ -17,19 +15,16 @@ class PauseScene: CCNode, CCPhysicsCollisionDelegate {
     func startMainMenu() {
         let PauseScene = CCBReader.loadAsScene("MainScene")
         CCDirector.sharedDirector().presentScene(PauseScene)
-        
     }
     
     func startLevelSelect() {
-        let PauseScene = CCBReader.loadAsScene("LevelSelect") 
+        let PauseScene = CCBReader.loadAsScene("LevelSelect")
         CCDirector.sharedDirector().presentScene(PauseScene)
-        
     }
     
     func startContinue() {
         CCDirector.sharedDirector().popScene()
     }
-    
 }
 
 

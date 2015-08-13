@@ -12,31 +12,19 @@ import Foundation
 
 class SettingsScene: CCNode  {
     
-    weak var contentNode: CCNode!
     weak var controlOn: CCButton!
     weak var controlOff: CCButton!
     
     func startMainMenu() {
-        //        let MainScene = CCBReader.loadAsScene("HelpScene")
         CCDirector.sharedDirector().popScene()
-        
-    }
-    func tiltControlOn() {
-        
-//        setBackgroundColor: ForState: SelectedState
-//        backgroundImageForState(Selected State)
-        
-        
-        //turn tilt on
-        LevelData.tilt = true
-        println("tilt on")
-        
-    }
-    func tiltControlOff() {
-        //turn tilt off
-        LevelData.tilt = false
-        println("tilt off")
     }
     
+    func tiltControlOn() {
+        LevelData.tilt = true
+    }
+    
+    func tiltControlOff() {
+        LevelData.tilt = false
+    }
     
 }

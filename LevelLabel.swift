@@ -10,15 +10,14 @@ import Foundation
 
 
 class LevelLabel: CCNode {
-    //smallLabel is the label that is changed depending on the level in the LevelSelect scene
+    
+    //shows the user what level they are on in ScienceScene
+    
     var smallLevelLabel: CCLabelTTF!
     var levelData: LevelData = LevelData()
     
     func didLoadFromCCB() {
-        
         smallLevelLabel.string = levelData.levels[LevelData.curLevel].smallLevelLabel
-        
     }
-    
     
 }
