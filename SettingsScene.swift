@@ -17,7 +17,6 @@ class SettingsScene: CCNode  {
     
     func didLoadFromCCB() {
     controlOn.selected = true
-    
     }
     
     

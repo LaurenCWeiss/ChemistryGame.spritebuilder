@@ -19,14 +19,26 @@ class CareerUpScene: CCNode {
         screenSize = UIScreen.mainScreen().bounds
         screenWidth = screenSize.size.width
         let currentLevelData = levelData.levels[LevelData.curLevel]
-        var MyNewCareerScientistImage = Gamestate.sharedInstance.levelUpData.imageName
+        var MyNewCareerScientistImageSmallLabel = Gamestate.sharedInstance.levelUpData.imageName
         var careerUpSmallLabel = Gamestate.sharedInstance.levelUpData.text
+    
+        
+        var MyNewCareerScientistImage = Gamestate.sharedInstance.levelUpData.imageName
+        
+        var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
+        spriteB.position = ccp(screenWidth/2,350)
+        self.addChild(spriteB)
+    
+    
     }
     
     
     func startContinueButton() {
+        Gamestate.sharedInstance.highestCompletedLevel += 1
+
         let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
         CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
+        
     }
     
 }

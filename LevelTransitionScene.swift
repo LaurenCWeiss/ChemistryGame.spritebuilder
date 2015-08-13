@@ -28,12 +28,28 @@ class LevelTransitionScene: CCNode {
         var levelData: LevelData = LevelData()
         let currentLevelData = levelData.levels[LevelData.curLevel]
         
-        if Gamestate.sharedInstance.highestCompletedLevel == Gamestate.sharedInstance.internLevel {
-            
+       println("highestcompletedlevel is:\(Gamestate.sharedInstance.highestCompletedLevel)")
+        println("intern level is:\(Gamestate.sharedInstance.internLevel)")
+      
+        
+//        if Gamestate.sharedInstance.highestCompletedLevel == 1 {
+//            Gamestate.sharedInstance.highestCompletedLevel == 5
+//        }
+//        if Gamestate.sharedInstance.highestCompletedLevel == 5 {
+//            Gamestate.sharedInstance.highestCompletedLevel == 10
+//        }
+//        if Gamestate.sharedInstance.highestCompletedLevel == 10 {
+//            Gamestate.sharedInstance.highestCompletedLevel == 15
+//        }
+        
+       
+
+        
+        if Gamestate.sharedInstance.highestCompletedLevel == Gamestate.sharedInstance.internLevel || Gamestate.sharedInstance.highestCompletedLevel == Gamestate.sharedInstance.researcherLevel {
             loadCareerUpScene()
-            
+                         
         } else {
-            
+            Gamestate.sharedInstance.highestCompletedLevel += 1
             let LevelTransitionScene = CCBReader.loadAsScene("LabReport2")
             CCDirector.sharedDirector().replaceScene(LevelTransitionScene)
         }

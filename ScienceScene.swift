@@ -407,7 +407,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         parent.addChild(popup)
     }
     
-    func checkIfCareerUpSceneShouldLoad() {
+    func LoadLevelTransitionScene() {
         
         
         let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
@@ -428,7 +428,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
             
             Gamestate.sharedInstance.passed[LevelData.curLevel] = true
             
-            checkIfCareerUpSceneShouldLoad()
+            LoadLevelTransitionScene()
         }
     }
     

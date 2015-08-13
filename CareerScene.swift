@@ -15,7 +15,7 @@ class CareerScene: CCNode {
     var levelData: LevelData = LevelData()
     var currentLevelData: Data?
     var MyNewCareerScientistImage: String!
-    
+    var careerUpSmallLabel = Gamestate.sharedInstance.levelUpData.text
     
     func didLoadFromCCB() {
         showCareerImageAndLabel()

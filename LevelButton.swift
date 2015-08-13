@@ -9,6 +9,9 @@ class LevelButton: CCButton {
     
     
     func didLoadFromCCB() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("passed", forKey: "level")
+        
         self.title = "Level: \(level + 1)"
     }
     
@@ -16,7 +19,7 @@ class LevelButton: CCButton {
         super.onEnter()
      
         if Gamestate.sharedInstance.passed[level] == true {
-        NSUserDefaults()
+   
         var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
         spriteC.positionInPoints = ccpAdd(self.positionInPoints,ccp(0,0))
         self.parent.addChild(spriteC)

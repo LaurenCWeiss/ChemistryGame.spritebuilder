@@ -15,7 +15,7 @@ class Gamestate {
     //level up constants
     let internLevel = 1
     let researcherLevel = 5
-    var highestCompletedLevel = 0
+    var highestCompletedLevel = 1
     var passed:[Bool] = []
     
     //array of 30 levels all defaulted to passed being false

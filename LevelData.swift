@@ -69,7 +69,6 @@ struct LevelData {
     
     
     static let defaults = NSUserDefaults.standardUserDefaults()
-    static var highestCompletedLevel = 1
     static var showCareer = false
     var levels:[Data] = [Data]()
     

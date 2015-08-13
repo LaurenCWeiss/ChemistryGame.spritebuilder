@@ -11,6 +11,7 @@
 		2E343E581B5DC29A00E4CDA3 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E343E571B5DC29A00E4CDA3 /* LevelButton.swift */; };
 		2E39033F1B7D067300B7E8F1 /* TutorialPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E39033E1B7D067300B7E8F1 /* TutorialPopUp.swift */; };
 		2E3903411B7D14B200B7E8F1 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3903401B7D14B200B7E8F1 /* AboutScreen.swift */; };
+		2E39034B1B7D57AA00B7E8F1 /* MyNewCareerScientistImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E39034A1B7D57AA00B7E8F1 /* MyNewCareerScientistImage.swift */; };
 		2E59F7E51B62A7A5009B4453 /* CareerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59F7E41B62A7A5009B4453 /* CareerScene.swift */; };
 		2E59F7E71B62A8ED009B4453 /* HelpScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E59F7E61B62A8ED009B4453 /* HelpScene.swift */; };
 		2E6D27CB1B72B61200890D6F /* LabelForLevelTransitionScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D27CA1B72B61200890D6F /* LabelForLevelTransitionScene.swift */; };
@@ -178,6 +179,7 @@
 		2E343E571B5DC29A00E4CDA3 /* LevelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
 		2E39033E1B7D067300B7E8F1 /* TutorialPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPopUp.swift; sourceTree = "<group>"; };
 		2E3903401B7D14B200B7E8F1 /* AboutScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		2E39034A1B7D57AA00B7E8F1 /* MyNewCareerScientistImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNewCareerScientistImage.swift; sourceTree = "<group>"; };
 		2E59F7E41B62A7A5009B4453 /* CareerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerScene.swift; sourceTree = "<group>"; };
 		2E59F7E61B62A8ED009B4453 /* HelpScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpScene.swift; sourceTree = "<group>"; };
 		2E6D27CA1B72B61200890D6F /* LabelForLevelTransitionScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelForLevelTransitionScene.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				2E0B14B41B59A7A800E4E378 /* Beaker.swift */,
 				2E59F7E41B62A7A5009B4453 /* CareerScene.swift */,
 				2EF767371B6AE136001050E0 /* CareerUpScene.swift */,
+				2E39034A1B7D57AA00B7E8F1 /* MyNewCareerScientistImage.swift */,
 				2EE5DF471B5427A50059A184 /* Extensions.swift */,
 				2EE5DF571B556D520059A184 /* Goal.swift */,
 				2EA0B16E1B57176600BEFFC4 /* Ground.swift */,
@@ -896,6 +899,7 @@
 				2EF7674A1B6C2FBD001050E0 /* Border.swift in Sources */,
 				2E343E581B5DC29A00E4CDA3 /* LevelButton.swift in Sources */,
 				2EEE77A01B7BC85500C1B351 /* Gamestate.swift in Sources */,
+				2E39034B1B7D57AA00B7E8F1 /* MyNewCareerScientistImage.swift in Sources */,
 				2E59F7E71B62A8ED009B4453 /* HelpScene.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				2EE982531B50679C00FE25DF /* LevelSelect.swift in Sources */,
