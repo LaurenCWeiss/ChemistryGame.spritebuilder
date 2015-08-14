@@ -19,9 +19,12 @@ class LevelButton: CCButton {
         super.onEnter()
      
         if Gamestate.sharedInstance.passed[level] == true {
+   
+//        defaults.setBool(true, forKey: "passed")
 
+            
         var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
-        spriteC.positionInPoints = ccpAdd(self.positionInPoints,ccp(40,20))
+        spriteC.positionInPoints = ccpAdd(self.positionInPoints,ccp(0,0))
         self.parent.addChild(spriteC)
         }
     }

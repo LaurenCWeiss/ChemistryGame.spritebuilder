@@ -22,7 +22,7 @@ class CareerUpScene: CCNode {
         var MyNewCareerScientistImage = Gamestate.sharedInstance.levelUpData.imageName
         
         var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
-        spriteB.position = ccp(screenWidth/2,190)
+        spriteB.position = ccp(screenWidth/2,350)
         self.addChild(spriteB)
     
     

@@ -556,8 +556,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>160</real>
-							<real>20.727399826049805</real>
+							<real>169.32115173339844</real>
+							<real>14.537312507629395</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -602,8 +602,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Tap to continue
-</string>
+							<string>Click to continue</string>
 							<false/>
 						</array>
 					</dict>
@@ -739,6 +738,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
