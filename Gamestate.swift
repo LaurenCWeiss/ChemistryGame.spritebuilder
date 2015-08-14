@@ -20,14 +20,9 @@ class Gamestate {
     
     //array of 30 levels all defaulted to passed being false
     
-    var passed:[Bool] = [] {
-        didSet {
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setObject(passed, forKey: "passed")
-            defaults.synchronize()
-        }
-    }
+    var passed:[Bool] = []
     init() {
+<<<<<<< HEAD
         let defaults = NSUserDefaults.standardUserDefaults()
         if let result = defaults.objectForKey("passed") as? [Bool] {
             passed = result
@@ -44,6 +39,10 @@ class Gamestate {
 =======
     var passed:[Bool] = []
     init() {
+        for i in 1...30 {
+            passed.append(false)
+>>>>>>> parent of a259960... STARS ARE WORKING
+=======
         for i in 1...30 {
             passed.append(false)
 >>>>>>> parent of a259960... STARS ARE WORKING
