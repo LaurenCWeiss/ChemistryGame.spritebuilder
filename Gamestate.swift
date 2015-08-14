@@ -18,11 +18,30 @@ class Gamestate {
     var highestLevelNumberCompleted = 1
     var currentLevelNumber = 1
     
-    var passed:[Bool] = []
-    init() {
-        for i in 1...30 {
-            passed.append(false)
+   
+    
+    var passed:[Bool] = [] {
+        didSet {
+            var defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(passed, forKey: "passed")
+            defaults.synchronize()
         }
+    }
+
+
+    
+    init() {
+        var defaults = NSUserDefaults.standardUserDefaults()
+        //is an optional value so need to use "if let"
+        if let result = defaults.objectForKey("passed") as? [Bool] {
+            passed = result
+        } else {
+            for i in 1...30 {
+                passed.append(false)
+            }
+        }
+       
+        
     }
     
     var levelUpData: (text: String, imageName: String) {
