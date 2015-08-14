@@ -18,10 +18,21 @@ class Gamestate {
     var highestLevelNumberCompleted = 1
     var currentLevelNumber = 1
     
-    var passed:[Bool] = []
+    var passed:[Bool] = [] {
+        didSet {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(passed, forKey: "passed")
+            defaults.synchronize()
+        }
+    }
     init() {
-        for i in 1...30 {
-            passed.append(false)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let result = defaults.objectForKey("passed") as? [Bool] {
+            passed = result
+        } else {
+            for i in 1...30 {
+                passed.append(false)
+            }
         }
     }
     
