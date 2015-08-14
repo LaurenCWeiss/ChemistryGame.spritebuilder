@@ -16,11 +16,10 @@ class Gamestate {
     let internLevel = 1
     let researcherLevel = 5
     var highestCompletedLevel = 1
-    var passed:[Bool] = []
+//    var passed:[Bool] = []
     
     //array of 30 levels all defaulted to passed being false
     
-<<<<<<< HEAD
     var passed:[Bool] = [] {
         didSet {
             let defaults = NSUserDefaults.standardUserDefaults()
@@ -42,6 +41,12 @@ class Gamestate {
         for i in 1...30 {
             passed.append(false)
 >>>>>>> origin/myNewBranch
+=======
+    var passed:[Bool] = []
+    init() {
+        for i in 1...30 {
+            passed.append(false)
+>>>>>>> parent of a259960... STARS ARE WORKING
         }
         
     }
