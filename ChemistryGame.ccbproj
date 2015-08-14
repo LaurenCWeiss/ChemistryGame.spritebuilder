@@ -80,6 +80,11 @@
 		</dict>
 		<key>Art Assets</key>
 		<dict/>
+		<key>Art Assets/A@4x.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
 		<key>Art Assets/Aluminum.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -184,6 +189,11 @@
 		<dict>
 			<key>scaleFrom</key>
 			<integer>4</integer>
+		</dict>
+		<key>Art Assets/O@4x.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
 		</dict>
 		<key>Art Assets/Oxygen.png</key>
 		<dict>
@@ -290,6 +300,11 @@
 			<key>scaleFrom</key>
 			<integer>4</integer>
 		</dict>
+		<key>Art Assets/W@4x.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
 		<key>Art Assets/beaker123.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -315,7 +330,7 @@
 		<key>Art Assets/star.png</key>
 		<dict>
 			<key>scaleFrom</key>
-			<integer>2</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Art Assets/starGold@4x.png</key>
 		<dict>
