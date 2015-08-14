@@ -19,5 +19,4 @@ class LevelLabel: CCNode {
     func didLoadFromCCB() {
         smallLevelLabel.string = levelData.levels[LevelData.curLevel].smallLevelLabel
     }
-    
 }
