@@ -24,6 +24,7 @@ class Gamestate {
             defaults.setObject(passed, forKey: "passed")
             defaults.synchronize()
         }
+
     }
     init() {
         let defaults = NSUserDefaults.standardUserDefaults()
