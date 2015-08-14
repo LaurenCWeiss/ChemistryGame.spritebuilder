@@ -10,7 +10,11 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
+<<<<<<< HEAD
 	<integer>28</integer>
+=======
+	<integer>15</integer>
+>>>>>>> parent of 995a6f3... FINAL VERSION WITHOUT SAVING STARS
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -712,6 +716,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
+<<<<<<< HEAD
 				<integer>13</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
@@ -828,6 +833,8 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
+=======
+>>>>>>> parent of 995a6f3... FINAL VERSION WITHOUT SAVING STARS
 				<integer>14</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
@@ -858,8 +865,13 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>167.23332214355469</real>
 							<real>493.74383544921875</real>
+=======
+							<real>160</real>
+							<real>275.50347900390625</real>
+>>>>>>> parent of 995a6f3... FINAL VERSION WITHOUT SAVING STARS
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1793,6 +1805,71 @@
 						</array>
 					</dict>
 				</array>
+<<<<<<< HEAD
+=======
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>13</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>LabelForLevelTransitionScene</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>160</real>
+							<real>365.85586547851562</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1.5</real>
+							<real>1.5</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>LabelForLevelTransitionScene.ccb</string>
+					</dict>
+				</array>
+>>>>>>> parent of 995a6f3... FINAL VERSION WITHOUT SAVING STARS
 				<key>selected</key>
 				<true/>
 			</dict>

@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>27</integer>
+	<integer>25</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -140,7 +140,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>26</integer>
+				<integer>10</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
@@ -148,7 +148,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>newBackground</string>
+				<string>ScientistBackgroundPicture</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -170,8 +170,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>179</real>
-							<real>281.25</real>
+							<real>173.32951354980469</real>
+							<real>248.50642395019531</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -195,8 +195,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.40000000596046448</real>
-							<real>0.49000000953674316</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -209,7 +209,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/newBackground.png</string>
+							<string>Art Assets/ScientistBackgroundPicture.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -242,7 +242,27 @@
 						<key>type</key>
 						<string>EffectControl</string>
 						<key>value</key>
-						<array/>
+						<array>
+							<dict>
+								<key>UUID</key>
+								<integer>12</integer>
+								<key>baseClass</key>
+								<string>CCEffectBlur</string>
+								<key>className</key>
+								<string>CCBPEffectBlur</string>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>blurRadius</string>
+										<key>type</key>
+										<string>Integer</string>
+										<key>value</key>
+										<integer>10</integer>
+									</dict>
+								</array>
+							</dict>
+						</array>
 					</dict>
 				</array>
 			</dict>
@@ -350,6 +370,19 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>dimensions</string>
 						<key>type</key>
 						<string>Size</string>
@@ -400,7 +433,7 @@
 							<real>0.0</real>
 							<real>0.0</real>
 							<real>0.0</real>
-							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -486,8 +519,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>162.0068359375</real>
-							<real>416.41366577148438</real>
+							<real>140.78256225585938</real>
+							<real>424.65478515625</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -532,8 +565,9 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Swipe or tilt the scientific
-flask to catch the falling atoms!</string>
+							<string>Swipe the scientific
+ flask left and right to 
+catch the falling atoms!</string>
 							<false/>
 						</array>
 					</dict>
@@ -563,6 +597,19 @@ flask to catch the falling atoms!</string>
 						<string>Check</string>
 						<key>value</key>
 						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>0.014058900065720081</real>
+							<real>0.014058900065720081</real>
+							<real>0.014058900065720081</real>
+							<real>1</real>
+						</array>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -616,7 +663,7 @@ flask to catch the falling atoms!</string>
 							<real>0.0</real>
 							<real>0.0</real>
 							<real>0.0</real>
-							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -702,8 +749,8 @@ flask to catch the falling atoms!</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>176.46382141113281</real>
-							<real>306.31454467773438</real>
+							<real>177.5982666015625</real>
+							<real>311.22637939453125</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -783,6 +830,19 @@ at the bottom of the screen!</string>
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>0.014058900065720081</real>
+							<real>0.014058900065720081</real>
+							<real>0.014058900065720081</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>dimensions</string>
 						<key>type</key>
 						<string>Size</string>
@@ -833,7 +893,7 @@ at the bottom of the screen!</string>
 							<real>0.0</real>
 							<real>0.0</real>
 							<real>0.0</real>
-							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -919,8 +979,8 @@ at the bottom of the screen!</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>144.41688537597656</real>
-							<real>192.13475036621094</real>
+							<real>160</real>
+							<real>201.49034118652344</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -967,7 +1027,7 @@ at the bottom of the screen!</string>
 						<array>
 							<string>Level up in your scientific 
 career! Become an Einstein
-by passing all of the levels!</string>
+ by passing all of the levels!</string>
 							<false/>
 						</array>
 					</dict>
@@ -997,6 +1057,19 @@ by passing all of the levels!</string>
 						<string>Check</string>
 						<key>value</key>
 						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>0.014058900065720081</real>
+							<real>0.014058900065720081</real>
+							<real>0.014058900065720081</real>
+							<real>1</real>
+						</array>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1050,7 +1123,7 @@ by passing all of the levels!</string>
 							<real>0.0</real>
 							<real>0.0</real>
 							<real>0.0</real>
-							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -1136,8 +1209,8 @@ by passing all of the levels!</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>178.53759765625</real>
-							<real>65.819740295410156</real>
+							<real>179.64903259277344</real>
+							<real>64.708305358886719</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1218,6 +1291,19 @@ will end the game!</string>
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>0.014058900065720081</real>
+							<real>0.014058900065720081</real>
+							<real>0.014058900065720081</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>dimensions</string>
 						<key>type</key>
 						<string>Size</string>
@@ -1265,10 +1351,10 @@ will end the game!</string>
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>0.014058900065720081</real>
-							<real>0.014058900065720081</real>
-							<real>0.014058900065720081</real>
-							<real>1</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>

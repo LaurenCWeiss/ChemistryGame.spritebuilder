@@ -159,7 +159,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         //min and max set in LevelData indicate which types of atoms will be spawned...1...18
         //means that any of the 18 different atoms could be spawned 8 times so far
         
-        for i in 1...currentLevelData!.spawnThisManyRandomOnes {
+        for i in 1...8 {
             spawn.append(Int.random(min: currentLevelData!.randomMin, max: currentLevelData!.randomMax))
         }
         
@@ -251,7 +251,7 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     
     override func onEnter() {
         super.onEnter()
-        self.schedule(Selector("dropAtom"), interval: 0.5)
+        self.schedule(Selector("dropAtom"), interval: 2)
         setImage()
     }
     
@@ -349,11 +349,11 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
         return true
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom?, border: Border!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, atomCollision: Atom!, border: Border!) -> Bool {
         let magnitude = levelData.levels[LevelData.curLevel].magnitude
         let randomImpulse = ccpAdd(ccp(CGFloat.random(min: -magnitude.x, max: magnitude.x),0),ccp(3.0,0))
         
-        atomCollision?.physicsBody.applyImpulse(randomImpulse)
+        atomCollision.physicsBody.applyImpulse(randomImpulse)
         
         return true
     }
@@ -408,8 +408,17 @@ class ScienceScene: CCNode, CCPhysicsCollisionDelegate {
     }
     
     func LoadLevelTransitionScene() {
+        
+        
         let ScienceScene = CCBReader.loadAsScene("LevelTransitionScene")
         CCDirector.sharedDirector().replaceScene(ScienceScene)
+        
+    
+        if (LevelData.curLevel) > 29 {
+            LevelData.curLevel = 0
+        } else {
+            LevelData.curLevel++
+        }
     }
     
     
