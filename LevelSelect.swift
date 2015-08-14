@@ -19,7 +19,11 @@ class LevelSelect: CCNode {
     }
     
     func startLevel(button:LevelButton) {
-        LevelData.curLevel = button.level
+        let levelNum = button.level
+        
+        LevelData.curLevel = levelNum
+        Gamestate.sharedInstance.currentLevelNumber = levelNum + 1
+        
         let LevelSelect = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().presentScene(LevelSelect)
     }

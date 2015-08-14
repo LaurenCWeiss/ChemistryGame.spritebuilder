@@ -15,7 +15,8 @@ class CareerLevelUpLabel: CCNode {
     
     
     func didLoadFromCCB() {
-        careerUpSmallLabel.string = levelData.levels[LevelData.curLevel].careerUpSmallLabel
+        careerUpSmallLabel.string = Gamestate.sharedInstance.levelUpData.text
     }
 }
+
 

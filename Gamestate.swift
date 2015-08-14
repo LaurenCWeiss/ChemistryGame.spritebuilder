@@ -12,27 +12,24 @@ class Gamestate {
     
     static let sharedInstance = Gamestate()
     
-    //level up constants
     let internLevel = 1
     let researcherLevel = 5
-    var highestCompletedLevel = 1
+    
+    var highestLevelNumberCompleted = 1
+    var currentLevelNumber = 1
+    
     var passed:[Bool] = []
-    
-    //array of 30 levels all defaulted to passed being false
-    
     init() {
-        
         for i in 1...30 {
             passed.append(false)
         }
-        
     }
     
     var levelUpData: (text: String, imageName: String) {
-        switch highestCompletedLevel {
-        case 0...internLevel:
+        switch highestLevelNumberCompleted {
+        case internLevel...researcherLevel - 1:
             return ("You're an intern!", "Art Assets/Scientist1.png")
-        case (internLevel + 1)...researcherLevel:
+        case researcherLevel:
             return ("You're a researcher!", "Art Assets/Scientist2.png")
         default:
             return ("add more stuff", "Art Assets/Scientist1.png")

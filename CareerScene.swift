@@ -30,11 +30,18 @@ class CareerScene: CCNode {
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
-        var MyNewCareerScientistImage = Gamestate.sharedInstance.levelUpData.imageName
+
         
-        var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
-        spriteB.position = ccp(screenWidth/2,350)
+       var spriteB = CCSprite(imageNamed:"\(Gamestate.sharedInstance.levelUpData.imageName)")
+        spriteB.position = ccp(screenWidth/2,200)
         self.addChild(spriteB)
+        
+        var label = CCLabelTTF(string: "\(Gamestate.sharedInstance.levelUpData.text)", fontName: "Arial", fontSize: 20)
+        label.name = "\(Gamestate.sharedInstance.levelUpData.text)Label"
+        label.position = ccp(200,25)
+        self.addChild(label)
+        
     }
+    
     
 }
