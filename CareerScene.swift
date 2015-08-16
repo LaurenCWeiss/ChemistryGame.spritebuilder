@@ -33,12 +33,13 @@ class CareerScene: CCNode {
 
         
        var spriteB = CCSprite(imageNamed:"\(Gamestate.sharedInstance.levelUpData.imageName)")
-        spriteB.position = ccp(screenWidth/2,200)
+        spriteB.position = ccp(screenWidth/2,screenHeight/2)
         self.addChild(spriteB)
         
-        var label = CCLabelTTF(string: "\(Gamestate.sharedInstance.levelUpData.text)", fontName: "Arial", fontSize: 20)
+        var label = CCLabelTTF(string: "\(Gamestate.sharedInstance.levelUpData.text)", fontName: "AmericanTypewriter", fontSize: 30)
         label.name = "\(Gamestate.sharedInstance.levelUpData.text)Label"
-        label.position = ccp(200,25)
+        label.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        label.position = ccp(screenWidth/2,screenHeight/2 - 140)
         self.addChild(label)
         
     }

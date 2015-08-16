@@ -127,7 +127,7 @@ struct LevelData {
         
         level1.goal = 3
         level1.smallLabel = "Water"
-        level1.smallLabelA = "Water"
+        level1.smallLabelA = "Water - H2O"
         level1.level = 1
         level1.ElementImage1 = 1
         level1.ElementImage2 = 1
@@ -144,7 +144,7 @@ struct LevelData {
         //add intern career level
         level1.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         level1.careerUpSmallLabelForLevel = "Intern"
-        level1.smallOrderLabel = "Water"
+        level1.smallOrderLabel = "Water - H2O"
         level1.smallLevelLabel = "Level 1"
         level1.careerUpSmallLabel = "You're an intern!"
 
@@ -166,7 +166,7 @@ struct LevelData {
         
         level2.goal = 2
         level2.smallLabel = "Carbon Monoxide"
-        level2.smallLabelA = "Carbon Monoxide"
+        level2.smallLabelA = "Carbon Monoxide - CO"
         level2.level = 2
         level2.ElementImage1 = 1
         level2.ElementImage2 = 1
@@ -179,14 +179,14 @@ struct LevelData {
         level2.magnitude = ccp(50,100)
         level2.spawnThese = [3,1,2,3]
         level2.randomMin = 1
-        level2.randomMax = 5
+        level2.randomMax = 18
         
         
         //add an order label of what the user is making in this level
         level2.careerUpSmallLabel = "You're an intern!"
         
         
-        level2.smallOrderLabel = "Carbon Monoxide"
+        level2.smallOrderLabel = "Carbon Monoxide - CO"
         
         level2.smallLevelLabel = "Level 2"
         
@@ -206,8 +206,9 @@ struct LevelData {
         level3.counters["Hydrogen"] = 3
         
         level3.goal = 4
-        level3.smallLabel = "Ammonia"
-        level3.smallLabelA = "Ammonia"
+        level3.smallLabel = "Ammonia - NH3"
+        level3.smallLabelA = "Ammonia - NH3"
+        
         level3.level = 3
         level3.ElementImage1 = 1
         level3.ElementImage2 = 1
@@ -219,7 +220,7 @@ struct LevelData {
         level3.magnitude = ccp(0,30)
 
         level3.randomMin = 1
-        level3.randomMax = 10
+        level3.randomMax = 18
         level3.spawnThisManyRandomOnes = 5
         
         
@@ -244,7 +245,8 @@ struct LevelData {
         level4.counters["Hydrogen"] = 2
         
         level4.goal = 4
-        level4.smallLabel = "Acetylene"
+        level4.smallLabel = "Acetylene - C2H2"
+        level4.smallLabelA = "Acetylene - C2H2"
         level4.level = 4
         level4.ElementImage1 = 1
         level4.ElementImage2 = 1
@@ -256,7 +258,7 @@ struct LevelData {
         level4.magnitude = ccp(0,30)
      
         level4.randomMin = 1
-        level4.randomMax = 3
+        level4.randomMax = 18
          level4.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
@@ -281,6 +283,7 @@ struct LevelData {
         
         level5.goal = 8
         level5.smallLabel = "Acetic Acid"
+        level5.smallLabelA = "Acetic Acid - C2H4O2"
         level5.level = 5
         level5.ElementImage1 = 1
         level5.ElementImage2 = 1
@@ -296,7 +299,7 @@ struct LevelData {
         level5.magnitude = ccp(0,30)
    
         level5.randomMin = 1
-        level5.randomMax = 3
+        level5.randomMax = 18
          level5.spawnThisManyRandomOnes = 5
         
         level5.smallLevelLabel = "Level 5"
@@ -319,6 +322,8 @@ struct LevelData {
         
         level6.goal = 3
         level6.smallLabel = "Lithium Nitrite"
+        level6.smallLabelA = "Lithium Nitrite - LiNO2"
+       
         level6.level = 6
         level6.ElementImage1 = 1
         level6.ElementImage2 = 1
@@ -334,7 +339,7 @@ struct LevelData {
         level6.magnitude = ccp(0,30)
 
         level6.randomMin = 1
-        level6.randomMax = 200
+        level6.randomMax = 18
         level6.smallLevelLabel = "Level 6"
         
         //add an order label of what the user is making in this level
@@ -360,6 +365,7 @@ struct LevelData {
         
         level7.goal = 4
         level7.smallLabel = "Aluminum Chloride"
+        level7.smallLabelA = "Aluminum Chloride - AlCl3"
         level7.level = 7
         level7.ElementImage1 = 1
         level7.ElementImage2 = 1
@@ -375,7 +381,7 @@ struct LevelData {
         level7.magnitude = ccp(0,30)
    
         level7.randomMin = 1
-        level7.randomMax = 3
+        level7.randomMax = 18
         level7.smallLevelLabel = "Level 7"
         
         //add an order label of what the user is making in this level
@@ -396,6 +402,7 @@ struct LevelData {
         
         level8.goal = 3
         level8.smallLabel = "Carbon Dioxide"
+        level8.smallLabelA = "Carbon Dioxide - CO2"
         level8.level = 8
         level8.ElementImage1 = 1
         level8.ElementImage2 = 1
@@ -405,7 +412,7 @@ struct LevelData {
         level8.magnitude = ccp(0,30)
  
         level8.randomMin = 1
-        level8.randomMax = 3
+        level8.randomMax = 18
          level8.spawnThisManyRandomOnes = 5
         
         level8.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
@@ -434,6 +441,7 @@ struct LevelData {
         
         level9.goal = 6
         level9.smallLabel = "Copper Sulfate"
+        level9.smallLabelA = "Copper Sulfate - CuSO4"
         level9.level = 9
         level9.ElementImage1 = 1
         level9.ElementImage2 = 1
@@ -445,7 +453,7 @@ struct LevelData {
         level9.magnitude = ccp(0,30)
      
         level9.randomMin = 1
-        level9.randomMax = 3
+        level9.randomMax = 18
         
         level9.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //add an order label of what the user is making in this level
@@ -470,6 +478,7 @@ struct LevelData {
         
         level10.goal = 5
         level10.smallLabel = "Aluminum Oxide"
+        level10.smallLabelA = "Aluminum Oxide - Al2O3"
         level10.level = 10
         level10.ElementImage1 = 1
         level10.ElementImage2 = 1
@@ -481,7 +490,7 @@ struct LevelData {
         level10.magnitude = ccp(0,30)
         level10.spawnThese = [3,1,2,3]
         level10.randomMin = 1
-        level10.randomMax = 3
+        level10.randomMax = 18
         level10.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         //add an order label of what the user is making in this level
@@ -508,6 +517,7 @@ struct LevelData {
         
         level11.goal = 5
         level11.smallLabel = "Ammonium"
+        level11.smallLabelA = "Ammonium - NH4"
         level11.level = 11
         level11.ElementImage1 = 1
         level11.ElementImage2 = 1
@@ -519,7 +529,7 @@ struct LevelData {
         level11.magnitude = ccp(0,30)
         level11.spawnThese = [3,1,2,3]
         level11.randomMin = 1
-        level11.randomMax = 3
+        level11.randomMax = 18
         level11.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         //add an order label of what the user is making in this level
@@ -555,11 +565,13 @@ struct LevelData {
         level12.magnitude = ccp(0,30)
         level12.spawnThese = [3,1,2,3]
         level12.randomMin = 1
-        level12.randomMax = 3
+        level12.randomMax = 18
         level12.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //add an order label of what the user is making in this level
          level12.spawnThisManyRandomOnes = 5
         level12.smallOrderLabel = "Nitrite"
+        level12.smallLabelA = "Nitrite - NO2"
+          level12.smallLevelLabel = "Level 12"
         
         levels.append(level12)
         
@@ -590,11 +602,13 @@ struct LevelData {
         level13.magnitude = ccp(0,30)
         level13.spawnThese = [3,1,2,3]
         level13.randomMin = 1
-        level13.randomMax = 3
+        level13.randomMax = 18
         level13.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //add an order label of what the user is making in this level
         level13.spawnThisManyRandomOnes = 5
         level13.smallOrderLabel = "Hydronium"
+         level13.smallLabelA = "Hydronium-H3O"
+          level13.smallLevelLabel = "Level 13"
         
         levels.append(level13)
         
@@ -627,12 +641,13 @@ struct LevelData {
         level14.magnitude = ccp(0,30)
         level14.spawnThese = [3,1,2,3]
         level14.randomMin = 1
-        level14.randomMax = 3
+        level14.randomMax = 18
          level14.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level14.smallOrderLabel = "Hydrogen Sulfate"
-        
+        level14.smallLabelA = "Hydrogen Sulfate-HSO4"
+          level14.smallLevelLabel = "Level 14"
         levels.append(level14)
         
         
@@ -663,12 +678,13 @@ struct LevelData {
         level15.magnitude = ccp(0,30)
         level15.spawnThese = [3,1,2,3]
         level15.randomMin = 1
-        level15.randomMax = 3
+        level15.randomMax = 18
          level15.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level15.smallOrderLabel = "Hydroxide"
-        
+        level15.smallLabelA = "Hydroxide-OH"
+          level15.smallLevelLabel = "Level 15"
         levels.append(level15)
         
         
@@ -704,11 +720,13 @@ struct LevelData {
         level16.magnitude = ccp(0,30)
         level16.spawnThese = [3,1,2,3]
         level16.randomMin = 1
-        level16.randomMax = 3
+        level16.randomMax = 18
          level16.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level16.smallOrderLabel = "Calcium Carbonate"
+        level16.smallLabelA = "Calcium Carbonate-CaCO3"
+          level16.smallLevelLabel = "Level 16"
         
         levels.append(level16)
         
@@ -740,11 +758,13 @@ struct LevelData {
         level17.magnitude = ccp(0,30)
         level17.spawnThese = [3,1,2,3]
         level17.randomMin = 1
-        level17.randomMax = 3
+        level17.randomMax = 18
          level17.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level17.smallOrderLabel = "Nitrate"
+        level17.smallLabelA = "Nitrate-NO3"
+          level17.smallLevelLabel = "Level 17"
         
         levels.append(level17)
         
@@ -776,16 +796,17 @@ struct LevelData {
         level18.ElementImage2Name = "Art Assets/Hydrogen.png"
         level18.ElementImage2Name = "Art Assets/Chlorine.png"
         level18.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-        
+          level18.smallLevelLabel = "Level 18"
         
         level18.magnitude = ccp(0,30)
         level18.spawnThese = [3,1,2,3]
         level18.randomMin = 1
-        level18.randomMax = 3
+        level18.randomMax = 18
          level18.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level18.smallOrderLabel = "Chloroform"
+         level18.smallLabelA = "Chloroform-CHCl3"
         
         levels.append(level18)
         
@@ -818,11 +839,13 @@ struct LevelData {
         level19.magnitude = ccp(0,30)
         level19.spawnThese = [3,1,2,3]
         level19.randomMin = 1
-        level19.randomMax = 3
+        level19.randomMax = 18
          level19.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level19.smallOrderLabel = "Ethane"
+                 level19.smallLabelA = "Ethane-C2H6"
+          level19.smallLevelLabel = "Level 19"
         
         levels.append(level19)
         
@@ -854,12 +877,13 @@ struct LevelData {
         level20.magnitude = ccp(0,30)
         level20.spawnThese = [3,1,2,3]
         level20.randomMin = 1
-        level20.randomMax = 3
+        level20.randomMax = 18
          level20.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level20.smallOrderLabel = "Iron(tri) Phosphide"
-        
+                  level20.smallLabelA = "Iron(tri) Phosphide-Fe3P"
+          level20.smallLevelLabel = "Level 20"
         levels.append(level20)
         
         
@@ -887,17 +911,17 @@ struct LevelData {
         level21.ElementImage2Name = "Art Assets/Nitrogen.png"
         level21.ElementImage3Name = "Art Assets/Oxygen.png"
         level21.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-        
+          level21.smallLabelA = "Potassium Nitrite-KNO2"
         
         
         
         level21.magnitude = ccp(0,30)
         level21.spawnThese = [3,1,2,3]
         level21.randomMin = 1
-        level21.randomMax = 3
+        level21.randomMax = 18
          level21.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
-        
+          level21.smallLevelLabel = "Level 21"
         level21.smallOrderLabel = "Potassium Nitrite"
         
         levels.append(level21)
@@ -924,13 +948,15 @@ struct LevelData {
         level22.ElementImage1Name = "Art Assets/Sodium.png"
         level22.ElementImage2Name = "Art Assets/Chlorine.png"
         level22.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+          level22.smallLabelA = "Sodium Chloride-NaCl"
         
         
         level22.magnitude = ccp(0,30)
         level22.spawnThese = [3,1,2,3]
         level22.randomMin = 1
-        level22.randomMax = 3
+        level22.randomMax = 18
          level22.spawnThisManyRandomOnes = 5
+          level22.smallLevelLabel = "Level 22"
         //add an order label of what the user is making in this level
         
         level22.smallOrderLabel = "Sodium Chloride"
@@ -965,12 +991,13 @@ struct LevelData {
         level23.magnitude = ccp(0,30)
         level23.spawnThese = [3,1,2,3]
         level23.randomMin = 1
-        level23.randomMax = 3
+        level23.randomMax = 18
          level23.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
+             level23.smallLabelA = "Disodium Telluride"
         
-        level23.smallOrderLabel = "Disodium Telluride"
-        
+        level23.smallOrderLabel = "Disodium Telluride-Na2Te"
+          level23.smallLevelLabel = "Level 23"
         levels.append(level23)
         
         
@@ -988,7 +1015,7 @@ struct LevelData {
         
         
         level24.goal = 4
-        level24.smallLabel = "Galium(lll) Bromide"
+        level24.smallLabel = "Galium(3) Bromide"
         level24.level = 24
         level24.ElementImage1 = 1
         level24.ElementImage2 = 1
@@ -1001,12 +1028,13 @@ struct LevelData {
         level24.magnitude = ccp(0,30)
         level24.spawnThese = [3,1,2,3]
         level24.randomMin = 1
-        level24.randomMax = 3
+        level24.randomMax = 18
          level24.spawnThisManyRandomOnes = 5
+            level24.smallLabelA = "Galium(3) Bromide-GaBr3"
         //add an order label of what the user is making in this level
         
-        level24.smallOrderLabel = "Galium(lll) Bromide"
-        
+        level24.smallOrderLabel = "Galium(3) Bromide"
+          level24.smallLevelLabel = "Level 24"
         levels.append(level24)
         
         
@@ -1024,7 +1052,7 @@ struct LevelData {
         
         
         level25.goal = 3
-        level25.smallLabel = "Mercury(l) Bromide"
+        level25.smallLabel = "Mercury(1) Bromide"
         level25.level = 25
         level25.ElementImage1 = 1
         level25.ElementImage2 = 1
@@ -1037,12 +1065,13 @@ struct LevelData {
         level25.magnitude = ccp(0,30)
         level25.spawnThese = [3,1,2,3]
         level25.randomMin = 1
-        level25.randomMax = 3
+        level25.randomMax = 18
          level25.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
-        level25.smallOrderLabel = "Mercury(l) Bromide"
-        
+        level25.smallOrderLabel = "Mercury(1) Bromide"
+            level25.smallLabelA = "Mercury(1) Bromide-HgBr2"
+          level25.smallLevelLabel = "Level 25"
         levels.append(level25)
         
         //Potassium oxide - K2O
@@ -1071,12 +1100,13 @@ struct LevelData {
         level26.magnitude = ccp(0,30)
         level26.spawnThese = [3,1,2,3]
         level26.randomMin = 1
-        level26.randomMax = 3
+        level26.randomMax = 18
          level26.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level26.smallOrderLabel = "Potassium Oxide"
-        
+           level26.smallLabelA = "Potassium Oxide-K2O"
+          level26.smallLevelLabel = "Level 26"
         levels.append(level26)
         
         
@@ -1106,12 +1136,13 @@ struct LevelData {
         level27.magnitude = ccp(0,30)
         level27.spawnThese = [3,1,2,3]
         level27.randomMin = 1
-        level27.randomMax = 3
+        level27.randomMax = 18
          level27.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level27.smallOrderLabel = "Mercuric Chloride"
-        
+           level27.smallLabelA = "Mercuric Chloride-HgS"
+          level27.smallLevelLabel = "Level 27"
         levels.append(level27)
         
         
@@ -1143,12 +1174,13 @@ struct LevelData {
         level28.magnitude = ccp(0,30)
         level28.spawnThese = [3,1,2,3]
         level28.randomMin = 1
-        level28.randomMax = 3
+        level28.randomMax = 18
          level28.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level28.smallOrderLabel = "Nitrogen Dioxide"
-        
+           level28.smallLabelA = "Nitrogen Dioxide-NO2"
+          level28.smallLevelLabel = "Level 28"
         levels.append(level28)
         
         
@@ -1178,11 +1210,12 @@ struct LevelData {
         level29.ElementImage3Name = "Art Assets/Hydrogen.png"
         level29.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
-        
+           level29.smallLabelA = "Potassium Hydroxide-KOH"
+          level29.smallLevelLabel = "Level 29"
         level29.magnitude = ccp(0,30)
         level29.spawnThese = [3,1,2,3]
         level29.randomMin = 1
-        level29.randomMax = 3
+        level29.randomMax = 18
          level29.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
@@ -1217,12 +1250,14 @@ struct LevelData {
         level30.magnitude = ccp(0,70)
         level30.spawnThese = [3,1,2,3]
         level30.randomMin = 1
-        level30.randomMax = 3
+        level30.randomMax = 18
          level30.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
         level30.smallOrderLabel = "Sulfur Dioxide"
+           level30.smallLabelA = "Sulfur Dioxide-SO2"
         level30.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+          level30.smallLevelLabel = "Level 30"
         
         levels.append(level30)
         

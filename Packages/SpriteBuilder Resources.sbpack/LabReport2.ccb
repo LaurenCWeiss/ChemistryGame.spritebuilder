@@ -602,7 +602,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Click to continue</string>
+							<string>Tap to continue</string>
 							<false/>
 						</array>
 					</dict>
@@ -738,8 +738,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

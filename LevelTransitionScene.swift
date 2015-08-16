@@ -19,7 +19,7 @@
             let screenWidth = screenSize.width
             
             var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
-            spriteC.position = ccp(screenWidth/2,250)
+            spriteC.position = ccp(screenWidth/2,190)
             self.addChild(spriteC)
         }
         

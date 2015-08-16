@@ -24,7 +24,7 @@ class LevelButton: CCButton {
 
             
         var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
-        spriteC.positionInPoints = ccpAdd(self.positionInPoints,ccp(0,0))
+        spriteC.positionInPoints = ccpAdd(self.positionInPoints,ccp(40,20))
         self.parent.addChild(spriteC)
         }
     }
