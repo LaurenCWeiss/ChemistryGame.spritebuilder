@@ -144,7 +144,7 @@ struct LevelData {
         //add intern career level
         level1.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         level1.careerUpSmallLabelForLevel = "Intern"
-        level1.smallOrderLabel = "Water - H2O"
+        level1.smallOrderLabel = "Water-H2O"
         level1.smallLevelLabel = "Level 1"
         level1.careerUpSmallLabel = "You're an intern!"
 
@@ -166,7 +166,7 @@ struct LevelData {
         
         level2.goal = 2
         level2.smallLabel = "Carbon Monoxide"
-        level2.smallLabelA = "Carbon Monoxide - CO"
+        level2.smallLabelA = "Carbon Monoxide-CO"
         level2.level = 2
         level2.ElementImage1 = 1
         level2.ElementImage2 = 1
@@ -186,7 +186,7 @@ struct LevelData {
         level2.careerUpSmallLabel = "You're an intern!"
         
         
-        level2.smallOrderLabel = "Carbon Monoxide - CO"
+        level2.smallOrderLabel = "Carbon Monoxide-CO"
         
         level2.smallLevelLabel = "Level 2"
         
@@ -206,8 +206,8 @@ struct LevelData {
         level3.counters["Hydrogen"] = 3
         
         level3.goal = 4
-        level3.smallLabel = "Ammonia - NH3"
-        level3.smallLabelA = "Ammonia - NH3"
+        level3.smallLabel = "Ammonia-NH3"
+        level3.smallLabelA = "Ammonia-NH3"
         
         level3.level = 3
         level3.ElementImage1 = 1
@@ -245,8 +245,8 @@ struct LevelData {
         level4.counters["Hydrogen"] = 2
         
         level4.goal = 4
-        level4.smallLabel = "Acetylene - C2H2"
-        level4.smallLabelA = "Acetylene - C2H2"
+        level4.smallLabel = "Acetylene-C2H2"
+        level4.smallLabelA = "Acetylene-C2H2"
         level4.level = 4
         level4.ElementImage1 = 1
         level4.ElementImage2 = 1
@@ -283,7 +283,7 @@ struct LevelData {
         
         level5.goal = 8
         level5.smallLabel = "Acetic Acid"
-        level5.smallLabelA = "Acetic Acid - C2H4O2"
+        level5.smallLabelA = "Acetic Acid-C2H4O2"
         level5.level = 5
         level5.ElementImage1 = 1
         level5.ElementImage2 = 1
@@ -322,7 +322,7 @@ struct LevelData {
         
         level6.goal = 3
         level6.smallLabel = "Lithium Nitrite"
-        level6.smallLabelA = "Lithium Nitrite - LiNO2"
+        level6.smallLabelA = "Lithium Nitrite-LiNO2"
        
         level6.level = 6
         level6.ElementImage1 = 1
@@ -365,7 +365,7 @@ struct LevelData {
         
         level7.goal = 4
         level7.smallLabel = "Aluminum Chloride"
-        level7.smallLabelA = "Aluminum Chloride - AlCl3"
+        level7.smallLabelA = "Aluminum Chloride-AlCl3"
         level7.level = 7
         level7.ElementImage1 = 1
         level7.ElementImage2 = 1
@@ -402,7 +402,7 @@ struct LevelData {
         
         level8.goal = 3
         level8.smallLabel = "Carbon Dioxide"
-        level8.smallLabelA = "Carbon Dioxide - CO2"
+        level8.smallLabelA = "Carbon Dioxide-CO2"
         level8.level = 8
         level8.ElementImage1 = 1
         level8.ElementImage2 = 1
@@ -441,7 +441,7 @@ struct LevelData {
         
         level9.goal = 6
         level9.smallLabel = "Copper Sulfate"
-        level9.smallLabelA = "Copper Sulfate - CuSO4"
+        level9.smallLabelA = "Copper Sulfate-CuSO4"
         level9.level = 9
         level9.ElementImage1 = 1
         level9.ElementImage2 = 1
@@ -478,7 +478,7 @@ struct LevelData {
         
         level10.goal = 5
         level10.smallLabel = "Aluminum Oxide"
-        level10.smallLabelA = "Aluminum Oxide - Al2O3"
+        level10.smallLabelA = "Aluminum Oxide-Al2O3"
         level10.level = 10
         level10.ElementImage1 = 1
         level10.ElementImage2 = 1
@@ -517,7 +517,7 @@ struct LevelData {
         
         level11.goal = 5
         level11.smallLabel = "Ammonium"
-        level11.smallLabelA = "Ammonium - NH4"
+        level11.smallLabelA = "Ammonium-NH4"
         level11.level = 11
         level11.ElementImage1 = 1
         level11.ElementImage2 = 1
@@ -570,7 +570,7 @@ struct LevelData {
         //add an order label of what the user is making in this level
          level12.spawnThisManyRandomOnes = 5
         level12.smallOrderLabel = "Nitrite"
-        level12.smallLabelA = "Nitrite - NO2"
+        level12.smallLabelA = "Nitrite-NO2"
           level12.smallLevelLabel = "Level 12"
         
         levels.append(level12)

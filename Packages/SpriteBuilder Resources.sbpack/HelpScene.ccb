@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>29</integer>
+	<integer>30</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -248,7 +248,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>27</integer>
+				<integer>29</integer>
 				<key>baseClass</key>
 				<string>CCNodeColor</string>
 				<key>children</key>
@@ -278,8 +278,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>30.894891738891602</real>
-							<real>462.49588012695312</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -316,8 +316,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>2.6222388744354248</real>
-							<real>0.58358794450759888</real>
+							<real>3.4209060668945312</real>
+							<real>5.7949743270874023</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -378,7 +378,7 @@
 						<key>value</key>
 						<array>
 							<real>162.0068359375</real>
-							<real>491.67526245117188</real>
+							<real>499.31973266601562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1025,9 +1025,9 @@ flask to catch the falling atoms!</string>
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -1051,7 +1051,7 @@ flask to catch the falling atoms!</string>
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>0.0</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1242,9 +1242,9 @@ at the bottom of the screen!</string>
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -1268,7 +1268,7 @@ at the bottom of the screen!</string>
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>0.0</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1345,7 +1345,7 @@ at the bottom of the screen!</string>
 						<key>value</key>
 						<array>
 							<real>144.41688537597656</real>
-							<real>192.13475036621094</real>
+							<real>188.42338562011719</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1459,9 +1459,9 @@ by passing all of the levels!</string>
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -1485,7 +1485,7 @@ by passing all of the levels!</string>
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>0.0</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1677,9 +1677,9 @@ will end the game!</string>
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -1703,7 +1703,7 @@ will end the game!</string>
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>0.0</real>
 							<integer>0</integer>
 						</array>
 					</dict>
