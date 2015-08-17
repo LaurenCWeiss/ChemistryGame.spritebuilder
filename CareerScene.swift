@@ -30,8 +30,9 @@ class CareerScene: CCNode {
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         let screenWidth = screenSize.width
         let screenHeight = screenSize.height
-
+        var MyNewCareerScientistImage = Gamestate.sharedInstance.levelUpData.imageName
         
+<<<<<<< HEAD
        var spriteB = CCSprite(imageNamed:"\(Gamestate.sharedInstance.levelUpData.imageName)")
         spriteB.position = ccp(screenWidth/2,screenHeight/2)
         self.addChild(spriteB)
@@ -42,7 +43,11 @@ class CareerScene: CCNode {
         label.position = ccp(screenWidth/2,screenHeight/2 - 140)
         self.addChild(label)
         
+=======
+        var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
+        spriteB.position = ccp(screenWidth/2,350)
+        self.addChild(spriteB)
+>>>>>>> origin/myNewBranch
     }
-    
     
 }

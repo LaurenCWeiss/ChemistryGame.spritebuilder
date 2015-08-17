@@ -48,7 +48,6 @@ struct Data {
     var spawnThese: [Int] = []
     var randomMin: Int = 0
     var randomMax: Int = 0
-    var spawnThisManyRandomOnes: Int = 0
     
     
     //element images + order label
@@ -116,8 +115,8 @@ struct LevelData {
         var level1 = Data()
         
         //need to this ensure that hydrogen atoms are dropped
-        level1.hydrogenCounter = 3
-        level1.oxygenCounter = 3
+        level1.hydrogenCounter = 4
+        level1.oxygenCounter = 6
         
         
         //how many of an element do you have left
@@ -134,11 +133,18 @@ struct LevelData {
         level1.ElementImage1Name = "Art Assets/Hydrogen.png"
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
         
+<<<<<<< HEAD
         level1.magnitude = ccp(50,100)
 //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
         level1.randomMin = 1
         level1.randomMax = 5
         level1.spawnThisManyRandomOnes = 5
+=======
+        level1.magnitude = ccp(50,1000)
+        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+        level1.randomMin = 1
+        level1.randomMax = 3
+>>>>>>> origin/myNewBranch
         
         
         //add intern career level
@@ -151,7 +157,42 @@ struct LevelData {
         
         
         levels.append(level1)
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         var level2 = Data()
         
@@ -174,12 +215,16 @@ struct LevelData {
         level2.ElementImage2Name = "Art Assets/Oxygen.png"
         //        level2.careerUpSmallLabel = "sci"
         level2.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
-         level2.spawnThisManyRandomOnes = 5
+        
         
         level2.magnitude = ccp(0,30)
         level2.spawnThese = [3,1,2,3]
         level2.randomMin = 1
+<<<<<<< HEAD
         level2.randomMax = 6
+=======
+        level2.randomMax = 3
+>>>>>>> origin/myNewBranch
         
         
         //add an order label of what the user is making in this level
@@ -217,11 +262,18 @@ struct LevelData {
         level3.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
+<<<<<<< HEAD
         level3.magnitude = ccp(50,80)
 
         level3.randomMin = 1
         level3.randomMax = 8
         level3.spawnThisManyRandomOnes = 5
+=======
+        level3.magnitude = ccp(0,30)
+        level3.spawnThese = [3,1,2,3]
+        level3.randomMin = 1
+        level3.randomMax = 3
+>>>>>>> origin/myNewBranch
         
         
         //add an order label of what the user is making in this level
@@ -255,11 +307,19 @@ struct LevelData {
         level4.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
+<<<<<<< HEAD
         level4.magnitude = ccp(50,100)
      
         level4.randomMin = 1
         level4.randomMax = 6
          level4.spawnThisManyRandomOnes = 5
+=======
+        level4.magnitude = ccp(0,30)
+        level4.spawnThese = [3,1,2,3]
+        level4.randomMin = 1
+        level4.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level4.smallLevelLabel = "Level 4"
@@ -296,11 +356,18 @@ struct LevelData {
         level5.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
+<<<<<<< HEAD
         level5.magnitude = ccp(5,80)
    
         level5.randomMin = 1
         level5.randomMax = 7
          level5.spawnThisManyRandomOnes = 5
+=======
+        level5.magnitude = ccp(0,30)
+        level5.spawnThese = [3,1,2,3]
+        level5.randomMin = 1
+        level5.randomMax = 3
+>>>>>>> origin/myNewBranch
         
         level5.smallLevelLabel = "Level 5"
         //add an order label of what the user is making in this level
@@ -332,12 +399,17 @@ struct LevelData {
         level6.ElementImage1Name = "Art Assets/Lithium.png"
         level6.ElementImage2Name = "Art Assets/Nitrogen.png"
         level6.ElementImage3Name =  "Art Assets/Oxygen.png"
-         level6.spawnThisManyRandomOnes = 5
+        
         level6.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
+<<<<<<< HEAD
         level6.magnitude = ccp(10,300)
 
+=======
+        level6.magnitude = ccp(0,30)
+        level6.spawnThese = []
+>>>>>>> origin/myNewBranch
         level6.randomMin = 1
         level6.randomMax = 15
         level6.smallLevelLabel = "Level 6"
@@ -373,13 +445,18 @@ struct LevelData {
         
         level7.ElementImage1Name = "Art Assets/Aluminum.png"
         level7.ElementImage2Name = "Art Assets/Chlorine.png"
-         level7.spawnThisManyRandomOnes = 5
+        
         
         level7.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
+<<<<<<< HEAD
         level7.magnitude = ccp(5,30)
    
+=======
+        level7.magnitude = ccp(0,30)
+        level7.spawnThese = [3,1,2,3]
+>>>>>>> origin/myNewBranch
         level7.randomMin = 1
         level7.randomMax = 16
         level7.smallLevelLabel = "Level 7"
@@ -410,10 +487,15 @@ struct LevelData {
         level8.ElementImage2Name = "Art Assets/Oxygen.png"
         
         level8.magnitude = ccp(0,30)
- 
+        level8.spawnThese = [3,1,2,3]
         level8.randomMin = 1
+<<<<<<< HEAD
         level8.randomMax = 17
          level8.spawnThisManyRandomOnes = 5
+=======
+        level8.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         
         level8.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
@@ -451,7 +533,7 @@ struct LevelData {
         level9.ElementImage3Name = "Art Assets/Oxygen.png"
         
         level9.magnitude = ccp(0,30)
-     
+        level9.spawnThese = [3,1,2,3]
         level9.randomMin = 1
         level9.randomMax = 18
         
@@ -460,7 +542,7 @@ struct LevelData {
         
         level9.smallOrderLabel = "Copper Sulfate"
         level9.smallLevelLabel = "Level 9"
-         level9.spawnThisManyRandomOnes = 5
+        
         levels.append(level9)
         
         
@@ -494,7 +576,7 @@ struct LevelData {
         level10.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         //add an order label of what the user is making in this level
-         level10.spawnThisManyRandomOnes = 5
+        
         level10.smallOrderLabel = "Aluminum Oxide"
         level10.smallLevelLabel = "Level 10"
         levels.append(level10)
@@ -533,7 +615,7 @@ struct LevelData {
         level11.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         //add an order label of what the user is making in this level
-         level11.spawnThisManyRandomOnes = 5
+        
         level11.smallOrderLabel = "Ammonium"
         level11.smallLevelLabel = "Level 11"
         levels.append(level11)
@@ -568,7 +650,7 @@ struct LevelData {
         level12.randomMax = 18
         level12.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //add an order label of what the user is making in this level
-         level12.spawnThisManyRandomOnes = 5
+        
         level12.smallOrderLabel = "Nitrite"
         level12.smallLabelA = "Nitrite - NO2"
           level12.smallLevelLabel = "Level 12"
@@ -605,7 +687,7 @@ struct LevelData {
         level13.randomMax = 18
         level13.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         //add an order label of what the user is making in this level
-        level13.spawnThisManyRandomOnes = 5
+        
         level13.smallOrderLabel = "Hydronium"
          level13.smallLabelA = "Hydronium-H3O"
           level13.smallLevelLabel = "Level 13"
@@ -641,8 +723,13 @@ struct LevelData {
         level14.magnitude = ccp(0,30)
         level14.spawnThese = [3,1,2,3]
         level14.randomMin = 1
+<<<<<<< HEAD
         level14.randomMax = 18
          level14.spawnThisManyRandomOnes = 5
+=======
+        level14.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level14.smallOrderLabel = "Hydrogen Sulfate"
@@ -678,8 +765,13 @@ struct LevelData {
         level15.magnitude = ccp(0,30)
         level15.spawnThese = [3,1,2,3]
         level15.randomMin = 1
+<<<<<<< HEAD
         level15.randomMax = 18
          level15.spawnThisManyRandomOnes = 5
+=======
+        level15.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level15.smallOrderLabel = "Hydroxide"
@@ -720,8 +812,13 @@ struct LevelData {
         level16.magnitude = ccp(0,30)
         level16.spawnThese = [3,1,2,3]
         level16.randomMin = 1
+<<<<<<< HEAD
         level16.randomMax = 18
          level16.spawnThisManyRandomOnes = 5
+=======
+        level16.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level16.smallOrderLabel = "Calcium Carbonate"
@@ -758,8 +855,13 @@ struct LevelData {
         level17.magnitude = ccp(0,30)
         level17.spawnThese = [3,1,2,3]
         level17.randomMin = 1
+<<<<<<< HEAD
         level17.randomMax = 18
          level17.spawnThisManyRandomOnes = 5
+=======
+        level17.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level17.smallOrderLabel = "Nitrate"
@@ -801,8 +903,13 @@ struct LevelData {
         level18.magnitude = ccp(0,30)
         level18.spawnThese = [3,1,2,3]
         level18.randomMin = 1
+<<<<<<< HEAD
         level18.randomMax = 18
          level18.spawnThisManyRandomOnes = 5
+=======
+        level18.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level18.smallOrderLabel = "Chloroform"
@@ -839,8 +946,13 @@ struct LevelData {
         level19.magnitude = ccp(0,30)
         level19.spawnThese = [3,1,2,3]
         level19.randomMin = 1
+<<<<<<< HEAD
         level19.randomMax = 18
          level19.spawnThisManyRandomOnes = 5
+=======
+        level19.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level19.smallOrderLabel = "Ethane"
@@ -877,8 +989,13 @@ struct LevelData {
         level20.magnitude = ccp(0,30)
         level20.spawnThese = [3,1,2,3]
         level20.randomMin = 1
+<<<<<<< HEAD
         level20.randomMax = 18
          level20.spawnThisManyRandomOnes = 5
+=======
+        level20.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level20.smallOrderLabel = "Iron(tri) Phosphide"
@@ -918,8 +1035,13 @@ struct LevelData {
         level21.magnitude = ccp(0,30)
         level21.spawnThese = [3,1,2,3]
         level21.randomMin = 1
+<<<<<<< HEAD
         level21.randomMax = 18
          level21.spawnThisManyRandomOnes = 5
+=======
+        level21.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
           level21.smallLevelLabel = "Level 21"
         level21.smallOrderLabel = "Potassium Nitrite"
@@ -954,9 +1076,14 @@ struct LevelData {
         level22.magnitude = ccp(0,30)
         level22.spawnThese = [3,1,2,3]
         level22.randomMin = 1
+<<<<<<< HEAD
         level22.randomMax = 18
          level22.spawnThisManyRandomOnes = 5
           level22.smallLevelLabel = "Level 22"
+=======
+        level22.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level22.smallOrderLabel = "Sodium Chloride"
@@ -991,8 +1118,13 @@ struct LevelData {
         level23.magnitude = ccp(0,30)
         level23.spawnThese = [3,1,2,3]
         level23.randomMin = 1
+<<<<<<< HEAD
         level23.randomMax = 18
          level23.spawnThisManyRandomOnes = 5
+=======
+        level23.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
              level23.smallLabelA = "Disodium Telluride"
         
@@ -1028,9 +1160,14 @@ struct LevelData {
         level24.magnitude = ccp(0,30)
         level24.spawnThese = [3,1,2,3]
         level24.randomMin = 1
+<<<<<<< HEAD
         level24.randomMax = 18
          level24.spawnThisManyRandomOnes = 5
             level24.smallLabelA = "Galium(3) Bromide-GaBr3"
+=======
+        level24.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level24.smallOrderLabel = "Galium(3) Bromide"
@@ -1065,8 +1202,13 @@ struct LevelData {
         level25.magnitude = ccp(0,30)
         level25.spawnThese = [3,1,2,3]
         level25.randomMin = 1
+<<<<<<< HEAD
         level25.randomMax = 18
          level25.spawnThisManyRandomOnes = 5
+=======
+        level25.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level25.smallOrderLabel = "Mercury(1) Bromide"
@@ -1100,8 +1242,13 @@ struct LevelData {
         level26.magnitude = ccp(0,30)
         level26.spawnThese = [3,1,2,3]
         level26.randomMin = 1
+<<<<<<< HEAD
         level26.randomMax = 18
          level26.spawnThisManyRandomOnes = 5
+=======
+        level26.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level26.smallOrderLabel = "Potassium Oxide"
@@ -1136,8 +1283,13 @@ struct LevelData {
         level27.magnitude = ccp(0,30)
         level27.spawnThese = [3,1,2,3]
         level27.randomMin = 1
+<<<<<<< HEAD
         level27.randomMax = 18
          level27.spawnThisManyRandomOnes = 5
+=======
+        level27.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level27.smallOrderLabel = "Mercuric Chloride"
@@ -1174,8 +1326,13 @@ struct LevelData {
         level28.magnitude = ccp(0,30)
         level28.spawnThese = [3,1,2,3]
         level28.randomMin = 1
+<<<<<<< HEAD
         level28.randomMax = 18
          level28.spawnThisManyRandomOnes = 5
+=======
+        level28.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level28.smallOrderLabel = "Nitrogen Dioxide"
@@ -1215,8 +1372,13 @@ struct LevelData {
         level29.magnitude = ccp(0,30)
         level29.spawnThese = [3,1,2,3]
         level29.randomMin = 1
+<<<<<<< HEAD
         level29.randomMax = 18
          level29.spawnThisManyRandomOnes = 5
+=======
+        level29.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level29.smallOrderLabel = "Potassium Hydroxide"
@@ -1247,11 +1409,19 @@ struct LevelData {
         level30.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
+<<<<<<< HEAD
         level30.magnitude = ccp(1000,1200)
         level30.spawnThese = [3,1,2,3]
         level30.randomMin = 1
         level30.randomMax = 18
          level30.spawnThisManyRandomOnes = 10
+=======
+        level30.magnitude = ccp(0,30)
+        level30.spawnThese = [3,1,2,3]
+        level30.randomMin = 1
+        level30.randomMax = 3
+        
+>>>>>>> origin/myNewBranch
         //add an order label of what the user is making in this level
         
         level30.smallOrderLabel = "Sulfur Dioxide"

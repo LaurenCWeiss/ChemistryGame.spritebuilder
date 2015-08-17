@@ -12,7 +12,9 @@ class Gamestate {
     
     static let sharedInstance = Gamestate()
     
+    //level up constants
     let internLevel = 1
+<<<<<<< HEAD
     let associateLevel = 5
      let researcherLevel = 10
     let technicianLevel = 15
@@ -33,7 +35,18 @@ class Gamestate {
         }
 
     }
+=======
+    let researcherLevel = 5
+    var highestCompletedLevel = 1
+//    var passed:[Bool] = []
+    
+    //array of 30 levels all defaulted to passed being false
+    
+    var passed:[Bool] = []
+>>>>>>> origin/myNewBranch
     init() {
+<<<<<<< HEAD
+<<<<<<< HEAD
         let defaults = NSUserDefaults.standardUserDefaults()
         if let result = defaults.objectForKey("passed") as? [Bool] {
             passed = result
@@ -41,10 +54,32 @@ class Gamestate {
             for i in 1...30 {
                 passed.append(false)
             }
+=======
+    init() {
+        
+        for i in 1...30 {
+            passed.append(false)
+>>>>>>> origin/myNewBranch
+=======
+    var passed:[Bool] = []
+    init() {
+        for i in 1...30 {
+            passed.append(false)
+>>>>>>> parent of a259960... STARS ARE WORKING
+=======
+        for i in 1...30 {
+            passed.append(false)
+>>>>>>> parent of a259960... STARS ARE WORKING
+=======
+        for i in 1...30 {
+            passed.append(false)
+>>>>>>> parent of a259960... STARS ARE WORKING
         }
+        
     }
     
     var levelUpData: (text: String, imageName: String) {
+<<<<<<< HEAD
        
         
         switch highestLevelNumberCompleted {
@@ -65,6 +100,12 @@ class Gamestate {
             
         case researcherLevel...technicianLevel-1:
             
+=======
+        switch highestCompletedLevel {
+        case 0...internLevel:
+            return ("You're an intern!", "Art Assets/Scientist1.png")
+        case (internLevel + 1)...researcherLevel:
+>>>>>>> origin/myNewBranch
             return ("You're a researcher!", "Art Assets/Scientist2.png")
             
         case technicianLevel...seniorScientistLevel-1:

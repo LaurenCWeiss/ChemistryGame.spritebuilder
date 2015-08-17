@@ -189,10 +189,17 @@
 						<string>Color4</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
+=======
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
+>>>>>>> origin/myNewBranch
 						</array>
 					</dict>
 					<dict>
@@ -202,7 +209,11 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>0.0</real>
+=======
+							<real>1</real>
+>>>>>>> origin/myNewBranch
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -245,8 +256,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -319,6 +328,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
