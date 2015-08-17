@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCNodeColor</string>
+				<string>White background for pop up</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -72,7 +72,7 @@
 						<key>value</key>
 						<array>
 							<real>-90.535812377929688</real>
-							<real>-34.255996704101562</real>
+							<real>-6.331545352935791</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -125,7 +125,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>0.0</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -134,7 +134,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>0.5</real>
 					</dict>
 				</array>
 			</dict>
@@ -148,7 +148,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCLabelTTF</string>
+				<string>You Lost! text</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -170,8 +170,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>7.0000038146972656</real>
-							<real>65.000015258789062</real>
+							<real>8.789276123046875</real>
+							<real>87.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -369,7 +369,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCButton</string>
+				<string>Restart Button</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -391,8 +391,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>8.7892799377441406</real>
-							<real>0.0</real>
+							<real>8.7892780303955078</real>
+							<real>34</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -486,7 +486,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -497,7 +497,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -521,7 +521,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -540,7 +540,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Art Assets/Button.png</string>
+							<string>Art Assets/NewButton.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -557,7 +557,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>AmericanTypewriter-Bold</string>
 					</dict>
 					<dict>
 						<key>name</key>

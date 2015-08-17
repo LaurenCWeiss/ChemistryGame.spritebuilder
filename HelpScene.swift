@@ -9,14 +9,11 @@
 import Foundation
 
 
-class HelpScene: CCNode, CCPhysicsCollisionDelegate {
-    //scene where the user can receive information on how to play the game
-    //loads the main scene using the back button
-    
-    weak var contentNode: CCNode!
+class HelpScene: CCNode {
     
     func startMainMenu() {
-//        let MainScene = CCBReader.loadAsScene("HelpScene")
         CCDirector.sharedDirector().popScene()
-        
-    }}
+    }
+    
+}
+

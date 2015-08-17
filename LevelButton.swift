@@ -1,20 +1,31 @@
-//
-//  ChemicalName.swift
-//  ChemistryGame
-//
-//  Created by Lauren Weiss on 7/20/15.
-//  Copyright (c) 2015 Apportable. All rights reserved.
-//
+
 
 import Foundation
 
 class LevelButton: CCButton {
-    //shows different level buttons in the level select scene
+    
     var level: Int = 0
+    var currentLevelData: Data?
+//  let defaults = NSUserDefaults.standardUserDefaults()
+    
     
     func didLoadFromCCB() {
+       
+        
         self.title = "Level: \(level + 1)"
     }
     
-    
+    override func onEnter() {
+        super.onEnter()
+     
+        if Gamestate.sharedInstance.passed[level] == true {
+   
+//        defaults.setBool(true, forKey: "passed")
+
+            
+        var spriteC = CCSprite(imageNamed:"Art Assets/star.png")
+        spriteC.positionInPoints = ccpAdd(self.positionInPoints,ccp(40,20))
+        self.parent.addChild(spriteC)
+        }
+    }
 }

@@ -11,24 +11,17 @@ import Foundation
 class LevelSelect: CCNode {
     
     var levelData: LevelData = LevelData()
-
+    var currentLevelData: Data?
+    
     func startMainMenu2() {
-        
-        let LevelSelect = CCBReader.loadAsScene("MainScene")
+        let LevelSelect = CCBReader.loadAsScene("PauseScene")
         CCDirector.sharedDirector().presentScene(LevelSelect)
-        
     }
     
     func startLevel(button:LevelButton) {
-        //println checks that correct level loads when its button is pressed in level select
-        println("StartLevel: \(button.level)")
-        
         LevelData.curLevel = button.level
-        //loads gameplay scene for the level that is pressed
         let LevelSelect = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().presentScene(LevelSelect)
-
-     
     }
     
 }

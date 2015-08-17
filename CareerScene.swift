@@ -8,40 +8,46 @@
 
 import Foundation
 
-class CareerScene: CCNode, CCPhysicsCollisionDelegate {
-    //scene that shows information about the user's career
-    //loads the main menu from the career scene using the back button
-
-    weak var contentNode: CCNode!
+class CareerScene: CCNode {
+    
+    //CareerScene is accessed through MainScene
+    
     var levelData: LevelData = LevelData()
     var currentLevelData: Data?
+    var MyNewCareerScientistImage: String!
+    var careerUpSmallLabel = Gamestate.sharedInstance.levelUpData.text
     
     func didLoadFromCCB() {
         showCareerImageAndLabel()
     }
     
     func startMainMenu() {
-        
         CCDirector.sharedDirector().popScene()
-        
     }
+    
     func showCareerImageAndLabel() {
-        
         let currentLevelData = levelData.levels[LevelData.curLevel]
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        var MyNewCareerScientistImage = Gamestate.sharedInstance.levelUpData.imageName
         
-        //show career image
-     
+<<<<<<< HEAD
+       var spriteB = CCSprite(imageNamed:"\(Gamestate.sharedInstance.levelUpData.imageName)")
+        spriteB.position = ccp(screenWidth/2,screenHeight/2)
+        self.addChild(spriteB)
         
-        //add the image of the new career to the scene
-        var spriteC = CCSprite(imageNamed:"\(currentLevelData.MyNewCareerScientistImage)")
-        spriteC.position = ccp(50.0,73.0)
-        self.addChild(spriteC)
-
+        var label = CCLabelTTF(string: "\(Gamestate.sharedInstance.levelUpData.text)", fontName: "AmericanTypewriter", fontSize: 30)
+        label.name = "\(Gamestate.sharedInstance.levelUpData.text)Label"
+        label.color = CCColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        label.position = ccp(screenWidth/2,screenHeight/2 - 140)
+        self.addChild(label)
         
-        
-        //show career title
-        
-        
-        
+=======
+        var spriteB = CCSprite(imageNamed:"\(MyNewCareerScientistImage)")
+        spriteB.position = ccp(screenWidth/2,350)
+        self.addChild(spriteB)
+>>>>>>> origin/myNewBranch
     }
+    
 }

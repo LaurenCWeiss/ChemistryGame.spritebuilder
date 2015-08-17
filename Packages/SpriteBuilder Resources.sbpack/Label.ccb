@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCLabelTTF</string>
+				<string>smallLabel</string>
 				<key>memberVarAssignmentName</key>
 				<string>smallLabel</string>
 				<key>memberVarAssignmentType</key>
@@ -128,7 +128,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>12</real>
+							<real>9</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -252,7 +252,7 @@
 		<key>customClass</key>
 		<string>Label</string>
 		<key>displayName</key>
-		<string>CCNode</string>
+		<string>Label</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>

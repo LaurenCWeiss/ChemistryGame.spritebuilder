@@ -16,6 +16,5 @@ class RestartPopup: CCNode {
     func restart() {
         let scene = CCBReader.loadAsScene("ScienceScene")
         CCDirector.sharedDirector().presentScene(scene)
-        
     }
 }
