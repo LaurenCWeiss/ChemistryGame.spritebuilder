@@ -13,10 +13,17 @@ class Gamestate {
     static let sharedInstance = Gamestate()
     
     let internLevel = 1
-    let researcherLevel = 5
+    let associateLevel = 5
+     let researcherLevel = 10
+    let technicianLevel = 15
+    let seniorScientistLevel = 20
+    let principleScientistLevel = 25
+    let researchFellowLevel = 27
+    let einsteinLevel = 30
     
     var highestLevelNumberCompleted = 1
     var currentLevelNumber = 1
+ 
     
     var passed:[Bool] = [] {
         didSet {
@@ -38,13 +45,24 @@ class Gamestate {
     }
     
     var levelUpData: (text: String, imageName: String) {
+       
+        
         switch highestLevelNumberCompleted {
-        case internLevel...researcherLevel - 1:
-            return ("You're an intern!", "Art Assets/Scientist1.png")
-        case researcherLevel:
-            return ("You're a researcher!", "Art Assets/Scientist2.png")
-        default:
-            return ("add more stuff", "Art Assets/Scientist1.png")
+//        case internLevel...researcherLevel - 1:
+//            return ("You're an intern!", "Art Assets/Scientist1.png")
+//        case researcherLevel:
+//            return ("You're a researcher!", "Art Assets/Scientist2.png")
+//        default:
+//            return ("You already leveled up!", "Art Assets/Scientist1.png")
+            
+
+            
+            var levelUpData: (text: String, imageName: String) {
+            
+            switch highestLevelNumberCompleted {
+            
+            
         }
+    
     }
 }

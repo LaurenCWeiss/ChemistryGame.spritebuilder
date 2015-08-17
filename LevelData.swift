@@ -134,10 +134,10 @@ struct LevelData {
         level1.ElementImage1Name = "Art Assets/Hydrogen.png"
         level1.ElementImage2Name = "Art Assets/Oxygen.png"
         
-        level1.magnitude = ccp(50,1000)
+        level1.magnitude = ccp(50,100)
 //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
         level1.randomMin = 1
-        level1.randomMax = 18
+        level1.randomMax = 5
         level1.spawnThisManyRandomOnes = 5
         
         
@@ -176,10 +176,10 @@ struct LevelData {
         level2.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
          level2.spawnThisManyRandomOnes = 5
         
-        level2.magnitude = ccp(50,100)
+        level2.magnitude = ccp(0,30)
         level2.spawnThese = [3,1,2,3]
         level2.randomMin = 1
-        level2.randomMax = 18
+        level2.randomMax = 6
         
         
         //add an order label of what the user is making in this level
@@ -217,10 +217,10 @@ struct LevelData {
         level3.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
-        level3.magnitude = ccp(0,30)
+        level3.magnitude = ccp(50,80)
 
         level3.randomMin = 1
-        level3.randomMax = 18
+        level3.randomMax = 8
         level3.spawnThisManyRandomOnes = 5
         
         
@@ -255,10 +255,10 @@ struct LevelData {
         level4.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
-        level4.magnitude = ccp(0,30)
+        level4.magnitude = ccp(50,100)
      
         level4.randomMin = 1
-        level4.randomMax = 18
+        level4.randomMax = 6
          level4.spawnThisManyRandomOnes = 5
         //add an order label of what the user is making in this level
         
@@ -296,10 +296,10 @@ struct LevelData {
         level5.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
-        level5.magnitude = ccp(0,30)
+        level5.magnitude = ccp(5,80)
    
         level5.randomMin = 1
-        level5.randomMax = 18
+        level5.randomMax = 7
          level5.spawnThisManyRandomOnes = 5
         
         level5.smallLevelLabel = "Level 5"
@@ -336,10 +336,10 @@ struct LevelData {
         level6.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
-        level6.magnitude = ccp(0,30)
+        level6.magnitude = ccp(10,300)
 
         level6.randomMin = 1
-        level6.randomMax = 18
+        level6.randomMax = 15
         level6.smallLevelLabel = "Level 6"
         
         //add an order label of what the user is making in this level
@@ -378,10 +378,10 @@ struct LevelData {
         level7.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
-        level7.magnitude = ccp(0,30)
+        level7.magnitude = ccp(5,30)
    
         level7.randomMin = 1
-        level7.randomMax = 18
+        level7.randomMax = 16
         level7.smallLevelLabel = "Level 7"
         
         //add an order label of what the user is making in this level
@@ -412,7 +412,7 @@ struct LevelData {
         level8.magnitude = ccp(0,30)
  
         level8.randomMin = 1
-        level8.randomMax = 18
+        level8.randomMax = 17
          level8.spawnThisManyRandomOnes = 5
         
         level8.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
@@ -1247,11 +1247,11 @@ struct LevelData {
         level30.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
         
         
-        level30.magnitude = ccp(0,70)
+        level30.magnitude = ccp(1000,1200)
         level30.spawnThese = [3,1,2,3]
         level30.randomMin = 1
         level30.randomMax = 18
-         level30.spawnThisManyRandomOnes = 5
+         level30.spawnThisManyRandomOnes = 10
         //add an order label of what the user is making in this level
         
         level30.smallOrderLabel = "Sulfur Dioxide"
@@ -1261,6 +1261,829 @@ struct LevelData {
         
         levels.append(level30)
         
+        
+        
+        
+//        
+//        var level31 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level31.hydrogenCounter = 3
+//        level31.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level31.counters["Oxygen"] = 1
+//        level31.counters["Hydrogen"] = 2
+//        
+//        
+//        level31.goal = 3
+//        level31.smallLabel = "Water"
+//        level31.smallLabelA = "Water - H2O"
+//        level31.level = 31
+//        level31.ElementImage1 = 1
+//        level31.ElementImage2 = 1
+//        level31.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level31.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level31.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level31.randomMin = 1
+//        level31.randomMax = 5
+//        level31.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level31.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level31.careerUpSmallLabelForLevel = "Intern"
+//        level31.smallOrderLabel = "Water-H2O"
+//        level31.smallLevelLabel = "Level 1"
+//        level31.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level31)
+//        
+//        var level32 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level32.hydrogenCounter = 3
+//        level32.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level32.counters["Oxygen"] = 1
+//        level32.counters["Hydrogen"] = 2
+//        
+//        
+//        level32.goal = 3
+//        level32.smallLabel = "Water"
+//        level32.smallLabelA = "Water - H2O"
+//        level32.level = 32
+//        level32.ElementImage1 = 1
+//        level32.ElementImage2 = 1
+//        level32.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level32.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level32.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level32.randomMin = 1
+//        level32.randomMax = 5
+//        level32.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level32.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level32.careerUpSmallLabelForLevel = "Intern"
+//        level32.smallOrderLabel = "Water-H2O"
+//        level32.smallLevelLabel = "Level 1"
+//        level32.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level32)
+//        
+//        
+//        var level33 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level33.hydrogenCounter = 3
+//        level33.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level33.counters["Oxygen"] = 1
+//        level33.counters["Hydrogen"] = 2
+//        
+//        
+//        level33.goal = 3
+//        level33.smallLabel = "Water"
+//        level33.smallLabelA = "Water - H2O"
+//        level33.level = 33
+//        level33.ElementImage1 = 1
+//        level33.ElementImage2 = 1
+//        level33.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level33.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level33.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level33.randomMin = 1
+//        level33.randomMax = 5
+//        level33.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level33.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level33.careerUpSmallLabelForLevel = "Intern"
+//        level33.smallOrderLabel = "Water-H2O"
+//        level33.smallLevelLabel = "Level 1"
+//        level33.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level33)
+//        
+//        
+//        var level34 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level34.hydrogenCounter = 3
+//        level34.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level34.counters["Oxygen"] = 1
+//        level34.counters["Hydrogen"] = 2
+//        
+//        
+//        level34.goal = 3
+//        level34.smallLabel = "Water"
+//        level34.smallLabelA = "Water - H2O"
+//        level34.level = 34
+//        level34.ElementImage1 = 1
+//        level34.ElementImage2 = 1
+//        level34.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level34.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level34.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level34.randomMin = 1
+//        level34.randomMax = 5
+//        level34.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level34.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level34.careerUpSmallLabelForLevel = "Intern"
+//        level34.smallOrderLabel = "Water-H2O"
+//        level34.smallLevelLabel = "Level 1"
+//        level34.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level34)
+//        
+//        
+//        var level35 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level35.hydrogenCounter = 3
+//        level35.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level35.counters["Oxygen"] = 1
+//        level35.counters["Hydrogen"] = 2
+//        
+//        
+//        level35.goal = 3
+//        level35.smallLabel = "Water"
+//        level35.smallLabelA = "Water - H2O"
+//        level35.level = 35
+//        level35.ElementImage1 = 1
+//        level35.ElementImage2 = 1
+//        level35.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level35.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level35.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level35.randomMin = 1
+//        level35.randomMax = 5
+//        level35.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level35.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level35.careerUpSmallLabelForLevel = "Intern"
+//        level35.smallOrderLabel = "Water-H2O"
+//        level35.smallLevelLabel = "Level 1"
+//        level35.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level35)
+//        
+//        
+//        
+//        var level36 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level36.hydrogenCounter = 3
+//        level36.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level36.counters["Oxygen"] = 1
+//        level36.counters["Hydrogen"] = 2
+//        
+//        
+//        level36.goal = 3
+//        level36.smallLabel = "Water"
+//        level36.smallLabelA = "Water - H2O"
+//        level36.level = 36
+//        level36.ElementImage1 = 1
+//        level36.ElementImage2 = 1
+//        level36.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level36.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level36.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level36.randomMin = 1
+//        level36.randomMax = 5
+//        level36.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level36.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level36.careerUpSmallLabelForLevel = "Intern"
+//        level36.smallOrderLabel = "Water-H2O"
+//        level36.smallLevelLabel = "Level 1"
+//        level36.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level36)
+//        
+//        
+//        
+//        var level37 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level37.hydrogenCounter = 3
+//        level37.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level37.counters["Oxygen"] = 1
+//        level37.counters["Hydrogen"] = 2
+//        
+//        
+//        level37.goal = 3
+//        level37.smallLabel = "Water"
+//        level37.smallLabelA = "Water - H2O"
+//        level37.level = 37
+//        level37.ElementImage1 = 1
+//        level37.ElementImage2 = 1
+//        level37.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level37.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level37.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level37.randomMin = 1
+//        level37.randomMax = 5
+//        level37.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level37.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level37.careerUpSmallLabelForLevel = "Intern"
+//        level37.smallOrderLabel = "Water-H2O"
+//        level37.smallLevelLabel = "Level 1"
+//        level37.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level37)
+//        
+//        
+//        
+//        var level38 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level38.hydrogenCounter = 3
+//        level38.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level38.counters["Oxygen"] = 1
+//        level38.counters["Hydrogen"] = 2
+//        
+//        
+//        level38.goal = 3
+//        level38.smallLabel = "Water"
+//        level38.smallLabelA = "Water - H2O"
+//        level38.level = 38
+//        level38.ElementImage1 = 1
+//        level38.ElementImage2 = 1
+//        level38.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level38.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level38.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level38.randomMin = 1
+//        level38.randomMax = 5
+//        level38.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level38.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level38.careerUpSmallLabelForLevel = "Intern"
+//        level38.smallOrderLabel = "Water-H2O"
+//        level38.smallLevelLabel = "Level 1"
+//        level38.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level38)
+//        
+//        
+//        
+//        var level39 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level39.hydrogenCounter = 3
+//        level39.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level39.counters["Oxygen"] = 1
+//        level39.counters["Hydrogen"] = 2
+//        
+//        
+//        level39.goal = 3
+//        level39.smallLabel = "Water"
+//        level39.smallLabelA = "Water - H2O"
+//        level39.level = 39
+//        level39.ElementImage1 = 1
+//        level39.ElementImage2 = 1
+//        level39.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level39.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level39.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level39.randomMin = 1
+//        level39.randomMax = 5
+//        level39.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level39.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level39.careerUpSmallLabelForLevel = "Intern"
+//        level39.smallOrderLabel = "Water-H2O"
+//        level39.smallLevelLabel = "Level 1"
+//        level39.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level39)
+//        
+//        
+//        
+//        var level40 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level40.hydrogenCounter = 3
+//        level40.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level40.counters["Oxygen"] = 1
+//        level40.counters["Hydrogen"] = 2
+//        
+//        
+//        level40.goal = 3
+//        level40.smallLabel = "Water"
+//        level40.smallLabelA = "Water - H2O"
+//        level40.level = 40
+//        level40.ElementImage1 = 1
+//        level40.ElementImage2 = 1
+//        level40.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level40.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level40.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level40.randomMin = 1
+//        level40.randomMax = 5
+//        level40.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level40.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level40.careerUpSmallLabelForLevel = "Intern"
+//        level40.smallOrderLabel = "Water-H2O"
+//        level40.smallLevelLabel = "Level 1"
+//        level40.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level40)
+//        
+//        
+//        
+//        
+//        var level41 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level41.hydrogenCounter = 3
+//        level41.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level41.counters["Oxygen"] = 1
+//        level41.counters["Hydrogen"] = 2
+//        
+//        
+//        level41.goal = 3
+//        level41.smallLabel = "Water"
+//        level41.smallLabelA = "Water - H2O"
+//        level41.level = 41
+//        level41.ElementImage1 = 1
+//        level41.ElementImage2 = 1
+//        level41.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level41.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level41.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level41.randomMin = 1
+//        level41.randomMax = 5
+//        level41.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level41.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level41.careerUpSmallLabelForLevel = "Intern"
+//        level41.smallOrderLabel = "Water-H2O"
+//        level41.smallLevelLabel = "Level 1"
+//        level41.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level41)
+//        
+//        
+//        
+//        var level42 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level42.hydrogenCounter = 3
+//        level42.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level42.counters["Oxygen"] = 1
+//        level42.counters["Hydrogen"] = 2
+//        
+//        
+//        level42.goal = 3
+//        level42.smallLabel = "Water"
+//        level42.smallLabelA = "Water - H2O"
+//        level42.level = 42
+//        level42.ElementImage1 = 1
+//        level42.ElementImage2 = 1
+//        level42.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level42.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level42.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level42.randomMin = 1
+//        level42.randomMax = 5
+//        level42.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level42.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level42.careerUpSmallLabelForLevel = "Intern"
+//        level42.smallOrderLabel = "Water-H2O"
+//        level42.smallLevelLabel = "Level 1"
+//        level42.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level42)
+//        
+//        
+//        
+//        
+//        var level43 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level43.hydrogenCounter = 3
+//        level43.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level43.counters["Oxygen"] = 1
+//        level43.counters["Hydrogen"] = 2
+//        
+//        
+//        level43.goal = 3
+//        level43.smallLabel = "Water"
+//        level43.smallLabelA = "Water - H2O"
+//        level43.level = 43
+//        level43.ElementImage1 = 1
+//        level43.ElementImage2 = 1
+//        level43.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level43.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level43.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level43.randomMin = 1
+//        level43.randomMax = 5
+//        level43.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level43.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level43.careerUpSmallLabelForLevel = "Intern"
+//        level43.smallOrderLabel = "Water-H2O"
+//        level43.smallLevelLabel = "Level 1"
+//        level43.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level43)
+//        
+//        
+//        
+//        
+//        var level44 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level44.hydrogenCounter = 3
+//        level44.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level44.counters["Oxygen"] = 1
+//        level44.counters["Hydrogen"] = 2
+//        
+//        
+//        level44.goal = 3
+//        level44.smallLabel = "Water"
+//        level44.smallLabelA = "Water - H2O"
+//        level44.level = 44
+//        level44.ElementImage1 = 1
+//        level44.ElementImage2 = 1
+//        level44.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level44.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level44.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level44.randomMin = 1
+//        level44.randomMax = 5
+//        level44.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level44.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level44.careerUpSmallLabelForLevel = "Intern"
+//        level44.smallOrderLabel = "Water-H2O"
+//        level44.smallLevelLabel = "Level 1"
+//        level44.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level44)
+//        
+//        
+//        
+//        var level45 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level45.hydrogenCounter = 3
+//        level45.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level45.counters["Oxygen"] = 1
+//        level45.counters["Hydrogen"] = 2
+//        
+//        
+//        level45.goal = 3
+//        level45.smallLabel = "Water"
+//        level45.smallLabelA = "Water - H2O"
+//        level45.level = 45
+//        level45.ElementImage1 = 1
+//        level45.ElementImage2 = 1
+//        level45.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level45.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level45.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level45.randomMin = 1
+//        level45.randomMax = 5
+//        level45.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level45.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level45.careerUpSmallLabelForLevel = "Intern"
+//        level45.smallOrderLabel = "Water-H2O"
+//        level45.smallLevelLabel = "Level 1"
+//        level45.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level45)
+//        
+//        
+//        
+//        
+//        var level46 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level46.hydrogenCounter = 3
+//        level46.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level46.counters["Oxygen"] = 1
+//        level46.counters["Hydrogen"] = 2
+//        
+//        
+//        level46.goal = 3
+//        level46.smallLabel = "Water"
+//        level46.smallLabelA = "Water - H2O"
+//        level46.level = 46
+//        level46.ElementImage1 = 1
+//        level46.ElementImage2 = 1
+//        level46.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level46.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level46.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level46.randomMin = 1
+//        level46.randomMax = 5
+//        level46.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level46.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level46.careerUpSmallLabelForLevel = "Intern"
+//        level46.smallOrderLabel = "Water-H2O"
+//        level46.smallLevelLabel = "Level 1"
+//        level46.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level46)
+//        
+//        
+//        
+//        var level47 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level47.hydrogenCounter = 3
+//        level47.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level47.counters["Oxygen"] = 1
+//        level47.counters["Hydrogen"] = 2
+//        
+//        
+//        level47.goal = 3
+//        level47.smallLabel = "Water"
+//        level47.smallLabelA = "Water - H2O"
+//        level47.level = 47
+//        level47.ElementImage1 = 1
+//        level47.ElementImage2 = 1
+//        level47.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level47.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level47.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level47.randomMin = 1
+//        level47.randomMax = 5
+//        level47.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level47.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level47.careerUpSmallLabelForLevel = "Intern"
+//        level47.smallOrderLabel = "Water-H2O"
+//        level47.smallLevelLabel = "Level 1"
+//        level47.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level47)
+//        
+//        
+//        
+//        
+//        var level48 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level48.hydrogenCounter = 3
+//        level48.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level48.counters["Oxygen"] = 1
+//        level48.counters["Hydrogen"] = 2
+//        
+//        
+//        level48.goal = 3
+//        level48.smallLabel = "Water"
+//        level48.smallLabelA = "Water - H2O"
+//        level48.level = 48
+//        level48.ElementImage1 = 1
+//        level48.ElementImage2 = 1
+//        level48.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level48.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level48.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level48.randomMin = 1
+//        level48.randomMax = 5
+//        level48.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level48.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level48.careerUpSmallLabelForLevel = "Intern"
+//        level48.smallOrderLabel = "Water-H2O"
+//        level48.smallLevelLabel = "Level 1"
+//        level48.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level48)
+//        
+//        
+//        
+//        var level49 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level49.hydrogenCounter = 3
+//        level49.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level49.counters["Oxygen"] = 1
+//        level49.counters["Hydrogen"] = 2
+//        
+//        
+//        level49.goal = 3
+//        level49.smallLabel = "Water"
+//        level49.smallLabelA = "Water - H2O"
+//        level49.level = 49
+//        level49.ElementImage1 = 1
+//        level49.ElementImage2 = 1
+//        level49.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level49.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level49.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level49.randomMin = 1
+//        level49.randomMax = 5
+//        level49.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level49.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level49.careerUpSmallLabelForLevel = "Intern"
+//        level49.smallOrderLabel = "Water-H2O"
+//        level49.smallLevelLabel = "Level 1"
+//        level49.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level49)
+//        
+//        
+//        
+//        
+//        var level50 = Data()
+//        
+//        //need to this ensure that hydrogen atoms are dropped
+//        level50.hydrogenCounter = 3
+//        level50.oxygenCounter = 3
+//        
+//        
+//        //how many of an element do you have left
+//        level50.counters["Oxygen"] = 1
+//        level50.counters["Hydrogen"] = 2
+//        
+//        
+//        level50.goal = 3
+//        level50.smallLabel = "Water"
+//        level50.smallLabelA = "Water - H2O"
+//        level50.level = 50
+//        level50.ElementImage1 = 1
+//        level50.ElementImage2 = 1
+//        level50.ElementImage1Name = "Art Assets/Hydrogen.png"
+//        level50.ElementImage2Name = "Art Assets/Oxygen.png"
+//        
+//        level50.magnitude = ccp(50,100)
+//        //        level1.spawnThese = [3,1,2,4,5,6,7,8,9]
+//        level50.randomMin = 1
+//        level50.randomMax = 5
+//        level50.spawnThisManyRandomOnes = 5
+//        
+//        
+//        //add intern career level
+//        level50.MyNewCareerScientistImage = "Art Assets/Scientist0.png"
+//        level50.careerUpSmallLabelForLevel = "Intern"
+//        level50.smallOrderLabel = "Water-H2O"
+//        level50.smallLevelLabel = "Level 1"
+//        level50.careerUpSmallLabel = "You're an intern!"
+//        
+//        
+//        
+//        levels.append(level50)
+//        
         
         
     }
