@@ -57,7 +57,7 @@
             println("current level data level:\(currentLevelData.level)")
             
             if (LevelData.curLevel) > 29 {
-                LevelData.curLevel = 0
+                LevelData.curLevel = 1
             } else {
                 LevelData.curLevel++
             }
@@ -67,7 +67,7 @@
             }
             
             if Gamestate.sharedInstance.internLevel == Gamestate.sharedInstance.currentLevelNumber ||
-                Gamestate.sharedInstance.researcherLevel == Gamestate.sharedInstance.currentLevelNumber {
+                Gamestate.sharedInstance.researcherLevel == Gamestate.sharedInstance.currentLevelNumber || Gamestate.sharedInstance.associateLevel == Gamestate.sharedInstance.currentLevelNumber || Gamestate.sharedInstance.technicianLevel == Gamestate.sharedInstance.currentLevelNumber || Gamestate.sharedInstance.seniorScientistLevel == Gamestate.sharedInstance.currentLevelNumber || Gamestate.sharedInstance.principleScientistLevel == Gamestate.sharedInstance.currentLevelNumber || Gamestate.sharedInstance.researchFellowLevel == Gamestate.sharedInstance.currentLevelNumber || Gamestate.sharedInstance.einsteinLevel == Gamestate.sharedInstance.currentLevelNumber {
                 loadCareerUpScene()
                 
             } else {

@@ -55,14 +55,50 @@ class Gamestate {
 //        default:
 //            return ("You already leveled up!", "Art Assets/Scientist1.png")
             
-
+        case internLevel...associateLevel - 1:
             
-            var levelUpData: (text: String, imageName: String) {
+            return ("You're an intern!", "Art Assets/Scientist0.png")
             
-            switch highestLevelNumberCompleted {
+        case associateLevel...researcherLevel-1:
+            
+            return ("You're an associate!", "Art Assets/Scientist1.png")
+            
+        case researcherLevel...technicianLevel-1:
+            
+            return ("You're a researcher!", "Art Assets/Scientist2.png")
+            
+        case technicianLevel...seniorScientistLevel-1:
+            
+            return ("You're a technician!", "Art Assets/Scientist3.png")
+            
+        case seniorScientistLevel...principleScientistLevel-1:
+            
+            return ("You're a senior scientist!", "Art Assets/Scientist4.png")
+            
+        case principleScientistLevel...researchFellowLevel-1:
+            
+            return ("You're a principle scientist!", "Art Assets/Scientist5.png")
+            
+        case researchFellowLevel...einsteinLevel-1:
+            
+            return ("You're a research fellow!", "Art Assets/Scientist6.png")
+            
+        case einsteinLevel:
+            
+            return ("YOU ARE EINSTEIN!", "Art Assets/Scientist7.png")
+            
+            
+            
+        default:
+            
+            return ("You already leveled up!", "Art Assets/Scientist7.png")
+            
+            
+            
             
             
         }
-    
+            
+
     }
 }
